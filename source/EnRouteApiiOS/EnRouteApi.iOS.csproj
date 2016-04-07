@@ -53,6 +53,7 @@
     <Compile Include="Source\Operation.cs" />
     <Compile Include="Source\Organization.cs" />
     <Compile Include="Source\TaskManager.cs" />
+    <Compile Include="Source\Session.cs" />
   </ItemGroup>
   <ItemGroup>
     <ObjcBindingApiDefinition Include="ApiDefinition.cs" />

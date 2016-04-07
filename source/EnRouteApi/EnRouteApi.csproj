@@ -45,6 +45,7 @@
     <Compile Include="Source\EnRoute\EnRouteConstants.cs" />
     <Compile Include="Source\EnRoute\EnRouteEvents.cs" />
     <Compile Include="Source\Core\CoreFactory.cs" />
+    <Compile Include="Source\EnRoute\GSession.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
   <ItemGroup>

@@ -142,6 +142,44 @@ namespace Glympse.EnRoute.iOS
         string getPhase();        
     }
 
+	[BaseType (typeof(GlyCommon))]
+	[DisableDefaultCtor]
+	interface GlySession
+	{        
+		[Export ("getId")]
+		long getId();
+
+		[Export ("getCreatedTime")]
+		long getCreatedTime();
+
+		[Export ("getDescription")]
+		string getDescription();   
+
+		[Export ("getTasks")]
+		GlyArray getTasks();    
+
+		[Export ("getState")]
+		int getState();
+
+		[Export ("getStartTime")]
+		long getStartTime();
+
+		[Export ("getOrgId")]
+		long getOrgId();
+
+		[Export ("getAgentId")]
+		long getAgentId();
+
+		[Export ("getOperationId")]
+		long getOperationId();
+
+		[Export ("getOperation")]
+		GlyOperation getOperation();
+
+		[Export ("getCompletionReason")]
+		int getCompletionReason();
+	}
+
     [BaseType (typeof(GlySource))]
     [DisableDefaultCtor]
     interface GlyTaskManager
