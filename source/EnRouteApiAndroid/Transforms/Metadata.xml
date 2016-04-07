@@ -1,0 +1,232 @@
+﻿<metadata>   
+    <!-- Core SDK Symbols -->
+
+    <!-- Packages -->
+    <attr path="/api/package[@name='com.glympse.android.core']" name="managedName">com.glympse.android.core</attr>
+    <attr path="/api/package[@name='com.glympse.android.api']" name="managedName">com.glympse.android.api</attr>
+    <attr path="/api/package[@name='com.glympse.android.hal']" name="managedName">com.glympse.android.hal</attr>
+    <attr path="/api/package[@name='com.glympse.android.toolbox']" name="managedName">com.glympse.android.toolbox</attr>
+    <attr path="/api/package[@name='com.glympse.android.toolbox.listener']" name="managedName">com.glympse.android.toolbox.listener</attr>
+
+    <!-- GCommon -->
+    <attr 
+        path="/api/package[@name='com.glympse.android.core']/interface[@name='GCommon']" 
+        name="managedName">GCommon</attr>
+
+    <!-- GArray -->
+    <attr 
+        path="/api/package[@name='com.glympse.android.core']/interface[@name='GArray']" 
+        name="managedName">GArray</attr>
+    <attr 
+        path="/api/package[@name='com.glympse.android.core']/interface[@name='GArray']/method[@name='at']" 
+        name="managedName">at</attr>
+    <attr 
+        path="/api/package[@name='com.glympse.android.core']/interface[@name='GArray']/method[@name='length']" 
+        name="managedName">length</attr>
+
+    <!-- Toolbox -->
+    <attr 
+        path="/api/package[@name='com.glympse.android.toolbox.listener']/interface[@name='GListener']" 
+        name="managedName">GListener</attr>-
+    <attr 
+        path="/api/package[@name='com.glympse.android.toolbox.listener']/interface[@name='GListener']/method[@name='eventsOccurred']" 
+        name="managedName">eventsOccurred</attr>
+    <attr 
+        path="/api/package[@name='com.glympse.android.toolbox.listener']/interface[@name='GSource']" 
+        name="managedName">GSource</attr>-
+    <attr 
+        path="/api/package[@name='com.glympse.android.toolbox.listener']/interface[@name='GSource']/method[@name='addListener']" 
+        name="managedName">addListener</attr>
+    <attr 
+        path="/api/package[@name='com.glympse.android.toolbox.listener']/interface[@name='GSource']/method[@name='removeListener']" 
+        name="managedName">removeListener</attr>
+    <remove-node path="/api/package[@name='com.glympse.android.toolbox.listener']/class[@name='CommonSource']" />
+
+    <!-- GGlympse -->
+    <attr 
+        path="/api/package[@name='com.glympse.android.api']/interface[@name='GGlympse']" 
+        name="managedName">GGlympse</attr>
+
+    <!-- Exclude unnecessary packages -->
+    <remove-node path="/api/package[starts-with(@name, 'com.glympse.android.lib')]" />
+    <remove-node path="/api/package[starts-with(@name, 'com.glympse.android.rpc')]" />
+    <remove-node path="/api/package[starts-with(@name, 'com.glympse.android.kit')]" />
+    <remove-node path="/api/package[starts-with(@name, 'com.glympse.android.lite')]" />
+    <remove-node path="/api/package[starts-with(@name, 'com.glympse.android.rdbg')]" />
+    <remove-node path="/api/package[starts-with(@name, 'com.glympse.android.ui')]" />
+    <remove-node path="/api/package[starts-with(@name, 'com.glympse.android.ws')]" />
+    <remove-node path="/api/package[starts-with(@name, 'com.glympse.android.hal.gms')]" />
+
+    <!-- Exclude unnecessary HAL components -->
+    <remove-node path="/api/package[@name='com.glympse.android.hal']/class[@name='GLinkedList']" />
+    <remove-node path="/api/package[@name='com.glympse.android.hal']/class[@name='GVector']" />
+    <remove-node path="/api/package[@name='com.glympse.android.hal']/class[@name='ErrorReporterBase']" />
+    <remove-node path="/api/package[@name='com.glympse.android.hal']/class[@name='NameValue']" />
+    <remove-node path="/api/package[@name='com.glympse.android.hal']/class[@name='NameValue.NameValueComparator']" />
+
+    <!-- EnRoute SDK Symbols -->
+
+    <!-- Packages -->
+    <attr path="/api/package[@name='com.glympse.enroute.android.api']" name="managedName">com.glympse.enroute.android.api</attr>
+
+    <!-- GOrganization -->
+    <attr 
+        path="/api/package[@name='com.glympse.enroute.android.api']/interface[@name='GOrganization']" 
+        name="managedName">GOrganization</attr>
+    <attr 
+        path="/api/package[@name='com.glympse.enroute.android.api']/interface[@name='GOrganization']/method[@name='getId']" 
+        name="managedName">getId</attr>
+    <attr 
+        path="/api/package[@name='com.glympse.enroute.android.api']/interface[@name='GOrganization']/method[@name='getName']" 
+        name="managedName">getName</attr>
+    <attr 
+        path="/api/package[@name='com.glympse.enroute.android.api']/interface[@name='GOrganization']/method[@name='getAdminEmail']" 
+        name="managedName">getAdminEmail</attr>
+
+    <!-- GAgent -->
+    <attr 
+        path="/api/package[@name='com.glympse.enroute.android.api']/interface[@name='GAgent']" 
+        name="managedName">GAgent</attr>
+    <attr 
+        path="/api/package[@name='com.glympse.enroute.android.api']/interface[@name='GAgent']/method[@name='getId']" 
+        name="managedName">getId</attr>
+    <attr 
+        path="/api/package[@name='com.glympse.enroute.android.api']/interface[@name='GAgent']/method[@name='getName']" 
+        name="managedName">getName</attr>
+    <attr 
+        path="/api/package[@name='com.glympse.enroute.android.api']/interface[@name='GAgent']/method[@name='getEmail']" 
+        name="managedName">getEmail</attr>
+
+    <!-- GTask -->
+    <attr 
+        path="/api/package[@name='com.glympse.enroute.android.api']/interface[@name='GTask']" 
+        name="managedName">GTask</attr>
+    <attr 
+        path="/api/package[@name='com.glympse.enroute.android.api']/interface[@name='GTask']/method[@name='getState']" 
+        name="managedName">getState</attr>
+    <attr 
+        path="/api/package[@name='com.glympse.enroute.android.api']/interface[@name='GTask']/method[@name='getId']" 
+        name="managedName">getId</attr>
+    <attr 
+        path="/api/package[@name='com.glympse.enroute.android.api']/interface[@name='GTask']/method[@name='getOperation']" 
+        name="managedName">getOperation</attr>
+    <attr 
+        path="/api/package[@name='com.glympse.enroute.android.api']/interface[@name='GTask']/method[@name='getDescription']" 
+        name="managedName">getDescription</attr>
+    <attr 
+        path="/api/package[@name='com.glympse.enroute.android.api']/interface[@name='GTask']/method[@name='getDueTime']" 
+        name="managedName">getDueTime</attr>
+
+    <!-- GOperation -->
+    <attr 
+        path="/api/package[@name='com.glympse.enroute.android.api']/interface[@name='GOperation']" 
+        name="managedName">GOperation</attr>
+    <attr 
+        path="/api/package[@name='com.glympse.enroute.android.api']/interface[@name='GOperation']/method[@name='getState']" 
+        name="managedName">getState</attr>
+    <attr 
+        path="/api/package[@name='com.glympse.enroute.android.api']/interface[@name='GOperation']/method[@name='getId']" 
+        name="managedName">getId</attr>
+    <attr 
+        path="/api/package[@name='com.glympse.enroute.android.api']/interface[@name='GOperation']/method[@name='getStartTime']" 
+        name="managedName">getStartTime</attr>
+    <attr 
+        path="/api/package[@name='com.glympse.enroute.android.api']/interface[@name='GOperation']/method[@name='getTicketId']" 
+        name="managedName">getTicketId</attr>
+    <attr 
+        path="/api/package[@name='com.glympse.enroute.android.api']/interface[@name='GOperation']/method[@name='getInviteUrl']" 
+        name="managedName">getInviteUrl</attr>
+    <attr 
+        path="/api/package[@name='com.glympse.enroute.android.api']/interface[@name='GOperation']/method[@name='getInviteCode']" 
+        name="managedName">getInviteCode</attr>
+    <attr 
+        path="/api/package[@name='com.glympse.enroute.android.api']/interface[@name='GOperation']/method[@name='getTaskId']" 
+        name="managedName">getTaskId</attr>
+    <attr 
+        path="/api/package[@name='com.glympse.enroute.android.api']/interface[@name='GOperation']/method[@name='setTicketEta']" 
+        name="managedName">setTicketEta</attr>
+    <attr 
+        path="/api/package[@name='com.glympse.enroute.android.api']/interface[@name='GOperation']/method[@name='getTicketPhase']" 
+        name="managedName">getTicketPhase</attr>
+    <attr 
+        path="/api/package[@name='com.glympse.enroute.android.api']/interface[@name='GOperation']/method[@name='getPhase']" 
+        name="managedName">getPhase</attr>
+
+    <!-- GTaskManager -->
+    <attr 
+        path="/api/package[@name='com.glympse.enroute.android.api']/interface[@name='GTaskManager']" 
+        name="managedName">GTaskManager</attr>
+    <attr 
+        path="/api/package[@name='com.glympse.enroute.android.api']/interface[@name='GTaskManager']/method[@name='getTasks']" 
+        name="managedName">getTasks</attr>
+    <attr 
+        path="/api/package[@name='com.glympse.enroute.android.api']/interface[@name='GTaskManager']/method[@name='getPendingTasks']" 
+        name="managedName">getPendingTasks</attr>
+    <attr 
+        path="/api/package[@name='com.glympse.enroute.android.api']/interface[@name='GTaskManager']/method[@name='getActiveOperations']" 
+        name="managedName">getActiveOperations</attr>
+    <attr 
+        path="/api/package[@name='com.glympse.enroute.android.api']/interface[@name='GTaskManager']/method[@name='findTaskById']" 
+        name="managedName">findTaskById</attr>
+    <attr 
+        path="/api/package[@name='com.glympse.enroute.android.api']/interface[@name='GTaskManager']/method[@name='startTask']" 
+        name="managedName">startTask</attr>
+    <attr 
+        path="/api/package[@name='com.glympse.enroute.android.api']/interface[@name='GTaskManager']/method[@name='setOperationPhase']" 
+        name="managedName">setOperationPhase</attr>
+    <attr 
+        path="/api/package[@name='com.glympse.enroute.android.api']/interface[@name='GTaskManager']/method[@name='completeOperation']" 
+        name="managedName">completeOperation</attr>
+
+    <!-- GEnRouteManager -->
+    <attr
+        path="/api/package[@name='com.glympse.enroute.android.api']/interface[@name='GEnRouteManager']" 
+        name="managedName">GEnRouteManager</attr>
+    <attr 
+        path="/api/package[@name='com.glympse.enroute.android.api']/interface[@name='GEnRouteManager']/method[@name='isLoginNeeded']" 
+        name="managedName">isLoginNeeded</attr>
+    <attr 
+        path="/api/package[@name='com.glympse.enroute.android.api']/interface[@name='GEnRouteManager']/method[@name='login']" 
+        name="managedName">login</attr>
+    <attr 
+        path="/api/package[@name='com.glympse.enroute.android.api']/interface[@name='GEnRouteManager']/method[@name='logout']" 
+        name="managedName">logout</attr>
+    <attr 
+        path="/api/package[@name='com.glympse.enroute.android.api']/interface[@name='GEnRouteManager']/method[@name='start']" 
+        name="managedName">start</attr>
+    <attr 
+        path="/api/package[@name='com.glympse.enroute.android.api']/interface[@name='GEnRouteManager']/method[@name='stop']" 
+        name="managedName">stop</attr>
+    <attr 
+        path="/api/package[@name='com.glympse.enroute.android.api']/interface[@name='GEnRouteManager']/method[@name='isStarted']" 
+        name="managedName">isStarted</attr>
+    <attr 
+        path="/api/package[@name='com.glympse.enroute.android.api']/interface[@name='GEnRouteManager']/method[@name='setActive']" 
+        name="managedName">setActive</attr>
+    <attr 
+        path="/api/package[@name='com.glympse.enroute.android.api']/interface[@name='GEnRouteManager']/method[@name='isActive']" 
+        name="managedName">isActive</attr>
+    <attr 
+        path="/api/package[@name='com.glympse.enroute.android.api']/interface[@name='GEnRouteManager']/method[@name='refresh']" 
+        name="managedName">refresh</attr>
+    <attr 
+        path="/api/package[@name='com.glympse.enroute.android.api']/interface[@name='GEnRouteManager']/method[@name='getOrganization']" 
+        name="managedName">getOrganization</attr>
+    <attr 
+        path="/api/package[@name='com.glympse.enroute.android.api']/interface[@name='GEnRouteManager']/method[@name='getLoggedInAgent']" 
+        name="managedName">getLoggedInAgent</attr>
+    <attr 
+        path="/api/package[@name='com.glympse.enroute.android.api']/interface[@name='GEnRouteManager']/method[@name='getEnRouteToken']" 
+        name="managedName">getEnRouteToken</attr>
+    <attr 
+        path="/api/package[@name='com.glympse.enroute.android.api']/interface[@name='GEnRouteManager']/method[@name='getTaskManager']" 
+        name="managedName">getTaskManager</attr>
+
+    <!-- GEnRouteFactory -->
+    <attr 
+        path="/api/package[@name='com.glympse.enroute.android.api']/class[@name='EnRouteFactory']/method[@name='createEnRouteManager']" 
+        name="managedName">createEnRouteManager</attr>
+
+    <!-- Exclude unnecessary packages -->
+    <remove-node path="/api/package[starts-with(@name, 'com.glympse.enroute.android.lib')]" />
+</metadata>
