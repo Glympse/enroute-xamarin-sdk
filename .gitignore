@@ -1,0 +1,16 @@
+# ios
+*.a
+
+# android
+.idea
+*.jar
+*.zip
+
+# xamarin
+*.userprefs
+bin
+obj
+packages
+
+# tools
+tmp_*
