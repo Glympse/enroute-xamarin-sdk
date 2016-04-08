@@ -190,6 +190,20 @@
         path="/api/package[@name='com.glympse.enroute.android.api']/interface[@name='GSession']/method[@name='getCompletionReason']" 
         name="managedName">getCompletionReason</attr>
 
+    <!-- GSessionManager -->
+    <attr 
+        path="/api/package[@name='com.glympse.enroute.android.api']/interface[@name='GSessionManager']" 
+        name="managedName">GSessionManager</attr>
+    <attr 
+        path="/api/package[@name='com.glympse.enroute.android.api']/interface[@name='GSessionManager']/method[@name='getSessions']" 
+        name="managedName">getSessions</attr>
+    <attr 
+        path="/api/package[@name='com.glympse.enroute.android.api']/interface[@name='GSessionManager']/method[@name='getCurrentSession']" 
+        name="managedName">getCurrentSession</attr>
+    <attr 
+        path="/api/package[@name='com.glympse.enroute.android.api']/interface[@name='GSessionManager']/method[@name='findSessionById']" 
+        name="managedName">findSessionById</attr>
+
     <!-- GTaskManager -->
     <attr 
         path="/api/package[@name='com.glympse.enroute.android.api']/interface[@name='GTaskManager']" 

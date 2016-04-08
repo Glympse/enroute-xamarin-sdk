@@ -36,6 +36,14 @@ namespace Glympse.EnRoute.Android
             {
                 return new Operation((com.glympse.enroute.android.api.GOperation)raw);
             }
+			else if ( raw is com.glympse.enroute.android.api.GSessionManager )
+			{
+				return new SessionManager((com.glympse.enroute.android.api.GSessionManager)raw);
+			}
+			else if ( raw is com.glympse.enroute.android.api.GSession )
+			{
+				return new Session((com.glympse.enroute.android.api.GSession)raw);
+			}
             else if ( raw is Java.Lang.Object )
             {
                 Java.Lang.Object obj = (Java.Lang.Object)raw;

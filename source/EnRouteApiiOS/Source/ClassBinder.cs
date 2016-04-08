@@ -8,18 +8,22 @@ namespace Glympse.EnRoute.iOS
     {
         public static object bind(object raw)
         {
-            if ( null == raw ) 
-            {
-                return null;
-            }            
-            else if ( raw is GlyEnRouteManager )
-            {
-                return new EnRouteManager((GlyEnRouteManager)raw);
-            }
-            else if ( raw is GlyTaskManager )
-            {
-                return new TaskManager((GlyTaskManager)raw);
-            }
+			if (null == raw) 
+			{
+				return null;
+			} 
+			else if (raw is GlyEnRouteManager) 
+			{
+				return new EnRouteManager ((GlyEnRouteManager)raw);
+			} 
+			else if (raw is GlyTaskManager) 
+			{
+				return new TaskManager ((GlyTaskManager)raw);
+			} 
+			else if (raw is GlySessionManager) 
+			{
+				return new SessionManager ((GlySessionManager)raw);
+			}
             else if ( raw is GlyOrganization )
             {
                 return new Organization((GlyOrganization)raw);
@@ -36,6 +40,10 @@ namespace Glympse.EnRoute.iOS
             {
                 return new Operation((GlyOperation)raw);
             }
+			else if ( raw is GlySession )
+			{
+				return new Session((GlySession)raw);
+			}
             else
             {
                 throw new Exception("Unsupported type: " + raw.GetType().ToString());

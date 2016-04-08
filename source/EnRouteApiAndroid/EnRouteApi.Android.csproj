@@ -52,6 +52,7 @@
     <Compile Include="Source\Operation.cs" />
     <Compile Include="Source\Organization.cs" />
     <Compile Include="Source\Session.cs" />
+    <Compile Include="Source\SessionManager.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Additions\AboutAdditions.txt" />

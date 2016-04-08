@@ -180,6 +180,26 @@ namespace Glympse.EnRoute.iOS
 		int getCompletionReason();
 	}
 
+	[BaseType (typeof(GlySource))]
+	[DisableDefaultCtor]
+	interface GlySessionManager
+	{     
+		[Export ("getSessions")]
+		GlyArray getSessions();
+
+		[Export ("getCurrentSession")]
+		GlySession getCurrentSession();
+
+		[Export ("findSessionById:")]
+		GlyArray findSessionById(long sessionId);
+
+		[Export ("addListener:")]
+		bool addListener(GlyListener listener);
+
+		[Export ("removeListener:")]
+		bool removeListener(GlyListener listener);
+	}
+
     [BaseType (typeof(GlySource))]
     [DisableDefaultCtor]
     interface GlyTaskManager
@@ -203,7 +223,7 @@ namespace Glympse.EnRoute.iOS
         bool setOperationPhase(GlyOperation operation, string phase);
 
         [Export ("completeOperation:")]
-        bool completeOperation(GlyOperation operation);        
+        bool completeOperation(GlyOperation operation);
 
         [Export ("addListener:")]
         bool addListener(GlyListener listener);
