@@ -2,8 +2,8 @@
 
 ## Overview
 
-Glympse EnRoute SDK for Xamarin is s library designed to wrap native EnRoute SDKs
-and expose cross-platform interface available for use in Xamarin Forms application.
+Glympse EnRoute SDK for Xamarin is a library designed to wrap native EnRoute SDKs
+and expose cross-platform interfaces available for use in Xamarin Forms application.
 
 ## Architecture
 
@@ -26,7 +26,7 @@ public interface of Glympse EnRoute SDK.
 
 ### Glympse Android Bindings
 
-Defines Jave->C# mappings and provides implementation of interfaces defined in Glympse EnRoute Api.
+Defines Java->C# mappings and provides implementation of interfaces defined in Glympse EnRoute Api.
 
 ```
 ./source/EnRouteApiAndroid
