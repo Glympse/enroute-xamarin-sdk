@@ -10,15 +10,9 @@ namespace EnRouteDemo
 {
     public class App : Application
     {
-        private GEnRouteFactory _enRouteFactory;
-
-        private GEnRouteManager _enRouteManager;
-
         public App (GEnRouteFactory enRouteFactory)
         {
-            _enRouteFactory = enRouteFactory;
-
-            _enRouteManager = _enRouteFactory.createEnRouteManager();
+			EnRouteManagerWrapper.Instance.create(enRouteFactory);
 
             // The root page of your application
             MainPage = new ContentPage {
