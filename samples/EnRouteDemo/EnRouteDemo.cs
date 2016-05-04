@@ -12,8 +12,8 @@ namespace EnRouteDemo
     {
         public App (GEnRouteFactory enRouteFactory)
         {
-			EnRouteManagerWrapper.Instance.create(enRouteFactory);
-
+            EnRouteManagerWrapper.Instance.create(enRouteFactory);
+            
             // The root page of your application
             MainPage = new ContentPage {
                 Content = new StackLayout {
