@@ -27,11 +27,11 @@ namespace EnRouteDemo
         {     
             if ( EnRouteEvents.LISTENER_ENROUTE_MANAGER == listener ) 
             {
-                if ( 0 != EnRouteEvents.ENROUTE_MANAGER_LOGIN_COMPLETED )
+                if ( 0 != (EnRouteEvents.ENROUTE_MANAGER_LOGIN_COMPLETED & events) )
                 {
                     // Logged in!
                 }
-                if ( 0 != EnRouteEvents.ENROUTE_MANAGER_LOGGED_OUT )
+                if ( 0 != (EnRouteEvents.ENROUTE_MANAGER_LOGGED_OUT & events) )
                 {
                     // Logged out!
                 }
