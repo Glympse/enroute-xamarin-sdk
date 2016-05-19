@@ -24,6 +24,23 @@
         path="/api/package[@name='com.glympse.android.core']/interface[@name='GArray']/method[@name='length']" 
         name="managedName">length</attr>
 
+    <!-- GVector -->
+    <attr 
+        path="/api/package[@name='com.glympse.android.hal']/class[@name='GVector']" 
+        name="managedName">GVector</attr>
+    <attr 
+        path="/api/package[@name='com.glympse.android.hal']/class[@name='GVector']/method[@name='at']"
+        name="managedName">at</attr>
+    <attr 
+        path="/api/package[@name='com.glympse.android.hal']/class[@name='GVector']/method[@name='length']" 
+        name="managedName">length</attr>
+    <attr 
+        path="/api/package[@name='com.glympse.android.hal']/class[@name='GVector']/method[@name='clone']" 
+        name="managedName">clone</attr>
+    <add-node path="/api/package[@name='com.glympse.android.hal']/class[@name='GVector']">
+        <method name="clone" return="com.glympse.android.core.GArray" abstract="false" native="false" synchronized="false" static="false" final="false" deprecated="not deprecated" visibility="public"/>
+    </add-node>
+
     <!-- Toolbox -->
     <attr 
         path="/api/package[@name='com.glympse.android.toolbox.listener']/interface[@name='GListener']" 
@@ -59,7 +76,6 @@
 
     <!-- Exclude unnecessary HAL components -->
     <remove-node path="/api/package[@name='com.glympse.android.hal']/class[@name='GLinkedList']" />
-    <remove-node path="/api/package[@name='com.glympse.android.hal']/class[@name='GVector']" />
     <remove-node path="/api/package[@name='com.glympse.android.hal']/class[@name='ErrorReporterBase']" />
     <remove-node path="/api/package[@name='com.glympse.android.hal']/class[@name='NameValue']" />
     <remove-node path="/api/package[@name='com.glympse.android.hal']/class[@name='NameValue.NameValueComparator']" />
