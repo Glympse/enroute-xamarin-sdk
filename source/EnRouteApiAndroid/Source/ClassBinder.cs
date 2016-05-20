@@ -63,6 +63,10 @@ namespace Glympse.EnRoute.Android
                 {
                     return new Operation(Extensions.JavaCast<com.glympse.enroute.android.api.GOperation>(obj));
                 }
+                else if ( "com.glympse.android.lib.Primitive" == obj.Class.Name )
+                {
+                    return new Primitive(Extensions.JavaCast<com.glympse.android.core.GPrimitive>(obj));
+                }
                 else
                 {
                     throw new Exception("Unsupported type: " + obj.Class.Name);

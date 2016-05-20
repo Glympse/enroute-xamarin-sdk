@@ -36,6 +36,71 @@ namespace Glympse.EnRoute.iOS
         GlyCommon objectAtIndex(int index);
     }
 
+    [BaseType (typeof(GlyCommon))]
+    [DisableDefaultCtor]
+    interface GlyPrimitive
+    {        
+        [Export ("type")]
+        int type();   
+
+        [Export ("isArray")]
+        bool isArray();
+
+        [Export ("isObject")]
+        bool isObject();
+
+        [Export ("isDouble")]
+        bool isDouble();
+
+        [Export ("isLong")]
+        bool isLong();
+
+        [Export ("isBool")]
+        bool isBool();
+
+        [Export ("isString")]
+        bool isString();
+
+        [Export ("isNull")]
+        bool isNull();
+
+        [Export ("size")]
+        int size();
+
+        [Export ("clone")]
+        GlyCommon clone();
+
+        [Export ("getDouble")]
+        double getDouble();
+
+        [Export ("getLong")]
+        long getLong();
+
+        [Export ("getBool")]
+        bool getBool();
+
+        [Export ("getString")]
+        string getString();
+
+        [Export ("get:")]
+        GlyCommon get(string key);
+
+        [Export ("getDoubleWithNSString:")]
+        double getDouble(string key);
+
+        [Export ("getLongWithNSString:")]
+        long getLong(string key);
+
+        [Export ("getBoolWithNSString:")]
+        bool getBool(string key);
+
+        [Export ("getStringWithNSString:")]
+        string getString(string key);
+
+        [Export ("hasKey:")]
+        bool hasKey(string key);     
+    }
+
     [BaseType (typeof(NSObject))]
     [Model]
     interface GlyListener

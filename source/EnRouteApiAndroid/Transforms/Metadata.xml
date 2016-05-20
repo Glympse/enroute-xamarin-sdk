@@ -24,6 +24,59 @@
         path="/api/package[@name='com.glympse.android.core']/interface[@name='GArray']/method[@name='length']" 
         name="managedName">length</attr>
 
+    <!---GPrimitive -->
+    <attr
+        path="/api/package[@name='com.glympse.android.core']/interface[@name='GPrimitive']" 
+        name="managedName">GPrimitive</attr>
+    <attr 
+        path="/api/package[@name='com.glympse.android.core']/interface[@name='GPrimitive']/method[@name='type']" 
+        name="managedName">type</attr>
+    <attr 
+        path="/api/package[@name='com.glympse.android.core']/interface[@name='GPrimitive']/method[@name='isArray']" 
+        name="managedName">isArray</attr>
+    <attr 
+        path="/api/package[@name='com.glympse.android.core']/interface[@name='GPrimitive']/method[@name='isObject']" 
+        name="managedName">isObject</attr>
+    <attr 
+        path="/api/package[@name='com.glympse.android.core']/interface[@name='GPrimitive']/method[@name='isDouble']" 
+        name="managedName">isDouble</attr>
+    <attr 
+        path="/api/package[@name='com.glympse.android.core']/interface[@name='GPrimitive']/method[@name='isLong']" 
+        name="managedName">isLong</attr>
+    <attr 
+        path="/api/package[@name='com.glympse.android.core']/interface[@name='GPrimitive']/method[@name='isBool']" 
+        name="managedName">isBool</attr>
+    <attr 
+        path="/api/package[@name='com.glympse.android.core']/interface[@name='GPrimitive']/method[@name='isString']" 
+        name="managedName">isString</attr>
+    <attr 
+        path="/api/package[@name='com.glympse.android.core']/interface[@name='GPrimitive']/method[@name='isNull']" 
+        name="managedName">isNull</attr>
+    <attr 
+        path="/api/package[@name='com.glympse.android.core']/interface[@name='GPrimitive']/method[@name='size']" 
+        name="managedName">size</attr>
+    <attr 
+        path="/api/package[@name='com.glympse.android.core']/interface[@name='GPrimitive']/method[@name='clone']" 
+        name="managedName">clone</attr>
+    <attr 
+        path="/api/package[@name='com.glympse.android.core']/interface[@name='GPrimitive']/method[@name='getDouble']" 
+        name="managedName">getDouble</attr>
+    <attr 
+        path="/api/package[@name='com.glympse.android.core']/interface[@name='GPrimitive']/method[@name='getLong']" 
+        name="managedName">getLong</attr>
+    <attr 
+        path="/api/package[@name='com.glympse.android.core']/interface[@name='GPrimitive']/method[@name='getBool']" 
+        name="managedName">getBool</attr>
+    <attr 
+        path="/api/package[@name='com.glympse.android.core']/interface[@name='GPrimitive']/method[@name='getString']" 
+        name="managedName">getString</attr>
+    <attr 
+        path="/api/package[@name='com.glympse.android.core']/interface[@name='GPrimitive']/method[@name='get']" 
+        name="managedName">get</attr>
+    <attr 
+        path="/api/package[@name='com.glympse.android.core']/interface[@name='GPrimitive']/method[@name='hasKey']" 
+        name="managedName">hasKey</attr>
+
     <!-- GVector -->
     <attr 
         path="/api/package[@name='com.glympse.android.hal']/class[@name='GVector']" 
