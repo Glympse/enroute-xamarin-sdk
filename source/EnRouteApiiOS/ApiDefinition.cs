@@ -98,7 +98,94 @@ namespace Glympse.EnRoute.iOS
         string getString(string key);
 
         [Export ("hasKey:")]
-        bool hasKey(string key);     
+        bool hasKey(string key);    
+
+        [Export ("getArray:")]
+        GlyCommon getArray();
+
+        [Export ("get:")]
+        GlyCommon get(int index);
+
+        [Export ("getDouble")]
+        double getDouble(int index);
+
+        [Export ("getLong")]
+        long getLong(int index);
+
+        [Export ("getBool")]
+        bool getBool(int index);
+
+        [Export ("getString")]
+        string getString(int index);
+
+        [Export ("set")]
+        void set(double value);
+
+        [Export ("set")]
+        void set(long value);
+
+        [Export ("set")]
+        void set(bool value);
+
+        [Export ("set")]
+        void set(string value);
+
+        [Export ("setNull")]
+        void setNull();
+
+        [Export ("setArray")]
+        void setArray();
+
+        [Export ("setObject")]
+        void setObject();
+
+        [Export ("put")]
+        void put(string key, double value);
+
+        [Export ("put")]
+        void put(string key, long value);
+
+        [Export ("put")]
+        void put(string key, bool value);
+
+        [Export ("put")]
+        void put(string key, string value);
+
+        [Export ("putNull")]
+        void putNull(string key);
+
+        [Export ("remove")]
+        void remove(string key);
+
+        [Export ("put")]
+        void put(double value);
+
+        [Export ("put")]
+        void put(long value);
+
+        [Export ("put")]
+        void put(bool value);
+
+        [Export ("put")]
+        void put(string value);
+
+        [Export ("put")]
+        void put(int index, double value);
+
+        [Export ("put")]
+        void put(int index, long value);
+
+        [Export ("put")]
+        void put(int index, bool value);
+
+        [Export ("put")]
+        void put(int index, string value);
+
+        [Export ("putNull")]
+        void putNull(int index);
+
+        [Export ("remove")]
+        void remove(int index);
     }
 
     [BaseType (typeof(NSObject))]

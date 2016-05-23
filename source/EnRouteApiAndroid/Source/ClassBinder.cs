@@ -63,6 +63,14 @@ namespace Glympse.EnRoute.Android
                 {
                     return new Operation(Extensions.JavaCast<com.glympse.enroute.android.api.GOperation>(obj));
                 }
+                else if ("java.lang.String" == obj.Class.Name)
+                {
+                    return Extensions.JavaCast<Java.Lang.String>(obj).ToString();
+                }
+                else if ("java.lang.Long" == obj.Class.Name)
+                {
+                    return Extensions.JavaCast<Java.Lang.Long>(obj).LongValue();
+                }
                 else if ( "com.glympse.android.lib.Primitive" == obj.Class.Name )
                 {
                     return new Primitive(Extensions.JavaCast<com.glympse.android.core.GPrimitive>(obj));

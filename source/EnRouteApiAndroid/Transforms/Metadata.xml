@@ -76,6 +76,48 @@
     <attr 
         path="/api/package[@name='com.glympse.android.core']/interface[@name='GPrimitive']/method[@name='hasKey']" 
         name="managedName">hasKey</attr>
+    <attr 
+        path="/api/package[@name='com.glympse.android.core']/interface[@name='GPrimitive']/method[@name='getArray']" 
+        name="managedName">getArray</attr>
+    <attr 
+        path="/api/package[@name='com.glympse.android.core']/interface[@name='GPrimitive']/method[@name='get']" 
+        name="managedName">get</attr>
+    <attr 
+        path="/api/package[@name='com.glympse.android.core']/interface[@name='GPrimitive']/method[@name='getDouble']" 
+        name="managedName">getDouble</attr>
+    <attr 
+        path="/api/package[@name='com.glympse.android.core']/interface[@name='GPrimitive']/method[@name='getLong']" 
+        name="managedName">getLong</attr>
+    <attr 
+        path="/api/package[@name='com.glympse.android.core']/interface[@name='GPrimitive']/method[@name='getBool']" 
+        name="managedName">getBool</attr>
+    <attr 
+        path="/api/package[@name='com.glympse.android.core']/interface[@name='GPrimitive']/method[@name='getString']" 
+        name="managedName">getString</attr>
+    <attr 
+        path="/api/package[@name='com.glympse.android.core']/interface[@name='GPrimitive']/method[@name='set']" 
+        name="managedName">set</attr>
+    <attr 
+        path="/api/package[@name='com.glympse.android.core']/interface[@name='GPrimitive']/method[@name='setNull']" 
+        name="managedName">setNull</attr>
+    <attr 
+        path="/api/package[@name='com.glympse.android.core']/interface[@name='GPrimitive']/method[@name='setArray']" 
+        name="managedName">setArray</attr>
+    <attr 
+        path="/api/package[@name='com.glympse.android.core']/interface[@name='GPrimitive']/method[@name='setObject']" 
+        name="managedName">setObject</attr>
+    <attr 
+        path="/api/package[@name='com.glympse.android.core']/interface[@name='GPrimitive']/method[@name='put']" 
+        name="managedName">put</attr>
+    <attr 
+        path="/api/package[@name='com.glympse.android.core']/interface[@name='GPrimitive']/method[@name='putNull']" 
+        name="managedName">putNull</attr>
+    <attr 
+        path="/api/package[@name='com.glympse.android.core']/interface[@name='GPrimitive']/method[@name='remove']" 
+        name="managedName">remove</attr>
+    <attr 
+        path="/api/package[@name='com.glympse.android.core']/interface[@name='GPrimitive']/method[@name='insert']" 
+        name="managedName">insert</attr>
 
     <!-- GVector -->
     <attr 
