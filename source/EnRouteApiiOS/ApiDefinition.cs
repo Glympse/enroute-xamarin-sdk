@@ -70,6 +70,9 @@ namespace Glympse.EnRoute.iOS
         [Export ("clone")]
         GlyCommon clone();
 
+        [Export ("merge:overrideTarget:")]
+        bool merge(GlyPrimitive from, bool overrideTarget);
+
         [Export ("getDouble")]
         double getDouble();
 
@@ -82,7 +85,7 @@ namespace Glympse.EnRoute.iOS
         [Export ("getString")]
         string getString();
 
-        [Export ("get:")]
+        [Export ("getWithNSString:")]
         GlyCommon get(string key);
 
         [Export ("getDoubleWithNSString:")]
@@ -100,34 +103,34 @@ namespace Glympse.EnRoute.iOS
         [Export ("hasKey:")]
         bool hasKey(string key);    
 
-        [Export ("getArray:")]
+        [Export ("getArray")]
         GlyCommon getArray();
 
-        [Export ("get:")]
+        [Export ("getWithInt:")]
         GlyCommon get(int index);
 
-        [Export ("getDouble")]
+        [Export ("getDoubleWithInt:")]
         double getDouble(int index);
 
-        [Export ("getLong")]
+        [Export ("getLongWithInt:")]
         long getLong(int index);
 
-        [Export ("getBool")]
+        [Export ("getBoolWithInt:")]
         bool getBool(int index);
 
-        [Export ("getString")]
+        [Export ("getStringWithInt:")]
         string getString(int index);
 
-        [Export ("set")]
+        [Export ("setWithDouble:")]
         void set(double value);
 
-        [Export ("set")]
+        [Export ("setWithLong:")]
         void set(long value);
 
-        [Export ("set")]
+        [Export ("setWithBool:")]
         void set(bool value);
 
-        [Export ("set")]
+        [Export ("setWithNSString:")]
         void set(string value);
 
         [Export ("setNull")]
@@ -139,53 +142,68 @@ namespace Glympse.EnRoute.iOS
         [Export ("setObject")]
         void setObject();
 
-        [Export ("put")]
+        [Export ("putWithNSString:withGlyPrimitive:")]
+        void put(string key, GlyPrimitive value);
+
+        [Export ("putWithNSString:withDouble:")]
         void put(string key, double value);
 
-        [Export ("put")]
+        [Export ("putWithNSString:withLongLongInt:")]
         void put(string key, long value);
 
-        [Export ("put")]
+        [Export ("putWithNSString:withBool:")]
         void put(string key, bool value);
 
-        [Export ("put")]
+        [Export ("putWithNSString:withNSString:")]
         void put(string key, string value);
 
-        [Export ("putNull")]
+        [Export ("putNullWithNSString:")]
         void putNull(string key);
 
-        [Export ("remove")]
+        [Export ("removeWithNSString:")]
         void remove(string key);
 
-        [Export ("put")]
+        [Export ("putWithGlyPrimitive:")]
+        void put(GlyPrimitive value);
+
+        [Export ("putWithDouble:")]
         void put(double value);
 
-        [Export ("put")]
+        [Export ("putWithLongLongInt:")]
         void put(long value);
 
-        [Export ("put")]
+        [Export ("putWithBool:")]
         void put(bool value);
 
-        [Export ("put")]
+        [Export ("putWithNSString:")]
         void put(string value);
 
-        [Export ("put")]
+        [Export ("insert:value:")]
+        void insert(int index, GlyPrimitive value);
+
+        [Export ("putWithInt:withGlyPrimitive:")]
+        void putWithInt(int index, GlyPrimitive value);
+
+        [Export ("putWithInt:withDouble:")]
         void put(int index, double value);
 
-        [Export ("put")]
+        [Export ("putWithInt:withLongLongInt:")]
         void put(int index, long value);
 
-        [Export ("put")]
+        [Export ("putWithInt:withBool:")]
         void put(int index, bool value);
 
-        [Export ("put")]
+        [Export ("putWithInt:withNSString:")]
         void put(int index, string value);
 
-        [Export ("putNull")]
+        [Export ("putNullWithInt:")]
         void putNull(int index);
 
-        [Export ("remove")]
+        [Export ("removeWithInt:")]
         void remove(int index);
+
+        [Export ("removeWithGlyPrimitive:")]
+        void remove(GlyPrimitive value);
     }
 
     [BaseType (typeof(NSObject))]

@@ -66,10 +66,10 @@ namespace Glympse.EnRoute.Android
             return new Primitive(_raw.clone());
         }
 
-        /*public bool merge(com.glympse.android.core.GPrimitive from, bool overrideTarget)
+        public bool merge(GPrimitive from, bool overrideTarget)
         {
-            return _raw.merge(from, overrideTarget);
-        }*/
+            return _raw.merge((com.glympse.android.core.GPrimitive) from.raw(), overrideTarget);
+        }
 
         public double getDouble()
         {
@@ -188,10 +188,10 @@ namespace Glympse.EnRoute.Android
             _raw.setObject();
         }
 
-        /*public void put(string key, GPrimitive value)
+        public void put(string key, GPrimitive value)
         {
-            _raw.put(key, value);
-        }*/
+            _raw.put(key, (com.glympse.android.core.GPrimitive) value.raw());
+        }
 
         public void put(string key, double value)
         {
@@ -223,10 +223,10 @@ namespace Glympse.EnRoute.Android
             _raw.remove(key);
         }
 
-        /*public void put(GPrimitive value)
+        public void put(GPrimitive value)
         {
-            _raw.put(value);
-        }*/
+            _raw.put((com.glympse.android.core.GPrimitive) value.raw());
+        }
 
         public void put(double value)
         {
@@ -248,15 +248,15 @@ namespace Glympse.EnRoute.Android
             _raw.put(value);
         }
 
-        /*public void insert(int index, GPrimitive value)
+        public void insert(int index, GPrimitive value)
         {
-            _raw.insert(index, value);
-        }*/
+            _raw.insert(index, (com.glympse.android.core.GPrimitive) value.raw());
+        }
 
-        /*public void put(int index, GPrimitive value)
+        public void put(int index, GPrimitive value)
         {
-            _raw.put(index, value);
-        }*/
+            _raw.put(index, (com.glympse.android.core.GPrimitive) value.raw());
+        }
 
         public void put(int index, double value)
         {
@@ -288,6 +288,9 @@ namespace Glympse.EnRoute.Android
             _raw.remove(index);
         }
 
-        /*void remove(GPrimitive value);*/
+        public void remove(GPrimitive value)
+        {
+            _raw.remove((com.glympse.android.core.GPrimitive) value.raw());
+        }
     }
 }

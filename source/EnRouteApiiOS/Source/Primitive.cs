@@ -66,10 +66,10 @@ namespace Glympse.EnRoute.iOS
             return (GPrimitive) _raw.clone();
         }
 
-        /*public bool merge(com.glympse.android.core.GPrimitive from, bool overrideTarget)
+        public bool merge(GPrimitive from, bool overrideTarget)
         {
-            return _raw.merge(from, overrideTarget);
-        }*/
+            return _raw.merge((GlyPrimitive) from.raw(), overrideTarget);
+        }
 
         public double getDouble()
         {
@@ -188,10 +188,10 @@ namespace Glympse.EnRoute.iOS
             _raw.setObject();
         }
 
-        /*public void put(string key, GPrimitive value)
+        public void put(string key, GPrimitive value)
         {
-            _raw.put(key, value);
-        }*/
+            _raw.put(key, (GlyPrimitive) value.raw());
+        }
 
         public void put(string key, double value)
         {
@@ -223,10 +223,10 @@ namespace Glympse.EnRoute.iOS
             _raw.remove(key);
         }
 
-        /*public void put(GPrimitive value)
+        public void put(GPrimitive value)
         {
-            _raw.put(value);
-        }*/
+            _raw.put((GlyPrimitive) value.raw());
+        }
 
         public void put(double value)
         {
@@ -248,15 +248,15 @@ namespace Glympse.EnRoute.iOS
             _raw.put(value);
         }
 
-        /*public void insert(int index, GPrimitive value)
+        public void insert(int index, GPrimitive value)
         {
-            _raw.insert(index, value);
-        }*/
+            _raw.insert(index, (GlyPrimitive) value.raw());
+        }
 
-        /*public void put(int index, GPrimitive value)
+        public void put(int index, GPrimitive value)
         {
-            _raw.put(index, value);
-        }*/
+            _raw.putWithInt(index, (GlyPrimitive) value.raw());
+        }
 
         public void put(int index, double value)
         {
@@ -288,6 +288,9 @@ namespace Glympse.EnRoute.iOS
             _raw.remove(index);
         }
 
-        /*void remove(GPrimitive value);*/
+        public void remove(GPrimitive value)
+        {
+            _raw.remove((GlyPrimitive) value.raw());
+        }
     }
 }

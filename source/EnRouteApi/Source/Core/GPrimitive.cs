@@ -30,7 +30,7 @@ namespace Glympse
     
         GPrimitive clone();
 
-        /*bool merge(GPrimitive from, bool overrideTarget);*/
+        bool merge(GPrimitive from, bool overrideTarget);
 
         /**
          * Value getters
@@ -100,7 +100,7 @@ namespace Glympse
          * Object modifiers
          */
 
-        /*void put(string key, GPrimitive value);*/
+        void put(string key, GPrimitive value);
 
         void put(string key, double value);
 
@@ -118,7 +118,7 @@ namespace Glympse
          * Array modifiers.
          */
 
-        /*void put(GPrimitive value);*/
+        void put(GPrimitive value);
 
         void put(double value);
 
@@ -128,9 +128,9 @@ namespace Glympse
 
         void put(string value);
 
-        /*void insert(int index, GPrimitive value);*/
+        void insert(int index, GPrimitive value);
 
-        /*void put(int index, GPrimitive value);*/
+        void put(int index, GPrimitive value);
 
         void put(int index, double value);
 
@@ -144,6 +144,6 @@ namespace Glympse
 
         void remove(int index);
 
-        /*void remove(GPrimitive value);*/
+        void remove(GPrimitive value);
     }
 }

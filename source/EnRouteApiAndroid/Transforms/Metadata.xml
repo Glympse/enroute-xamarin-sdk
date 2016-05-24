@@ -59,6 +59,9 @@
         path="/api/package[@name='com.glympse.android.core']/interface[@name='GPrimitive']/method[@name='clone']" 
         name="managedName">clone</attr>
     <attr 
+        path="/api/package[@name='com.glympse.android.core']/interface[@name='GPrimitive']/method[@name='merge']" 
+        name="managedName">merge</attr>
+    <attr 
         path="/api/package[@name='com.glympse.android.core']/interface[@name='GPrimitive']/method[@name='getDouble']" 
         name="managedName">getDouble</attr>
     <attr 
