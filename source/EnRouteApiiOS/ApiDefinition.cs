@@ -36,6 +36,176 @@ namespace Glympse.EnRoute.iOS
         GlyCommon objectAtIndex(int index);
     }
 
+    [BaseType (typeof(GlyCommon))]
+    [DisableDefaultCtor]
+    interface GlyPrimitive
+    {        
+        [Export ("type")]
+        int type();   
+
+        [Export ("isArray")]
+        bool isArray();
+
+        [Export ("isObject")]
+        bool isObject();
+
+        [Export ("isDouble")]
+        bool isDouble();
+
+        [Export ("isLong")]
+        bool isLong();
+
+        [Export ("isBool")]
+        bool isBool();
+
+        [Export ("isString")]
+        bool isString();
+
+        [Export ("isNull")]
+        bool isNull();
+
+        [Export ("size")]
+        int size();
+
+        [Export ("clone")]
+        GlyCommon clone();
+
+        [Export ("merge:overrideTarget:")]
+        bool merge(GlyPrimitive from, bool overrideTarget);
+
+        [Export ("getDouble")]
+        double getDouble();
+
+        [Export ("getLong")]
+        long getLong();
+
+        [Export ("getBool")]
+        bool getBool();
+
+        [Export ("getString")]
+        string getString();
+
+        [Export ("getWithNSString:")]
+        GlyCommon get(string key);
+
+        [Export ("getDoubleWithNSString:")]
+        double getDouble(string key);
+
+        [Export ("getLongWithNSString:")]
+        long getLong(string key);
+
+        [Export ("getBoolWithNSString:")]
+        bool getBool(string key);
+
+        [Export ("getStringWithNSString:")]
+        string getString(string key);
+
+        [Export ("hasKey:")]
+        bool hasKey(string key);    
+
+        [Export ("getArray")]
+        GlyCommon getArray();
+
+        [Export ("getWithInt:")]
+        GlyCommon get(int index);
+
+        [Export ("getDoubleWithInt:")]
+        double getDouble(int index);
+
+        [Export ("getLongWithInt:")]
+        long getLong(int index);
+
+        [Export ("getBoolWithInt:")]
+        bool getBool(int index);
+
+        [Export ("getStringWithInt:")]
+        string getString(int index);
+
+        [Export ("setWithDouble:")]
+        void set(double value);
+
+        [Export ("setWithLong:")]
+        void set(long value);
+
+        [Export ("setWithBool:")]
+        void set(bool value);
+
+        [Export ("setWithNSString:")]
+        void set(string value);
+
+        [Export ("setNull")]
+        void setNull();
+
+        [Export ("setArray")]
+        void setArray();
+
+        [Export ("setObject")]
+        void setObject();
+
+        [Export ("putWithNSString:withGlyPrimitive:")]
+        void put(string key, GlyPrimitive value);
+
+        [Export ("putWithNSString:withDouble:")]
+        void put(string key, double value);
+
+        [Export ("putWithNSString:withLongLongInt:")]
+        void put(string key, long value);
+
+        [Export ("putWithNSString:withBool:")]
+        void put(string key, bool value);
+
+        [Export ("putWithNSString:withNSString:")]
+        void put(string key, string value);
+
+        [Export ("putNullWithNSString:")]
+        void putNull(string key);
+
+        [Export ("removeWithNSString:")]
+        void remove(string key);
+
+        [Export ("putWithGlyPrimitive:")]
+        void put(GlyPrimitive value);
+
+        [Export ("putWithDouble:")]
+        void put(double value);
+
+        [Export ("putWithLongLongInt:")]
+        void put(long value);
+
+        [Export ("putWithBool:")]
+        void put(bool value);
+
+        [Export ("putWithNSString:")]
+        void put(string value);
+
+        [Export ("insert:value:")]
+        void insert(int index, GlyPrimitive value);
+
+        [Export ("putWithInt:withGlyPrimitive:")]
+        void putWithInt(int index, GlyPrimitive value);
+
+        [Export ("putWithInt:withDouble:")]
+        void put(int index, double value);
+
+        [Export ("putWithInt:withLongLongInt:")]
+        void put(int index, long value);
+
+        [Export ("putWithInt:withBool:")]
+        void put(int index, bool value);
+
+        [Export ("putWithInt:withNSString:")]
+        void put(int index, string value);
+
+        [Export ("putNullWithInt:")]
+        void putNull(int index);
+
+        [Export ("removeWithInt:")]
+        void remove(int index);
+
+        [Export ("removeWithGlyPrimitive:")]
+        void remove(GlyPrimitive value);
+    }
+
     [BaseType (typeof(NSObject))]
     [Model]
     interface GlyListener

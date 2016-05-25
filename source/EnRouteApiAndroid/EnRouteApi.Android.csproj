@@ -51,6 +51,7 @@
     <Compile Include="Source\Agent.cs" />
     <Compile Include="Source\Operation.cs" />
     <Compile Include="Source\Organization.cs" />
+    <Compile Include="Source\Primitive.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Additions\AboutAdditions.txt" />

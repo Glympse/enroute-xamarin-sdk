@@ -36,6 +36,10 @@ namespace Glympse.EnRoute.iOS
             {
                 return new Operation((GlyOperation)raw);
             }
+            else if ( raw is GlyPrimitive )
+            {
+                return new Primitive((GlyPrimitive)raw);
+            }
             else
             {
                 throw new Exception("Unsupported type: " + raw.GetType().ToString());
