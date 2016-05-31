@@ -50,7 +50,7 @@ namespace EnRouteDemo.Droid
             EnRouteManagerWrapper.Instance.create(enRouteFactory);
 
             GEnRouteManager enRouteManager = EnRouteManagerWrapper.Instance.Manager;
-            if ( enRouteManager.isLoginNeeded() || !enRouteManager.isStarted() ) 
+            if ( !enRouteManager.isStarted() ) 
             {
                 Auth.onAppStart(enRouteManager);
             }

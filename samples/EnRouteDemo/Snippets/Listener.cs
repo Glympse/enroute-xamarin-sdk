@@ -27,6 +27,11 @@ namespace EnRouteDemo
         {     
             if ( EnRouteEvents.LISTENER_ENROUTE_MANAGER == listener ) 
             {
+                if ( 0 != (EnRouteEvents.ENROUTE_MANAGER_LOGIN_REQUIRED & events) )
+                {
+                    // EnRouteManager lets us know when a login is required due to token expiration.
+                    Auth.onLoginRequired();
+                }
                 if ( 0 != (EnRouteEvents.ENROUTE_MANAGER_LOGIN_COMPLETED & events) )
                 {
                     // Logged in!

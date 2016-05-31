@@ -53,10 +53,11 @@ namespace EnRoute
     public const int ACTIVE_AGENTS_AGENT_REGISTERED = 0x00000002;
         
     public const int ENROUTE_MANAGER_LOGIN_COMPLETED = 0x00000001;
-    public const int ENROUTE_MANAGER_LOGGED_OUT = 0x00000002;
-    public const int ENROUTE_MANAGER_STARTED = 0x00000004;
-    public const int ENROUTE_MANAGER_STOPPED = 0x00000008;
-    public const int ENROUTE_MANAGER_SHOW_NOTIFICATION = 0x00000010;
+    public const int ENROUTE_MANAGER_LOGIN_REQUIRED = 0x00000002;
+    public const int ENROUTE_MANAGER_LOGGED_OUT = 0x00000004;
+    public const int ENROUTE_MANAGER_STARTED = 0x00000008;
+    public const int ENROUTE_MANAGER_STOPPED = 0x00000010;
+    public const int ENROUTE_MANAGER_SHOW_NOTIFICATION = 0x00000020;
         
     public const int TASKS_TASK_LIST_CHANGED = 0x00000001;
     public const int TASKS_TASK_STARTED = 0x00000002;

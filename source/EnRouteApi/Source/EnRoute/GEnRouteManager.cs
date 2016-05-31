@@ -7,8 +7,6 @@ namespace Glympse
     {
         public interface GEnRouteManager : GSource
         {
-            bool isLoginNeeded();
-
             bool login(string username, string password);
 
             bool login(string token, long expiresIn);

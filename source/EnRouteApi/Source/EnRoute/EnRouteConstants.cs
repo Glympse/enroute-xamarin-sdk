@@ -55,6 +55,9 @@ namespace EnRoute
     public const int SESSION_STATE_FAILED_TO_START = 4;
     public const int SESSION_STATE_FINISHED = 5;
     
+    public const int AUTHENTICATION_MODE_USERNAME_PASSWORD = 0;
+    public const int AUTHENTICATION_MODE_TOKEN = 1;
+    
     public static String PHASE_PROPERTY_KEY()
     {
         return CoreFactory.createString("phase");

@@ -297,9 +297,6 @@
         path="/api/package[@name='com.glympse.enroute.android.api']/interface[@name='GEnRouteManager']" 
         name="managedName">GEnRouteManager</attr>
     <attr 
-        path="/api/package[@name='com.glympse.enroute.android.api']/interface[@name='GEnRouteManager']/method[@name='isLoginNeeded']" 
-        name="managedName">isLoginNeeded</attr>
-    <attr 
         path="/api/package[@name='com.glympse.enroute.android.api']/interface[@name='GEnRouteManager']/method[@name='login']" 
         name="managedName">login</attr>
     <attr 
