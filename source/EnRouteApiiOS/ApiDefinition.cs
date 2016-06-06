@@ -348,13 +348,10 @@ namespace Glympse.EnRoute.iOS
     [DisableDefaultCtor]
     interface GlyEnRouteManager
     {
-        [Export ("isLoginNeeded")]
-        bool isLoginNeeded();
-
-        [Export ("login:password:")]
+        [Export ("loginWithNSString:withNSString:")]
         bool login(string username, string password);
 
-        [Export ("login:expiresIn:")]
+        [Export ("loginWithNSString:withLongLongInt:")]
         bool login(string token, long expiresIn);
 
         [Export ("logout:")]

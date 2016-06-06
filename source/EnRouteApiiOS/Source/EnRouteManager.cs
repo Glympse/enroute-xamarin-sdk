@@ -20,11 +20,6 @@ namespace Glympse.EnRoute.iOS
          * GEnRouteManager section
          */
 
-        public bool isLoginNeeded()
-        {
-            return _raw.isLoginNeeded();
-        }
-
         public bool login(string username, string password)
         {
             return _raw.login(username, password);
