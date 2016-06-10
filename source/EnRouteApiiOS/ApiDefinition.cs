@@ -392,6 +392,9 @@ namespace Glympse.EnRoute.iOS
 
         [Export ("removeListener:")]
         bool removeListener(GlyListener listener);
+        
+        [Export ("handleRemoteNotification:")]
+        void handleRemoteNotification(string payload);
     }
         
     [BaseType (typeof(NSObject))]
