@@ -84,6 +84,11 @@ namespace Glympse.EnRoute.iOS
         {
             return (GTaskManager)ClassBinder.bind(_raw.getTaskManager());
         }
+        
+        public void handleRemoteNotification(string payload)
+        {
+            _raw.handleRemoteNotification(payload);
+        }
 
         /**
          * GSource section
