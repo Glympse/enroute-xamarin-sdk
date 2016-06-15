@@ -395,6 +395,9 @@ namespace Glympse.EnRoute.iOS
         
         [Export ("handleRemoteNotification:")]
         void handleRemoteNotification(string payload);
+        
+        [Export ("registerDeviceToken:")]
+        void registerDeviceToken(string tokenType, string deviceToken);
     }
         
     [BaseType (typeof(NSObject))]

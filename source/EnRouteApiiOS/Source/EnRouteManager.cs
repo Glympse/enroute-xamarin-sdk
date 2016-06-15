@@ -89,6 +89,11 @@ namespace Glympse.EnRoute.iOS
         {
             _raw.handleRemoteNotification(payload);
         }
+        
+        public void registerDeviceToken(string tokenType, string deviceToken)
+        {
+            _raw.registerDeviceToken(tokenType, deviceToken);
+        }
 
         /**
          * GSource section
