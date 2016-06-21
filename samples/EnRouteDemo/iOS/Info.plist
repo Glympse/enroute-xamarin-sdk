@@ -43,10 +43,14 @@
 	<key>UIBackgroundModes</key>
 	<array>
 		<string>location</string>
+		<string>fetch</string>
+		<string>remote-notification</string>
 	</array>
 	<key>NSLocationAlwaysUsageDescription</key>
 	<string>Sharing from background</string>
 	<key>NSLocationWhenInUseUsageDescription</key>
 	<string>Sharing from foreground</string>
+	<key>CFBundleName</key>
+	<string>EnRouteDemo</string>
 </dict>
 </plist>
