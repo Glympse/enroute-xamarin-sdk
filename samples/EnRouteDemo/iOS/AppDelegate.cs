@@ -26,7 +26,8 @@ namespace EnRouteDemo.iOS
             if (UIDevice.CurrentDevice.CheckSystemVersion (8, 0)) 
             {
                 var pushSettings = UIUserNotificationSettings.GetSettingsForTypes (
-                                   UIUserNotificationType.Alert | UIUserNotificationType.Badge | UIUserNotificationType.Sound,
+                                   UIUserNotificationType.Alert | UIUserNotificationType.Badge | 
+                                   UIUserNotificationType.Sound,
                                    new NSSet ());
             
                 UIApplication.SharedApplication.RegisterUserNotificationSettings (pushSettings);
@@ -34,7 +35,8 @@ namespace EnRouteDemo.iOS
             } 
             else 
             {
-                UIRemoteNotificationType notificationTypes = UIRemoteNotificationType.Alert | UIRemoteNotificationType.Badge | UIRemoteNotificationType.Sound;
+                UIRemoteNotificationType notificationTypes = UIRemoteNotificationType.Alert | 
+                UIRemoteNotificationType.Badge | UIRemoteNotificationType.Sound;
                 UIApplication.SharedApplication.RegisterForRemoteNotificationTypes (notificationTypes);
             }
 
@@ -77,7 +79,8 @@ namespace EnRouteDemo.iOS
             EnRouteManagerWrapper.Instance.Manager.handleRemoteNotification(userInfo.Description);
         }
         
-        public override void DidReceiveRemoteNotification (UIApplication application, NSDictionary userInfo, Action<UIBackgroundFetchResult> completionHandler)
+        public override void DidReceiveRemoteNotification (UIApplication application, NSDictionary userInfo, 
+            Action<UIBackgroundFetchResult> completionHandler)
         {
             Debug.WriteLine("DidReceiveRemoteNotification:" + userInfo.Description);  
             EnRouteManagerWrapper.Instance.Manager.handleRemoteNotification(userInfo.Description);
@@ -85,4 +88,3 @@ namespace EnRouteDemo.iOS
         }
     }
 }
-
