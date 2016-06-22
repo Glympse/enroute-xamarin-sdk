@@ -338,6 +338,9 @@
     <attr 
         path="/api/package[@name='com.glympse.enroute.android.api']/interface[@name='GEnRouteManager']/method[@name='handleRemoteNotification']" 
         name="managedName">handleRemoteNotification</attr>    
+    <attr 
+        path="/api/package[@name='com.glympse.enroute.android.api']/interface[@name='GEnRouteManager']/method[@name='registerDeviceToken']" 
+        name="managedName">registerDeviceToken</attr> 
 
     <!-- GEnRouteFactory -->
     <attr 

@@ -26,6 +26,8 @@ namespace EnRouteDemo
                     }
                 }
             };
+            
+            Auth.onAppStart(EnRouteManagerWrapper.Instance.Manager);
         }
 
         protected override void OnStart ()
