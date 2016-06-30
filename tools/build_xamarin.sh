@@ -47,9 +47,9 @@ echo "XAMARIN_SDK_VERSION=${XAMARIN_SDK_VERSION}" > tmp_dlls/etc/version.propert
 echo "CLIENT_SDK_VERSION=${CLIENT_SDK_VERSION}" >> tmp_dlls/etc/version.properties
 
 # Sign all of the Dlls
-codesign -s Glympse ${SHARED_LIB_DIRECTORY}/EnRouteApi.dll -v
-codesign -s Glympse ${IOS_LIB_DIRECTORY}/EnRouteApi.iOS.dll -v
-codesign -s Glympse ${ANDROID_LIB_DIRECTORY}/EnRouteApi.Android.dll -v
+codesign -s Glympse_Xamarin ${SHARED_LIB_DIRECTORY}/EnRouteApi.dll -v
+codesign -s Glympse_Xamarin ${IOS_LIB_DIRECTORY}/EnRouteApi.iOS.dll -v
+codesign -s Glympse_Xamarin ${ANDROID_LIB_DIRECTORY}/EnRouteApi.Android.dll -v
 
 # Build the archive
 TARGET_ZIP=EnRoute_Api_Xamarin_$XAMARIN_SDK_VERSION.zip
