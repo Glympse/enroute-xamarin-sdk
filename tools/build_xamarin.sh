@@ -46,6 +46,9 @@ cp ../source/EnRouteApiiOS/bin/Release/EnRouteApi.iOS.dll ${IOS_LIB_DIRECTORY}/E
 echo "XAMARIN_SDK_VERSION=${XAMARIN_SDK_VERSION}" > tmp_dlls/etc/version.properties
 echo "CLIENT_SDK_VERSION=${CLIENT_SDK_VERSION}" >> tmp_dlls/etc/version.properties
 
+# Copy docs
+cp -r ../docs tmp_dlls/docs
+
 # Sign all of the Dlls
 codesign -s Glympse_Xamarin ${SHARED_LIB_DIRECTORY}/EnRouteApi.dll -v
 codesign -s Glympse_Xamarin ${IOS_LIB_DIRECTORY}/EnRouteApi.iOS.dll -v
