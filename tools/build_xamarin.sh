@@ -9,11 +9,10 @@ SHARED_LIB_DIRECTORY=tmp_dlls/lib/EnRouteApi
 ANDROID_LIB_DIRECTORY=tmp_dlls/lib/EnRouteApiAndroid
 IOS_LIB_DIRECTORY=tmp_dlls/lib/EnRouteApiiOS
 ETC_DIRECTORY=tmp_dlls/etc
-DOCS_DIRECTORY=tmp_dlls/docs
 
 # Clean up previous builds
 rm -rf tmp_dlls
-mkdir -p ${SHARED_LIB_DIRECTORY} ${ANDROID_LIB_DIRECTORY} ${IOS_LIB_DIRECTORY} ${ETC_DIRECTORY} ${DOCS_DIRECTORY}
+mkdir -p ${SHARED_LIB_DIRECTORY} ${ANDROID_LIB_DIRECTORY} ${IOS_LIB_DIRECTORY} ${ETC_DIRECTORY}
 rm -rf build
 mkdir build
 
@@ -45,9 +44,6 @@ CONFIG_SOURCE_FILE="../source/EnRouteApi/Source/Core/Config.cs"
 XAMARIN_SDK_VERSION=$(./GetVersionNumber.py $CONFIG_SOURCE_FILE)
 echo "XAMARIN_SDK_VERSION=${XAMARIN_SDK_VERSION}" > tmp_dlls/etc/version.properties
 echo "CLIENT_SDK_VERSION=${CLIENT_SDK_VERSION}" >> tmp_dlls/etc/version.properties
-
-# Copy the changelog
-cp ../../web-dgc/docs/enroute/client-sdk/guides/changelog_xamarin.md tmp_dlls/docs/changelog.md
 
 # Sign all of the Dlls
 codesign -s Glympse_Xamarin ${SHARED_LIB_DIRECTORY}/EnRouteApi.dll -v
