@@ -14,6 +14,3 @@ packages
 
 # tools
 tmp_*
-
-# dropbox
-dropbox_uploader.conf
