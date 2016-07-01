@@ -27,6 +27,7 @@ namespace EnRoute
     public const int LISTENER_ACTIVE_AGENTS = 4;
     public const int LISTENER_ENROUTE_MANAGER = 4;
     public const int LISTENER_TASKS = 5;
+    public const int LISTENER_ETA_PLANNER = 6;
     
     /**
      * Event Constants
@@ -66,6 +67,8 @@ namespace EnRoute
     public const int SESSIONS_COMPLETED_UNKOWN = 0x00000000;
     public const int SESSIONS_COMPLETED_GEOFENCE = 0x00000001;
     public const int SESSIONS_COMPLETED_USER_ACTION = 0x00000002;
+    
+    public const int ETA_PLANNER_ETAS_UPDATED = 0x00000001;
 };
     
 }

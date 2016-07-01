@@ -42,6 +42,9 @@ namespace EnRoute
     
     public const long MINIMUM_MANUAL_ETA = 300000;
     
+    public const int DIAGNOSTICS_COLLECTOR_MAX_CAPACITY = 200;
+    public const int DIAGNOSTICS_COLLECTOR_UPLOAD_DELAY_MS = 5000;
+    
     public const int INDEX_BEFORE = -2;
     public const int INDEX_AFTER = -1;
     

@@ -32,6 +32,10 @@ namespace Glympse
             string getEnRouteToken();
 
             GTaskManager getTaskManager();
+            
+            void handleRemoteNotification(string payload);
+            
+            void registerDeviceToken(string tokenType, string deviceToken);
         }
     }
 }
