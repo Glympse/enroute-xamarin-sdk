@@ -20,9 +20,6 @@ mkdir build
 CLIENT_SDK_ZIP=$(find . -name "EnRoute_Api_Android_*.zip" | cut -d '_' -f 4)
 CLIENT_SDK_VERSION=${CLIENT_SDK_ZIP%.zip}
 
-# Get XAMARIN_SDK_VERSION
-. ../version.properties
-
 # Clean the Andriod build
 /Library/Frameworks/Mono.framework/Commands/xbuild /p:Configuration=Release /t:PackageForAndroid /target:Build ../source/EnRouteApiAndroid/EnRouteApi.Android.csproj /t:Clean
 
@@ -43,6 +40,8 @@ cp ../source/EnRouteApiAndroid/bin/Release/EnRouteApi.dll ${SHARED_LIB_DIRECTORY
 cp ../source/EnRouteApiiOS/bin/Release/EnRouteApi.iOS.dll ${IOS_LIB_DIRECTORY}/EnRouteApi.iOS.dll
 
 # Create a version.properties to package with the zip
+CONFIG_SOURCE_FILE="../source/EnRouteApi/Source/Core/Config.cs"
+XAMARIN_SDK_VERSION=$(./GetVersionNumber.py $CONFIG_SOURCE_FILE)
 echo "XAMARIN_SDK_VERSION=${XAMARIN_SDK_VERSION}" > tmp_dlls/etc/version.properties
 echo "CLIENT_SDK_VERSION=${CLIENT_SDK_VERSION}" >> tmp_dlls/etc/version.properties
 
