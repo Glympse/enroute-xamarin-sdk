@@ -108,18 +108,19 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Source\Agent.cs" />
+    <Compile Include="Source\Array.cs" />
+    <Compile Include="Source\AssemblyManager.cs" />
+    <Compile Include="Source\ClassBinder.cs" />
+    <Compile Include="Source\CommonSource.cs" />
+    <Compile Include="Source\EnRouteFactory.cs" />
+    <Compile Include="Source\EnRouteManager.cs" />
+    <Compile Include="Source\Operation.cs" />
+    <Compile Include="Source\Organization.cs" />
+    <Compile Include="Source\Primitive.cs" />
+    <Compile Include="Source\Task.cs" />
+    <Compile Include="Source\TaskManager.cs" />
     <EmbeddedResource Include="Properties\EnRouteApi.UWP.rd.xml" />
-  </ItemGroup>
-  <ItemGroup>
-    <Reference Include="EnRouteApiDll">
-      <HintPath>lib\EnRouteApi.dll</HintPath>
-    </Reference>
-    <Reference Include="GlympseApiDll">
-      <HintPath>lib\GlympseApi.dll</HintPath>
-    </Reference>
-    <Reference Include="GlympseApiToolboxDll">
-      <HintPath>lib\GlympseApiToolbox.dll</HintPath>
-    </Reference>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\EnRouteApi\EnRouteApi.csproj">
@@ -128,7 +129,21 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Source\" />
+    <Reference Include="EnRoute, Version=1.0.0.0, Culture=neutral, PublicKeyToken=79a20da9d7dac9d3, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>lib\EnRoute.dll</HintPath>
+      <Aliases>EnRouteApiDll</Aliases>
+    </Reference>
+    <Reference Include="GlympseApi, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>lib\GlympseApi.dll</HintPath>
+      <Aliases>GlympseApiDll</Aliases>
+    </Reference>
+    <Reference Include="GlympseApiToolbox, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>lib\GlympseApiToolbox.dll</HintPath>
+      <Aliases>GlympseApiToolboxDll</Aliases>
+    </Reference>
   </ItemGroup>
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
     <VisualStudioVersion>14.0</VisualStudioVersion>

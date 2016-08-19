@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Reflection;
 using System.Runtime.InteropServices.WindowsRuntime;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
@@ -27,7 +28,7 @@ namespace EnRouteDemo.UWP
         {
             this.InitializeComponent();
 
-            GEnRouteFactory enRouteFactory = null; //TODO
+            GEnRouteFactory enRouteFactory = new Glympse.EnRoute.UWP.EnRouteFactory(typeof(App).GetTypeInfo().Assembly);
             LoadApplication(new EnRouteDemo.App(enRouteFactory));
         }
     }
