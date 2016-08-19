@@ -16,6 +16,7 @@ using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
 using Windows.Networking.PushNotifications;
 using System.Threading.Tasks;
+using Windows.ApplicationModel.Background;
 
 namespace EnRouteDemo.UWP
 {
@@ -82,6 +83,10 @@ namespace EnRouteDemo.UWP
                 Window.Current.Activate();
             }
 
+            await BackgroundExecutionManager.RequestAccessAsync();
+
+            RegisterBackgroundTasks();
+
             await InitNotificationsAsync();
         }
 
@@ -107,6 +112,48 @@ namespace EnRouteDemo.UWP
             var deferral = e.SuspendingOperation.GetDeferral();
             //TODO: Save application state and stop any background activity
             deferral.Complete();
+        }
+
+        protected override void OnBackgroundActivated(BackgroundActivatedEventArgs args)
+        {
+            base.OnBackgroundActivated(args);
+            
+            if ( args.TaskInstance.Task.Name == "PushBackgroundTask" )
+            {
+                try
+                {
+                    //TODO we probably need more time to handle this event
+                    RawNotification notification = (RawNotification)args.TaskInstance.TriggerDetails;
+                    EnRouteManagerWrapper.Instance.Manager.handleRemoteNotification(notification.Content);
+                }
+                catch (Exception e)
+                {
+                    
+                }
+            }
+        }
+
+        private void RegisterBackgroundTasks()
+        {
+            // Check to make sure our task isn't already registered
+            var taskRegistered = false;
+            var pushTaskName = "PushBackgroundTask";
+            foreach (var task in BackgroundTaskRegistration.AllTasks)
+            {
+                if (task.Value.Name == pushTaskName)
+                {
+                    taskRegistered = true;
+                    break;
+                }
+            }
+
+            if ( !taskRegistered )
+            {
+                var builder = new BackgroundTaskBuilder();
+                builder.Name = pushTaskName;
+                builder.SetTrigger(new PushNotificationTrigger());
+                BackgroundTaskRegistration task = builder.Register();
+            }
         }
 
         private async Task InitNotificationsAsync()
