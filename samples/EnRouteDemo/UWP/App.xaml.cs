@@ -14,6 +14,8 @@ using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
+using Windows.Networking.PushNotifications;
+using System.Threading.Tasks;
 
 namespace EnRouteDemo.UWP
 {
@@ -37,7 +39,7 @@ namespace EnRouteDemo.UWP
         /// will be used such as when the application is launched to open a specific file.
         /// </summary>
         /// <param name="e">Details about the launch request and process.</param>
-        protected override void OnLaunched(LaunchActivatedEventArgs e)
+        protected async override void OnLaunched(LaunchActivatedEventArgs e)
         {
 #if DEBUG
             if (System.Diagnostics.Debugger.IsAttached)
@@ -79,6 +81,8 @@ namespace EnRouteDemo.UWP
                 // Ensure the current window is active
                 Window.Current.Activate();
             }
+
+            await InitNotificationsAsync();
         }
 
         /// <summary>
@@ -103,6 +107,42 @@ namespace EnRouteDemo.UWP
             var deferral = e.SuspendingOperation.GetDeferral();
             //TODO: Save application state and stop any background activity
             deferral.Complete();
+        }
+
+        private async Task InitNotificationsAsync()
+        {
+            // Create a channel for push notifications
+            PushNotificationChannel channel = await PushNotificationChannelManager.CreatePushNotificationChannelForApplicationAsync();
+
+            // Register our event handler
+            channel.PushNotificationReceived += OnPushNotification;
+        }
+
+        private void OnPushNotification(PushNotificationChannel sender, PushNotificationReceivedEventArgs e)
+        {
+            String content = String.Empty;
+
+            switch (e.NotificationType)
+            {
+                case PushNotificationType.Badge:
+                    content = e.BadgeNotification.Content.GetXml();
+                    break;
+                case PushNotificationType.Tile:
+                    content = e.TileNotification.Content.GetXml();
+                    break;
+                case PushNotificationType.Toast:
+                    content = e.ToastNotification.Content.GetXml();
+                    break;
+                case PushNotificationType.Raw:
+                    content = e.RawNotification.Content;
+                    break;
+            }
+
+            // We'll handle the notification ourselves
+            e.Cancel = true;
+
+            // Forward the content to the Glympse EnRoute platform
+            EnRouteManagerWrapper.Instance.Manager.handleRemoteNotification(content);
         }
     }
 }
