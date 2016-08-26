@@ -23,17 +23,17 @@ namespace Glympse.EnRoute.UWP
 
         public GArray<GTask> getTasks()
         {
-            return null;// return new Array<GTask>(_raw.getTasks());
+            return (GArray <GTask>)ClassBinder.bind(_raw.getTasks());
         }
 
         public GArray<GTask> getPendingTasks()
         {
-            return null; // return new Array<GTask>(_raw.getPendingTasks());
+            return (GArray<GTask>)ClassBinder.bind(_raw.getPendingTasks());
         }
 
         public GArray<GOperation> getActiveOperations()
         {
-            return null; // return new Array<GOperation>(_raw.getActiveOperations());
+            return (GArray<GOperation>)ClassBinder.bind(_raw.getActiveOperations());
         }
 
         public GTask findTaskById(long id)
