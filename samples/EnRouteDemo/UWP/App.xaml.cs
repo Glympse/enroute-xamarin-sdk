@@ -25,6 +25,8 @@ namespace EnRouteDemo.UWP
     /// </summary>
     sealed partial class App : Application
     {
+        private static PushNotificationChannel _channel;
+
         /// <summary>
         /// Initializes the singleton application object.  This is the first line of authored code
         /// executed, and as such is the logical equivalent of main() or WinMain().
@@ -158,11 +160,29 @@ namespace EnRouteDemo.UWP
 
         private async Task InitNotificationsAsync()
         {
-            // Create a channel for push notifications
-            PushNotificationChannel channel = await PushNotificationChannelManager.CreatePushNotificationChannelForApplicationAsync();
+            try
+            {
+                // Create a channel for push notifications
+                _channel = await PushNotificationChannelManager.CreatePushNotificationChannelForApplicationAsync();
 
-            // Register our event handler
-            channel.PushNotificationReceived += OnPushNotification;
+                if ( EnRouteManagerWrapper.Instance.Manager.isStarted() )
+                {
+                    // If Glympse has been started we can register the token right away
+                    RegisterDeviceTokenIfNeeded();
+                }
+                else
+                {
+                    // Otherwise let's listen for when EnRoute has started
+                    EnRouteManagerWrapper.Instance.Manager.addListener(new PlatformStartedListener());
+                }
+
+                // Register our event handler
+                _channel.PushNotificationReceived += OnPushNotification;
+            }
+            catch (Exception e)
+            {
+                // An exception can occur if we try to get a channel with no data connection
+            }
         }
 
         private void OnPushNotification(PushNotificationChannel sender, PushNotificationReceivedEventArgs e)
@@ -190,6 +210,33 @@ namespace EnRouteDemo.UWP
 
             // Forward the content to the Glympse EnRoute platform
             EnRouteManagerWrapper.Instance.Manager.handleRemoteNotification(content);
+        }
+
+        private static void RegisterDeviceTokenIfNeeded()
+        {
+            // Is the URI different from what we already have stored?
+            //TODO
+
+            //if (_channel.Uri != currentToken)
+            {
+                //TODO enable this when the server supports wns
+                //EnRouteManagerWrapper.Instance.Manager.registerDeviceToken("wns", _channel.Uri);
+            }
+        }
+
+        public class PlatformStartedListener : Glympse.Toolbox.GListener
+        {
+            public void eventsOccurred(Glympse.Toolbox.GSource source, int listener, int events, object param1, object param2)
+            {
+                if (Glympse.EnRoute.EnRouteEvents.LISTENER_ENROUTE_MANAGER == listener)
+                {
+                    if (0 == (events & Glympse.EnRoute.EnRouteEvents.ENROUTE_MANAGER_LOGIN_COMPLETED))
+                    {
+                        RegisterDeviceTokenIfNeeded();
+                        EnRouteManagerWrapper.Instance.Manager.removeListener(this);
+                    }
+                }
+            }
         }
     }
 }
