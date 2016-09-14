@@ -17,6 +17,9 @@ using Windows.UI.Xaml.Navigation;
 using Windows.Networking.PushNotifications;
 using System.Threading.Tasks;
 using Windows.ApplicationModel.Background;
+using Windows.UI.Core;
+using Windows.Data.Xml.Dom;
+using Windows.UI.Notifications;
 
 namespace EnRouteDemo.UWP
 {
@@ -51,6 +54,10 @@ namespace EnRouteDemo.UWP
             }
 #endif
             Frame rootFrame = Window.Current.Content as Frame;
+
+            // Listen for the Activated event because we may have to turn on extended execution for location when that occurs
+            Window.Current.CoreWindow.Activated -= CoreWindow_OnActivated;
+            Window.Current.CoreWindow.Activated += CoreWindow_OnActivated;
 
             // Do not repeat app initialization when the Window already has content,
             // just ensure that the window is active
@@ -114,6 +121,16 @@ namespace EnRouteDemo.UWP
             var deferral = e.SuspendingOperation.GetDeferral();
             //TODO: Save application state and stop any background activity
             deferral.Complete();
+        }
+
+        private void CoreWindow_OnActivated(CoreWindow sender, WindowActivatedEventArgs args)
+        {
+            // This seems to be the last chance we get to enable extended execution when going to the background.
+            // Trying this on OnVisibilityChanged, OnEnteredBackground, or OnSuspending is too late.
+            if ((null != args) && (CoreWindowActivationState.Deactivated == args.WindowActivationState))
+            {
+                ExtendedExecutionManager.Instance.BeginExtendedExecutionIfNeeded();
+            }
         }
 
         protected override void OnBackgroundActivated(BackgroundActivatedEventArgs args)
@@ -187,6 +204,18 @@ namespace EnRouteDemo.UWP
 
         private void OnPushNotification(PushNotificationChannel sender, PushNotificationReceivedEventArgs e)
         {
+            // Show a toast when a push is received for easy debugging
+            XmlDocument toastXml = ToastNotificationManager.GetTemplateContent(ToastTemplateType.ToastText01);
+
+            XmlNodeList elements = toastXml.GetElementsByTagName("text");
+            foreach (IXmlNode node in elements)
+            {
+                node.InnerText = "OnPushNotification";
+            }
+
+            ToastNotification toast = new ToastNotification(toastXml);
+            ToastNotificationManager.CreateToastNotifier().Show(toast);
+
             String content = String.Empty;
 
             switch (e.NotificationType)
