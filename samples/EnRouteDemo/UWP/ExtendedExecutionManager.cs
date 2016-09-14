@@ -12,7 +12,7 @@ namespace EnRouteDemo
         {
             get
             {
-                if (null == _instance)
+                if ( null == _instance )
                 {
                     _instance = new ExtendedExecutionManager();
                 }
@@ -24,7 +24,7 @@ namespace EnRouteDemo
         {
             try
             {
-                if (null == _extendedExecutionSession)
+                if ( null == _extendedExecutionSession )
                 {
                     // Start the extended execution session.
                     ExtendedExecutionSession extendedExecutionSession = new ExtendedExecutionSession();
@@ -53,7 +53,7 @@ namespace EnRouteDemo
 
         public void EndExtendedExecution()
         {
-            if (null != _extendedExecutionSession)
+            if ( null != _extendedExecutionSession )
             {
                 _extendedExecutionSession.Revoked -= ExtendedExecutionSession_Revoked;
                 _extendedExecutionSession.Dispose();

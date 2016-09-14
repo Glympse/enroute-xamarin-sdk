@@ -48,7 +48,7 @@ namespace EnRouteDemo.UWP
         protected async override void OnLaunched(LaunchActivatedEventArgs e)
         {
 #if DEBUG
-            if (System.Diagnostics.Debugger.IsAttached)
+            if ( System.Diagnostics.Debugger.IsAttached )
             {
                 this.DebugSettings.EnableFrameRateCounter = true;
             }
@@ -61,7 +61,7 @@ namespace EnRouteDemo.UWP
 
             // Do not repeat app initialization when the Window already has content,
             // just ensure that the window is active
-            if (rootFrame == null)
+            if ( null == rootFrame )
             {
                 // Create a Frame to act as the navigation context and navigate to the first page
                 rootFrame = new Frame();
@@ -70,7 +70,7 @@ namespace EnRouteDemo.UWP
 
                 Xamarin.Forms.Forms.Init(e);
 
-                if (e.PreviousExecutionState == ApplicationExecutionState.Terminated)
+                if ( ApplicationExecutionState.Terminated == e.PreviousExecutionState )
                 {
                     //TODO: Load state from previously suspended application
                 }
@@ -79,9 +79,9 @@ namespace EnRouteDemo.UWP
                 Window.Current.Content = rootFrame;
             }
 
-            if (e.PrelaunchActivated == false)
+            if ( !e.PrelaunchActivated )
             {
-                if (rootFrame.Content == null)
+                if ( null == rootFrame.Content )
                 {
                     // When the navigation stack isn't restored navigate to the first page,
                     // configuring the new page by passing required information as a navigation
@@ -127,7 +127,7 @@ namespace EnRouteDemo.UWP
         {
             // This seems to be the last chance we get to enable extended execution when going to the background.
             // Trying this on OnVisibilityChanged, OnEnteredBackground, or OnSuspending is too late.
-            if ((null != args) && (CoreWindowActivationState.Deactivated == args.WindowActivationState))
+            if ( (null != args) && (CoreWindowActivationState.Deactivated == args.WindowActivationState) )
             {
                 ExtendedExecutionManager.Instance.BeginExtendedExecutionIfNeeded();
             }
@@ -159,7 +159,7 @@ namespace EnRouteDemo.UWP
             var pushTaskName = "PushBackgroundTask";
             foreach (var task in BackgroundTaskRegistration.AllTasks)
             {
-                if (task.Value.Name == pushTaskName)
+                if ( task.Value.Name == pushTaskName )
                 {
                     taskRegistered = true;
                     break;
@@ -185,7 +185,7 @@ namespace EnRouteDemo.UWP
                 if ( EnRouteManagerWrapper.Instance.Manager.isStarted() )
                 {
                     // If Glympse has been started we can register the token right away
-                    RegisterDeviceTokenIfNeeded();
+                    EnRouteManagerWrapper.Instance.Manager.registerDeviceToken("wns", _channel.Uri);
                 }
                 else
                 {
@@ -208,7 +208,7 @@ namespace EnRouteDemo.UWP
             XmlDocument toastXml = ToastNotificationManager.GetTemplateContent(ToastTemplateType.ToastText01);
 
             XmlNodeList elements = toastXml.GetElementsByTagName("text");
-            foreach (IXmlNode node in elements)
+            foreach ( IXmlNode node in elements )
             {
                 node.InnerText = "OnPushNotification";
             }
@@ -241,27 +241,15 @@ namespace EnRouteDemo.UWP
             EnRouteManagerWrapper.Instance.Manager.handleRemoteNotification(content);
         }
 
-        private static void RegisterDeviceTokenIfNeeded()
-        {
-            // Is the URI different from what we already have stored?
-            //TODO
-
-            //if (_channel.Uri != currentToken)
-            {
-                //TODO enable this when the server supports wns
-                //EnRouteManagerWrapper.Instance.Manager.registerDeviceToken("wns", _channel.Uri);
-            }
-        }
-
         public class PlatformStartedListener : Glympse.Toolbox.GListener
         {
             public void eventsOccurred(Glympse.Toolbox.GSource source, int listener, int events, object param1, object param2)
             {
                 if (Glympse.EnRoute.EnRouteEvents.LISTENER_ENROUTE_MANAGER == listener)
                 {
-                    if (0 == (events & Glympse.EnRoute.EnRouteEvents.ENROUTE_MANAGER_LOGIN_COMPLETED))
+                    if ( 0 == (events & Glympse.EnRoute.EnRouteEvents.ENROUTE_MANAGER_LOGIN_COMPLETED) )
                     {
-                        RegisterDeviceTokenIfNeeded();
+                        EnRouteManagerWrapper.Instance.Manager.registerDeviceToken("wns", _channel.Uri);
                         EnRouteManagerWrapper.Instance.Manager.removeListener(this);
                     }
                 }
