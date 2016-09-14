@@ -157,7 +157,7 @@ namespace EnRouteDemo.UWP
             // Check to make sure our task isn't already registered
             var taskRegistered = false;
             var pushTaskName = "PushBackgroundTask";
-            foreach (var task in BackgroundTaskRegistration.AllTasks)
+            foreach ( var task in BackgroundTaskRegistration.AllTasks )
             {
                 if ( task.Value.Name == pushTaskName )
                 {
