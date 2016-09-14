@@ -110,7 +110,6 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Source\Agent.cs" />
     <Compile Include="Source\Array.cs" />
-    <Compile Include="Source\AssemblyManager.cs" />
     <Compile Include="Source\ClassBinder.cs" />
     <Compile Include="Source\CommonSource.cs" />
     <Compile Include="Source\EnRouteFactory.cs" />
