@@ -14,3 +14,8 @@ packages
 
 # tools
 tmp_*
+
+project.lock.json
+*.pfx
+Package.StoreAssociation.xml
+UpgradeLog.htm
