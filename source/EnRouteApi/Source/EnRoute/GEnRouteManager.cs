@@ -11,6 +11,8 @@ namespace Glympse
 
             bool login(string username, string password);
 
+            bool login(string token, long expiresIn);
+
             void logout(int reason);
 
             bool start();

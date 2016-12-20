@@ -354,6 +354,9 @@ namespace Glympse.EnRoute.iOS
         [Export ("login:password:")]
         bool login(string username, string password);
 
+        [Export ("login:expiresIn:")]
+        bool login(string token, long expiresIn);
+
         [Export ("logout:")]
         void logout(int reason);
 

@@ -31,6 +31,11 @@ namespace Glympse.EnRoute.Android
             return _raw.login(username, password);
         }
 
+        public bool login(string token, long expiresIn)
+        {
+            return _raw.login(token, expiresIn);
+        }
+
         public void logout(int reason)
         {
             _raw.logout(reason);
