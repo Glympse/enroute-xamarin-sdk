@@ -1,6 +1,6 @@
 //------------------------------------------------------------------------------
 //
-// Copyright (c) 2015 Glympse Inc.  All rights reserved.
+// Copyright (c) 2017 Glympse Inc.  All rights reserved.
 //
 //------------------------------------------------------------------------------
 
@@ -23,169 +23,46 @@ namespace EnRoute
      */
     
     /**
-     * Agent events.
-     * Use IAgentManager event sink to subscribe on these events.
-     */
-    public const int LISTENER_AGENTS = 1;
-    
-    /**
-     * Session events.
-     * Use ISessionManager event sink to subscribe on these events.
-     */
-    public const int LISTENER_SESSIONS = 2;
-    
-    /**
-     * Stage Manager events.
-     * Use IStageManager event sink to subscribe on these events.
-     */
-    public const int LISTENER_STAGE_MANAGER = 3;
-    
-    /**
-     * Active Agent events.
-     * Use IActiveAgentsManager event sink to subscribe on these events.
-     */
-    public const int LISTENER_ACTIVE_AGENTS = 4;
-    
-    /**
      * EnRoute Manager events.
      * Use IEnRouteManager event sink to subscribe on these events.
      */
-    public const int LISTENER_ENROUTE_MANAGER = 4;
+    public const int LISTENER_ENROUTE_MANAGER = 1;
     
     /**
      * Tasks events.
      * Use ITaskManager event sink to subscribe on these events.
      */
-    public const int LISTENER_TASKS = 5;
+    public const int LISTENER_TASKS = 2;
+    
+    /**
+     * Agent events.
+     * Use IAgentManager event sink to subscribe on these events.
+     */
+    public const int LISTENER_AGENTS = 3;
+    
+    /**
+     * Session events.
+     * Use ISessionManager event sink to subscribe on these events.
+     */
+    public const int LISTENER_SESSIONS = 4;
+    
+    /**
+     * Stage Manager events.
+     * Use IStageManager event sink to subscribe on these events.
+     */
+    public const int LISTENER_STAGE_MANAGER = 5;
+    
+    /**
+     * Active Agent events.
+     * Use IActiveAgentsManager event sink to subscribe on these events.
+     */
+    public const int LISTENER_ACTIVE_AGENTS = 6;
     
     /**
      * ETA Planner events.
      * Use IEtaPlanner event sink to subscribe on these events.
      */
-    public const int LISTENER_ETA_PLANNER = 6;
-    
-    /**
-     * @name Agent Manager events.
-     *
-     * Events broadcasted by LISTENER_AGENTS.
-     */
-    
-    /**
-     * This event is broadcast when anything changes within the agent list managed by
-     * the Agent Manager.
-     */
-    public const int AGENTS_AGENT_LIST_CHANGED = 0x00000001;
-    
-    /**
-     * This event is broadcast when an agent is created.
-     *
-     * The associated agent is passed as a parameter (GAgent)
-     */
-    public const int AGENTS_AGENT_CREATED = 0x00000002;
-    
-    /**
-     * This event is broadcast when an agent fails to create.
-     *
-     * The reason for failusre is passed as a parameter (string).
-     */
-    public const int AGENTS_AGENT_CREATION_FAILED = 0x00000004;
-    
-    /**
-     * This event is broadcast when an agent is updated.
-     *
-     * The associated agent is passed as a parameter (GAgent).
-     */
-    public const int AGENTS_AGENT_UPDATED = 0x00000008;
-    
-    /**
-     * This event is broadcast when an agent fails to update.
-     * 
-     * The reason for failusre is passed as a parameter (string).
-     */
-    public const int AGENTS_AGENT_UPDATE_FAILED = 0x000000010;
-    
-    /**
-     * @name Session Manager events.
-     *
-     * Events broadcasted by LISTENER_SESSIONS.
-     */
-    
-    /**
-     * This event is broadcast when anything changes within the session list managed by
-     * the Session Manager.
-     */
-    public const int SESSIONS_SESSION_LIST_CHANGED = 0x00000001;
-    
-    /**
-     * This event is broadcast when a session is started.
-     *
-     * The associated session is passed as a parameter (GSession).
-     */
-    public const int SESSIONS_SESSION_STARTED = 0x00000002;
-    
-    /**
-     * This event is broadcast when a session fails to start.
-     * 
-     * The associated session is passed as a parameter (GSession).
-     */
-    public const int SESSIONS_SESSION_START_FAILED = 0x00000004;
-    
-    /**
-     * This event is broadcast when a session is completed.
-     *
-     * The associated session is passed as a parameter (GSession).
-     */
-    public const int SESSIONS_SESSION_COMPLETED = 0x00000008;
-    
-    /**
-     * @name Stage Manager events.
-     *
-     * Events broadcasted by LISTENER_STAGE_MANAGER.
-     */
-    
-    /**
-     * This event is broadcast when anything changes within the active agent list managed by
-     * the Stage Manager.
-     */
-    public const int STAGE_MANAGER_TASKS_CHANGED = 0x00000001;
-    
-    /**
-     * This event is broadcast when the current stage index changes.
-     *
-     * The new stage index is passed as a parameter (long).
-     */
-    public const int STAGE_MANAGER_STAGE_INDEX_CHANGED = 0x00000002;
-    
-    /**
-     * This event is broadcast when the current task index changes.
-     *
-     * The new task index is passed as a parameter (long).
-     */
-    public const int STAGE_MANAGER_TASK_INDEX_CHANGED = 0x00000004;
-    
-    /**
-     * This event is broadcast when the current session changes.
-     */
-    public const int STAGE_MANAGER_CURRENT_SESSION_CHANGED = 0x00000008;
-    
-    /**
-     * @name Active Agents Manager events.
-     *
-     * Events broadcasted by LISTENER_ACTIVE_AGENTS.
-     */
-    
-    /**
-     * This event is broadcast when anything changes within the active agent list managed by
-     * the Active Agents Manager.
-     */
-    public const int ACTIVE_AGENTS_AGENT_LIST_CHANGED = 0x00000001;
-    
-    /**
-     * This event is broadcast when an agent is added to the active agents list.
-     *
-     * The associated active agent is passed as a parameter (GActiveAgent).
-     */
-    public const int ACTIVE_AGENTS_AGENT_REGISTERED = 0x00000002;
+    public const int LISTENER_ETA_PLANNER = 7;
     
     /**
      * @name EnRoute Manager events.
@@ -195,7 +72,7 @@ namespace EnRoute
     
     /**
      * This event is broadcast when the platform gets a login response from the Glympse server.
-     * If the login is successful, this event the platform will then attempt to load the organization and 
+     * If the login is successful, this event the platform will then attempt to load the organization and
      * agent profile from the server. Upon loading these, the platform will then fire ENROUTE_MANAGER_STARTED.
      *
      * If the login fails this event will pass en error code as a parameter (string).
@@ -211,7 +88,7 @@ namespace EnRoute
     public const int ENROUTE_MANAGER_LOGGED_OUT = 0x00000002;
     
     /**
-     * This event is broadcast when the platform finishes starting and is ready to be used.
+     * This event is broadcast when the manager has been started.
      * The platform will remain started until it is stopped.
      */
     public const int ENROUTE_MANAGER_STARTED = 0x00000004;
@@ -224,20 +101,32 @@ namespace EnRoute
     public const int ENROUTE_MANAGER_STOPPED = 0x00000008;
     
     /**
+     * This event is broadcast when the manager completed it's initial sync with the server and is ready to be used.
+     * The platform will remain started until it is stopped.
+     */
+    public const int ENROUTE_MANAGER_SYNCED = 0x00000010;
+    
+    /**
      * This event is broadcast when there is a push notification to display.
      *
      * The notification to display will be passed as a parameter (GPrimitive).
      */
-    public const int ENROUTE_MANAGER_SHOW_NOTIFICATION = 0x00000010;
+    public const int ENROUTE_MANAGER_SHOW_NOTIFICATION = 0x00000020;
+    
+    /**
+     * This event is broadcast when authentication (auth token) is needed by the En Route manager
+     *
+     */
+    public const int ENROUTE_MANAGER_AUTHENTICATION_NEEDED = 0x00000040;
     
     /**
      * @name Task Manager events.
      *
      * Events broadcasted by LISTENER_TASKS.
      */
-
+    
     /**
-     * This event is broadcast when anything changes within the task list managed by 
+     * This event is broadcast when anything changes within the task list managed by
      * Task Manager. This includes added tasks, removed tasks, phase changes, refreshes, etc.
      */
     public const int TASKS_TASK_LIST_CHANGED = 0x00000001;
@@ -303,6 +192,137 @@ namespace EnRoute
      * The list of etas are passed as a parameter (GVector<GLong>).
      */
     public const int ETA_PLANNER_ETAS_UPDATED = 0x00000001;
+    
+    /**
+     * @name Agent Manager events.
+     *
+     * Events broadcasted by LISTENER_AGENTS.
+     */
+    
+    /**
+     * This event is broadcast when anything changes within the agent list managed by
+     * the Agent Manager.
+     */
+    public const int AGENTS_AGENT_LIST_CHANGED = 0x00000001;
+    
+    /**
+     * This event is broadcast when an agent is created.
+     *
+     * The associated agent is passed as a parameter (GAgent)
+     */
+    public const int AGENTS_AGENT_CREATED = 0x00000002;
+    
+    /**
+     * This event is broadcast when an agent fails to create.
+     *
+     * The reason for failusre is passed as a parameter (string).
+     */
+    public const int AGENTS_AGENT_CREATION_FAILED = 0x00000004;
+    
+    /**
+     * This event is broadcast when an agent is updated.
+     *
+     * The associated agent is passed as a parameter (GAgent).
+     */
+    public const int AGENTS_AGENT_UPDATED = 0x00000008;
+    
+    /**
+     * This event is broadcast when an agent fails to update.
+     * 
+     * The reason for failusre is passed as a parameter (string).
+     */
+    public const int AGENTS_AGENT_UPDATE_FAILED = 0x000000010;
+    
+    /**
+     * @name Session Manager events.
+     *
+     * Events broadcasted by LISTENER_SESSIONS.
+     */
+    
+    /**
+     * This event is broadcast when anything changes within the session list managed by
+     * the Session Manager.
+     */
+    public const int SESSIONS_SESSION_LIST_CHANGED = 0x00000001;
+    
+    /**
+     * This event is broadcast when a session is started.
+     *
+     * The associated session is passed as a parameter (GSession).
+     */
+    public const int SESSIONS_SESSION_STARTED = 0x00000002;
+    
+    /**
+     * This event is broadcast when a session fails to start.
+     * 
+     * The associated session is passed as a parameter (GSession), along with the error string.
+     */
+    public const int SESSIONS_SESSION_START_FAILED = 0x00000004;
+    
+    /**
+     * This event is broadcast when a session is completed.
+     *
+     * The associated session is passed as a parameter (GSession).
+     */
+    public const int SESSIONS_SESSION_COMPLETED = 0x00000008;
+    
+    /**
+     * This event is broadcast when a session fails to complete.
+     *
+     * The associated session is passed as a parameter (GSession), along with the error string.
+     */
+    public const int SESSIONS_SESSION_COMPLETION_FAILED = 0x000000010;
+    
+    /**
+     * @name Stage Manager events.
+     *
+     * Events broadcasted by LISTENER_STAGE_MANAGER.
+     */
+    
+    /**
+     * This event is broadcast when anything changes within the active agent list managed by
+     * the Stage Manager.
+     */
+    public const int STAGE_MANAGER_TASKS_CHANGED = 0x00000001;
+    
+    /**
+     * This event is broadcast when the current stage index changes.
+     *
+     * The new stage index is passed as a parameter (long).
+     */
+    public const int STAGE_MANAGER_STAGE_INDEX_CHANGED = 0x00000002;
+    
+    /**
+     * This event is broadcast when the current task index changes.
+     *
+     * The new task index is passed as a parameter (long).
+     */
+    public const int STAGE_MANAGER_TASK_INDEX_CHANGED = 0x00000004;
+    
+    /**
+     * This event is broadcast when the current session changes.
+     */
+    public const int STAGE_MANAGER_CURRENT_SESSION_CHANGED = 0x00000008;
+    
+    /**
+     * @name Active Agents Manager events.
+     *
+     * Events broadcasted by LISTENER_ACTIVE_AGENTS.
+     */
+    
+    /**
+     * This event is broadcast when anything changes within the active agent list managed by
+     * the Active Agents Manager.
+     */
+    public const int ACTIVE_AGENTS_AGENT_LIST_CHANGED = 0x00000001;
+    
+    /**
+     * This event is broadcast when an agent is added to the active agents list.
+     *
+     * The associated active agent is passed as a parameter (GActiveAgent).
+     */
+    public const int ACTIVE_AGENTS_AGENT_REGISTERED = 0x00000002;
+    
 };
     
 }
