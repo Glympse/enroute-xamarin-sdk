@@ -15,7 +15,7 @@ namespace EnRouteDemo
         {
             if ( manager.isLoginNeeded() ) 
             {
-                manager.login(_driverEmail, _driverPassword);
+                manager.loginWithCredentials(_driverEmail, _driverPassword);
             } 
             else 
             {
