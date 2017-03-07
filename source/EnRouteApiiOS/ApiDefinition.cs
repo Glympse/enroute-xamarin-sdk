@@ -354,8 +354,8 @@ namespace Glympse.EnRoute.iOS
         [Export ("loginWithCredentials:password:")]
         bool loginWithCredentials(string username, string password);
 
-		[Export("loginWithToken:expireTime:")]
-		bool loginWithToken(string token, long expireTime);
+        [Export("loginWithToken:expireTime:")]
+        bool loginWithToken(string token, long expireTime);
 
         [Export ("logout:")]
         void logout(int reason);
@@ -375,11 +375,11 @@ namespace Glympse.EnRoute.iOS
         [Export ("isActive")]
         bool isActive();
 
-		[Export("setAuthenticationMode:")]
-		void setAuthenticationMode(int authMode);
+        [Export("setAuthenticationMode:")]
+        void setAuthenticationMode(int authMode);
 
-		[Export("getAuthenticationMode")]
-		int getAuthenticationMode();
+        [Export("getAuthenticationMode")]
+        int getAuthenticationMode();
 
         [Export ("refresh")]
         void refresh();

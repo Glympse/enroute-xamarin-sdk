@@ -302,7 +302,7 @@
     <attr 
         path="/api/package[@name='com.glympse.enroute.android.api']/interface[@name='GEnRouteManager']/method[@name='loginWithCredentials']" 
         name="managedName">loginWithCredentials</attr>
-	<attr 
+    <attr 
         path="/api/package[@name='com.glympse.enroute.android.api']/interface[@name='GEnRouteManager']/method[@name='loginWithToken']" 
         name="managedName">loginWithToken</attr>
     <attr 
@@ -323,7 +323,7 @@
     <attr 
         path="/api/package[@name='com.glympse.enroute.android.api']/interface[@name='GEnRouteManager']/method[@name='isActive']" 
         name="managedName">isActive</attr>
-	<attr 
+    <attr 
         path="/api/package[@name='com.glympse.enroute.android.api']/interface[@name='GEnRouteManager']/method[@name='setAuthenticationMode']" 
         name="managedName">setAuthenticationMode</attr>
     <attr 

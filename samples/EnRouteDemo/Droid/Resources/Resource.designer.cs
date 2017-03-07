@@ -13,190 +13,190 @@
 
 namespace EnRouteDemo.Droid
 {
-	
-	
-	[System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Android.Build.Tasks", "1.0.0.0")]
-	public partial class Resource
-	{
-		
-		static Resource()
-		{
-			global::Android.Runtime.ResourceIdManager.UpdateIdValues();
-		}
-		
-		public static void UpdateIdValues()
-		{
-		}
-		
-		public partial class Attribute
-		{
-			
-			static Attribute()
-			{
-				global::Android.Runtime.ResourceIdManager.UpdateIdValues();
-			}
-			
-			private Attribute()
-			{
-			}
-		}
-		
-		public partial class Drawable
-		{
-			
-			// aapt resource value: 0x7f020000
-			public const int bg_wru = 2130837504;
-			
-			// aapt resource value: 0x7f020001
-			public const int glogo_v2 = 2130837505;
-			
-			// aapt resource value: 0x7f020002
-			public const int icon = 2130837506;
-			
-			// aapt resource value: 0x7f020003
-			public const int notification_00 = 2130837507;
-			
-			// aapt resource value: 0x7f020004
-			public const int notification_01 = 2130837508;
-			
-			// aapt resource value: 0x7f020005
-			public const int notification_02 = 2130837509;
-			
-			// aapt resource value: 0x7f020006
-			public const int notification_03 = 2130837510;
-			
-			// aapt resource value: 0x7f020007
-			public const int notification_04 = 2130837511;
-			
-			// aapt resource value: 0x7f020008
-			public const int notification_05 = 2130837512;
-			
-			// aapt resource value: 0x7f020009
-			public const int notification_06 = 2130837513;
-			
-			// aapt resource value: 0x7f02000a
-			public const int notification_07 = 2130837514;
-			
-			// aapt resource value: 0x7f02000b
-			public const int notification_08 = 2130837515;
-			
-			// aapt resource value: 0x7f02000c
-			public const int notification_09 = 2130837516;
-			
-			// aapt resource value: 0x7f02000d
-			public const int notification_arrived = 2130837517;
-			
-			// aapt resource value: 0x7f02000e
-			public const int notification_low_battery = 2130837518;
-			
-			// aapt resource value: 0x7f02000f
-			public const int notification_received = 2130837519;
-			
-			// aapt resource value: 0x7f020010
-			public const int notification_warning = 2130837520;
-			
-			static Drawable()
-			{
-				global::Android.Runtime.ResourceIdManager.UpdateIdValues();
-			}
-			
-			private Drawable()
-			{
-			}
-		}
-		
-		public partial class Plurals
-		{
-			
-			// aapt resource value: 0x7f040000
-			public const int common_days_1d = 2130968576;
-			
-			static Plurals()
-			{
-				global::Android.Runtime.ResourceIdManager.UpdateIdValues();
-			}
-			
-			private Plurals()
-			{
-			}
-		}
-		
-		public partial class String
-		{
-			
-			// aapt resource value: 0x7f030001
-			public const int arrived_at_destination = 2130903041;
-			
-			// aapt resource value: 0x7f030002
-			public const int click_to_expire = 2130903042;
-			
-			// aapt resource value: 0x7f030007
-			public const int click_to_reply = 2130903047;
-			
-			// aapt resource value: 0x7f030004
-			public const int click_to_view = 2130903044;
-			
-			// aapt resource value: 0x7f030003
-			public const int glympse_was_received = 2130903043;
-			
-			// aapt resource value: 0x7f030005
-			public const int group_invitation_was_received = 2130903045;
-			
-			// aapt resource value: 0x7f03000b
-			public const int low_battey_warning = 2130903051;
-			
-			// aapt resource value: 0x7f03000c
-			public const int no_active_glympses = 2130903052;
-			
-			// aapt resource value: 0x7f03000a
-			public const int no_network_connection = 2130903050;
-			
-			// aapt resource value: 0x7f03000d
-			public const int rate_limited = 2130903053;
-			
-			// aapt resource value: 0x7f030009
-			public const int remaining_details = 2130903049;
-			
-			// aapt resource value: 0x7f030008
-			public const int remaining_title = 2130903048;
-			
-			// aapt resource value: 0x7f030000
-			public const int remaining_title_glympse = 2130903040;
-			
-			// aapt resource value: 0x7f03000e
-			public const int reply_with_a_glympse = 2130903054;
-			
-			// aapt resource value: 0x7f030006
-			public const int request_was_received = 2130903046;
-			
-			static String()
-			{
-				global::Android.Runtime.ResourceIdManager.UpdateIdValues();
-			}
-			
-			private String()
-			{
-			}
-		}
-		
-		public partial class Style
-		{
-			
-			// aapt resource value: 0x7f050001
-			public const int NotificationText = 2131034113;
-			
-			// aapt resource value: 0x7f050000
-			public const int NotificationTitle = 2131034112;
-			
-			static Style()
-			{
-				global::Android.Runtime.ResourceIdManager.UpdateIdValues();
-			}
-			
-			private Style()
-			{
-			}
-		}
-	}
+    
+    
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Android.Build.Tasks", "1.0.0.0")]
+    public partial class Resource
+    {
+        
+        static Resource()
+        {
+            global::Android.Runtime.ResourceIdManager.UpdateIdValues();
+        }
+        
+        public static void UpdateIdValues()
+        {
+        }
+        
+        public partial class Attribute
+        {
+            
+            static Attribute()
+            {
+                global::Android.Runtime.ResourceIdManager.UpdateIdValues();
+            }
+            
+            private Attribute()
+            {
+            }
+        }
+        
+        public partial class Drawable
+        {
+            
+            // aapt resource value: 0x7f020000
+            public const int bg_wru = 2130837504;
+            
+            // aapt resource value: 0x7f020001
+            public const int glogo_v2 = 2130837505;
+            
+            // aapt resource value: 0x7f020002
+            public const int icon = 2130837506;
+            
+            // aapt resource value: 0x7f020003
+            public const int notification_00 = 2130837507;
+            
+            // aapt resource value: 0x7f020004
+            public const int notification_01 = 2130837508;
+            
+            // aapt resource value: 0x7f020005
+            public const int notification_02 = 2130837509;
+            
+            // aapt resource value: 0x7f020006
+            public const int notification_03 = 2130837510;
+            
+            // aapt resource value: 0x7f020007
+            public const int notification_04 = 2130837511;
+            
+            // aapt resource value: 0x7f020008
+            public const int notification_05 = 2130837512;
+            
+            // aapt resource value: 0x7f020009
+            public const int notification_06 = 2130837513;
+            
+            // aapt resource value: 0x7f02000a
+            public const int notification_07 = 2130837514;
+            
+            // aapt resource value: 0x7f02000b
+            public const int notification_08 = 2130837515;
+            
+            // aapt resource value: 0x7f02000c
+            public const int notification_09 = 2130837516;
+            
+            // aapt resource value: 0x7f02000d
+            public const int notification_arrived = 2130837517;
+            
+            // aapt resource value: 0x7f02000e
+            public const int notification_low_battery = 2130837518;
+            
+            // aapt resource value: 0x7f02000f
+            public const int notification_received = 2130837519;
+            
+            // aapt resource value: 0x7f020010
+            public const int notification_warning = 2130837520;
+            
+            static Drawable()
+            {
+                global::Android.Runtime.ResourceIdManager.UpdateIdValues();
+            }
+            
+            private Drawable()
+            {
+            }
+        }
+        
+        public partial class Plurals
+        {
+            
+            // aapt resource value: 0x7f040000
+            public const int common_days_1d = 2130968576;
+            
+            static Plurals()
+            {
+                global::Android.Runtime.ResourceIdManager.UpdateIdValues();
+            }
+            
+            private Plurals()
+            {
+            }
+        }
+        
+        public partial class String
+        {
+            
+            // aapt resource value: 0x7f030001
+            public const int arrived_at_destination = 2130903041;
+            
+            // aapt resource value: 0x7f030002
+            public const int click_to_expire = 2130903042;
+            
+            // aapt resource value: 0x7f030007
+            public const int click_to_reply = 2130903047;
+            
+            // aapt resource value: 0x7f030004
+            public const int click_to_view = 2130903044;
+            
+            // aapt resource value: 0x7f030003
+            public const int glympse_was_received = 2130903043;
+            
+            // aapt resource value: 0x7f030005
+            public const int group_invitation_was_received = 2130903045;
+            
+            // aapt resource value: 0x7f03000b
+            public const int low_battey_warning = 2130903051;
+            
+            // aapt resource value: 0x7f03000c
+            public const int no_active_glympses = 2130903052;
+            
+            // aapt resource value: 0x7f03000a
+            public const int no_network_connection = 2130903050;
+            
+            // aapt resource value: 0x7f03000d
+            public const int rate_limited = 2130903053;
+            
+            // aapt resource value: 0x7f030009
+            public const int remaining_details = 2130903049;
+            
+            // aapt resource value: 0x7f030008
+            public const int remaining_title = 2130903048;
+            
+            // aapt resource value: 0x7f030000
+            public const int remaining_title_glympse = 2130903040;
+            
+            // aapt resource value: 0x7f03000e
+            public const int reply_with_a_glympse = 2130903054;
+            
+            // aapt resource value: 0x7f030006
+            public const int request_was_received = 2130903046;
+            
+            static String()
+            {
+                global::Android.Runtime.ResourceIdManager.UpdateIdValues();
+            }
+            
+            private String()
+            {
+            }
+        }
+        
+        public partial class Style
+        {
+            
+            // aapt resource value: 0x7f050001
+            public const int NotificationText = 2131034113;
+            
+            // aapt resource value: 0x7f050000
+            public const int NotificationTitle = 2131034112;
+            
+            static Style()
+            {
+                global::Android.Runtime.ResourceIdManager.UpdateIdValues();
+            }
+            
+            private Style()
+            {
+            }
+        }
+    }
 }
 #pragma warning restore 1591

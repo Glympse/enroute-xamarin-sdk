@@ -27,16 +27,16 @@ namespace EnRouteDemo
         {     
             if ( EnRouteEvents.LISTENER_ENROUTE_MANAGER == listener ) 
             {
-				if (0 != (EnRouteEvents.ENROUTE_MANAGER_STARTED & events))
-				{
-					// Started
-				}
-				if (0 != (EnRouteEvents.ENROUTE_MANAGER_AUTHENTICATION_NEEDED & events))
-				{
-					// Auth Needed
-					Auth.login(EnRouteManagerWrapper.Instance.Manager);
-				}
-				if ( 0 != (EnRouteEvents.ENROUTE_MANAGER_SYNCED & events) )
+                if (0 != (EnRouteEvents.ENROUTE_MANAGER_STARTED & events))
+                {
+                    // Started
+                }
+                if (0 != (EnRouteEvents.ENROUTE_MANAGER_AUTHENTICATION_NEEDED & events))
+                {
+                    // Auth Needed
+                    Auth.login(EnRouteManagerWrapper.Instance.Manager);
+                }
+                if ( 0 != (EnRouteEvents.ENROUTE_MANAGER_SYNCED & events) )
                 {
                     // Synced
                 }
