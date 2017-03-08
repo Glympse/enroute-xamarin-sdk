@@ -9,7 +9,13 @@ namespace Glympse
         {
             bool isLoginNeeded();
 
-            bool login(string username, string password);
+            void setAuthenticationMode(int mode);
+
+            int getAuthenticationMode();
+
+            bool loginWithCredentials(string username, string password);
+
+            bool loginWithToken(string token, long expireTime);
 
             void logout(int reason);
 

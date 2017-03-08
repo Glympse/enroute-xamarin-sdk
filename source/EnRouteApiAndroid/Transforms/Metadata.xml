@@ -300,8 +300,11 @@
         path="/api/package[@name='com.glympse.enroute.android.api']/interface[@name='GEnRouteManager']/method[@name='isLoginNeeded']" 
         name="managedName">isLoginNeeded</attr>
     <attr 
-        path="/api/package[@name='com.glympse.enroute.android.api']/interface[@name='GEnRouteManager']/method[@name='login']" 
-        name="managedName">login</attr>
+        path="/api/package[@name='com.glympse.enroute.android.api']/interface[@name='GEnRouteManager']/method[@name='loginWithCredentials']" 
+        name="managedName">loginWithCredentials</attr>
+    <attr 
+        path="/api/package[@name='com.glympse.enroute.android.api']/interface[@name='GEnRouteManager']/method[@name='loginWithToken']" 
+        name="managedName">loginWithToken</attr>
     <attr 
         path="/api/package[@name='com.glympse.enroute.android.api']/interface[@name='GEnRouteManager']/method[@name='logout']" 
         name="managedName">logout</attr>
@@ -320,6 +323,12 @@
     <attr 
         path="/api/package[@name='com.glympse.enroute.android.api']/interface[@name='GEnRouteManager']/method[@name='isActive']" 
         name="managedName">isActive</attr>
+    <attr 
+        path="/api/package[@name='com.glympse.enroute.android.api']/interface[@name='GEnRouteManager']/method[@name='setAuthenticationMode']" 
+        name="managedName">setAuthenticationMode</attr>
+    <attr 
+        path="/api/package[@name='com.glympse.enroute.android.api']/interface[@name='GEnRouteManager']/method[@name='getAuthenticationMode']" 
+        name="managedName">getAuthenticationMode</attr>
     <attr 
         path="/api/package[@name='com.glympse.enroute.android.api']/interface[@name='GEnRouteManager']/method[@name='refresh']" 
         name="managedName">refresh</attr>

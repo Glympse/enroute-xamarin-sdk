@@ -25,9 +25,14 @@ namespace Glympse.EnRoute.iOS
             return _raw.isLoginNeeded();
         }
 
-        public bool login(string username, string password)
+        public bool loginWithCredentials(string username, string password)
         {
-            return _raw.login(username, password);
+            return _raw.loginWithCredentials(username, password);
+        }
+
+        public bool loginWithToken(string token, long expireTime)
+        {
+            return _raw.loginWithToken(token, expireTime);
         }
 
         public void logout(int reason)
@@ -58,6 +63,16 @@ namespace Glympse.EnRoute.iOS
         public bool isActive()
         {
             return _raw.isActive();
+        }
+
+        public void setAuthenticationMode(int mode)
+        {
+            _raw.setAuthenticationMode(mode);
+        }
+
+        public int getAuthenticationMode()
+        {
+            return _raw.getAuthenticationMode();
         }
 
         public void refresh()
