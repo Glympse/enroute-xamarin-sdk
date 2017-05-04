@@ -121,31 +121,104 @@
     <Compile Include="Source\TaskManager.cs" />
     <EmbeddedResource Include="Properties\EnRouteApi.UWP.rd.xml" />
   </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\EnRouteApi\EnRouteApi.csproj">
-      <Project>{20bd2ba0-cf80-4808-bddb-612943ec729b}</Project>
-      <Name>EnRouteApi</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <Reference Include="EnRoute, Version=1.0.0.0, Culture=neutral, PublicKeyToken=79a20da9d7dac9d3, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>lib\EnRoute.dll</HintPath>
-      <Aliases>EnRouteApiDll</Aliases>
-    </Reference>
-    <Reference Include="GlympseApi, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>lib\GlympseApi.dll</HintPath>
-      <Aliases>GlympseApiDll</Aliases>
-    </Reference>
-    <Reference Include="GlympseApiToolbox, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>lib\GlympseApiToolbox.dll</HintPath>
-      <Aliases>GlympseApiToolboxDll</Aliases>
-    </Reference>
-  </ItemGroup>
+  <Choose>
+	<When Condition="'$(Configuration)|$(Platform)' == 'Release-NoRebuild|AnyCPU'">
+	  <ItemGroup>
+		<Reference Include="EnRoute, Version=1.0.0.0, Culture=neutral, PublicKeyToken=79a20da9d7dac9d3, processorArchitecture=MSIL">
+		  <SpecificVersion>False</SpecificVersion>
+		  <HintPath>lib\EnRoute.dll</HintPath>
+		  <Aliases>EnRouteApiDll</Aliases>
+		</Reference>
+		<Reference Include="EnRouteApi">
+		  <HintPath>lib\EnRouteApi.dll</HintPath>
+		</Reference>
+		<Reference Include="GlympseApi, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+		  <SpecificVersion>False</SpecificVersion>
+		  <HintPath>lib\GlympseApi.dll</HintPath>
+		  <Aliases>GlympseApiDll</Aliases>
+		</Reference>
+		<Reference Include="GlympseApiToolbox, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+		  <SpecificVersion>False</SpecificVersion>
+		  <HintPath>lib\GlympseApiToolbox.dll</HintPath>
+		  <Aliases>GlympseApiToolboxDll</Aliases>
+		</Reference>
+	  </ItemGroup>
+	</When>
+	<Otherwise>
+	  <ItemGroup>
+		<ProjectReference Include="..\EnRouteApi\EnRouteApi.csproj">
+		  <Project>{20bd2ba0-cf80-4808-bddb-612943ec729b}</Project>
+		  <Name>EnRouteApi</Name>
+		</ProjectReference>
+	  </ItemGroup>
+	  <ItemGroup>
+		<Reference Include="EnRoute, Version=1.0.0.0, Culture=neutral, PublicKeyToken=79a20da9d7dac9d3, processorArchitecture=MSIL">
+		  <SpecificVersion>False</SpecificVersion>
+		  <HintPath>lib\EnRoute.dll</HintPath>
+		  <Aliases>EnRouteApiDll</Aliases>
+		</Reference>
+		<Reference Include="GlympseApi, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+		  <SpecificVersion>False</SpecificVersion>
+		  <HintPath>lib\GlympseApi.dll</HintPath>
+		  <Aliases>GlympseApiDll</Aliases>
+		</Reference>
+		<Reference Include="GlympseApiToolbox, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+		  <SpecificVersion>False</SpecificVersion>
+		  <HintPath>lib\GlympseApiToolbox.dll</HintPath>
+		  <Aliases>GlympseApiToolboxDll</Aliases>
+		</Reference>
+	  </ItemGroup>
+	</Otherwise>
+  </Choose>
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
     <VisualStudioVersion>14.0</VisualStudioVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release-NoRebuild|AnyCPU'">
+    <OutputPath>bin\Release-NoRebuild\</OutputPath>
+    <DefineConstants>TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <Optimize>true</Optimize>
+    <NoStdLib>true</NoStdLib>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release-NoRebuild|x86'">
+    <OutputPath>bin\x86\Release-NoRebuild\</OutputPath>
+    <DefineConstants>TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <Optimize>true</Optimize>
+    <NoWarn>;2008</NoWarn>
+    <NoStdLib>true</NoStdLib>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release-NoRebuild|ARM'">
+    <OutputPath>bin\ARM\Release-NoRebuild\</OutputPath>
+    <DefineConstants>TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <Optimize>true</Optimize>
+    <NoWarn>;2008</NoWarn>
+    <NoStdLib>true</NoStdLib>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>ARM</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release-NoRebuild|x64'">
+    <OutputPath>bin\x64\Release-NoRebuild\</OutputPath>
+    <DefineConstants>TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <Optimize>true</Optimize>
+    <NoWarn>;2008</NoWarn>
+    <NoStdLib>true</NoStdLib>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
   </PropertyGroup>
   <Import Project="$(MSBuildExtensionsPath)\Microsoft\WindowsXaml\v$(VisualStudioVersion)\Microsoft.Windows.UI.Xaml.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
