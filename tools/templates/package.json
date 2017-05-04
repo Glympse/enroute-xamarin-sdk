@@ -1,0 +1,15 @@
+{
+  "type": "package",
+  "product": "PRODUCT_NAME",
+  "legal": "Copyright (c) YEAR_FULL Glympse Inc. All rights reserved.",
+  "resource": {
+    "build": "BUILD_VERSION_RESOURCE",
+    "package_file": "PACKAGE_FILE"
+  },
+  "version": {
+    "short": "BUILD_VERSION_SHORT",
+    "full": "BUILD_VERSION_FULL",
+    "tag": "TAG_LONG",
+    "build_time": "BUILD_TIME"
+  }
+}

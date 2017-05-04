@@ -18,6 +18,14 @@ namespace EnRoute
 /*O*/public/**/ class EnRouteConstants
 {
     /**
+     * @name Authentication modes
+     */
+    
+    public const int AUTH_MODE_NONE = 0;
+    public const int AUTH_MODE_CREDENTIALS = 1;
+    public const int AUTH_MODE_TOKEN = 2;
+    
+    /**
      * @name Task states
      */
     
@@ -86,8 +94,14 @@ namespace EnRoute
     public const int SESSION_STATE_CREATED = 1;
     public const int SESSION_STATE_STARTING = 2;
     public const int SESSION_STATE_STARTED = 3;
-    public const int SESSION_STATE_FAILED_TO_START = 4;
-    public const int SESSION_STATE_FINISHED = 5;
+    public const int SESSION_STATE_COMPLETING = 4;
+    public const int SESSION_STATE_COMPLETED = 5;
+    
+    /**
+     * @name Batch constants
+     */
+    
+    public const int BATCH_MAXIMUM_ENDPOINTS = 16;
     
     /**
      * @name Phase properties
@@ -128,6 +142,19 @@ namespace EnRoute
     public static String PHASE_PROPERTY_NOT_COMPLETED()
     {
         return CoreFactory.createString("not_completed");
+    }
+    
+    /**
+     * @name Session control modes
+     */
+    public static String SESSION_CONTROL_MODE_MANUAL()
+    {
+        return CoreFactory.createString("manual");
+    }
+    
+    public static String SESSION_CONTROL_MODE_STAGE_MANAGER()
+    {
+        return CoreFactory.createString("sdk_stage_manager");
     }
 };
     

@@ -16,8 +16,23 @@ rm -rf tmp_*
 
 # Copy Android dependencies
 unzip $PACKAGE_ANDROID -d $TMP_ANDROID
-cp $TMP_ANDROID/lib/EnRouteApi/libs/* ../source/EnRouteApiAndroid/Jars
-cp $TMP_ANDROID/lib/GlympseApi/libs/* ../source/EnRouteApiAndroid/Jars
+
+pushd $TMP_ANDROID/lib/EnRouteApi > /dev/null
+    unzip EnRouteApi-release.aar
+popd > /dev/null
+
+pushd $TMP_ANDROID/lib/GlympseApi > /dev/null
+    unzip GlympseApi-release.aar
+popd > /dev/null
+
+pushd $TMP_ANDROID/lib/GlympseApiToolbox > /dev/null
+    unzip GlympseApiToolbox-release.aar
+popd > /dev/null
+
+cp $TMP_ANDROID/lib/EnRouteApi/classes.jar ../source/EnRouteApiAndroid/Jars/EnRouteApi.jar
+cp $TMP_ANDROID/lib/GlympseApiToolbox/classes.jar ../source/EnRouteApiAndroid/Jars/GlympseApiToolbox.jar
+cp $TMP_ANDROID/lib/GlympseApi/classes.jar ../source/EnRouteApiAndroid/Jars/GlympseApi.jar
+
 pushd $TMP_ANDROID/lib/GlympseApi > /dev/null
     zip -r GlympseApi.zip ./res
     mkdir bin
