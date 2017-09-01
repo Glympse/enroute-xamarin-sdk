@@ -47,12 +47,6 @@ namespace EnRoute
     public const int LISTENER_SESSIONS = 4;
     
     /**
-     * Stage Manager events.
-     * Use IStageManager event sink to subscribe on these events.
-     */
-    public const int LISTENER_STAGE_MANAGER = 5;
-    
-    /**
      * Active Agent events.
      * Use IActiveAgentsManager event sink to subscribe on these events.
      */
@@ -158,6 +152,20 @@ namespace EnRoute
      * The associated operation is passed as a parameter (GOperation).
      */
     public const int TASKS_OPERATION_COMPLETION_FAILED = 0x00000010;
+    
+    /**
+     * This event is broadcast when an task's phase changed.
+     *
+     * The associated task and the new phase are passed as parameters (GTask, GString).
+     */
+    public const int TASKS_TASK_PHASE_CHANGED = 0x00000020;
+    
+    /**
+     * This event is broadcast when an operation's ticket reference changes.
+     *
+     * The associated operation and the new ticket are passed as parameters (GOperation, GTicket).
+     */
+    public const int TASKS_OPERATION_TICKET_CHANGED = 0x00000040;
     
     /**
      * @name Session Manager events.
@@ -274,35 +282,20 @@ namespace EnRoute
     public const int SESSIONS_SESSION_COMPLETION_FAILED = 0x000000010;
     
     /**
-     * @name Stage Manager events.
+     * This event is broadcast when the active task of a session is changed
      *
-     * Events broadcasted by LISTENER_STAGE_MANAGER.
+     * param1: GSession session
+     * param2: GTask active task
      */
+    public const int SESSIONS_SESSION_ACTIVE_TASK_CHANGED = 0x00000020;
     
     /**
-     * This event is broadcast when anything changes within the active agent list managed by
-     * the Stage Manager.
-     */
-    public const int STAGE_MANAGER_TASKS_CHANGED = 0x00000001;
-    
-    /**
-     * This event is broadcast when the current stage index changes.
+     * This event is broadcast when the phase of the active task changes
      *
-     * The new stage index is passed as a parameter (long).
+     * param1: GSession session
+     * param2: GTask active task
      */
-    public const int STAGE_MANAGER_STAGE_INDEX_CHANGED = 0x00000002;
-    
-    /**
-     * This event is broadcast when the current task index changes.
-     *
-     * The new task index is passed as a parameter (long).
-     */
-    public const int STAGE_MANAGER_TASK_INDEX_CHANGED = 0x00000004;
-    
-    /**
-     * This event is broadcast when the current session changes.
-     */
-    public const int STAGE_MANAGER_CURRENT_SESSION_CHANGED = 0x00000008;
+    public const int SESSIONS_SESSION_ACTIVE_TASK_PHASE_CHANGED = 0x00000040;
     
     /**
      * @name Active Agents Manager events.

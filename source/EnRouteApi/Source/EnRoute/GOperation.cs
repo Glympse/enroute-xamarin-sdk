@@ -22,8 +22,6 @@ namespace Glympse
 
             void setTicketEta(long eta);           
 
-            string getTicketPhase();
-
             string getPhase();
         }
     }

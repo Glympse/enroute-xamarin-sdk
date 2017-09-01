@@ -44,9 +44,9 @@ namespace Glympse.EnRoute.Android
             return _raw.startTask((com.glympse.enroute.android.api.GTask)task.raw());
         }
 
-        public bool setOperationPhase(GOperation operation, string phase)
+        public bool setTaskPhase(GTask task, string phase)
         {
-            return _raw.setOperationPhase((com.glympse.enroute.android.api.GOperation)operation.raw(), phase);
+            return _raw.setTaskPhase((com.glympse.enroute.android.api.GTask)task.raw(), phase);
         }
 
         public bool completeOperation(GOperation operation)

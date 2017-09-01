@@ -51,16 +51,6 @@ namespace Glympse.EnRoute.iOS
             _raw.setTicketEta(eta);
         }
 
-        public string getTicketPhase()
-        {
-            return _raw.getTicketPhase();
-        }
-
-        public string getPhase()
-        {
-            return _raw.getPhase();
-        }
-
         public object raw()
         {
             return _raw;
