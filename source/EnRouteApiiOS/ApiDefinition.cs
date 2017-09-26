@@ -417,5 +417,13 @@ namespace Glympse.EnRoute.iOS
         [Export ("createEnRouteManager")]
         GlyEnRouteManager createEnRouteManager();       
     }
+
+	[BaseType(typeof(GlyCommon))]
+	[DisableDefaultCtor]
+	interface GlyLong
+	{
+        [Export ("longValue")]
+        long longValue();
+	}
 }
 

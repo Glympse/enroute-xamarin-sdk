@@ -44,6 +44,10 @@ namespace Glympse.EnRoute.iOS
             {
                 return ((Foundation.NSNumber) raw).LongValue;
             }
+			else if (raw is GlyLong)
+			{
+                return ((GlyLong)raw).longValue();
+			}
             else if ( raw is GlyPrimitive )
             {
                 return new Primitive((GlyPrimitive)raw);
