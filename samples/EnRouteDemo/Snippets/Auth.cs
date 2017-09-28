@@ -10,8 +10,8 @@ namespace EnRouteDemo
     {
         private static EnRouteDemo.Listener _listener;
 
-        private static String _driverEmail = "<< Driver Email >>";
-        private static String _driverPassword = "<< Driver Password >>";
+        private static String _driverEmail = "adam-test@marken.com";
+        private static String _driverPassword = "ah";
 
         public static void onAppStart(GEnRouteManager manager)
         {
@@ -29,6 +29,7 @@ namespace EnRouteDemo
         public static void login(GEnRouteManager manager)
         {
             manager.loginWithCredentials(_driverEmail, _driverPassword);
+            //manager.loginWithToken("gaFmAA.WWqOwtHJ}Ac16TfbBh-vW9Gc0KDDUlCKoqTC-JdTMY0xG}zCK3/Zb4ySbYR{zOnGu9yMsCsPLXymElcao3ECQRzhhRDppws19OVr8LQQyjeNqOaGBh61H2WB6ARU-6Cn", 1606528270000);
         }
     }
 }

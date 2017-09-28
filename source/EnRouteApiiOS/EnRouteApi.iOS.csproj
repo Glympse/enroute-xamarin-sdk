@@ -54,6 +54,7 @@
     <Compile Include="Source\Organization.cs" />
     <Compile Include="Source\TaskManager.cs" />
     <Compile Include="Source\Primitive.cs" />
+    <Compile Include="Source\Long.cs" />
   </ItemGroup>
   <ItemGroup>
     <ObjcBindingApiDefinition Include="ApiDefinition.cs" />

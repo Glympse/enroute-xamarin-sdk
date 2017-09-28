@@ -206,6 +206,14 @@ namespace Glympse.EnRoute.iOS
         void remove(GlyPrimitive value);
     }
 
+    [BaseType(typeof(GlyCommon))]
+    [DisableDefaultCtor]
+    interface GlyLong
+    {
+        [Export("longValue")]
+        long longValue();
+    }
+
     [BaseType (typeof(NSObject))]
     [Model]
     interface GlyListener
