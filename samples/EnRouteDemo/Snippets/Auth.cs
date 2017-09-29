@@ -10,8 +10,8 @@ namespace EnRouteDemo
     {
         private static EnRouteDemo.Listener _listener;
 
-        private static String _driverEmail = "<<< Driver Email >>>";
-        private static String _driverPassword = "<<< Driver Password >>>";
+        private static String _driverEmail = "<< Driver Email >>";
+        private static String _driverPassword = "<< Driver Password >>";
 
         public static void onAppStart(GEnRouteManager manager)
         {
