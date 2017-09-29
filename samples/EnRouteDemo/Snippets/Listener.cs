@@ -42,6 +42,7 @@ namespace EnRouteDemo
                 }
                 if ( 0 != (EnRouteEvents.ENROUTE_MANAGER_LOGGED_OUT & events) )
                 {
+                    long reason = (long)param1;
                     // Logged out!
                 }
             }

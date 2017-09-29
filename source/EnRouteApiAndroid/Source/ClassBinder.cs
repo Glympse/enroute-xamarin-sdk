@@ -69,7 +69,7 @@ namespace Glympse.EnRoute.Android
                 }
                 else if ( "java.lang.Long" == obj.Class.Name )
                 {
-                    return Extensions.JavaCast<Java.Lang.Long>(obj);
+                    return Extensions.JavaCast<Java.Lang.Long>(obj).LongValue();
                 }
                 else if ( "com.glympse.android.lib.Primitive" == obj.Class.Name )
                 {

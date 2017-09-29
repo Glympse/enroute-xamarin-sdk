@@ -39,7 +39,7 @@ namespace Glympse.EnRoute.UWP
             }
             else if (raw is GlympseApiDll::Glympse.GLong)
             {
-                return new Long((GlympseApiDll::Glympse.GLong)raw);
+                return new Int64(((EnRouteApiDll::Glympse.EnRoute.GOperation)raw).longValue());
             }
             else if ( raw is GlympseApiDll::Glympse.GVector<EnRouteApiDll::Glympse.EnRoute.GOperation> )
             {

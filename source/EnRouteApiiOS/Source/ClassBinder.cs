@@ -50,7 +50,7 @@ namespace Glympse.EnRoute.iOS
             }
             else if (raw is GlyLong)
             {
-                return new Long((GlyLong)raw);
+                return ((GlyLong) raw).longValue();
             }
             else
             {
