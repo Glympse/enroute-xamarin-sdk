@@ -114,6 +114,12 @@ namespace EnRoute
     public const int ENROUTE_MANAGER_AUTHENTICATION_NEEDED = 0x00000040;
     
     /**
+     * This event is broadcast when the org config object has been updated and the new values are in use by the system.
+     *
+     */
+    public const int ENROUTE_MANAGER_ORG_CONFIG_UPDATED = 0x00000080;
+    
+    /**
      * @name Task Manager events.
      *
      * Events broadcasted by LISTENER_TASKS.
@@ -176,7 +182,7 @@ namespace EnRoute
     /**
      * This event is broadcast when a session is completed for an unknown reason.
      */
-    public const int SESSIONS_COMPLETED_UNKOWN = 0x00000000;
+    public const int SESSIONS_COMPLETED_UNKNOWN = 0x00000000;
     
     /**
      * This event is broadcast when a session is completed due to a geofence trigger.

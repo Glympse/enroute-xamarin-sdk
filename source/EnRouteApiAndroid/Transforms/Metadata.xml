@@ -230,6 +230,9 @@
     <attr 
         path="/api/package[@name='com.glympse.enroute.android.api']/interface[@name='GTask']/method[@name='getDueTime']" 
         name="managedName">getDueTime</attr>
+	<attr 
+        path="/api/package[@name='com.glympse.enroute.android.api']/interface[@name='GTask']/method[@name='getPhase']" 
+        name="managedName">getPhase</attr>
 
     <!-- GOperation -->
     <attr 
@@ -259,12 +262,6 @@
     <attr 
         path="/api/package[@name='com.glympse.enroute.android.api']/interface[@name='GOperation']/method[@name='setTicketEta']" 
         name="managedName">setTicketEta</attr>
-    <attr 
-        path="/api/package[@name='com.glympse.enroute.android.api']/interface[@name='GOperation']/method[@name='getTicketPhase']" 
-        name="managedName">getTicketPhase</attr>
-    <attr 
-        path="/api/package[@name='com.glympse.enroute.android.api']/interface[@name='GOperation']/method[@name='getPhase']" 
-        name="managedName">getPhase</attr>
 
     <!-- GTaskManager -->
     <attr 
@@ -286,8 +283,8 @@
         path="/api/package[@name='com.glympse.enroute.android.api']/interface[@name='GTaskManager']/method[@name='startTask']" 
         name="managedName">startTask</attr>
     <attr 
-        path="/api/package[@name='com.glympse.enroute.android.api']/interface[@name='GTaskManager']/method[@name='setOperationPhase']" 
-        name="managedName">setOperationPhase</attr>
+        path="/api/package[@name='com.glympse.enroute.android.api']/interface[@name='GTaskManager']/method[@name='setTaskPhase']" 
+        name="managedName">setTaskPhase</attr>
     <attr 
         path="/api/package[@name='com.glympse.enroute.android.api']/interface[@name='GTaskManager']/method[@name='completeOperation']" 
         name="managedName">completeOperation</attr>
