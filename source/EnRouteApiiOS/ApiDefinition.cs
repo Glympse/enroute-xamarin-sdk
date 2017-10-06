@@ -274,7 +274,10 @@ namespace Glympse.EnRoute.iOS
         string getDescription();
 
         [Export ("getDueTime")]
-        long getDueTime();        
+        long getDueTime();
+
+		[Export("getForeignId")]
+		string getForeignId();
     }
 
     [BaseType (typeof(GlyCommon))]
@@ -417,5 +420,13 @@ namespace Glympse.EnRoute.iOS
         [Export ("createEnRouteManager")]
         GlyEnRouteManager createEnRouteManager();       
     }
+
+	[BaseType(typeof(GlyCommon))]
+	[DisableDefaultCtor]
+	interface GlyLong
+	{
+        [Export ("longValue")]
+        long longValue();
+	}
 }
 
