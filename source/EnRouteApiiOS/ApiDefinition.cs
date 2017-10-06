@@ -274,7 +274,10 @@ namespace Glympse.EnRoute.iOS
         string getDescription();
 
         [Export ("getDueTime")]
-        long getDueTime();        
+        long getDueTime();
+
+		[Export("getForeignId")]
+		string getForeignId();
     }
 
     [BaseType (typeof(GlyCommon))]
