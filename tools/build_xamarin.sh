@@ -21,10 +21,10 @@ CLIENT_SDK_ZIP=$(find . -name "EnRoute_Api_Android_*.zip" | cut -d '_' -f 4)
 CLIENT_SDK_VERSION=${CLIENT_SDK_ZIP%.zip}
 
 # Clean the Andriod build
-/Library/Frameworks/Mono.framework/Commands/xbuild /p:Configuration=Release /t:PackageForAndroid /target:Build ../source/EnRouteApiAndroid/EnRouteApi.Android.csproj /t:Clean
+/Library/Frameworks/Mono.framework/Commands/xbuild /p:Configuration=Release /p:AndroidClassParser=class-parse /t:PackageForAndroid /target:Build ../source/EnRouteApiAndroid/EnRouteApi.Android.csproj /t:Clean
 
 # Build the Android solution
-/Library/Frameworks/Mono.framework/Commands/xbuild /p:Configuration=Release /t:PackageForAndroid /target:Build ../source/EnRouteApiAndroid/EnRouteApi.Android.csproj
+/Library/Frameworks/Mono.framework/Commands/xbuild /p:Configuration=Release /p:AndroidClassParser=class-parse /t:PackageForAndroid /target:Build ../source/EnRouteApiAndroid/EnRouteApi.Android.csproj
 
 # Move Android Dlls to the output folder
 cp ../source/EnRouteApiAndroid/bin/Release/EnRouteApi.Android.dll ${ANDROID_LIB_DIRECTORY}/EnRouteApi.Android.dll

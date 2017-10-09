@@ -44,9 +44,9 @@ namespace Glympse.EnRoute.iOS
             return _raw.startTask((GlyTask)task.raw());
         }
 
-        public bool setOperationPhase(GOperation operation, string phase)
+        public bool setTaskPhase(GTask task, string phase)
         {
-            return _raw.setOperationPhase((GlyOperation)operation.raw(), phase);
+            return _raw.setTaskPhase((GlyTask)task.raw(), phase);
         }
 
         public bool completeOperation(GOperation operation)

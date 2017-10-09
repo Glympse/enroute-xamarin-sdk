@@ -20,11 +20,7 @@ namespace Glympse
 
             long getTaskId();
 
-            void setTicketEta(long eta);           
-
-            string getTicketPhase();
-
-            string getPhase();
+            void setTicketEta(long eta);
         }
     }
 }

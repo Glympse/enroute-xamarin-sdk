@@ -282,7 +282,10 @@ namespace Glympse.EnRoute.iOS
         string getDescription();
 
         [Export ("getDueTime")]
-        long getDueTime();        
+        long getDueTime();
+
+        [Export ("getPhase")]
+        string getPhase();          
     }
 
     [BaseType (typeof(GlyCommon))]
@@ -311,13 +314,7 @@ namespace Glympse.EnRoute.iOS
         long getTaskId();
 
         [Export ("setTicketEta:")]
-        void setTicketEta(long eta);           
-
-        [Export ("getTicketPhase")]
-        string getTicketPhase();
-
-        [Export ("getPhase")]
-        string getPhase();        
+        void setTicketEta(long eta);   
     }
 
     [BaseType (typeof(GlySource))]
@@ -339,8 +336,8 @@ namespace Glympse.EnRoute.iOS
         [Export ("startTaskWithGlyTask:")]
         bool startTask(GlyTask task);
 
-        [Export ("setOperationPhase:phase:")]
-        bool setOperationPhase(GlyOperation operation, string phase);
+        [Export ("setTaskPhase:phase:")]
+        bool setTaskPhase(GlyTask task, string phase);
 
         [Export ("completeOperation:")]
         bool completeOperation(GlyOperation operation);        

@@ -15,6 +15,8 @@ namespace Glympse
             string getDescription();
 
             long getDueTime();
+
+            string getPhase();
         }
     }
 }

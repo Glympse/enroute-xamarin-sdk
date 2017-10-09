@@ -46,9 +46,9 @@ namespace Glympse.EnRoute.UWP
             return _raw.startTask((EnRouteApiDll::Glympse.EnRoute.GTask)task.raw());
         }
 
-        public bool setOperationPhase(GOperation operation, string phase)
+        public bool setTaskPhase(GTask task, string phase)
         {
-            return _raw.setOperationPhase((EnRouteApiDll::Glympse.EnRoute.GOperation)operation.raw(), phase);
+            return _raw.setTaskPhase((EnRouteApiDll::Glympse.EnRoute.GTask)task.raw(), phase);
         }
 
         public bool completeOperation(GOperation operation)
