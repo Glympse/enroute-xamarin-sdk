@@ -48,6 +48,10 @@ namespace Glympse.EnRoute.iOS
             {
                 return new Primitive((GlyPrimitive)raw);
             }
+            else if (raw is GlyLong)
+            {
+                return ((GlyLong) raw).longValue();
+            }
             else
             {
                 throw new Exception("Unsupported type: " + raw.GetType().ToString());
