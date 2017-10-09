@@ -17,7 +17,7 @@ namespace Glympse
 
             bool startTask(GTask task);
 
-            bool setOperationPhase(GOperation operation, string phase);
+            bool setTaskPhase(GTask task, string phase);
 
             bool completeOperation(GOperation operation);
         }

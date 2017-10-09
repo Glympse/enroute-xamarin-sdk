@@ -25,8 +25,7 @@ namespace EnRouteDemo
 
             // Change task phase to "live". Notes
             // - task needs to be in active state
-            // - operation object needs to be available
-            taskManager.setOperationPhase(task.getOperation(), EnRouteConstants.PHASE_PROPERTY_LIVE());
+            taskManager.setTaskPhase(task, EnRouteConstants.PHASE_PROPERTY_LIVE());
 
             // Complete task. Notes
             // - task needs to be in active state

@@ -152,9 +152,14 @@ namespace EnRoute
         return CoreFactory.createString("manual");
     }
     
-    public static String SESSION_CONTROL_MODE_STAGE_MANAGER()
+    public static String SESSION_CONTROL_MODE_SHUTTLE_SERVICE()
     {
-        return CoreFactory.createString("sdk_stage_manager");
+        return CoreFactory.createString("sdk_shuttle_service");
+    }
+    
+    public static String SESSION_CONTROL_MODE_FOOD_DELIVERY()
+    {
+        return CoreFactory.createString("sdk_food_delivery");
     }
 };
     

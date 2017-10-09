@@ -36,6 +36,11 @@ namespace Glympse.EnRoute.Android
             return _raw.getDueTime();
         }
 
+        public string getPhase()
+        {
+            return _raw.getPhase();
+        }
+
         public object raw()
         {
             return _raw;
