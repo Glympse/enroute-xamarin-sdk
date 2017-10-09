@@ -1,6 +1,6 @@
 ﻿extern alias GlympseApiDll;
 
-namespace Glympse.EnRoute.Android
+namespace Glympse.EnRoute.UWP
 {
     class Primitive : GPrimitive
     {

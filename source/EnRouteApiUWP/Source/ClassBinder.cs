@@ -37,6 +37,10 @@ namespace Glympse.EnRoute.UWP
             {
                 return new Operation((EnRouteApiDll::Glympse.EnRoute.GOperation)raw);
             }
+            else if (raw is GlympseApiDll::Glympse.GLong)
+            {
+                return new Int64(((EnRouteApiDll::Glympse.EnRoute.GOperation)raw).longValue());
+            }
             else if ( raw is GlympseApiDll::Glympse.GVector<EnRouteApiDll::Glympse.EnRoute.GOperation> )
             {
                 // Convert the items in the array to the shared interface version
