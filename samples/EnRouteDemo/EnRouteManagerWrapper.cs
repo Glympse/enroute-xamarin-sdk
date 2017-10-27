@@ -39,6 +39,12 @@ namespace EnRouteDemo
             }
         }
 
+		public void clear()
+		{
+			_enRouteFactory = null;
+			_enRouteManager = null;
+		}
+
         public GEnRouteManager Manager
         {
             get 
