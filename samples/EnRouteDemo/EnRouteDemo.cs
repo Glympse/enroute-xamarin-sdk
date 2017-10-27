@@ -10,9 +10,9 @@ namespace EnRouteDemo
 {
     public class App : Application
     {
-		GEnRouteFactory _enRouteFactory;
+        GEnRouteFactory _enRouteFactory;
 
-        public App (GEnRouteFactory enRouteFactory)
+        public App(GEnRouteFactory enRouteFactory)
         {
             _enRouteFactory = enRouteFactory;
             EnRouteManagerWrapper.Instance.create(enRouteFactory);
@@ -38,49 +38,51 @@ namespace EnRouteDemo
             logoutButton.Clicked += onLogoutClicked;
 
             // The root page of your application
-            MainPage = new ContentPage {
-                Content = new StackLayout {
+            MainPage = new ContentPage
+            {
+                Content = new StackLayout
+                {
                     VerticalOptions = LayoutOptions.Center,
                     Children = {
                         new Label {
                             XAlign = TextAlignment.Center,
                             Text = "Welcome to Xamarin Forms!"
                         },
-						loginButton,
-						logoutButton
+                        loginButton,
+                        logoutButton
                     }
                 }
             };
-            
+
             Auth.onAppStart(EnRouteManagerWrapper.Instance.Manager);
         }
 
-		void onLoginClicked(object sender, EventArgs e)
-		{
+        void onLoginClicked(object sender, EventArgs e)
+        {
             EnRouteManagerWrapper.Instance.clear();
             EnRouteManagerWrapper.Instance.create(_enRouteFactory);
             Auth.onAppStart(EnRouteManagerWrapper.Instance.Manager);
-		}
+        }
 
-		void onLogoutClicked(object sender, EventArgs e)
-		{
-			Auth.onDriverLogout(EnRouteManagerWrapper.Instance.Manager);
-		}
+        void onLogoutClicked(object sender, EventArgs e)
+        {
+            Auth.onDriverLogout(EnRouteManagerWrapper.Instance.Manager);
+        }
 
-		protected override void OnStart ()
+        protected override void OnStart()
         {
             // Handle when your app starts
         }
 
-        protected override void OnSleep ()
+        protected override void OnSleep()
         {
             // Handle when your app sleeps
         }
 
-        protected override void OnResume ()
+        protected override void OnResume()
         {
             // Handle when your app resumes
-        }            
+        }
     }
 }
 

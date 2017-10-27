@@ -20,9 +20,9 @@ namespace EnRouteDemo
 
         public static EnRouteManagerWrapper Instance
         {
-            get 
+            get
             {
-                if ( null == instance ) 
+                if (null == instance)
                 {
                     instance = new EnRouteManagerWrapper();
                 }
@@ -32,7 +32,7 @@ namespace EnRouteDemo
 
         public void create(GEnRouteFactory enRouteFactory)
         {
-            if ( null == _enRouteFactory || null == _enRouteManager ) 
+            if (null == _enRouteFactory || null == _enRouteManager)
             {
                 _enRouteFactory = enRouteFactory;
                 _enRouteManager = _enRouteFactory.createEnRouteManager();
@@ -47,7 +47,7 @@ namespace EnRouteDemo
 
         public GEnRouteManager Manager
         {
-            get 
+            get
             {
                 return _enRouteManager;
             }
