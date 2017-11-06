@@ -12,6 +12,7 @@ namespace EnRouteDemo
 
         private GEnRouteFactory _enRouteFactory;
         private GEnRouteManager _enRouteManager;
+        private bool _stopped;
 
         private EnRouteManagerWrapper()
         {
@@ -43,9 +44,10 @@ namespace EnRouteDemo
                     throw new Exception("EnRouteManagerWrapper.Initialize(...) must be called once before accessing the Manager property");
                 }
 
-                if ( null == _enRouteManager ) 
+                if ( _stopped || null == _enRouteManager ) 
                 {
                     createManager();
+                    _stopped = false;
                 }
 
                 return _enRouteManager;
@@ -67,6 +69,7 @@ namespace EnRouteDemo
                     // Manager is stopped and can not be used again.
                     _enRouteManager.removeListener(this);
                     _enRouteManager = null;
+                    _stopped = true;
                 }
             }
         }

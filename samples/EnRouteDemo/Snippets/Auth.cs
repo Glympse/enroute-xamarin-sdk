@@ -15,6 +15,11 @@ namespace EnRouteDemo
 
         public static void onAppStart(GEnRouteManager manager)
         {
+            Auth.start(manager);
+        }
+
+        public static void start(GEnRouteManager manager)
+        {
             _listener = new EnRouteDemo.Listener();
             manager.addListener(_listener);
             manager.setAuthenticationMode(EnRouteConstants.AUTH_MODE_CREDENTIALS);
