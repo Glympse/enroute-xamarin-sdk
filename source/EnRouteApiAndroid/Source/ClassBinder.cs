@@ -77,12 +77,12 @@ namespace Glympse.EnRoute.Android
                 }
                 else
                 {
-                    throw new Exception("Unsupported type: " + obj.Class.Name);
+                    return null;
                 }
             }    
             else
             {
-                throw new Exception("Unsupported type: " + raw.GetType().ToString());
+                return null;
             }
         }
     }

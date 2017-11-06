@@ -54,7 +54,7 @@ namespace Glympse.EnRoute.iOS
             }
             else
             {
-                throw new Exception("Unsupported type: " + raw.GetType().ToString());
+                return null;
             }
         }
     }

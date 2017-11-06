@@ -46,11 +46,8 @@ namespace EnRouteDemo.Droid
 
         private void startManager(Context context)
         {
-            GEnRouteFactory enRouteFactory = new EnRouteFactory (context);
-            if ( null == EnRouteManagerWrapper.Instance.Manager )
-            {
-                EnRouteManagerWrapper.Instance.create(enRouteFactory);
-            }
+            GEnRouteFactory enRouteFactory = new EnRouteFactory(context);
+            EnRouteManagerWrapper.Instance.Initialize(enRouteFactory);
 
             GEnRouteManager enRouteManager = EnRouteManagerWrapper.Instance.Manager;
             if ( enRouteManager.isLoginNeeded() || !enRouteManager.isStarted() ) 

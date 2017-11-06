@@ -6,12 +6,11 @@ using Glympse.EnRoute;
 
 namespace EnRouteDemo
 {
-    public class EnRouteManagerWrapper
+    public class EnRouteManagerWrapper : GListener
     {
         private static EnRouteManagerWrapper instance;
 
         private GEnRouteFactory _enRouteFactory;
-
         private GEnRouteManager _enRouteManager;
 
         private EnRouteManagerWrapper()
@@ -30,22 +29,46 @@ namespace EnRouteDemo
             }
         }
 
-        public void create(GEnRouteFactory enRouteFactory)
+        public void Initialize(GEnRouteFactory enRouteFactory)
         {
-            if ( null == _enRouteFactory || null == _enRouteManager ) 
-            {
-                _enRouteFactory = enRouteFactory;
-                _enRouteManager = _enRouteFactory.createEnRouteManager();
-            }
+            _enRouteFactory = enRouteFactory;
         }
 
         public GEnRouteManager Manager
         {
             get 
             {
+                if ( null == _enRouteFactory )
+                {
+                    throw new Exception("EnRouteManagerWrapper.Initialize(...) must be called once before accessing the Manager property");
+                }
+
+                if ( null == _enRouteManager ) 
+                {
+                    createManager();
+                }
+
                 return _enRouteManager;
+            }
+        }
+
+        private void createManager()
+        {
+        	_enRouteManager = _enRouteFactory.createEnRouteManager();
+        	_enRouteManager.addListener(this);
+        }
+
+        public void eventsOccurred(GSource source, int listener, int events, object param1, object param2)
+        {
+            if (EnRouteEvents.LISTENER_ENROUTE_MANAGER == listener)
+            {
+                if (0 != (EnRouteEvents.ENROUTE_MANAGER_STOPPED & events))
+                {
+                    // Manager is stopped and can not be used again.
+                    _enRouteManager.removeListener(this);
+                    _enRouteManager = null;
+                }
             }
         }
     }
 }
-
