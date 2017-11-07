@@ -67,7 +67,7 @@ namespace Glympse.EnRoute.UWP
             }
             else
             {
-                throw new Exception("Unsupported type: " + raw.GetType().ToString());
+                return null;
             }
         }
     }
