@@ -41,6 +41,11 @@ namespace Glympse.EnRoute.UWP
             return _raw.getPhase();
         }
 
+        public string getForeignId()
+        {
+            return _raw.getForeignId();
+        }
+
         public object raw()
         {
             return _raw;

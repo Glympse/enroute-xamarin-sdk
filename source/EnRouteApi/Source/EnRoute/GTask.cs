@@ -17,6 +17,8 @@ namespace Glympse
             long getDueTime();
 
             string getPhase();
+
+            string getForeignId();
         }
     }
 }

@@ -284,8 +284,11 @@ namespace Glympse.EnRoute.iOS
         [Export ("getDueTime")]
         long getDueTime();
 
-        [Export ("getPhase")]
-        string getPhase();          
+        [Export("getPhase")]
+        string getPhase();
+
+        [Export ("getForeignId")]
+        string getForeignId();   
     }
 
     [BaseType (typeof(GlyCommon))]
