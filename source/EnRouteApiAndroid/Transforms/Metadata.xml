@@ -233,6 +233,9 @@
 	<attr 
         path="/api/package[@name='com.glympse.enroute.android.api']/interface[@name='GTask']/method[@name='getPhase']" 
         name="managedName">getPhase</attr>
+	<attr 
+        path="/api/package[@name='com.glympse.enroute.android.api']/interface[@name='GTask']/method[@name='getForeignId']" 
+        name="managedName">getForeignId</attr>
 
     <!-- GOperation -->
     <attr 
