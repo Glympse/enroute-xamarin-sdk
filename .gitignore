@@ -1,5 +1,6 @@
 # ios
 *.a
+*.framework
 
 # android
 .idea
@@ -11,6 +12,9 @@
 bin
 obj
 packages
+
+# visual studio
+.vs
 
 # tools
 tmp_*
