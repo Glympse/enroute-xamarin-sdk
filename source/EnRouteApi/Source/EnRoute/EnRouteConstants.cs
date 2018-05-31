@@ -57,6 +57,25 @@ namespace EnRoute
     public const int LOGOUT_REASON_SERVER_ERROR = 6;
     
     /**
+     * @name Session completion reasons
+     */
+    
+    /**
+     * Completion reason for when a session is completed for an unknown reason.
+     */
+    public const int SESSION_COMPLETION_REASON_UNKNOWN = 0x00000000;
+    
+    /**
+     * Completion reason for when a session is completed due to a geofence trigger.
+     */
+    public const int SESSION_COMPLETION_REASON_GEOFENCE = 0x00000001;
+    
+    /**
+     * Completion reason for when a session is completed due to manual user action.
+     */
+    public const int SESSION_COMPLETION_REASON_USER_ACTION = 0x00000002;
+    
+    /**
      * @name Ticket extension constants
      */
 

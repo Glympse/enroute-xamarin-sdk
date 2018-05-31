@@ -120,6 +120,12 @@ namespace EnRoute
     public const int ENROUTE_MANAGER_ORG_CONFIG_UPDATED = 0x00000080;
     
     /**
+     * This event is broadcast when the self agent has been updated and the new values are in use by the system.
+     *
+     */
+    public const int ENROUTE_MANAGER_SELF_AGENT_UPDATED = 0x00000100;
+    
+    /**
      * @name Task Manager events.
      *
      * Events broadcasted by LISTENER_TASKS.
@@ -172,27 +178,6 @@ namespace EnRoute
      * The associated operation and the new ticket are passed as parameters (GOperation, GTicket).
      */
     public const int TASKS_OPERATION_TICKET_CHANGED = 0x00000040;
-    
-    /**
-     * @name Session Manager events.
-     *
-     * Events broadcasted by LISTENER_SESSIONS.
-     */
-    
-    /**
-     * This event is broadcast when a session is completed for an unknown reason.
-     */
-    public const int SESSIONS_COMPLETED_UNKNOWN = 0x00000000;
-    
-    /**
-     * This event is broadcast when a session is completed due to a geofence trigger.
-     */
-    public const int SESSIONS_COMPLETED_GEOFENCE = 0x00000001;
-    
-    /**
-     * This event is broadcast when a session is completed due to manual user action.
-     */
-    public const int SESSIONS_COMPLETED_USER_ACTION = 0x00000002;
     
     /**
      * @name ETA Planner events.

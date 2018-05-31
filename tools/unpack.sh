@@ -44,4 +44,4 @@ mv $TMP_ANDROID/lib/GlympseApi/GlympseApi.zip ../source/EnRouteApiAndroid/Res
 
 # Copy iOS dependencies
 unzip $PACKAGE_IOS -d $TMP_IOS
-cp $TMP_IOS/lib/EnRouteApi/lib/libc++/* ../source/EnRouteApiiOS/Libs
+cp -r $TMP_IOS/framework/* ../source/EnRouteApiiOS/Libs
