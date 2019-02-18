@@ -25,12 +25,17 @@ pushd $TMP_ANDROID/lib/GlympseApi > /dev/null
     unzip GlympseApi-release.aar
 popd > /dev/null
 
+pushd $TMP_ANDROID/lib/GlympseApiPush > /dev/null
+    unzip GlympseApiPush-release.aar
+popd > /dev/null
+
 pushd $TMP_ANDROID/lib/GlympseApiToolbox > /dev/null
     unzip GlympseApiToolbox-release.aar
 popd > /dev/null
 
 cp $TMP_ANDROID/lib/EnRouteApi/classes.jar ../source/EnRouteApiAndroid/Jars/EnRouteApi.jar
 cp $TMP_ANDROID/lib/GlympseApiToolbox/classes.jar ../source/EnRouteApiAndroid/Jars/GlympseApiToolbox.jar
+cp $TMP_ANDROID/lib/GlympseApiPush/classes.jar ../source/EnRouteApiAndroid/Jars/GlympseApiPush.jar
 cp $TMP_ANDROID/lib/GlympseApi/classes.jar ../source/EnRouteApiAndroid/Jars/GlympseApi.jar
 
 pushd $TMP_ANDROID/lib/GlympseApi > /dev/null

@@ -180,6 +180,36 @@ namespace EnRoute
     public const int TASKS_OPERATION_TICKET_CHANGED = 0x00000040;
     
     /**
+     * This event is broadcast following a call to Taskmanager->addOrUpdateMetadataItem that succeeds
+     *
+     * The associated task is passed as a parameter (GTask)
+     */
+    public const int TASKS_TASK_METADATA_UPDATE_SUCCEEDED = 0X00000080;
+    
+    /**
+     * This event is broadcast following a call to Taskmanager->addOrUpdateMetadataItem that fails
+     *
+     * The associated task and error are passed as parameters (GTask, GString)
+     */
+    public const int TASKS_TASK_METADATA_UPDATE_FAILED    = 0X00000100;
+    
+    /**
+     * This event is broadcast when the CardMessages object associated with a task is updated
+     *
+     * The associated task is passed as a parameter (GTask).
+     */
+    public const int TASKS_TASK_CARD_MESSAGE_CHANGED = 0x00000200;
+    
+    /**
+     * This event is broadcast when the SDK receives a response from the server after sending
+     * a message
+     *
+     * The event id and unique id of the message are passed as parameters (GString, GString)
+     * If no event id is present then the message failed to create on the server
+     */
+    public const int TASKS_TASK_CARD_MESSAGE_STATUS = 0x00000400;
+    
+    /**
      * @name ETA Planner events.
      *
      * Events broadcasted by LISTENER_ETA_PLANNER.
