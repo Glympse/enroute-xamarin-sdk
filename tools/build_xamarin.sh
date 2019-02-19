@@ -21,20 +21,20 @@ CLIENT_SDK_ZIP=$(find . -name "EnRoute_Api_Android_*.zip" | cut -d '_' -f 4)
 CLIENT_SDK_VERSION=${CLIENT_SDK_ZIP%.zip}
 
 # Clean the Andriod build
-/Library/Frameworks/Mono.framework/Commands/xbuild /p:Configuration=Release /p:AndroidClassParser=class-parse /t:PackageForAndroid /target:Build ../source/EnRouteApiAndroid/EnRouteApi.Android.csproj /t:Clean
+/Library/Frameworks/Mono.framework/Commands/msbuild /p:Configuration=Release /p:AndroidClassParser=class-parse /target:Clean ../source/EnRouteApiAndroid/EnRouteApi.Android.csproj
 
 # Build the Android solution
-/Library/Frameworks/Mono.framework/Commands/xbuild /p:Configuration=Release /p:AndroidClassParser=class-parse /t:PackageForAndroid /target:Build ../source/EnRouteApiAndroid/EnRouteApi.Android.csproj
+/Library/Frameworks/Mono.framework/Commands/msbuild /p:Configuration=Release /p:AndroidClassParser=class-parse /target:Build ../source/EnRouteApiAndroid/EnRouteApi.Android.csproj
 
 # Move Android Dlls to the output folder
 cp ../source/EnRouteApiAndroid/bin/Release/EnRouteApi.Android.dll ${ANDROID_LIB_DIRECTORY}/EnRouteApi.Android.dll
 cp ../source/EnRouteApiAndroid/bin/Release/EnRouteApi.dll ${SHARED_LIB_DIRECTORY}/EnRouteApi.dll
 
 # Clean the iOS build
-/Library/Frameworks/Mono.framework/Commands/xbuild /p:Configuration=Release /p:BuildIpa=false /target:Build ../source/EnRouteApiiOS/EnRouteApi.iOS.csproj /t:Clean
+/Library/Frameworks/Mono.framework/Commands/msbuild /p:Configuration=Release /p:BuildIpa=false /target:Clean ../source/EnRouteApiiOS/EnRouteApi.iOS.csproj
 
 # Build the iOS solution
-/Library/Frameworks/Mono.framework/Commands/xbuild /p:Configuration=Release /p:BuildIpa=false /target:Build ../source/EnRouteApiiOS/EnRouteApi.iOS.csproj
+/Library/Frameworks/Mono.framework/Commands/msbuild /p:Configuration=Release /p:BuildIpa=false /target:Build ../source/EnRouteApiiOS/EnRouteApi.iOS.csproj
 
 # Move iOS Dlls to the output folder
 cp ../source/EnRouteApiiOS/bin/Release/EnRouteApi.iOS.dll ${IOS_LIB_DIRECTORY}/EnRouteApi.iOS.dll
