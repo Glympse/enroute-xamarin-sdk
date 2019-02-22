@@ -82,5 +82,6 @@
     <EmbeddedJar Include="Jars\GlympseApi.jar" />
     <EmbeddedJar Include="Jars\GlympseApiToolbox.jar" />
     <EmbeddedJar Include="Jars\EnRouteApi.jar" />
+    <EmbeddedJar Include="Jars\GlympseApiPush.jar" />
   </ItemGroup>
 </Project>
