@@ -415,6 +415,9 @@ namespace Glympse.EnRoute.iOS
         
         [Export ("registerDeviceToken:deviceToken:")]
         void registerDeviceToken(string tokenType, string deviceToken);
+
+        [Export("overrideLoggingLevels:debugLogLevel:")]
+        void overrideLoggingLevels(int fileLevel, int debugLevel);
     }
         
     [BaseType (typeof(NSObject))]

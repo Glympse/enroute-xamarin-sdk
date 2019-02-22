@@ -350,6 +350,9 @@
     <attr 
         path="/api/package[@name='com.glympse.enroute.android.api']/interface[@name='GEnRouteManager']/method[@name='registerDeviceToken']" 
         name="managedName">registerDeviceToken</attr> 
+    <attr 
+        path="/api/package[@name='com.glympse.enroute.android.api']/interface[@name='GEnRouteManager']/method[@name='overrideLoggingLevels']" 
+        name="managedName">overrideLoggingLevels</attr> 
 
     <!-- GEnRouteFactory -->
     <attr 

@@ -42,6 +42,8 @@ namespace Glympse
             void handleRemoteNotification(string payload);
             
             void registerDeviceToken(string tokenType, string deviceToken);
+
+            void overrideLoggingLevels(int fileLevel, int debugLevel);
         }
     }
 }
