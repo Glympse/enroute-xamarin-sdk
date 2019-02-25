@@ -110,6 +110,11 @@ namespace Glympse.EnRoute.iOS
             _raw.registerDeviceToken(tokenType, deviceToken);
         }
 
+        public void overrideLoggingLevels(int fileLevel, int debugLevel)
+        {
+            _raw.overrideLoggingLevels(fileLevel, debugLevel);
+        }
+
         /**
          * GSource section
          */

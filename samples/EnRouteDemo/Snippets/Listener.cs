@@ -39,6 +39,7 @@ namespace EnRouteDemo
                 if ( 0 != (EnRouteEvents.ENROUTE_MANAGER_SYNCED & events) )
                 {
                     // Synced
+                    EnRouteManagerWrapper.Instance.Manager.overrideLoggingLevels(1, 1);
                 }
                 if ( 0 != (EnRouteEvents.ENROUTE_MANAGER_LOGGED_OUT & events) )
                 {

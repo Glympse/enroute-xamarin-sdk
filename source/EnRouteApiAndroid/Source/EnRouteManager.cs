@@ -111,6 +111,11 @@ namespace Glympse.EnRoute.Android
             _raw.registerDeviceToken(tokenType, deviceToken);
         }
 
+        public void overrideLoggingLevels(int fileLevel, int debugLevel)
+        {
+            _raw.overrideLoggingLevels(fileLevel, debugLevel);
+        }
+
         /**
          * GSource section
          */

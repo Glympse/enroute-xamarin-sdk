@@ -23,3 +23,4 @@ project.lock.json
 *.pfx
 Package.StoreAssociation.xml
 UpgradeLog.htm
+google-services.json
