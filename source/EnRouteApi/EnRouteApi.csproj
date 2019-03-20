@@ -48,6 +48,9 @@
     <Compile Include="Source\Core\GPrimitive.cs" />
     <Compile Include="Source\Core\Config.cs" />
     <Compile Include="Source\Core\GlympseConstants.cs" />
+    <Compile Include="Source\Core\GTicket.cs" />
+    <Compile Include="Source\Core\GInvite.cs" />
+    <Compile Include="Source\Core\GPlace.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
   <ItemGroup>

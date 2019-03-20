@@ -54,6 +54,10 @@
     <Compile Include="Source\Organization.cs" />
     <Compile Include="Source\Primitive.cs" />
     <Compile Include="Source\CoreFactory.cs" />
+    <Compile Include="Source\GlympseFactory.cs" />
+    <Compile Include="Source\Invite.cs" />
+    <Compile Include="Source\Ticket.cs" />
+    <Compile Include="Source\Place.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Additions\AboutAdditions.txt" />

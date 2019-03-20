@@ -56,6 +56,10 @@
     <Compile Include="Source\TaskManager.cs" />
     <Compile Include="Source\Primitive.cs" />
     <Compile Include="Source\CoreFactory.cs" />
+    <Compile Include="Source\Place.cs" />
+    <Compile Include="Source\Invite.cs" />
+    <Compile Include="Source\Ticket.cs" />
+    <Compile Include="Source\GlympseFactory.cs" />
   </ItemGroup>
   <ItemGroup>
     <ObjcBindingApiDefinition Include="ApiDefinition.cs" />

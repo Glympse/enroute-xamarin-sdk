@@ -242,6 +242,73 @@ namespace Glympse.EnRoute.iOS
         GlyPrimitive createPrimitive(string str);
     }
 
+    [BaseType(typeof(GlyCommon))]
+    [DisableDefaultCtor]
+    interface GlyPlace
+    {
+
+    }
+
+    [BaseType(typeof(NSObject))]
+    [DisableDefaultCtor]
+    interface GlyInvite
+    {
+        [Export("getAddress")]
+        string getAddress();
+
+        [Export("getType")]
+        int getType();
+    }
+
+    [BaseType(typeof(NSObject))]
+    [DisableDefaultCtor]
+    interface GlyTicket
+    {
+        [Export("appendData:partnerId:name:value")]
+        bool appendData(long partnerId, string name, GlyPrimitive value);
+
+        [Export("expire")]
+        bool expire();
+
+        [Export("extend:interval")]
+        bool extend(long interval);
+
+        [Export("getDuration")]
+        long getDuration();
+
+        [Export("getEta")]
+        long getEta();
+
+        [Export("getId")]
+        string getId();
+
+        [Export("getInvites")]
+        GlyArray getInvites();
+
+        [Export("modify:remaining:message:destination")]
+        bool modify(long remaining, string message, GlyPlace destination);
+
+        [Export("updateEta:eta")]
+        void updateEta(long eta);
+    }
+
+    [BaseType(typeof(NSObject))]
+    [DisableDefaultCtor]
+    interface GlyGlympseFactory
+    {
+        [Static]
+        [Export("createInviteWithInt:type:name:address")]
+        GlyInvite createInvite(int type, string name, string address);
+
+        [Static]
+        [Export("createPlace:latitude:longitude:name")]
+        GlyPlace createPlace(double latitude, double longitude, string name);
+
+        [Static]
+        [Export("createTicket:duration:message:destination")]
+        GlyTicket createTicket(long duration, string message, GlyPlace destination);
+    }
+
     /**
      * EnRoute SDK Bindings
      */

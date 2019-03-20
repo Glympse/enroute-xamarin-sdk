@@ -162,10 +162,75 @@
         path="/api/package[@name='com.glympse.android.api']/interface[@name='GGlympse']" 
         name="managedName">GGlympse</attr>
     
+    <!-- GPlace -->
+    <attr 
+        path="/api/package[@name='com.glympse.android.api']/interface[@name='GPlace']" 
+        name="managedName">GPlace</attr>
+    
+    <!-- GInvite -->
+    <attr 
+        path="/api/package[@name='com.glympse.android.api']/interface[@name='GInvite']" 
+        name="managedName">GInvite</attr>
+    <attr 
+        path="/api/package[@name='com.glympse.android.api']/interface[@name='GInvite']/method[@name='getAddress']" 
+        name="managedName">getAddress</attr>
+    <attr 
+        path="/api/package[@name='com.glympse.android.api']/interface[@name='GInvite']/method[@name='getType']" 
+        name="managedName">getType</attr>
+    
+    <!-- GTicket -->
+    <attr 
+        path="/api/package[@name='com.glympse.android.api']/interface[@name='GTicket']" 
+        name="managedName">GTicket</attr>
+    <attr 
+        path="/api/package[@name='com.glympse.android.api']/interface[@name='GTicket']/method[@name='appendData']" 
+        name="managedName">appendData</attr>
+    <attr 
+        path="/api/package[@name='com.glympse.android.api']/interface[@name='GTicket']/method[@name='expire']" 
+        name="managedName">expire</attr>
+    <attr 
+        path="/api/package[@name='com.glympse.android.api']/interface[@name='GTicket']/method[@name='extend']" 
+        name="managedName">extend</attr>
+    <attr 
+        path="/api/package[@name='com.glympse.android.api']/interface[@name='GTicket']/method[@name='getDuration']" 
+        name="managedName">getDuration</attr>
+    <attr 
+        path="/api/package[@name='com.glympse.android.api']/interface[@name='GTicket']/method[@name='getEta']" 
+        name="managedName">getEta</attr>
+    <attr 
+        path="/api/package[@name='com.glympse.android.api']/interface[@name='GTicket']/method[@name='getId']" 
+        name="managedName">getId</attr>
+    <attr 
+        path="/api/package[@name='com.glympse.android.api']/interface[@name='GTicket']/method[@name='getInvites']" 
+        name="managedName">getInvites</attr>
+    <attr 
+        path="/api/package[@name='com.glympse.android.api']/interface[@name='GTicket']/method[@name='modify']" 
+        name="managedName">modify</attr>
+    <attr 
+        path="/api/package[@name='com.glympse.android.api']/interface[@name='GTicket']/method[@name='updateEta']" 
+        name="managedName">updateEta</attr>
+    
     <!-- CoreFactory -->
     <attr 
         path="/api/package[@name='com.glympse.android.core']/class[@name='CoreFactory']/method[@name='createPrimitive']" 
         name="managedName">createPrimitive</attr>
+    
+    <!-- GlympseFactory -->
+    <attr 
+        path="/api/package[@name='com.glympse.android.api']/class[@name='GlympseFactory']/method[@name='createGlympse']" 
+        name="managedName">createGlympse</attr>
+    
+    <attr 
+        path="/api/package[@name='com.glympse.android.api']/class[@name='GlympseFactory']/method[@name='createInvite']" 
+        name="managedName">createInvite</attr>
+    
+    <attr 
+        path="/api/package[@name='com.glympse.android.api']/class[@name='GlympseFactory']/method[@name='createPlace']" 
+        name="managedName">createPlace</attr>
+    
+    <attr 
+        path="/api/package[@name='com.glympse.android.api']/class[@name='GlympseFactory']/method[@name='createTicket']" 
+        name="managedName">createTicket</attr>
 
     <!-- Exclude unnecessary packages -->
     <remove-node path="/api/package[starts-with(@name, 'com.glympse.android.lib')]" />
