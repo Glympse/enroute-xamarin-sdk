@@ -161,6 +161,11 @@
     <attr 
         path="/api/package[@name='com.glympse.android.api']/interface[@name='GGlympse']" 
         name="managedName">GGlympse</attr>
+    
+    <!-- CoreFactory -->
+    <attr 
+        path="/api/package[@name='com.glympse.android.core']/class[@name='CoreFactory']/method[@name='createPrimitive']" 
+        name="managedName">createPrimitive</attr>
 
     <!-- Exclude unnecessary packages -->
     <remove-node path="/api/package[starts-with(@name, 'com.glympse.android.lib')]" />

@@ -231,8 +231,17 @@ namespace Glympse.EnRoute.iOS
 
         [Export ("removeListener:")]
         bool removeListener(GlyListener listener);
-    } 
-        
+    }
+
+    [BaseType(typeof(NSObject))]
+    [DisableDefaultCtor]
+    interface GlyCoreFactory
+    {
+        [Static]
+        [Export("createPrimitive:str")]
+        GlyPrimitive createPrimitive(string str);
+    }
+
     /**
      * EnRoute SDK Bindings
      */
