@@ -63,6 +63,7 @@
     <Compile Include="Source\DirectionsManager.cs" />
     <Compile Include="Source\User.cs" />
     <Compile Include="Source\UserManager.cs" />
+    <Compile Include="Source\Glympse.cs" />
   </ItemGroup>
   <ItemGroup>
     <ObjcBindingApiDefinition Include="ApiDefinition.cs" />

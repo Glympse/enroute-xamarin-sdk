@@ -54,6 +54,7 @@
     <Compile Include="Source\Core\GDirectionsManager.cs" />
     <Compile Include="Source\Core\GUser.cs" />
     <Compile Include="Source\Core\GUserManager.cs" />
+    <Compile Include="Source\Core\GGlympse.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
   <ItemGroup>

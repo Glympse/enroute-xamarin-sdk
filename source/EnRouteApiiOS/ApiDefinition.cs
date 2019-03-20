@@ -242,6 +242,47 @@ namespace Glympse.EnRoute.iOS
         GlyPrimitive createPrimitive(string str);
     }
 
+    [BaseType(typeof(NSObject))]
+    [DisableDefaultCtor]
+    interface GlyGlympse
+    {
+        [Export("start")]
+        void start();
+
+        [Export("stop")]
+        void stop();
+
+        [Export("isStarted")]
+        bool isStarted();
+
+        [Export("getUserManager")]
+        GlyUserManager getUserManager();
+
+        [Export("getDirectionsManager")]
+        GlyDirectionsManager getDirectionsManager();
+
+        [Export("sendTicket:ticket")]
+        bool sendTicket(GlyTicket ticket);
+
+        [Export("getSmsSendMode")]
+        int getSmsSendMode();
+
+        [Export("setSmsSendMode:mode")]
+        void setSmsSendMode(int mode);
+
+        [Export("canDeviceSendSms")]
+        int canDeviceSendSms();
+
+        [Export("getEtaMode")]
+        int getEtaMode();
+
+        [Export("setEtaMode:mode")]
+        void setEtaMode(int mode);
+
+        [Export("getApiVersion")]
+        string getApiVersion();
+    }
+
     [BaseType(typeof(GlyCommon))]
     [DisableDefaultCtor]
     interface GlyPlace
@@ -296,6 +337,10 @@ namespace Glympse.EnRoute.iOS
     [DisableDefaultCtor]
     interface GlyGlympseFactory
     {
+        [Static]
+        [Export("createGlympseWithNSString:server:apiKey")]
+        GlyGlympse createGlympse(string server, string apiKey);
+
         [Static]
         [Export("createInviteWithInt:type:name:address")]
         GlyInvite createInvite(int type, string name, string address);

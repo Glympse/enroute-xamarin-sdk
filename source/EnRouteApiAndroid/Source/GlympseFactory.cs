@@ -1,13 +1,14 @@
 ﻿using System;
+using Android.Content;
 
 namespace Glympse.EnRoute.Android
 {
     public static class GlympseFactory
     {
-        /*GGlympse createGlympse(Context context, string server, string apiKey)
-        {       
-            return null; // TODO
-        }*/
+        public static GGlympse createGlympse(Context context, string server, string apiKey)
+        {
+            return new Glympse(com.glympse.android.api.GlympseFactory.createGlympse(context, server, apiKey));
+        }
 
         public static GInvite createInvite(int type, string name, string address)
         {
