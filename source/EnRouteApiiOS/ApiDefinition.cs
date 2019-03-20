@@ -309,6 +309,33 @@ namespace Glympse.EnRoute.iOS
         GlyTicket createTicket(long duration, string message, GlyPlace destination);
     }
 
+    [BaseType(typeof(NSObject))]
+    [DisableDefaultCtor]
+    interface GlyDirectionsManager
+    {
+        [Export("setTravelMode:mode")]
+        void setTravelMode(int mode);
+    }
+
+    [BaseType(typeof(NSObject))]
+    [DisableDefaultCtor]
+    interface GlyUserManager
+    {
+        [Export("getSelf")]
+        GlyUser getSelf();
+    }
+
+    [BaseType(typeof(NSObject))]
+    [DisableDefaultCtor]
+    interface GlyUser
+    {
+        [Export("setNickname:nickname")]
+        bool setNickname(string nickname);
+
+        [Export("getNickname")]
+        string getNickname();
+    }
+
     /**
      * EnRoute SDK Bindings
      */

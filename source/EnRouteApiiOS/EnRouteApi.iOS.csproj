@@ -60,6 +60,9 @@
     <Compile Include="Source\Invite.cs" />
     <Compile Include="Source\Ticket.cs" />
     <Compile Include="Source\GlympseFactory.cs" />
+    <Compile Include="Source\DirectionsManager.cs" />
+    <Compile Include="Source\User.cs" />
+    <Compile Include="Source\UserManager.cs" />
   </ItemGroup>
   <ItemGroup>
     <ObjcBindingApiDefinition Include="ApiDefinition.cs" />

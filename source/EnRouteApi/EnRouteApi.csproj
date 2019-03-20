@@ -51,6 +51,9 @@
     <Compile Include="Source\Core\GTicket.cs" />
     <Compile Include="Source\Core\GInvite.cs" />
     <Compile Include="Source\Core\GPlace.cs" />
+    <Compile Include="Source\Core\GDirectionsManager.cs" />
+    <Compile Include="Source\Core\GUser.cs" />
+    <Compile Include="Source\Core\GUserManager.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
   <ItemGroup>

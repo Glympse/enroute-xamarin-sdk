@@ -210,6 +210,33 @@
         path="/api/package[@name='com.glympse.android.api']/interface[@name='GTicket']/method[@name='updateEta']" 
         name="managedName">updateEta</attr>
     
+    <!-- GUserManager -->
+    <attr 
+        path="/api/package[@name='com.glympse.android.api']/interface[@name='GUserManager']" 
+        name="managedName">GUserManager</attr>
+    <attr 
+        path="/api/package[@name='com.glympse.android.api']/interface[@name='GUserManager']/method[@name='getSelf']" 
+        name="managedName">getSelf</attr>
+    
+    <!-- GUser -->
+    <attr 
+        path="/api/package[@name='com.glympse.android.api']/interface[@name='GUser']" 
+        name="managedName">GUser</attr>
+    <attr 
+        path="/api/package[@name='com.glympse.android.api']/interface[@name='GUser']/method[@name='setNickname']" 
+        name="managedName">setNickname</attr>
+    <attr 
+        path="/api/package[@name='com.glympse.android.api']/interface[@name='GUser']/method[@name='getNickname']" 
+        name="managedName">getNickname</attr>
+    
+    <!-- GDirectionsManager -->
+    <attr 
+        path="/api/package[@name='com.glympse.android.api']/interface[@name='GDirectionsManager']" 
+        name="managedName">GDirectionsManager</attr>
+    <attr 
+        path="/api/package[@name='com.glympse.android.api']/interface[@name='GDirectionsManager']/method[@name='setTravelMode']" 
+        name="managedName">setTravelMode</attr>
+    
     <!-- CoreFactory -->
     <attr 
         path="/api/package[@name='com.glympse.android.core']/class[@name='CoreFactory']/method[@name='createPrimitive']" 
