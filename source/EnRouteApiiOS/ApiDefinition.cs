@@ -238,7 +238,7 @@ namespace Glympse.EnRoute.iOS
     interface GlyCoreFactory
     {
         [Static]
-        [Export("createPrimitive:str")]
+        [Export("createPrimitiveWithNSString:")]
         GlyPrimitive createPrimitive(string str);
     }
 
@@ -264,13 +264,13 @@ namespace Glympse.EnRoute.iOS
         [Export("getConsentManager")]
         GlyConsentManager getConsentManager();
 
-        [Export("sendTicket:ticket")]
+        [Export("sendTicket:")]
         bool sendTicket(GlyTicket ticket);
 
         [Export("getSmsSendMode")]
         int getSmsSendMode();
 
-        [Export("setSmsSendMode:mode")]
+        [Export("setSmsSendMode:")]
         void setSmsSendMode(int mode);
 
         [Export("canDeviceSendSms")]
@@ -279,14 +279,14 @@ namespace Glympse.EnRoute.iOS
         [Export("getEtaMode")]
         int getEtaMode();
 
-        [Export("setEtaMode:mode")]
+        [Export("setEtaMode:")]
         void setEtaMode(int mode);
 
         [Export("getApiVersion")]
         string getApiVersion();
 
-        [Export("overrideLoggingLevels:fileLevel:debugLevel")]
-        string overrideLoggingLevels(int fileLevel, int debugLevel);
+        [Export("overrideLoggingLevels:debugLevel:")]
+        void overrideLoggingLevels(int fileLevel, int debugLevel);
     }
 
     [BaseType(typeof(GlyCommon))]
@@ -311,13 +311,13 @@ namespace Glympse.EnRoute.iOS
     [DisableDefaultCtor]
     interface GlyTicket
     {
-        [Export("appendData:partnerId:name:value")]
+        [Export("appendData:name:value:")]
         bool appendData(long partnerId, string name, GlyPrimitive value);
 
         [Export("expire")]
         bool expire();
 
-        [Export("extend:interval")]
+        [Export("extend:")]
         bool extend(long interval);
 
         [Export("getDuration")]
@@ -332,10 +332,10 @@ namespace Glympse.EnRoute.iOS
         [Export("getInvites")]
         GlyArray getInvites();
 
-        [Export("modify:remaining:message:destination")]
+        [Export("modify:message:destination:")]
         bool modify(long remaining, string message, GlyPlace destination);
 
-        [Export("updateEta:eta")]
+        [Export("updateEta:")]
         void updateEta(long eta);
     }
 
@@ -344,19 +344,19 @@ namespace Glympse.EnRoute.iOS
     interface GlyGlympseFactory
     {
         [Static]
-        [Export("createGlympseWithNSString:server:apiKey")]
+        [Export("createGlympseWithNSString:withNSString:")]
         GlyGlympse createGlympse(string server, string apiKey);
 
         [Static]
-        [Export("createInviteWithInt:type:name:address")]
+        [Export("createInviteWithInt:withNSString:withNSString:")]
         GlyInvite createInvite(int type, string name, string address);
 
         [Static]
-        [Export("createPlace:latitude:longitude:name")]
+        [Export("createPlace:longitude:name:")]
         GlyPlace createPlace(double latitude, double longitude, string name);
 
         [Static]
-        [Export("createTicket:duration:message:destination")]
+        [Export("createTicket:message:destination:")]
         GlyTicket createTicket(long duration, string message, GlyPlace destination);
     }
 
@@ -364,7 +364,7 @@ namespace Glympse.EnRoute.iOS
     [DisableDefaultCtor]
     interface GlyConsentManager
     {
-        [Export("exemptFromConsent:isExempt")]
+        [Export("exemptFromConsent:")]
         void exemptFromConsent(bool isExempt);
     }
 
@@ -372,7 +372,7 @@ namespace Glympse.EnRoute.iOS
     [DisableDefaultCtor]
     interface GlyDirectionsManager
     {
-        [Export("setTravelMode:mode")]
+        [Export("setTravelMode:")]
         void setTravelMode(int mode);
     }
 
@@ -388,7 +388,7 @@ namespace Glympse.EnRoute.iOS
     [DisableDefaultCtor]
     interface GlyUser
     {
-        [Export("setNickname:nickname")]
+        [Export("setNickname:")]
         bool setNickname(string nickname);
 
         [Export("getNickname")]

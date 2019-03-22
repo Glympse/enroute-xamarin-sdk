@@ -17,15 +17,15 @@ namespace EnRouteDemo.Droid
     [Activity (Label = "EnRouteDemo.Droid", Icon = "@drawable/icon", MainLauncher = true, ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation)]
     public class MainActivity : global::Xamarin.Forms.Platform.Android.FormsApplicationActivity
     {
+        public const bool IS_ENROUTE_MODE = false;
+
         protected override void OnCreate (Bundle bundle)
         {
             base.OnCreate (bundle);
 
             global::Xamarin.Forms.Forms.Init (this, bundle);
 
-            bool isEnRouteMode = true;
-
-            if (isEnRouteMode)
+            if (IS_ENROUTE_MODE)
             {
                 GEnRouteFactory enRouteFactory = new EnRouteFactory(Application.Context);
                 LoadApplication(new App(enRouteFactory));
