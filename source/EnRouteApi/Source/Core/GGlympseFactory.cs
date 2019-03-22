@@ -11,5 +11,7 @@ namespace Glympse
         GPlace createPlace(double latitude, double longitude, string name);
 
         GTicket createTicket(long duration, string message, GPlace destination);
+
+        GCoreFactory createCoreFactory();
     }
 }

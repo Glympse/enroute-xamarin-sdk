@@ -37,5 +37,10 @@ namespace Glympse.EnRoute.Android
 
             return new Ticket(com.glympse.android.api.GlympseFactory.createTicket(duration, message, nativeDestination));
         }
+
+        public GCoreFactory createCoreFactory()
+        {
+            return new CoreFactory();
+        }
     }
 }

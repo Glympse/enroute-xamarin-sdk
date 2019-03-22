@@ -28,5 +28,10 @@ namespace Glympse.EnRoute.iOS
             }
             return new Ticket(GlyGlympseFactory.createTicket(duration, message, nativeDestination));
         }
+
+        public GCoreFactory createCoreFactory()
+        {
+            return new CoreFactory();
+        }
     }
 }

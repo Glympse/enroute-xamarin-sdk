@@ -13,6 +13,7 @@ namespace EnRouteDemo
         private static GlympseWrapper instance;
 
         private GGlympseFactory _glympseFactory;
+        private GCoreFactory _coreFactory;
         private GGlympse _glympse;
 
         private GlympseWrapper()
@@ -39,6 +40,7 @@ namespace EnRouteDemo
             }
 
             _glympseFactory = glympseFactory;
+            _coreFactory = glympseFactory.createCoreFactory();
             _glympse = glympseFactory.createGlympse(BASE_URL, API_KEY);
             _glympse.overrideLoggingLevels(1, 1); // Increases logging levels. Turn off for production deployments
             _glympse.getConsentManager().exemptFromConsent(true);
@@ -55,6 +57,19 @@ namespace EnRouteDemo
                 }
 
                 return _glympseFactory;
+            }
+        }
+
+        public GCoreFactory CoreFactory
+        {
+            get
+            {
+                if (null == _coreFactory)
+                {
+                    throw new Exception("GlympseWrapper.Initialize(...) must be called once before accessing the CoreFactory property");
+                }
+
+                return _coreFactory;
             }
         }
 

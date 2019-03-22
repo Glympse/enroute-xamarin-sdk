@@ -2,9 +2,9 @@
 
 namespace Glympse.EnRoute.iOS
 {
-    public static class CoreFactory
+    public class CoreFactory : GCoreFactory
     {
-        public static GPrimitive createPrimitive(string str)
+        public GPrimitive createPrimitive(string str)
         {
             return new Primitive(GlyCoreFactory.createPrimitive(str));
         }
