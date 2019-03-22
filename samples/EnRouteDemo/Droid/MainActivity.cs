@@ -17,7 +17,7 @@ namespace EnRouteDemo.Droid
     [Activity (Label = "EnRouteDemo.Droid", Icon = "@drawable/icon", MainLauncher = true, ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation)]
     public class MainActivity : global::Xamarin.Forms.Platform.Android.FormsApplicationActivity
     {
-        public const bool IS_ENROUTE_MODE = false;
+        public const bool IS_ENROUTE_MODE = true;
 
         protected override void OnCreate (Bundle bundle)
         {

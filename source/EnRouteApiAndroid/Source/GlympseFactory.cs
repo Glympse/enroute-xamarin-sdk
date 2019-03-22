@@ -29,7 +29,13 @@ namespace Glympse.EnRoute.Android
 
         public GTicket createTicket(long duration, string message, GPlace destination)
         {
-            return new Ticket(com.glympse.android.api.GlympseFactory.createTicket(duration, message, (com.glympse.android.api.GPlace)destination.raw()));
+            com.glympse.android.api.GPlace nativeDestination = null;
+            if ( null != destination )
+            {
+                nativeDestination = (com.glympse.android.api.GPlace)destination.raw();
+            }
+
+            return new Ticket(com.glympse.android.api.GlympseFactory.createTicket(duration, message, nativeDestination));
         }
     }
 }

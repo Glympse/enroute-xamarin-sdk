@@ -46,6 +46,8 @@
 	<string>Sharing from background</string>
 	<key>NSLocationWhenInUseUsageDescription</key>
 	<string>Sharing from foreground</string>
+	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
+	<string>Sharing from background and foreground</string>
 	<key>CFBundleName</key>
 	<string>EnRouteDemo</string>
 	<key>CFBundleShortVersionString</key>

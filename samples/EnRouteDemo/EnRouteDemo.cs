@@ -97,6 +97,7 @@ namespace EnRouteDemo
                 GInvite invite = GlympseWrapper.Instance.GlympseFactory.createInvite(GlympseConstants.INVITE_TYPE_EMAIL, "", _addressEntry.Text);
                 GPlace destination = GlympseWrapper.Instance.GlympseFactory.createPlace(47.6205099, -122.3514714, "Space Needle");
                 GTicket ticket = GlympseWrapper.Instance.GlympseFactory.createTicket(60000, "Xamarin Test", destination);
+                ticket.addInvite(invite);
                 GlympseWrapper.Instance.Glympse.sendTicket(ticket);
             }
         }

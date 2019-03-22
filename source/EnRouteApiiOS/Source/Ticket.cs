@@ -16,6 +16,11 @@ namespace Glympse.EnRoute.iOS
             return _raw.appendData(partnerId, name, (GlyPrimitive)value.raw());
         }
 
+        public bool addInvite(GInvite invite)
+        {
+            return _raw.addInvite((GlyInvite)invite.raw());
+        }
+
         public bool expire()
         {
             return _raw.expire();

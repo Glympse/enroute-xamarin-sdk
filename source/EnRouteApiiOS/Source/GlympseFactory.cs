@@ -21,7 +21,12 @@ namespace Glympse.EnRoute.iOS
 
         public GTicket createTicket(long duration, string message, GPlace destination)
         {
-            return new Ticket(GlyGlympseFactory.createTicket(duration, message, (GlyPlace)destination.raw()));
+            GlyPlace nativeDestination = null;
+            if ( null != destination )
+            {
+                nativeDestination = (GlyPlace)destination.raw();
+            }
+            return new Ticket(GlyGlympseFactory.createTicket(duration, message, nativeDestination));
         }
     }
 }

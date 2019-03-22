@@ -228,6 +228,9 @@
         path="/api/package[@name='com.glympse.android.api']/interface[@name='GTicket']/method[@name='appendData']" 
         name="managedName">appendData</attr>
     <attr 
+        path="/api/package[@name='com.glympse.android.api']/interface[@name='GTicket']/method[@name='addInvite']" 
+        name="managedName">addInvite</attr>
+    <attr 
         path="/api/package[@name='com.glympse.android.api']/interface[@name='GTicket']/method[@name='expire']" 
         name="managedName">expire</attr>
     <attr 

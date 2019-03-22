@@ -16,6 +16,11 @@ namespace Glympse.EnRoute.Android
             return _raw.appendData(partnerId, name, (com.glympse.android.core.GPrimitive)value.raw());
         }
 
+        public bool addInvite(GInvite invite)
+        {
+            return _raw.addInvite((com.glympse.android.api.GInvite)invite.raw());
+        }
+
         public bool expire()
         {
             return _raw.expire();

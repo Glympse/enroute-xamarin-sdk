@@ -15,7 +15,7 @@ namespace EnRouteDemo.iOS
     [Register ("AppDelegate")]
     public partial class AppDelegate : global::Xamarin.Forms.Platform.iOS.FormsApplicationDelegate
     {
-        public const bool IS_ENROUTE_MODE = false;
+        public const bool IS_ENROUTE_MODE = true;
 
         public override bool FinishedLaunching (UIApplication app, NSDictionary options)
         {

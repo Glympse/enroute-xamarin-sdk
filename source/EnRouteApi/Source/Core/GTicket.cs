@@ -8,6 +8,8 @@ namespace Glympse
 
         bool appendData(long partnerId, string name, GPrimitive value);
 
+        bool addInvite(GInvite invite);
+
         bool expire();
 
         void updateEta(long eta);

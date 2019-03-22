@@ -314,6 +314,9 @@ namespace Glympse.EnRoute.iOS
         [Export("appendData:name:value:")]
         bool appendData(long partnerId, string name, GlyPrimitive value);
 
+        [Export("addInvite:")]
+        bool addInvite(GlyInvite invite);
+
         [Export("expire")]
         bool expire();
 
