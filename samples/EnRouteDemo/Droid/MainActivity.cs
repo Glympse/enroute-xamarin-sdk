@@ -8,6 +8,7 @@ using Android.Views;
 using Android.Widget;
 using Android.OS;
 
+using Glympse;
 using Glympse.EnRoute;
 using Glympse.EnRoute.Android;
 
@@ -22,9 +23,18 @@ namespace EnRouteDemo.Droid
 
             global::Xamarin.Forms.Forms.Init (this, bundle);
 
-            GEnRouteFactory enRouteFactory = new EnRouteFactory (Application.Context);
+            bool isEnRouteMode = true;
 
-            LoadApplication (new App (enRouteFactory));
+            if (isEnRouteMode)
+            {
+                GEnRouteFactory enRouteFactory = new EnRouteFactory(Application.Context);
+                LoadApplication(new App(enRouteFactory));
+            }
+            else
+            {
+                GGlympseFactory glympseFactory = new GlympseFactory(Application.Context);
+                LoadApplication(new App(glympseFactory));
+            }
         }
     }
 }

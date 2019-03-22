@@ -55,6 +55,8 @@
     <Compile Include="Source\Core\GUser.cs" />
     <Compile Include="Source\Core\GUserManager.cs" />
     <Compile Include="Source\Core\GGlympse.cs" />
+    <Compile Include="Source\Core\GGlympseFactory.cs" />
+    <Compile Include="Source\Core\GConsentManager.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
   <ItemGroup>

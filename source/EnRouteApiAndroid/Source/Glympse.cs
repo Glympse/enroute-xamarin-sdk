@@ -56,6 +56,11 @@ namespace Glympse.EnRoute.Android
             return new UserManager((com.glympse.android.api.GUserManager)_raw.getUserManager());
         }
 
+        public GConsentManager getConsentManager()
+        {
+            return new ConsentManager((com.glympse.android.api.GConsentManager)_raw.getConsentManager());
+        }
+
         public bool sendTicket(GTicket ticket)
         {
             return _raw.sendTicket((com.glympse.android.api.GTicket)ticket.raw());
@@ -69,6 +74,11 @@ namespace Glympse.EnRoute.Android
         public void setSmsSendMode(int mode)
         {
             _raw.setSmsSendMode(mode);
+        }
+
+        public void overrideLoggingLevels(int fileLevel, int debugLevel)
+        {
+            _raw.overrideLoggingLevels(fileLevel, debugLevel);
         }
 
         public object raw()

@@ -6,6 +6,7 @@ using System.Diagnostics;
 using Foundation;
 using UIKit;
 
+using Glympse;
 using Glympse.EnRoute;
 using Glympse.EnRoute.iOS;
 
@@ -18,26 +19,35 @@ namespace EnRouteDemo.iOS
         {
             global::Xamarin.Forms.Forms.Init ();
 
-            GEnRouteFactory enRouteFactory = new EnRouteFactory();
+            bool isEnRouteMode = true;
 
-            LoadApplication (new App (enRouteFactory));
-            
-            // Register for a Push notification token
-            if (UIDevice.CurrentDevice.CheckSystemVersion (8, 0)) 
+            if (isEnRouteMode)
             {
-                var pushSettings = UIUserNotificationSettings.GetSettingsForTypes (
-                                   UIUserNotificationType.Alert | UIUserNotificationType.Badge | 
-                                   UIUserNotificationType.Sound,
-                                   new NSSet ());
-            
-                UIApplication.SharedApplication.RegisterUserNotificationSettings (pushSettings);
-                UIApplication.SharedApplication.RegisterForRemoteNotifications ();
-            } 
-            else 
+                GEnRouteFactory enRouteFactory = new EnRouteFactory();
+                LoadApplication(new App(enRouteFactory));
+
+                // Register for a Push notification token
+                if (UIDevice.CurrentDevice.CheckSystemVersion(8, 0))
+                {
+                    var pushSettings = UIUserNotificationSettings.GetSettingsForTypes(
+                                       UIUserNotificationType.Alert | UIUserNotificationType.Badge |
+                                       UIUserNotificationType.Sound,
+                                       new NSSet());
+
+                    UIApplication.SharedApplication.RegisterUserNotificationSettings(pushSettings);
+                    UIApplication.SharedApplication.RegisterForRemoteNotifications();
+                }
+                else
+                {
+                    UIRemoteNotificationType notificationTypes = UIRemoteNotificationType.Alert |
+                    UIRemoteNotificationType.Badge | UIRemoteNotificationType.Sound;
+                    UIApplication.SharedApplication.RegisterForRemoteNotificationTypes(notificationTypes);
+                }
+            }
+            else
             {
-                UIRemoteNotificationType notificationTypes = UIRemoteNotificationType.Alert | 
-                UIRemoteNotificationType.Badge | UIRemoteNotificationType.Sound;
-                UIApplication.SharedApplication.RegisterForRemoteNotificationTypes (notificationTypes);
+                GGlympseFactory glympseFactory = new GlympseFactory();
+                LoadApplication(new App(glympseFactory));
             }
 
             return base.FinishedLaunching (app, options);

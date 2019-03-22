@@ -56,6 +56,11 @@ namespace Glympse.EnRoute.iOS
             return new UserManager((GlyUserManager)_raw.getUserManager());
         }
 
+        public GConsentManager getConsentManager()
+        {
+            return new ConsentManager((GlyConsentManager)_raw.getConsentManager());
+        }
+
         public bool sendTicket(GTicket ticket)
         {
             return _raw.sendTicket((GlyTicket)ticket.raw());
@@ -69,6 +74,11 @@ namespace Glympse.EnRoute.iOS
         public void setSmsSendMode(int mode)
         {
             _raw.setSmsSendMode(mode);
+        }
+
+        public void overrideLoggingLevels(int fileLevel, int debugLevel)
+        {
+            _raw.overrideLoggingLevels(fileLevel, debugLevel);
         }
 
         public object raw()

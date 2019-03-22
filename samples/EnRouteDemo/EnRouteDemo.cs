@@ -14,6 +14,9 @@ namespace EnRouteDemo
         private Button _buttonLogout;
         private Button _buttonLogin;
 
+        private Entry _addressEntry;
+        private Button _buttonSendTicket;
+
         public App (GEnRouteFactory enRouteFactory)
         {
             EnRouteManagerWrapper.Instance.Initialize(enRouteFactory);
@@ -36,9 +39,31 @@ namespace EnRouteDemo
             Auth.onAppStart(EnRouteManagerWrapper.Instance.Manager);
         }
 
+        public App(GGlympseFactory glympseFactory)
+        {
+            GlympseWrapper.Instance.Initialize(glympseFactory);
+
+            Label recipientLabel = new Label();
+            recipientLabel.Text = "Recipient e-mail";
+
+            _addressEntry = new Entry();
+            _addressEntry.Placeholder = "email";
+
+            _buttonSendTicket = new Button();
+            _buttonSendTicket.Text = "Send Ticket";
+            _buttonSendTicket.Clicked += ButtonSendTicket_Clicked;
+
+            MainPage = new ContentPage();
+            _layout = new StackLayout();
+            _layout.VerticalOptions = LayoutOptions.Center;
+            _layout.Children.Add(recipientLabel);
+            _layout.Children.Add(_addressEntry);
+            _layout.Children.Add(_buttonSendTicket);
+            ((ContentPage)MainPage).Content = _layout;
+        }
+
         protected override void OnStart ()
         {
-            
             // Handle when your app starts
         }
 
@@ -62,6 +87,18 @@ namespace EnRouteDemo
         {
             // Login
             Auth.start(EnRouteManagerWrapper.Instance.Manager);
+        }
+
+        private void ButtonSendTicket_Clicked(object sender, EventArgs e)
+        {
+            if (null != _addressEntry.Text)
+            {
+                // Send Ticket
+                GInvite invite = GlympseWrapper.Instance.GlympseFactory.createInvite(GlympseConstants.INVITE_TYPE_EMAIL, "", _addressEntry.Text);
+                GPlace destination = GlympseWrapper.Instance.GlympseFactory.createPlace(47.6205099, -122.3514714, "Space Needle");
+                GTicket ticket = GlympseWrapper.Instance.GlympseFactory.createTicket(60000, "Xamarin Test", destination);
+                GlympseWrapper.Instance.Glympse.sendTicket(ticket);
+            }
         }
     }
 }

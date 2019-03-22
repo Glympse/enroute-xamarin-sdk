@@ -261,6 +261,9 @@ namespace Glympse.EnRoute.iOS
         [Export("getDirectionsManager")]
         GlyDirectionsManager getDirectionsManager();
 
+        [Export("getConsentManager")]
+        GlyConsentManager getConsentManager();
+
         [Export("sendTicket:ticket")]
         bool sendTicket(GlyTicket ticket);
 
@@ -281,6 +284,9 @@ namespace Glympse.EnRoute.iOS
 
         [Export("getApiVersion")]
         string getApiVersion();
+
+        [Export("overrideLoggingLevels:fileLevel:debugLevel")]
+        string overrideLoggingLevels(int fileLevel, int debugLevel);
     }
 
     [BaseType(typeof(GlyCommon))]
@@ -352,6 +358,14 @@ namespace Glympse.EnRoute.iOS
         [Static]
         [Export("createTicket:duration:message:destination")]
         GlyTicket createTicket(long duration, string message, GlyPlace destination);
+    }
+
+    [BaseType(typeof(NSObject))]
+    [DisableDefaultCtor]
+    interface GlyConsentManager
+    {
+        [Export("exemptFromConsent:isExempt")]
+        void exemptFromConsent(bool isExempt);
     }
 
     [BaseType(typeof(NSObject))]

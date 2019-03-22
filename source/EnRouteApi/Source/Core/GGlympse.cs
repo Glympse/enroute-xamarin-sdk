@@ -14,6 +14,8 @@ namespace Glympse
 
         GDirectionsManager getDirectionsManager();
 
+        GConsentManager getConsentManager();
+
         bool sendTicket(GTicket ticket);
 
         int getSmsSendMode();
@@ -27,5 +29,7 @@ namespace Glympse
         void setEtaMode(int mode);
 
         string getApiVersion();
+
+        void overrideLoggingLevels(int fileLevel, int debugLevel);
     }
 }

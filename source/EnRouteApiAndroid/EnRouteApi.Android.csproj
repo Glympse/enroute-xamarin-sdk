@@ -62,6 +62,7 @@
     <Compile Include="Source\User.cs" />
     <Compile Include="Source\UserManager.cs" />
     <Compile Include="Source\Glympse.cs" />
+    <Compile Include="Source\ConsentManager.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Additions\AboutAdditions.txt" />

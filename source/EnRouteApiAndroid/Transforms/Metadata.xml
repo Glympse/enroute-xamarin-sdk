@@ -177,6 +177,9 @@
         path="/api/package[@name='com.glympse.android.api']/interface[@name='GGlympse']/method[@name='getDirectionsManager']" 
         name="managedName">getDirectionsManager</attr>
     <attr 
+        path="/api/package[@name='com.glympse.android.api']/interface[@name='GGlympse']/method[@name='getConsentManager']" 
+        name="managedName">getConsentManager</attr>
+    <attr 
         path="/api/package[@name='com.glympse.android.api']/interface[@name='GGlympse']/method[@name='sendTicket']" 
         name="managedName">sendTicket</attr>
     <attr 
@@ -197,6 +200,9 @@
     <attr 
         path="/api/package[@name='com.glympse.android.api']/interface[@name='GGlympse']/method[@name='getApiVersion']" 
         name="managedName">getApiVersion</attr>
+    <attr 
+        path="/api/package[@name='com.glympse.android.api']/interface[@name='GGlympse']/method[@name='overrideLoggingLevels']" 
+        name="managedName">overrideLoggingLevels</attr>
     
     <!-- GPlace -->
     <attr 
@@ -253,6 +259,14 @@
     <attr 
         path="/api/package[@name='com.glympse.android.api']/interface[@name='GUserManager']/method[@name='getSelf']" 
         name="managedName">getSelf</attr>
+    
+    <!-- GConsentManager -->
+    <attr 
+        path="/api/package[@name='com.glympse.android.api']/interface[@name='GConsentManager']" 
+        name="managedName">GConsentManager</attr>
+    <attr 
+        path="/api/package[@name='com.glympse.android.api']/interface[@name='GConsentManager']/method[@name='exemptFromConsent']" 
+        name="managedName">exemptFromConsent</attr>
     
     <!-- GUser -->
     <attr 
