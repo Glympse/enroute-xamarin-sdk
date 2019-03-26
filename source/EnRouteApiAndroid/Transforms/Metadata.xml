@@ -161,6 +161,153 @@
     <attr 
         path="/api/package[@name='com.glympse.android.api']/interface[@name='GGlympse']" 
         name="managedName">GGlympse</attr>
+    <attr 
+        path="/api/package[@name='com.glympse.android.api']/interface[@name='GGlympse']/method[@name='start']" 
+        name="managedName">start</attr>
+    <attr 
+        path="/api/package[@name='com.glympse.android.api']/interface[@name='GGlympse']/method[@name='stop']" 
+        name="managedName">stop</attr>
+    <attr 
+        path="/api/package[@name='com.glympse.android.api']/interface[@name='GGlympse']/method[@name='isStarted']" 
+        name="managedName">isStarted</attr>
+    <attr 
+        path="/api/package[@name='com.glympse.android.api']/interface[@name='GGlympse']/method[@name='getUserManager']" 
+        name="managedName">getUserManager</attr>
+    <attr 
+        path="/api/package[@name='com.glympse.android.api']/interface[@name='GGlympse']/method[@name='getDirectionsManager']" 
+        name="managedName">getDirectionsManager</attr>
+    <attr 
+        path="/api/package[@name='com.glympse.android.api']/interface[@name='GGlympse']/method[@name='getConsentManager']" 
+        name="managedName">getConsentManager</attr>
+    <attr 
+        path="/api/package[@name='com.glympse.android.api']/interface[@name='GGlympse']/method[@name='sendTicket']" 
+        name="managedName">sendTicket</attr>
+    <attr 
+        path="/api/package[@name='com.glympse.android.api']/interface[@name='GGlympse']/method[@name='getSmsSendMode']" 
+        name="managedName">getSmsSendMode</attr>
+    <attr 
+        path="/api/package[@name='com.glympse.android.api']/interface[@name='GGlympse']/method[@name='setSmsSendMode']" 
+        name="managedName">setSmsSendMode</attr>
+    <attr 
+        path="/api/package[@name='com.glympse.android.api']/interface[@name='GGlympse']/method[@name='canDeviceSendSms']" 
+        name="managedName">canDeviceSendSms</attr>
+    <attr 
+        path="/api/package[@name='com.glympse.android.api']/interface[@name='GGlympse']/method[@name='getEtaMode']" 
+        name="managedName">getEtaMode</attr>
+    <attr 
+        path="/api/package[@name='com.glympse.android.api']/interface[@name='GGlympse']/method[@name='setEtaMode']" 
+        name="managedName">setEtaMode</attr>
+    <attr 
+        path="/api/package[@name='com.glympse.android.api']/interface[@name='GGlympse']/method[@name='getApiVersion']" 
+        name="managedName">getApiVersion</attr>
+    <attr 
+        path="/api/package[@name='com.glympse.android.api']/interface[@name='GGlympse']/method[@name='overrideLoggingLevels']" 
+        name="managedName">overrideLoggingLevels</attr>
+    
+    <!-- GPlace -->
+    <attr 
+        path="/api/package[@name='com.glympse.android.api']/interface[@name='GPlace']" 
+        name="managedName">GPlace</attr>
+    
+    <!-- GInvite -->
+    <attr 
+        path="/api/package[@name='com.glympse.android.api']/interface[@name='GInvite']" 
+        name="managedName">GInvite</attr>
+    <attr 
+        path="/api/package[@name='com.glympse.android.api']/interface[@name='GInvite']/method[@name='getAddress']" 
+        name="managedName">getAddress</attr>
+    <attr 
+        path="/api/package[@name='com.glympse.android.api']/interface[@name='GInvite']/method[@name='getType']" 
+        name="managedName">getType</attr>
+    
+    <!-- GTicket -->
+    <attr 
+        path="/api/package[@name='com.glympse.android.api']/interface[@name='GTicket']" 
+        name="managedName">GTicket</attr>
+    <attr 
+        path="/api/package[@name='com.glympse.android.api']/interface[@name='GTicket']/method[@name='appendData']" 
+        name="managedName">appendData</attr>
+    <attr 
+        path="/api/package[@name='com.glympse.android.api']/interface[@name='GTicket']/method[@name='addInvite']" 
+        name="managedName">addInvite</attr>
+    <attr 
+        path="/api/package[@name='com.glympse.android.api']/interface[@name='GTicket']/method[@name='expire']" 
+        name="managedName">expire</attr>
+    <attr 
+        path="/api/package[@name='com.glympse.android.api']/interface[@name='GTicket']/method[@name='extend']" 
+        name="managedName">extend</attr>
+    <attr 
+        path="/api/package[@name='com.glympse.android.api']/interface[@name='GTicket']/method[@name='getDuration']" 
+        name="managedName">getDuration</attr>
+    <attr 
+        path="/api/package[@name='com.glympse.android.api']/interface[@name='GTicket']/method[@name='getEta']" 
+        name="managedName">getEta</attr>
+    <attr 
+        path="/api/package[@name='com.glympse.android.api']/interface[@name='GTicket']/method[@name='getId']" 
+        name="managedName">getId</attr>
+    <attr 
+        path="/api/package[@name='com.glympse.android.api']/interface[@name='GTicket']/method[@name='getInvites']" 
+        name="managedName">getInvites</attr>
+    <attr 
+        path="/api/package[@name='com.glympse.android.api']/interface[@name='GTicket']/method[@name='modify']" 
+        name="managedName">modify</attr>
+    <attr 
+        path="/api/package[@name='com.glympse.android.api']/interface[@name='GTicket']/method[@name='updateEta']" 
+        name="managedName">updateEta</attr>
+    
+    <!-- GUserManager -->
+    <attr 
+        path="/api/package[@name='com.glympse.android.api']/interface[@name='GUserManager']" 
+        name="managedName">GUserManager</attr>
+    <attr 
+        path="/api/package[@name='com.glympse.android.api']/interface[@name='GUserManager']/method[@name='getSelf']" 
+        name="managedName">getSelf</attr>
+    
+    <!-- GConsentManager -->
+    <attr 
+        path="/api/package[@name='com.glympse.android.api']/interface[@name='GConsentManager']" 
+        name="managedName">GConsentManager</attr>
+    <attr 
+        path="/api/package[@name='com.glympse.android.api']/interface[@name='GConsentManager']/method[@name='exemptFromConsent']" 
+        name="managedName">exemptFromConsent</attr>
+    
+    <!-- GUser -->
+    <attr 
+        path="/api/package[@name='com.glympse.android.api']/interface[@name='GUser']" 
+        name="managedName">GUser</attr>
+    <attr 
+        path="/api/package[@name='com.glympse.android.api']/interface[@name='GUser']/method[@name='setNickname']" 
+        name="managedName">setNickname</attr>
+    <attr 
+        path="/api/package[@name='com.glympse.android.api']/interface[@name='GUser']/method[@name='getNickname']" 
+        name="managedName">getNickname</attr>
+    
+    <!-- GDirectionsManager -->
+    <attr 
+        path="/api/package[@name='com.glympse.android.api']/interface[@name='GDirectionsManager']" 
+        name="managedName">GDirectionsManager</attr>
+    <attr 
+        path="/api/package[@name='com.glympse.android.api']/interface[@name='GDirectionsManager']/method[@name='setTravelMode']" 
+        name="managedName">setTravelMode</attr>
+    
+    <!-- CoreFactory -->
+    <attr 
+        path="/api/package[@name='com.glympse.android.core']/class[@name='CoreFactory']/method[@name='createPrimitive']" 
+        name="managedName">createPrimitive</attr>
+    
+    <!-- GlympseFactory -->
+    <attr 
+        path="/api/package[@name='com.glympse.android.api']/class[@name='GlympseFactory']/method[@name='createGlympse']" 
+        name="managedName">createGlympse</attr>
+    <attr 
+        path="/api/package[@name='com.glympse.android.api']/class[@name='GlympseFactory']/method[@name='createInvite']" 
+        name="managedName">createInvite</attr>
+    <attr 
+        path="/api/package[@name='com.glympse.android.api']/class[@name='GlympseFactory']/method[@name='createPlace']" 
+        name="managedName">createPlace</attr>
+    <attr 
+        path="/api/package[@name='com.glympse.android.api']/class[@name='GlympseFactory']/method[@name='createTicket']" 
+        name="managedName">createTicket</attr>
 
     <!-- Exclude unnecessary packages -->
     <remove-node path="/api/package[starts-with(@name, 'com.glympse.android.lib')]" />

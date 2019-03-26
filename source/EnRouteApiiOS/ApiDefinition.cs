@@ -231,8 +231,173 @@ namespace Glympse.EnRoute.iOS
 
         [Export ("removeListener:")]
         bool removeListener(GlyListener listener);
-    } 
-        
+    }
+
+    [BaseType(typeof(NSObject))]
+    [DisableDefaultCtor]
+    interface GlyCoreFactory
+    {
+        [Static]
+        [Export("createPrimitiveWithNSString:")]
+        GlyPrimitive createPrimitive(string str);
+    }
+
+    [BaseType(typeof(NSObject))]
+    [DisableDefaultCtor]
+    interface GlyGlympse
+    {
+        [Export("start")]
+        void start();
+
+        [Export("stop")]
+        void stop();
+
+        [Export("isStarted")]
+        bool isStarted();
+
+        [Export("getUserManager")]
+        GlyUserManager getUserManager();
+
+        [Export("getDirectionsManager")]
+        GlyDirectionsManager getDirectionsManager();
+
+        [Export("getConsentManager")]
+        GlyConsentManager getConsentManager();
+
+        [Export("sendTicket:")]
+        bool sendTicket(GlyTicket ticket);
+
+        [Export("getSmsSendMode")]
+        int getSmsSendMode();
+
+        [Export("setSmsSendMode:")]
+        void setSmsSendMode(int mode);
+
+        [Export("canDeviceSendSms")]
+        int canDeviceSendSms();
+
+        [Export("getEtaMode")]
+        int getEtaMode();
+
+        [Export("setEtaMode:")]
+        void setEtaMode(int mode);
+
+        [Export("getApiVersion")]
+        string getApiVersion();
+
+        [Export("overrideLoggingLevels:debugLevel:")]
+        void overrideLoggingLevels(int fileLevel, int debugLevel);
+    }
+
+    [BaseType(typeof(GlyCommon))]
+    [DisableDefaultCtor]
+    interface GlyPlace
+    {
+
+    }
+
+    [BaseType(typeof(NSObject))]
+    [DisableDefaultCtor]
+    interface GlyInvite
+    {
+        [Export("getAddress")]
+        string getAddress();
+
+        [Export("getType")]
+        int getType();
+    }
+
+    [BaseType(typeof(NSObject))]
+    [DisableDefaultCtor]
+    interface GlyTicket
+    {
+        [Export("appendData:name:value:")]
+        bool appendData(long partnerId, string name, GlyPrimitive value);
+
+        [Export("addInvite:")]
+        bool addInvite(GlyInvite invite);
+
+        [Export("expire")]
+        bool expire();
+
+        [Export("extend:")]
+        bool extend(long interval);
+
+        [Export("getDuration")]
+        long getDuration();
+
+        [Export("getEta")]
+        long getEta();
+
+        [Export("getId")]
+        string getId();
+
+        [Export("getInvites")]
+        GlyArray getInvites();
+
+        [Export("modify:message:destination:")]
+        bool modify(long remaining, string message, GlyPlace destination);
+
+        [Export("updateEta:")]
+        void updateEta(long eta);
+    }
+
+    [BaseType(typeof(NSObject))]
+    [DisableDefaultCtor]
+    interface GlyGlympseFactory
+    {
+        [Static]
+        [Export("createGlympseWithNSString:withNSString:")]
+        GlyGlympse createGlympse(string server, string apiKey);
+
+        [Static]
+        [Export("createInviteWithInt:withNSString:withNSString:")]
+        GlyInvite createInvite(int type, string name, string address);
+
+        [Static]
+        [Export("createPlace:longitude:name:")]
+        GlyPlace createPlace(double latitude, double longitude, string name);
+
+        [Static]
+        [Export("createTicket:message:destination:")]
+        GlyTicket createTicket(long duration, string message, GlyPlace destination);
+    }
+
+    [BaseType(typeof(NSObject))]
+    [DisableDefaultCtor]
+    interface GlyConsentManager
+    {
+        [Export("exemptFromConsent:")]
+        void exemptFromConsent(bool isExempt);
+    }
+
+    [BaseType(typeof(NSObject))]
+    [DisableDefaultCtor]
+    interface GlyDirectionsManager
+    {
+        [Export("setTravelMode:")]
+        void setTravelMode(int mode);
+    }
+
+    [BaseType(typeof(NSObject))]
+    [DisableDefaultCtor]
+    interface GlyUserManager
+    {
+        [Export("getSelf")]
+        GlyUser getSelf();
+    }
+
+    [BaseType(typeof(NSObject))]
+    [DisableDefaultCtor]
+    interface GlyUser
+    {
+        [Export("setNickname:")]
+        bool setNickname(string nickname);
+
+        [Export("getNickname")]
+        string getNickname();
+    }
+
     /**
      * EnRoute SDK Bindings
      */

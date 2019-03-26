@@ -47,6 +47,17 @@
     <Compile Include="Source\Core\CoreFactory.cs" />
     <Compile Include="Source\Core\GPrimitive.cs" />
     <Compile Include="Source\Core\Config.cs" />
+    <Compile Include="Source\Core\GlympseConstants.cs" />
+    <Compile Include="Source\Core\GTicket.cs" />
+    <Compile Include="Source\Core\GInvite.cs" />
+    <Compile Include="Source\Core\GPlace.cs" />
+    <Compile Include="Source\Core\GDirectionsManager.cs" />
+    <Compile Include="Source\Core\GUser.cs" />
+    <Compile Include="Source\Core\GUserManager.cs" />
+    <Compile Include="Source\Core\GGlympse.cs" />
+    <Compile Include="Source\Core\GGlympseFactory.cs" />
+    <Compile Include="Source\Core\GConsentManager.cs" />
+    <Compile Include="Source\Core\GCoreFactory.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
   <ItemGroup>
