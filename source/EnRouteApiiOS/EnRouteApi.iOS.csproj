@@ -65,6 +65,8 @@
     <Compile Include="Source\UserManager.cs" />
     <Compile Include="Source\Glympse.cs" />
     <Compile Include="Source\ConsentManager.cs" />
+    <Compile Include="Source\CardMessages.cs" />
+    <Compile Include="Source\CardMessage.cs" />
   </ItemGroup>
   <ItemGroup>
     <ObjcBindingApiDefinition Include="ApiDefinition.cs" />

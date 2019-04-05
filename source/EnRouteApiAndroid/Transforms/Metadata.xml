@@ -255,6 +255,55 @@
         path="/api/package[@name='com.glympse.android.api']/interface[@name='GTicket']/method[@name='updateEta']" 
         name="managedName">updateEta</attr>
     
+    <!-- GCardMessages -->
+    <attr 
+        path="/api/package[@name='com.glympse.android.api']/interface[@name='GCardMessages']" 
+        name="managedName">GCardMessages</attr>
+    <attr 
+        path="/api/package[@name='com.glympse.android.api']/interface[@name='GCardMessages']/method[@name='getMessageList']" 
+        name="managedName">getMessageList</attr>
+    <attr 
+        path="/api/package[@name='com.glympse.android.api']/interface[@name='GCardMessages']/method[@name='getCardId']" 
+        name="managedName">getCardId</attr>
+    <attr 
+        path="/api/package[@name='com.glympse.android.api']/interface[@name='GCardMessages']/method[@name='sendMessage']" 
+        name="managedName">sendMessage</attr>
+    <attr 
+        path="/api/package[@name='com.glympse.android.api']/interface[@name='GCardMessages']/method[@name='hasUnreadMessages']" 
+        name="managedName">hasUnreadMessages</attr>
+    <attr 
+        path="/api/package[@name='com.glympse.android.api']/interface[@name='GCardMessages']/method[@name='confirmRead' and parameter[1][@type='com.glympse.android.api.GCardMessage']]" 
+        name="managedName">confirmRead</attr>
+    <attr 
+        path="/api/package[@name='com.glympse.android.api']/interface[@name='GCardMessages']/method[@name='confirmRead' and parameter[1][@type='java.lang.String']]" 
+        name="managedName">confirmReadById</attr>
+    
+    <!-- GCardMessage -->
+    <attr 
+        path="/api/package[@name='com.glympse.android.api']/interface[@name='GCardMessage']" 
+        name="managedName">GCardMessage</attr>
+    <attr 
+        path="/api/package[@name='com.glympse.android.api']/interface[@name='GCardMessage']/method[@name='getId']" 
+        name="managedName">getId</attr>
+    <attr 
+        path="/api/package[@name='com.glympse.android.api']/interface[@name='GCardMessage']/method[@name='getCreatedTime']" 
+        name="managedName">getCreatedTime</attr>
+    <attr 
+        path="/api/package[@name='com.glympse.android.api']/interface[@name='GCardMessage']/method[@name='getText']" 
+        name="managedName">getText</attr>
+    <attr 
+        path="/api/package[@name='com.glympse.android.api']/interface[@name='GCardMessage']/method[@name='getSenderUserId']" 
+        name="managedName">getSenderUserId</attr>
+    <attr 
+        path="/api/package[@name='com.glympse.android.api']/interface[@name='GCardMessage']/method[@name='getSenderNickname']" 
+        name="managedName">getSenderNickname</attr>
+    <attr 
+        path="/api/package[@name='com.glympse.android.api']/interface[@name='GCardMessage']/method[@name='getSenderAvatarUrl']" 
+        name="managedName">getSenderAvatarUrl</attr>
+    <attr 
+        path="/api/package[@name='com.glympse.android.api']/interface[@name='GCardMessage']/method[@name='isRead']" 
+        name="managedName">isRead</attr>
+    
     <!-- GUserManager -->
     <attr 
         path="/api/package[@name='com.glympse.android.api']/interface[@name='GUserManager']" 
@@ -438,6 +487,9 @@
     <attr 
         path="/api/package[@name='com.glympse.enroute.android.api']/interface[@name='GTaskManager']/method[@name='completeOperation']" 
         name="managedName">completeOperation</attr>
+    <attr 
+        path="/api/package[@name='com.glympse.enroute.android.api']/interface[@name='GTaskManager']/method[@name='getCardMessagesForTask']" 
+        name="managedName">getCardMessagesForTask</attr>
 
     <!-- GEnRouteManager -->
     <attr

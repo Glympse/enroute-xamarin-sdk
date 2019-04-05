@@ -58,6 +58,8 @@
     <Compile Include="Source\Core\GGlympseFactory.cs" />
     <Compile Include="Source\Core\GConsentManager.cs" />
     <Compile Include="Source\Core\GCoreFactory.cs" />
+    <Compile Include="Source\Core\GCardMessage.cs" />
+    <Compile Include="Source\Core\GCardMessages.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
   <ItemGroup>
