@@ -365,7 +365,7 @@ namespace Glympse.EnRoute.iOS
         bool confirmReadById(string messageId);
     }
 
-    [BaseType(typeof(NSObject))]
+    [BaseType(typeof(GlyCommon))]
     [DisableDefaultCtor]
     interface GlyCardMessage
     {
