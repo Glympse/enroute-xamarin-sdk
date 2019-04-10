@@ -54,6 +54,11 @@ namespace Glympse.EnRoute.iOS
             return _raw.completeOperation((GlyOperation)operation.raw());
         }
 
+        public GCardMessages getCardMessagesForTask(GTask task)
+        {
+            return (GCardMessages)ClassBinder.bind(_raw.getCardMessagesForTask((GlyTask)task.raw()));
+        }
+
         /**
          * GSource section
          */

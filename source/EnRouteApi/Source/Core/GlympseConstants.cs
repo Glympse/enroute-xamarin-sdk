@@ -297,6 +297,25 @@ namespace Glympse
     public const int EXPIRE_ON_ARRIVAL_AUTO       = 2;
     
     /**
+     * @name Delete after Complete modes
+     */
+    
+    /**
+     * No ticket deletion will automatically occur after ticket completion (default)
+     */
+    public const int DELETE_AFTER_COMPLETE_OFF = 0;
+    
+    /**
+     * Tickets will be deleted automatically after they complete
+     */
+    public const int DELETE_AFTER_COMPLETE_IMMEDIATE = 1;
+    
+    /**
+     * Tickets will be deleted after a scheduled period of time following complete
+     */
+    public const int DELETE_AFTER_COMPLETE_SCHEDULED = 2;
+    
+    /**
      * @name Group Name Verification Options
      *
      * Values returned by IGroupManager#validateGroupName().

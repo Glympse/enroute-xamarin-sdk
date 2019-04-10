@@ -59,6 +59,12 @@ namespace EnRoute
     public const int LISTENER_ETA_PLANNER = 7;
     
     /**
+     * Pickup events
+     * Use IPickupManager event sink to subscribe on these events
+     */
+    public const int LISTENER_PICKUPS = 8;
+    
+    /**
      * @name EnRoute Manager events.
      *
      * Events broadcasted by LISTENER_ENROUTE_MANAGER.
@@ -336,6 +342,93 @@ namespace EnRoute
      * The associated active agent is passed as a parameter (GActiveAgent).
      */
     public const int ACTIVE_AGENTS_AGENT_REGISTERED = 0x00000002;
+    
+    /**
+     * @name Pickup Manager events
+     *
+     * Events broadcasted by LISTENER_PICKUPS
+     */
+    
+    /**
+     * This event is broadcast when anything changes within the pickups list managed by
+     * the Pickup Manager
+     */
+    public const int PICKUPS_PICKUP_LIST_CHANGED = 0X00000001;
+    
+    /**
+     * This event is broadcast when a pickup is accepted
+     *
+     * param1: GPickup that was accepted
+     */
+    public const int PICKUPS_PICKUP_ACCEPTED = 0X00000002;
+    
+    /**
+     * This event is broadcast when a pickup is completed
+     * 
+     * param1: GPickup that completed
+     */
+    public const int PICKUPS_PICKUP_COMPLETED = 0X00000004;
+    
+    /**
+     * This event is broadcast when a pickup fails to complete
+     *
+     * The associated pickup is passed as a parameter (GPickup), along with the error string.
+     */
+    public const int PICKUPS_PICKUP_FAILED_TO_COMPLETE = 0X00000008;
+    
+    /**
+     * This event is broadcast when a pickup's phase changes
+     *
+     * param1: GPickup that changed
+     */
+    public const int PICKUPS_PICKUP_PHASE_UPDATED = 0x00000010;
+    
+    /**
+     * This event is broadcast when a pickup's phase failed to update
+     *
+     * param1: GPickup that failed to update
+     * param2: GString error
+     */
+    public const int PICKUPS_PICKUP_PHASE_UPDATE_FAILED = 0x00000020;
+    
+    /**
+     * This event is broadcast when a pickup is assigned to a new agent. If the pickup's
+     * agent id is now -1 it means the pickup has been unassigned.
+     *
+     * param1: GPickup that was assigned
+     */
+    public const int PICKUPS_PICKUP_ASSIGNED = 0x00000040;
+    
+    /**
+     * This event is broadcast when a pickup fails to assign to a new agent
+     *
+     * param1: GPickup that failed to assign
+     * param2: GString error
+     */
+    public const int PICKUPS_PICKUP_ASSIGN_FAILED = 0x00000080;
+    
+    /**
+     * This event is broadcast when the CardMessages object associated with a pickup is updated
+     *
+     * The associated pickup is passed as a parameter (GPickup).
+     */
+    public const int PICKUPS_PICKUP_CARD_MESSAGE_CHANGED = 0x00000100;
+    
+    /**
+     * This event is broadcast when the SDK receives a response from the server after sending
+     * a message
+     *
+     * The event id and unique id of the message are passed as parameters (GString, GString)
+     * If no event id is present then the message failed to create on the server
+     */
+    public const int PICKUPS_PICKUP_CARD_MESSAGE_STATUS = 0x00000200;
+    
+    /**
+     * This event is broadcast when the SDK receives an updated customer ETA for a pickup
+     *
+     * The associated pickup is passed as a parameter (GPickup).
+     */
+    public const int PICKUPS_PICKUP_ETA_CHANGED = 0x00000400;
     
 };
     

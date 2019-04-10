@@ -36,6 +36,38 @@ namespace Glympse.EnRoute.iOS
             {
                 return new Operation((GlyOperation)raw);
             }
+            else if ( raw is GlyCardMessage )
+            {
+                return new CardMessage((GlyCardMessage)raw);
+            }
+            else if (raw is GlyCardMessages)
+            {
+                return new CardMessages((GlyCardMessages)raw);
+            }
+            else if (raw is GlyTicket)
+            {
+                return new Ticket((GlyTicket)raw);
+            }
+            else if (raw is GlyInvite)
+            {
+                return new Invite((GlyInvite)raw);
+            }
+            else if (raw is GlyUser)
+            {
+                return new User((GlyUser)raw);
+            }
+            else if (raw is GlyPlace)
+            {
+                return new Place((GlyPlace)raw);
+            }
+            else if (raw is GlyGlympse)
+            {
+                return new Glympse((GlyGlympse)raw);
+            }
+            else if (raw is GlyConsentManager)
+            {
+                return new ConsentManager((GlyConsentManager)raw);
+            }
             else if ( raw is Foundation.NSString )
             {
                 return ((Foundation.NSString) raw).ToString();
@@ -43,6 +75,10 @@ namespace Glympse.EnRoute.iOS
             else if ( raw is Foundation.NSNumber )
             {
                 return ((Foundation.NSNumber) raw).LongValue;
+            }
+            else if (raw is GlyUserManager)
+            {
+                return new UserManager((GlyUserManager)raw);
             }
             else if ( raw is GlyPrimitive )
             {

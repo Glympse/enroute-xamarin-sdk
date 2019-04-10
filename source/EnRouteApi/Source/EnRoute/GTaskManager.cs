@@ -20,6 +20,8 @@ namespace Glympse
             bool setTaskPhase(GTask task, string phase);
 
             bool completeOperation(GOperation operation);
+
+            GCardMessages getCardMessagesForTask(GTask task);
         }
     }
 }

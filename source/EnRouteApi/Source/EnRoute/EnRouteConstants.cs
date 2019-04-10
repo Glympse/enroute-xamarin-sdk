@@ -142,6 +142,10 @@ namespace EnRoute
     {
         return CoreFactory.createString("eta");
     }
+    public static String PHASE_PROPERTY_NEW()
+    {
+        return CoreFactory.createString("new");
+    }
     public static String PHASE_PROPERTY_LIVE()
     {
         return CoreFactory.createString("live");
@@ -154,6 +158,10 @@ namespace EnRoute
     {
         return CoreFactory.createString("feedback");
     }
+    public static String PHASE_PROPERTY_COMPLETING()
+    {
+        return CoreFactory.createString("completing");
+    }
     public static String PHASE_PROPERTY_COMPLETED()
     {
         return CoreFactory.createString("completed");
@@ -161,6 +169,26 @@ namespace EnRoute
     public static String PHASE_PROPERTY_NOT_COMPLETED()
     {
         return CoreFactory.createString("not_completed");
+    }
+    public static String PHASE_PROPERTY_CANCELLED()
+    {
+        return CoreFactory.createString("cancelled");
+    }
+    public static String PHASE_PROPERTY_READY()
+    {
+        return CoreFactory.createString("ready");
+    }
+    
+    /**
+     * @name Pickup remote trigger names
+     */
+    public static String PICKUP_TRIGGER_GEOFENCE()
+    {
+        return CoreFactory.createString("pickup_geocircle");
+    }
+    public static String PICKUP_TRIGGER_ETA()
+    {
+        return CoreFactory.createString("pickup_eta");
     }
     
     /**
