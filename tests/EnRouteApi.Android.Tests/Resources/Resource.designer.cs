@@ -26,28 +26,12 @@ namespace EnRouteApi.Android.Tests
 		
 		public static void UpdateIdValues()
 		{
-			global::Xamarin.Android.NUnitLite.Resource.Id.OptionHostName = global::EnRouteApi.Android.Tests.Resource.Id.OptionHostName;
-			global::Xamarin.Android.NUnitLite.Resource.Id.OptionPort = global::EnRouteApi.Android.Tests.Resource.Id.OptionPort;
-			global::Xamarin.Android.NUnitLite.Resource.Id.OptionRemoteServer = global::EnRouteApi.Android.Tests.Resource.Id.OptionRemoteServer;
-			global::Xamarin.Android.NUnitLite.Resource.Id.OptionsButton = global::EnRouteApi.Android.Tests.Resource.Id.OptionsButton;
-			global::Xamarin.Android.NUnitLite.Resource.Id.ResultFullName = global::EnRouteApi.Android.Tests.Resource.Id.ResultFullName;
-			global::Xamarin.Android.NUnitLite.Resource.Id.ResultMessage = global::EnRouteApi.Android.Tests.Resource.Id.ResultMessage;
-			global::Xamarin.Android.NUnitLite.Resource.Id.ResultResultState = global::EnRouteApi.Android.Tests.Resource.Id.ResultResultState;
-			global::Xamarin.Android.NUnitLite.Resource.Id.ResultRunSingleMethodTest = global::EnRouteApi.Android.Tests.Resource.Id.ResultRunSingleMethodTest;
-			global::Xamarin.Android.NUnitLite.Resource.Id.ResultStackTrace = global::EnRouteApi.Android.Tests.Resource.Id.ResultStackTrace;
-			global::Xamarin.Android.NUnitLite.Resource.Id.ResultsFailed = global::EnRouteApi.Android.Tests.Resource.Id.ResultsFailed;
-			global::Xamarin.Android.NUnitLite.Resource.Id.ResultsId = global::EnRouteApi.Android.Tests.Resource.Id.ResultsId;
-			global::Xamarin.Android.NUnitLite.Resource.Id.ResultsIgnored = global::EnRouteApi.Android.Tests.Resource.Id.ResultsIgnored;
-			global::Xamarin.Android.NUnitLite.Resource.Id.ResultsInconclusive = global::EnRouteApi.Android.Tests.Resource.Id.ResultsInconclusive;
-			global::Xamarin.Android.NUnitLite.Resource.Id.ResultsMessage = global::EnRouteApi.Android.Tests.Resource.Id.ResultsMessage;
-			global::Xamarin.Android.NUnitLite.Resource.Id.ResultsPassed = global::EnRouteApi.Android.Tests.Resource.Id.ResultsPassed;
-			global::Xamarin.Android.NUnitLite.Resource.Id.ResultsResult = global::EnRouteApi.Android.Tests.Resource.Id.ResultsResult;
-			global::Xamarin.Android.NUnitLite.Resource.Id.RunTestsButton = global::EnRouteApi.Android.Tests.Resource.Id.RunTestsButton;
-			global::Xamarin.Android.NUnitLite.Resource.Id.TestSuiteListView = global::EnRouteApi.Android.Tests.Resource.Id.TestSuiteListView;
-			global::Xamarin.Android.NUnitLite.Resource.Layout.options = global::EnRouteApi.Android.Tests.Resource.Layout.options;
-			global::Xamarin.Android.NUnitLite.Resource.Layout.results = global::EnRouteApi.Android.Tests.Resource.Layout.results;
-			global::Xamarin.Android.NUnitLite.Resource.Layout.test_result = global::EnRouteApi.Android.Tests.Resource.Layout.test_result;
-			global::Xamarin.Android.NUnitLite.Resource.Layout.test_suite = global::EnRouteApi.Android.Tests.Resource.Layout.test_suite;
+			global::Nunit.Runner.Resource.String.ApplicationName = global::EnRouteApi.Android.Tests.Resource.String.ApplicationName;
+			global::Nunit.Runner.Resource.String.Hello = global::EnRouteApi.Android.Tests.Resource.String.Hello;
+			global::PCLStorage.Resource.String.ApplicationName = global::EnRouteApi.Android.Tests.Resource.String.ApplicationName;
+			global::PCLStorage.Resource.String.Hello = global::EnRouteApi.Android.Tests.Resource.String.Hello;
+			global::Xamarin.Forms.Platform.Resource.String.ApplicationName = global::EnRouteApi.Android.Tests.Resource.String.ApplicationName;
+			global::Xamarin.Forms.Platform.Resource.String.Hello = global::EnRouteApi.Android.Tests.Resource.String.Hello;
 		}
 		
 		public partial class Attribute
@@ -124,98 +108,6 @@ namespace EnRouteApi.Android.Tests
 			}
 		}
 		
-		public partial class Id
-		{
-			
-			// aapt resource value: 0x7f080001
-			public const int OptionHostName = 2131230721;
-			
-			// aapt resource value: 0x7f080002
-			public const int OptionPort = 2131230722;
-			
-			// aapt resource value: 0x7f080000
-			public const int OptionRemoteServer = 2131230720;
-			
-			// aapt resource value: 0x7f080010
-			public const int OptionsButton = 2131230736;
-			
-			// aapt resource value: 0x7f08000b
-			public const int ResultFullName = 2131230731;
-			
-			// aapt resource value: 0x7f08000d
-			public const int ResultMessage = 2131230733;
-			
-			// aapt resource value: 0x7f08000c
-			public const int ResultResultState = 2131230732;
-			
-			// aapt resource value: 0x7f08000a
-			public const int ResultRunSingleMethodTest = 2131230730;
-			
-			// aapt resource value: 0x7f08000e
-			public const int ResultStackTrace = 2131230734;
-			
-			// aapt resource value: 0x7f080006
-			public const int ResultsFailed = 2131230726;
-			
-			// aapt resource value: 0x7f080003
-			public const int ResultsId = 2131230723;
-			
-			// aapt resource value: 0x7f080007
-			public const int ResultsIgnored = 2131230727;
-			
-			// aapt resource value: 0x7f080008
-			public const int ResultsInconclusive = 2131230728;
-			
-			// aapt resource value: 0x7f080009
-			public const int ResultsMessage = 2131230729;
-			
-			// aapt resource value: 0x7f080005
-			public const int ResultsPassed = 2131230725;
-			
-			// aapt resource value: 0x7f080004
-			public const int ResultsResult = 2131230724;
-			
-			// aapt resource value: 0x7f08000f
-			public const int RunTestsButton = 2131230735;
-			
-			// aapt resource value: 0x7f080011
-			public const int TestSuiteListView = 2131230737;
-			
-			static Id()
-			{
-				global::Android.Runtime.ResourceIdManager.UpdateIdValues();
-			}
-			
-			private Id()
-			{
-			}
-		}
-		
-		public partial class Layout
-		{
-			
-			// aapt resource value: 0x7f040000
-			public const int options = 2130968576;
-			
-			// aapt resource value: 0x7f040001
-			public const int results = 2130968577;
-			
-			// aapt resource value: 0x7f040002
-			public const int test_result = 2130968578;
-			
-			// aapt resource value: 0x7f040003
-			public const int test_suite = 2130968579;
-			
-			static Layout()
-			{
-				global::Android.Runtime.ResourceIdManager.UpdateIdValues();
-			}
-			
-			private Layout()
-			{
-			}
-		}
-		
 		public partial class Mipmap
 		{
 			
@@ -235,8 +127,8 @@ namespace EnRouteApi.Android.Tests
 		public partial class Plurals
 		{
 			
-			// aapt resource value: 0x7f060000
-			public const int common_days_1d = 2131099648;
+			// aapt resource value: 0x7f050000
+			public const int common_days_1d = 2131034112;
 			
 			static Plurals()
 			{
@@ -251,59 +143,65 @@ namespace EnRouteApi.Android.Tests
 		public partial class String
 		{
 			
-			// aapt resource value: 0x7f050001
-			public const int arrived_at_destination = 2131034113;
+			// aapt resource value: 0x7f040002
+			public const int ApplicationName = 2130968578;
 			
-			// aapt resource value: 0x7f050002
-			public const int click_to_expire = 2131034114;
+			// aapt resource value: 0x7f040001
+			public const int Hello = 2130968577;
 			
-			// aapt resource value: 0x7f050003
-			public const int click_to_reply = 2131034115;
+			// aapt resource value: 0x7f040003
+			public const int arrived_at_destination = 2130968579;
 			
-			// aapt resource value: 0x7f050004
-			public const int click_to_view = 2131034116;
+			// aapt resource value: 0x7f040004
+			public const int click_to_expire = 2130968580;
 			
-			// aapt resource value: 0x7f050000
-			public const int fcm_fallback_notification_channel_label = 2131034112;
+			// aapt resource value: 0x7f040005
+			public const int click_to_reply = 2130968581;
 			
-			// aapt resource value: 0x7f050010
-			public const int glympse_gdpr_accept = 2131034128;
+			// aapt resource value: 0x7f040006
+			public const int click_to_view = 2130968582;
 			
-			// aapt resource value: 0x7f050011
-			public const int glympse_gdpr_message = 2131034129;
+			// aapt resource value: 0x7f040000
+			public const int fcm_fallback_notification_channel_label = 2130968576;
 			
-			// aapt resource value: 0x7f050005
-			public const int glympse_was_received = 2131034117;
+			// aapt resource value: 0x7f040012
+			public const int glympse_gdpr_accept = 2130968594;
 			
-			// aapt resource value: 0x7f050006
-			public const int group_invitation_was_received = 2131034118;
+			// aapt resource value: 0x7f040013
+			public const int glympse_gdpr_message = 2130968595;
 			
-			// aapt resource value: 0x7f050007
-			public const int low_battey_warning = 2131034119;
+			// aapt resource value: 0x7f040007
+			public const int glympse_was_received = 2130968583;
 			
-			// aapt resource value: 0x7f050008
-			public const int no_active_glympses = 2131034120;
+			// aapt resource value: 0x7f040008
+			public const int group_invitation_was_received = 2130968584;
 			
-			// aapt resource value: 0x7f050009
-			public const int no_network_connection = 2131034121;
+			// aapt resource value: 0x7f040009
+			public const int low_battey_warning = 2130968585;
 			
-			// aapt resource value: 0x7f05000a
-			public const int rate_limited = 2131034122;
+			// aapt resource value: 0x7f04000a
+			public const int no_active_glympses = 2130968586;
 			
-			// aapt resource value: 0x7f05000b
-			public const int remaining_details = 2131034123;
+			// aapt resource value: 0x7f04000b
+			public const int no_network_connection = 2130968587;
 			
-			// aapt resource value: 0x7f05000c
-			public const int remaining_title = 2131034124;
+			// aapt resource value: 0x7f04000c
+			public const int rate_limited = 2130968588;
 			
-			// aapt resource value: 0x7f05000d
-			public const int remaining_title_glympse = 2131034125;
+			// aapt resource value: 0x7f04000d
+			public const int remaining_details = 2130968589;
 			
-			// aapt resource value: 0x7f05000e
-			public const int reply_with_a_glympse = 2131034126;
+			// aapt resource value: 0x7f04000e
+			public const int remaining_title = 2130968590;
 			
-			// aapt resource value: 0x7f05000f
-			public const int request_was_received = 2131034127;
+			// aapt resource value: 0x7f04000f
+			public const int remaining_title_glympse = 2130968591;
+			
+			// aapt resource value: 0x7f040010
+			public const int reply_with_a_glympse = 2130968592;
+			
+			// aapt resource value: 0x7f040011
+			public const int request_was_received = 2130968593;
 			
 			static String()
 			{
@@ -318,11 +216,11 @@ namespace EnRouteApi.Android.Tests
 		public partial class Style
 		{
 			
-			// aapt resource value: 0x7f070000
-			public const int NotificationText = 2131165184;
+			// aapt resource value: 0x7f060000
+			public const int NotificationText = 2131099648;
 			
-			// aapt resource value: 0x7f070001
-			public const int NotificationTitle = 2131165185;
+			// aapt resource value: 0x7f060001
+			public const int NotificationTitle = 2131099649;
 			
 			static Style()
 			{
