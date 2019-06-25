@@ -483,6 +483,13 @@ namespace Glympse
     {
         return CoreFactory.createString("hidden");
     }
+    /**
+     * TICKET_VISIBILITY_KEY_LOCATION() value indicating hidden location.
+     */
+    public static String TICKET_VISIBILITY_LOCATION_CLOAKED()
+    {
+        return CoreFactory.createString("hidden");
+    }
 
     /**
      * Key to retrieve the location visibility from ITicket::getVisibility.

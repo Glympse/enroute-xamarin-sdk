@@ -534,7 +534,10 @@ namespace Glympse.EnRoute.iOS
         long getTaskId();
 
         [Export ("setTicketEta:")]
-        void setTicketEta(long eta);   
+        void setTicketEta(long eta);
+
+        [Export("setTicketVisible:")]
+        void setTicketVisible(string visible);
     }
 
     [BaseType (typeof(GlySource))]

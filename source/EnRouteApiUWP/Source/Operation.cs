@@ -51,7 +51,12 @@ namespace Glympse.EnRoute.UWP
             _raw.setTicketEta(eta);
         }
 
-        public object raw()
+		public void setTicketVisible(string visible)
+		{
+			_raw.setTicketVisible(visible);
+		}
+
+		public object raw()
         {
             return _raw;
         }
