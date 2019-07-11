@@ -20,7 +20,7 @@ namespace EnRouteDemo
         public App (GEnRouteFactory enRouteFactory)
         {
             EnRouteManagerWrapper.Instance.Initialize(enRouteFactory);
-         
+
             _buttonLogout = new Button();
             _buttonLogout.Text = "Logout";
             _buttonLogout.Clicked += ButtonLogout_Clicked;
@@ -80,31 +80,13 @@ namespace EnRouteDemo
         private void ButtonLogout_Clicked(object sender, EventArgs e)
         {
             //Logout
-            //EnRouteManagerWrapper.Instance.Manager.logout(EnRouteConstants.LOGOUT_REASON_USER_ACTION);
-
-            GArray<GTask> tasks =  EnRouteManagerWrapper.Instance.Manager.getTaskManager().getTasks();
-            int num = tasks.length();
-
-            if (num > 0) {
-
-                GTask task = tasks.at(0);
-                GOperation operation = task.getOperation();
-                operation.setTicketVisible("hidden");
-            }
-
-            //GlympseWrapper.Instance.Initialize(new GlympseFactory());
-            //GPlace destination = GlympseWrapper.Instance.GlympseFactory.createPlace(47.6205099, -122.3514714, "Space Needle");
-            //GTicket ticket = GlympseWrapper.Instance.GlympseFactory.createTicket(60000, "Xamarin Cloaked Test 1", destination);
-            //ticket.
-            //GlympseWrapper.Instance.Glympse.sendTicket(ticket);
+            EnRouteManagerWrapper.Instance.Manager.logout(EnRouteConstants.LOGOUT_REASON_USER_ACTION);
         }
 
         private void ButtonLogin_Clicked(object sender, EventArgs e)
         {
             // Login
             Auth.start(EnRouteManagerWrapper.Instance.Manager);
-
-            //Auth.login(EnRouteManagerWrapper.Instance.Manager);
         }
 
         private void ButtonSendTicket_Clicked(object sender, EventArgs e)

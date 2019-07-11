@@ -57,8 +57,7 @@ namespace EnRouteDemo
         private void createManager()
         {
         	_enRouteManager = _enRouteFactory.createEnRouteManager();
-            _enRouteManager.overrideLoggingLevels(1, 1);
-            _enRouteManager.addListener(this);
+        	_enRouteManager.addListener(this);
         }
 
         public void eventsOccurred(GSource source, int listener, int events, object param1, object param2)
