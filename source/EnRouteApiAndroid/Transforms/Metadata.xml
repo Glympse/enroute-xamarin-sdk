@@ -461,7 +461,7 @@
     <attr 
         path="/api/package[@name='com.glympse.enroute.android.api']/interface[@name='GOperation']/method[@name='setTicketEta']" 
         name="managedName">setTicketEta</attr>
-        <attr 
+    <attr 
         path="/api/package[@name='com.glympse.enroute.android.api']/interface[@name='GOperation']/method[@name='setTicketVisible']" 
         name="managedName">setTicketVisible</attr>
 
