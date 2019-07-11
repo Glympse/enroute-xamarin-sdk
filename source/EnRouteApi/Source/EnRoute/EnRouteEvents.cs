@@ -424,11 +424,11 @@ namespace EnRoute
     public const int PICKUPS_PICKUP_CARD_MESSAGE_STATUS = 0x00000200;
     
     /**
-     * This event is broadcast when the SDK receives an updated customer ETA for a pickup
+     * This event is broadcast when the Ticket object associated with a Pickup becomes available
      *
      * The associated pickup is passed as a parameter (GPickup).
      */
-    public const int PICKUPS_PICKUP_ETA_CHANGED = 0x00000400;
+    public const int PICKUPS_PICKUP_TICKET_AVAILABLE = 0x00000400;
     
 };
     
