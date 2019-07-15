@@ -475,6 +475,14 @@ namespace Glympse
     {
         return CoreFactory.createString("visible");
     }
+    
+    /**
+     * TICKET_VISIBILITY_KEY_LOCATION() value indicating cloaked location.
+     */
+    public static String TICKET_VISIBILITY_LOCATION_CLOAKED()
+    {
+        return CoreFactory.createString("cloaked");
+    }
 
     /**
      * TICKET_VISIBILITY_KEY_LOCATION() value indicating hidden location.

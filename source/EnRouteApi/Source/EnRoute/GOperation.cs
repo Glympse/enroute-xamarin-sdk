@@ -21,6 +21,8 @@ namespace Glympse
             long getTaskId();
 
             void setTicketEta(long eta);
+
+            void setTicketVisible(string visible);
         }
     }
 }
