@@ -81,6 +81,11 @@ namespace Glympse.EnRoute.iOS
             _raw.overrideLoggingLevels(fileLevel, debugLevel);
         }
 
+        public GConfig getConfig()
+        {
+            return new Config((GlyConfig)_raw.getConfig());
+        }
+
         public object raw()
         {
             return _raw;

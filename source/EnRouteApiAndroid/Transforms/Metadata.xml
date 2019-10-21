@@ -203,6 +203,9 @@
     <attr 
         path="/api/package[@name='com.glympse.android.api']/interface[@name='GGlympse']/method[@name='overrideLoggingLevels']" 
         name="managedName">overrideLoggingLevels</attr>
+    <attr 
+        path="/api/package[@name='com.glympse.android.api']/interface[@name='GGlympse']/method[@name='getConfig']" 
+        name="managedName">getConfig</attr>
     
     <!-- GPlace -->
     <attr 
@@ -303,6 +306,14 @@
     <attr 
         path="/api/package[@name='com.glympse.android.api']/interface[@name='GCardMessage']/method[@name='isRead']" 
         name="managedName">isRead</attr>
+    
+    <!-- GConfig -->
+    <attr 
+        path="/api/package[@name='com.glympse.android.api']/interface[@name='GConfig']" 
+        name="managedName">GConfig</attr>
+    <attr 
+        path="/api/package[@name='com.glympse.android.api']/interface[@name='GConfig']/method[@name='setActiveSharingNotificationMessage']" 
+        name="managedName">setActiveSharingNotificationMessage</attr>
     
     <!-- GUserManager -->
     <attr 

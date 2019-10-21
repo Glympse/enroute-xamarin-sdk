@@ -31,5 +31,7 @@ namespace Glympse
         string getApiVersion();
 
         void overrideLoggingLevels(int fileLevel, int debugLevel);
+
+        GConfig getConfig();
     }
 }

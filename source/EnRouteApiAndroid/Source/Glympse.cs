@@ -81,6 +81,11 @@ namespace Glympse.EnRoute.Android
             _raw.overrideLoggingLevels(fileLevel, debugLevel);
         }
 
+        public GConfig getConfig()
+        {
+            return new Config((com.glympse.android.api.GConfig)_raw.getConfig());
+        }
+
         public object raw()
         {
             return _raw;
