@@ -132,6 +132,32 @@ namespace EnRoute
     public const int ENROUTE_MANAGER_SELF_AGENT_UPDATED = 0x00000100;
     
     /**
+     * This event is broadcast when the self agent's shift starts
+     *
+     */
+    public const int ENROUTE_MANAGER_SHIFT_STARTED = 0x00000200;
+    
+    /**
+     * This event is broadcast when the self agent's shift completes
+     *
+     */
+    public const int ENROUTE_MANAGER_SHIFT_COMPLETED = 0x00000400;
+    
+    /**
+     * This event is broadcast when the self agent's shift fails to start
+     *
+     * param1: error (GString)
+     */
+    public const int ENROUTE_MANAGER_SHIFT_START_FAILED = 0x00000800;
+    
+    /**
+     * This event is broadcast when the self agent's shift fails to complete
+     *
+     * param1: error (GString)
+     */
+    public const int ENROUTE_MANAGER_SHIFT_COMPLETE_FAILED = 0x00001000;
+    
+    /**
      * @name Task Manager events.
      *
      * Events broadcasted by LISTENER_TASKS.
@@ -266,7 +292,7 @@ namespace EnRoute
      * 
      * The reason for failusre is passed as a parameter (string).
      */
-    public const int AGENTS_AGENT_UPDATE_FAILED = 0x000000010;
+    public const int AGENTS_AGENT_UPDATE_FAILED = 0x00000010;
     
     /**
      * @name Session Manager events.

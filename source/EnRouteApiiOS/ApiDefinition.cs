@@ -287,6 +287,9 @@ namespace Glympse.EnRoute.iOS
 
         [Export("overrideLoggingLevels:debugLevel:")]
         void overrideLoggingLevels(int fileLevel, int debugLevel);
+
+        [Export("getConfig")]
+        GlyConfig getConfig();
     }
 
     [BaseType(typeof(GlyCommon))]
@@ -392,6 +395,14 @@ namespace Glympse.EnRoute.iOS
 
         [Export("isRead")]
         bool isRead();
+    }
+
+    [BaseType(typeof(NSObject))]
+    [DisableDefaultCtor]
+    interface GlyConfig
+    {
+        [Export("setActiveSharingNotificationMessage:")]
+        void setActiveSharingNotificationMessage(string message);
     }
 
     [BaseType(typeof(NSObject))]

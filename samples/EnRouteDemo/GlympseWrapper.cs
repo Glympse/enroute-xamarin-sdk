@@ -44,6 +44,7 @@ namespace EnRouteDemo
             _glympse = glympseFactory.createGlympse(BASE_URL, API_KEY);
             _glympse.overrideLoggingLevels(1, 1); // Increases logging levels. Turn off for production deployments
             _glympse.getConsentManager().exemptFromConsent(true);
+            _glympse.getConfig().setActiveSharingNotificationMessage("This message will show in your notifcation");
             _glympse.start();
         }
 
