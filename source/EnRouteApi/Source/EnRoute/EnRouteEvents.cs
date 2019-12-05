@@ -434,27 +434,18 @@ namespace EnRoute
     public const int PICKUPS_PICKUP_ASSIGN_FAILED = 0x00000080;
     
     /**
-     * This event is broadcast when the CardMessages object associated with a pickup is updated
-     *
-     * The associated pickup is passed as a parameter (GPickup).
-     */
-    public const int PICKUPS_PICKUP_CARD_MESSAGE_CHANGED = 0x00000100;
-    
-    /**
-     * This event is broadcast when the SDK receives a response from the server after sending
-     * a message
-     *
-     * The event id and unique id of the message are passed as parameters (GString, GString)
-     * If no event id is present then the message failed to create on the server
-     */
-    public const int PICKUPS_PICKUP_CARD_MESSAGE_STATUS = 0x00000200;
-    
-    /**
      * This event is broadcast when the Ticket object associated with a Pickup becomes available
      *
      * The associated pickup is passed as a parameter (GPickup).
      */
-    public const int PICKUPS_PICKUP_TICKET_AVAILABLE = 0x00000400;
+    public const int PICKUPS_PICKUP_TICKET_AVAILABLE = 0x00000100;
+    
+    /**
+    * This event is broadcast when the messages collection associated with a pickup is updated
+    *
+    * The associated pickup is passed as a parameter (GPickup).
+    */
+    public const int PICKUPS_PICKUP_MESSAGES_CHANGED = 0x00000800;
     
 };
     
