@@ -116,6 +116,16 @@ namespace Glympse.EnRoute.Android
             _raw.overrideLoggingLevels(fileLevel, debugLevel);
         }
 
+        public void setTravelMode(string travelMode)
+        {
+            _raw.setTravelMode(travelMode);
+        }
+        
+        public string getTravelMode()
+        {
+            return _raw.getTravelMode();
+        }
+
         /**
          * GSource section
          */

@@ -208,6 +208,30 @@ namespace EnRoute
     {
         return CoreFactory.createString("sdk_food_delivery");
     }
+    
+    /**
+     * @name Travel modes
+     */
+    public static String TRAVEL_MODE_DRIVING()
+    {
+        return CoreFactory.createString("driving");
+    }
+    
+    public static String TRAVEL_MODE_WALKING()
+    {
+        return CoreFactory.createString("walking");
+    }
+    
+    public static String TRAVEL_MODE_TRANSIT()
+    {
+        return CoreFactory.createString("transit");
+    }
+    
+    public static String TRAVEL_MODE_BICYCLE()
+    {
+        return CoreFactory.createString("cycle");
+    }
+    
 };
     
 }

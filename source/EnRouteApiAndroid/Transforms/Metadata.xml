@@ -566,6 +566,12 @@
     <attr 
         path="/api/package[@name='com.glympse.enroute.android.api']/interface[@name='GEnRouteManager']/method[@name='overrideLoggingLevels']" 
         name="managedName">overrideLoggingLevels</attr> 
+    <attr 
+        path="/api/package[@name='com.glympse.enroute.android.api']/interface[@name='GEnRouteManager']/method[@name='setTravelMode']" 
+        name="managedName">setTravelMode</attr> 
+    <attr 
+        path="/api/package[@name='com.glympse.enroute.android.api']/interface[@name='GEnRouteManager']/method[@name='getTravelMode']" 
+        name="managedName">getTravelMode</attr> 
 
     <!-- GEnRouteFactory -->
     <attr 

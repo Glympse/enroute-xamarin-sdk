@@ -652,6 +652,12 @@ namespace Glympse.EnRoute.iOS
 
         [Export("overrideLoggingLevels:debugLogLevel:")]
         void overrideLoggingLevels(int fileLevel, int debugLevel);
+
+        [Export("setTravelMode:")]
+        void setTravelMode(string travelMode);
+
+        [Export("getTravelMode")]
+        string getTravelMode();
     }
         
     [BaseType (typeof(NSObject))]
