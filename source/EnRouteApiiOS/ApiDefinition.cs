@@ -579,6 +579,12 @@ namespace Glympse.EnRoute.iOS
         [Export("getCardMessagesForTask:")]
         GlyCardMessages getCardMessagesForTask(GlyTask task);
 
+        [Export("setTravelModeForTask:travelMode:")]
+        void setTravelModeForTask(GlyTask task, string travelMode);
+
+        [Export("getTravelModeForTask:")]
+        string getTravelModeForTask(GlyTask task);
+
         [Export ("addListener:")]
         bool addListener(GlyListener listener);
 
@@ -652,12 +658,6 @@ namespace Glympse.EnRoute.iOS
 
         [Export("overrideLoggingLevels:debugLogLevel:")]
         void overrideLoggingLevels(int fileLevel, int debugLevel);
-
-        [Export("setTravelMode:")]
-        void setTravelMode(string travelMode);
-
-        [Export("getTravelMode")]
-        string getTravelMode();
     }
         
     [BaseType (typeof(NSObject))]

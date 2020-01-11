@@ -50,53 +50,53 @@ namespace EnRouteApi.Android.Tests
 		public partial class Drawable
 		{
 			
-			// aapt resource value: 0x7f020000
-			public const int bg_wru = 2130837504;
+			// aapt resource value: 0x7F010000
+			public const int bg_wru = 2130771968;
 			
-			// aapt resource value: 0x7f020001
-			public const int glogo_v2 = 2130837505;
+			// aapt resource value: 0x7F010001
+			public const int glogo_v2 = 2130771969;
 			
-			// aapt resource value: 0x7f020002
-			public const int notification_00 = 2130837506;
+			// aapt resource value: 0x7F010002
+			public const int notification_00 = 2130771970;
 			
-			// aapt resource value: 0x7f020003
-			public const int notification_01 = 2130837507;
+			// aapt resource value: 0x7F010003
+			public const int notification_01 = 2130771971;
 			
-			// aapt resource value: 0x7f020004
-			public const int notification_02 = 2130837508;
+			// aapt resource value: 0x7F010004
+			public const int notification_02 = 2130771972;
 			
-			// aapt resource value: 0x7f020005
-			public const int notification_03 = 2130837509;
+			// aapt resource value: 0x7F010005
+			public const int notification_03 = 2130771973;
 			
-			// aapt resource value: 0x7f020006
-			public const int notification_04 = 2130837510;
+			// aapt resource value: 0x7F010006
+			public const int notification_04 = 2130771974;
 			
-			// aapt resource value: 0x7f020007
-			public const int notification_05 = 2130837511;
+			// aapt resource value: 0x7F010007
+			public const int notification_05 = 2130771975;
 			
-			// aapt resource value: 0x7f020008
-			public const int notification_06 = 2130837512;
+			// aapt resource value: 0x7F010008
+			public const int notification_06 = 2130771976;
 			
-			// aapt resource value: 0x7f020009
-			public const int notification_07 = 2130837513;
+			// aapt resource value: 0x7F010009
+			public const int notification_07 = 2130771977;
 			
-			// aapt resource value: 0x7f02000a
-			public const int notification_08 = 2130837514;
+			// aapt resource value: 0x7F01000A
+			public const int notification_08 = 2130771978;
 			
-			// aapt resource value: 0x7f02000b
-			public const int notification_09 = 2130837515;
+			// aapt resource value: 0x7F01000B
+			public const int notification_09 = 2130771979;
 			
-			// aapt resource value: 0x7f02000c
-			public const int notification_arrived = 2130837516;
+			// aapt resource value: 0x7F01000C
+			public const int notification_arrived = 2130771980;
 			
-			// aapt resource value: 0x7f02000d
-			public const int notification_low_battery = 2130837517;
+			// aapt resource value: 0x7F01000D
+			public const int notification_low_battery = 2130771981;
 			
-			// aapt resource value: 0x7f02000e
-			public const int notification_received = 2130837518;
+			// aapt resource value: 0x7F01000E
+			public const int notification_received = 2130771982;
 			
-			// aapt resource value: 0x7f02000f
-			public const int notification_warning = 2130837519;
+			// aapt resource value: 0x7F01000F
+			public const int notification_warning = 2130771983;
 			
 			static Drawable()
 			{
@@ -111,8 +111,8 @@ namespace EnRouteApi.Android.Tests
 		public partial class Mipmap
 		{
 			
-			// aapt resource value: 0x7f030000
-			public const int Icon = 2130903040;
+			// aapt resource value: 0x7F020000
+			public const int Icon = 2130837504;
 			
 			static Mipmap()
 			{
@@ -127,8 +127,8 @@ namespace EnRouteApi.Android.Tests
 		public partial class Plurals
 		{
 			
-			// aapt resource value: 0x7f050000
-			public const int common_days_1d = 2131034112;
+			// aapt resource value: 0x7F030000
+			public const int common_days_1d = 2130903040;
 			
 			static Plurals()
 			{
@@ -143,65 +143,62 @@ namespace EnRouteApi.Android.Tests
 		public partial class String
 		{
 			
-			// aapt resource value: 0x7f040002
-			public const int ApplicationName = 2130968578;
+			// aapt resource value: 0x7F040000
+			public const int ApplicationName = 2130968576;
 			
-			// aapt resource value: 0x7f040001
+			// aapt resource value: 0x7F040002
+			public const int arrived_at_destination = 2130968578;
+			
+			// aapt resource value: 0x7F040003
+			public const int click_to_expire = 2130968579;
+			
+			// aapt resource value: 0x7F040004
+			public const int click_to_reply = 2130968580;
+			
+			// aapt resource value: 0x7F040005
+			public const int click_to_view = 2130968581;
+			
+			// aapt resource value: 0x7F040006
+			public const int glympse_gdpr_accept = 2130968582;
+			
+			// aapt resource value: 0x7F040007
+			public const int glympse_gdpr_message = 2130968583;
+			
+			// aapt resource value: 0x7F040008
+			public const int glympse_was_received = 2130968584;
+			
+			// aapt resource value: 0x7F040009
+			public const int group_invitation_was_received = 2130968585;
+			
+			// aapt resource value: 0x7F040001
 			public const int Hello = 2130968577;
 			
-			// aapt resource value: 0x7f040003
-			public const int arrived_at_destination = 2130968579;
+			// aapt resource value: 0x7F04000A
+			public const int low_battey_warning = 2130968586;
 			
-			// aapt resource value: 0x7f040004
-			public const int click_to_expire = 2130968580;
+			// aapt resource value: 0x7F04000B
+			public const int no_active_glympses = 2130968587;
 			
-			// aapt resource value: 0x7f040005
-			public const int click_to_reply = 2130968581;
+			// aapt resource value: 0x7F04000C
+			public const int no_network_connection = 2130968588;
 			
-			// aapt resource value: 0x7f040006
-			public const int click_to_view = 2130968582;
+			// aapt resource value: 0x7F04000D
+			public const int rate_limited = 2130968589;
 			
-			// aapt resource value: 0x7f040000
-			public const int fcm_fallback_notification_channel_label = 2130968576;
+			// aapt resource value: 0x7F04000E
+			public const int remaining_details = 2130968590;
 			
-			// aapt resource value: 0x7f040012
-			public const int glympse_gdpr_accept = 2130968594;
+			// aapt resource value: 0x7F04000F
+			public const int remaining_title = 2130968591;
 			
-			// aapt resource value: 0x7f040013
-			public const int glympse_gdpr_message = 2130968595;
+			// aapt resource value: 0x7F040010
+			public const int remaining_title_glympse = 2130968592;
 			
-			// aapt resource value: 0x7f040007
-			public const int glympse_was_received = 2130968583;
+			// aapt resource value: 0x7F040011
+			public const int reply_with_a_glympse = 2130968593;
 			
-			// aapt resource value: 0x7f040008
-			public const int group_invitation_was_received = 2130968584;
-			
-			// aapt resource value: 0x7f040009
-			public const int low_battey_warning = 2130968585;
-			
-			// aapt resource value: 0x7f04000a
-			public const int no_active_glympses = 2130968586;
-			
-			// aapt resource value: 0x7f04000b
-			public const int no_network_connection = 2130968587;
-			
-			// aapt resource value: 0x7f04000c
-			public const int rate_limited = 2130968588;
-			
-			// aapt resource value: 0x7f04000d
-			public const int remaining_details = 2130968589;
-			
-			// aapt resource value: 0x7f04000e
-			public const int remaining_title = 2130968590;
-			
-			// aapt resource value: 0x7f04000f
-			public const int remaining_title_glympse = 2130968591;
-			
-			// aapt resource value: 0x7f040010
-			public const int reply_with_a_glympse = 2130968592;
-			
-			// aapt resource value: 0x7f040011
-			public const int request_was_received = 2130968593;
+			// aapt resource value: 0x7F040012
+			public const int request_was_received = 2130968594;
 			
 			static String()
 			{
@@ -216,11 +213,11 @@ namespace EnRouteApi.Android.Tests
 		public partial class Style
 		{
 			
-			// aapt resource value: 0x7f060000
-			public const int NotificationText = 2131099648;
+			// aapt resource value: 0x7F050000
+			public const int NotificationText = 2131034112;
 			
-			// aapt resource value: 0x7f060001
-			public const int NotificationTitle = 2131099649;
+			// aapt resource value: 0x7F050001
+			public const int NotificationTitle = 2131034113;
 			
 			static Style()
 			{

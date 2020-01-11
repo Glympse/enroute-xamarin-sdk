@@ -44,10 +44,6 @@ namespace Glympse
             void registerDeviceToken(string tokenType, string deviceToken);
 
             void overrideLoggingLevels(int fileLevel, int debugLevel);
-
-            void setTravelMode(string travelMode);
-    
-            string getTravelMode();
         }
     }
 }
