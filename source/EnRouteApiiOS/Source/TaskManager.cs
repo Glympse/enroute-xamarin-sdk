@@ -59,6 +59,16 @@ namespace Glympse.EnRoute.iOS
             return (GCardMessages)ClassBinder.bind(_raw.getCardMessagesForTask((GlyTask)task.raw()));
         }
 
+        public void setTravelModeForTask(GTask task, string travelMode)
+        {
+            _raw.setTravelModeForTask((GlyTask)task.raw(), travelMode);
+        }
+
+        public string getTravelModeForTask(GTask task)
+        {
+            return _raw.getTravelModeForTask((GlyTask)task.raw());
+        }
+
         /**
          * GSource section
          */

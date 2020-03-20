@@ -504,6 +504,12 @@
     <attr 
         path="/api/package[@name='com.glympse.enroute.android.api']/interface[@name='GTaskManager']/method[@name='getCardMessagesForTask']" 
         name="managedName">getCardMessagesForTask</attr>
+    <attr 
+        path="/api/package[@name='com.glympse.enroute.android.api']/interface[@name='GTaskManager']/method[@name='setTravelModeForTask']" 
+        name="managedName">setTravelModeForTask</attr> 
+    <attr 
+        path="/api/package[@name='com.glympse.enroute.android.api']/interface[@name='GTaskManager']/method[@name='getTravelModeForTask']" 
+        name="managedName">getTravelModeForTask</attr> 
 
     <!-- GEnRouteManager -->
     <attr

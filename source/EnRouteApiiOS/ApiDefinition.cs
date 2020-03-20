@@ -579,6 +579,12 @@ namespace Glympse.EnRoute.iOS
         [Export("getCardMessagesForTask:")]
         GlyCardMessages getCardMessagesForTask(GlyTask task);
 
+        [Export("setTravelModeForTask:travelMode:")]
+        void setTravelModeForTask(GlyTask task, string travelMode);
+
+        [Export("getTravelModeForTask:")]
+        string getTravelModeForTask(GlyTask task);
+
         [Export ("addListener:")]
         bool addListener(GlyListener listener);
 

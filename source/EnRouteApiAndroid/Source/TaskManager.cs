@@ -59,6 +59,16 @@ namespace Glympse.EnRoute.Android
             return new CardMessages(_raw.getCardMessagesForTask((com.glympse.enroute.android.api.GTask)task.raw()));
         }
 
+        public void setTravelModeForTask(GTask task, string travelMode)
+        {
+            _raw.setTravelModeForTask((com.glympse.enroute.android.api.GTask)task.raw(), travelMode);
+        }
+
+        public string getTravelModeForTask(GTask task)
+        {
+            return _raw.getTravelModeForTask((com.glympse.enroute.android.api.GTask)task.raw());
+        }
+
         /**
          * GSource section
          */
