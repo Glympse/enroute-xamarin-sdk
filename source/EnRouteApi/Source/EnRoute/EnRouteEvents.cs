@@ -441,11 +441,20 @@ namespace EnRoute
     public const int PICKUPS_PICKUP_TICKET_AVAILABLE = 0x00000100;
     
     /**
-    * This event is broadcast when the messages collection associated with a pickup is updated
-    *
-    * The associated pickup is passed as a parameter (GPickup).
+     * This event is broadcast when the messages collection associated with a pickup is updated
+     *
+     * The associated pickup is passed as a parameter (GPickup).
     */
     public const int PICKUPS_PICKUP_MESSAGES_CHANGED = 0x00000800;
+    
+    /**
+     * This event is broadcast anytime a Pickup is refreshed individually. Properties within
+     * the Pickup may or may not have been updated, but it's useful to listen to if an application
+     * is focused on this Pickup and may need to refresh.
+     *
+     * The associated pickup is passed as a parameter (GPickup).
+     */
+    public const int PICKUPS_PICKUP_CHANGED = 0X00001000;
     
 };
     

@@ -123,6 +123,14 @@ namespace EnRoute
     public const int BATCH_MAXIMUM_ENDPOINTS = 16;
     
     /**
+     * @name Completed Pickup Keep Threshold
+     * Pickups older than this value should be discarded
+     * Value is 48 hours in ms
+     */
+    
+    public const long PICKUP_COMPLETED_KEEP_THRESHOLD_MS = 172800000;
+    
+    /**
      * @name Phase properties
      */
     
@@ -214,12 +222,12 @@ namespace EnRoute
      */
     public static String TRAVEL_MODE_DRIVING()
     {
-        return CoreFactory.createString("driving");
+        return CoreFactory.createString("drive");
     }
     
     public static String TRAVEL_MODE_WALKING()
     {
-        return CoreFactory.createString("walking");
+        return CoreFactory.createString("walk");
     }
     
     public static String TRAVEL_MODE_TRANSIT()
