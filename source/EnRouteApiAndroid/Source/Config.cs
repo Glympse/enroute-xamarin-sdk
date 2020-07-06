@@ -16,6 +16,11 @@ namespace Glympse.EnRoute.Android
             _raw.setActiveSharingNotificationMessage(message);
         }
 
+        public void setExpireOnArrival(int mode)
+        {
+            _raw.setExpireOnArrival(mode);
+        }
+
         public object raw()
         {
             return _raw;

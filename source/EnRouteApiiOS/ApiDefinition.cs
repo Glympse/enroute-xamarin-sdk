@@ -403,6 +403,9 @@ namespace Glympse.EnRoute.iOS
     {
         [Export("setActiveSharingNotificationMessage:")]
         void setActiveSharingNotificationMessage(string message);
+
+        [Export("setExpireOnArrival:")]
+        void setExpireOnArrival(int mode);
     }
 
     [BaseType(typeof(NSObject))]
