@@ -44,6 +44,8 @@ namespace Glympse
             void registerDeviceToken(string tokenType, string deviceToken);
 
             void overrideLoggingLevels(int fileLevel, int debugLevel);
+
+            void enableXoANotifications(bool enabled);
         }
     }
 }

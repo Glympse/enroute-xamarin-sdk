@@ -116,6 +116,11 @@ namespace Glympse.EnRoute.Android
             _raw.overrideLoggingLevels(fileLevel, debugLevel);
         }
 
+        public void enableXoANotifications(bool enabled)
+        {
+            _raw.enableXoANotifications(enabled);
+        }
+
         /**
          * GSource section
          */
