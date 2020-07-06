@@ -314,6 +314,9 @@
     <attr 
         path="/api/package[@name='com.glympse.android.api']/interface[@name='GConfig']/method[@name='setActiveSharingNotificationMessage']" 
         name="managedName">setActiveSharingNotificationMessage</attr>
+    <attr 
+        path="/api/package[@name='com.glympse.android.api']/interface[@name='GConfig']/method[@name='setExpireOnArrival']" 
+        name="managedName">setExpireOnArrival</attr>
     
     <!-- GUserManager -->
     <attr 
