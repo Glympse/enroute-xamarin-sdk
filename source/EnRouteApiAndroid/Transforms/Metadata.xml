@@ -575,7 +575,10 @@
     <attr 
         path="/api/package[@name='com.glympse.enroute.android.api']/interface[@name='GEnRouteManager']/method[@name='overrideLoggingLevels']" 
         name="managedName">overrideLoggingLevels</attr> 
-
+    <attr 
+        path="/api/package[@name='com.glympse.enroute.android.api']/interface[@name='GEnRouteManager']/method[@name='enableXoANotifications']" 
+        name="managedName">enableXoANotifications</attr>     
+    
     <!-- GEnRouteFactory -->
     <attr 
         path="/api/package[@name='com.glympse.enroute.android.api']/class[@name='EnRouteFactory']/method[@name='createEnRouteManager']" 

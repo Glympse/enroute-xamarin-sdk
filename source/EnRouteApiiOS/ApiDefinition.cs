@@ -661,6 +661,9 @@ namespace Glympse.EnRoute.iOS
 
         [Export("overrideLoggingLevels:debugLogLevel:")]
         void overrideLoggingLevels(int fileLevel, int debugLevel);
+
+        [Export("enableXoANotifications:")]
+        void enableXoANotifications(bool enabled);
     }
         
     [BaseType (typeof(NSObject))]
