@@ -242,6 +242,13 @@ namespace EnRoute
     public const int TASKS_TASK_CARD_MESSAGE_STATUS = 0x00000400;
     
     /**
+     * This event is broadcast when the Ticket associated with a Task has updated its travel mode
+     *
+     * The associated task is passed as a parameter (GTask)
+     */
+    public const int TASKS_TASK_TRAVEL_MODE_CHANGED = 0x00000800;
+    
+    /**
      * @name ETA Planner events.
      *
      * Events broadcasted by LISTENER_ETA_PLANNER.
