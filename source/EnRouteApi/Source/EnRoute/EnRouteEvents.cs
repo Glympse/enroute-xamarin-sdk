@@ -248,6 +248,12 @@ namespace EnRoute
      */
     public const int TASKS_TASK_TRAVEL_MODE_CHANGED = 0x00000800;
     
+    public const int TASKS_TASK_DURATION_CHANGED = 0x00001000;
+    
+    public const int TASKS_TASK_DESTINATION_CHANGED = 0x00002000;
+    
+    public const int TASKS_TASK_TRANSFERRED = 0x00004000;
+    
     /**
      * @name ETA Planner events.
      *
