@@ -467,7 +467,14 @@ namespace EnRoute
      *
      * The associated pickup is passed as a parameter (GPickup).
      */
-    public const int PICKUPS_PICKUP_CHANGED = 0X00001000;
+    public const int PICKUPS_PICKUP_CHANGED = 0x00001000;
+    
+    /**
+     * This event is broadcast when the Chat Messages associated with a pickup is updated
+     *
+     * The associated pickup is passed as a parameter (GPickup).
+    */
+    public const int PICKUPS_PICKUP_CHAT_MESSAGES_CHANGED = 0x00002000;
     
 };
     
