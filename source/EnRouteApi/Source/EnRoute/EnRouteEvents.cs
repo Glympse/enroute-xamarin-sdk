@@ -186,7 +186,9 @@ namespace EnRoute
     /**
      * This event is broadcast when an operation is completed.
      *
-     * The associated operation is passed as a parameter (GOperation).
+     * See EnRouteConstants::TASK_COMPLETE_REASON_* for reason codes
+     *
+     * The associated operation and reason code are passed as parameters (GOperation, long).
      */
     public const int TASKS_OPERATION_COMPLETED = 0x00000008;
     

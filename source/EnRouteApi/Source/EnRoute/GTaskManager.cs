@@ -21,6 +21,8 @@ namespace Glympse
 
             bool completeOperation(GOperation operation);
 
+            bool completeOperation(GOperation operation, int reasonCode);
+
             GCardMessages getCardMessagesForTask(GTask task);
 
             void setTravelModeForTask(GTask task, string travelMode);

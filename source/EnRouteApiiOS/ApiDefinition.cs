@@ -576,8 +576,11 @@ namespace Glympse.EnRoute.iOS
         [Export ("setTaskPhase:phase:")]
         bool setTaskPhase(GlyTask task, string phase);
 
-        [Export ("completeOperation:")]
+        [Export ("completeOperationWithGlyOperation:")]
         bool completeOperation(GlyOperation operation);
+
+        [Export ("completeOperationWithGlyOperation:withInt:")]
+        bool completeOperation(GlyOperation operation, int reasonCode);
 
         [Export("getCardMessagesForTask:")]
         GlyCardMessages getCardMessagesForTask(GlyTask task);

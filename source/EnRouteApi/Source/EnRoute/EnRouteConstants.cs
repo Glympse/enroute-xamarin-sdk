@@ -57,6 +57,16 @@ namespace EnRoute
     public const int LOGOUT_REASON_SERVER_ERROR = 6;
     
     /**
+     * @name Task completion reasons
+     */
+    public const int TASK_COMPLETE_REASON_UNKNOWN = 0;
+    public const int TASK_COMPLETE_REASON_MANUAL_ARRIVAL = 1;
+    public const int TASK_COMPLETE_REASON_ARRIVAL_DETECTED = 2;
+    public const int TASK_COMPLETE_REASON_CANCELLED = 3;
+    public const int TASK_COMPLETE_REASON_TICKET_EXPIRED = 4;
+    public const int TASK_COMPLETE_REASON_TASK_REMOVED = 5;
+    
+    /**
      * @name Session completion reasons
      */
     
