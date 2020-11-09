@@ -133,6 +133,11 @@ namespace EnRoute
     public const int BATCH_MAXIMUM_ENDPOINTS = 16;
     
     /**
+     * @name Minimum auto refresh period
+     */
+    public const int MINIMUM_AUTO_REFRESH_PERIOD = 10000;
+    
+    /**
      * @name Completed Pickup Keep Threshold
      * Pickups older than this value should be discarded
      * Value is 48 hours in ms

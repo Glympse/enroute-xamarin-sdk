@@ -158,6 +158,11 @@ namespace EnRoute
     public const int ENROUTE_MANAGER_SHIFT_COMPLETE_FAILED = 0x00001000;
     
     /**
+     * This event is broadcast when the location accuracy authorization is updated
+     */
+    public const int ENROUTE_MANAGER_LOCATION_ACCURACY_UPDATED = 0x00002000;
+    
+    /**
      * @name Task Manager events.
      *
      * Events broadcasted by LISTENER_TASKS.
