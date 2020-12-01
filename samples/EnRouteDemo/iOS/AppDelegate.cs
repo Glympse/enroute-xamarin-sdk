@@ -56,11 +56,9 @@ namespace EnRouteDemo.iOS
         public override void RegisteredForRemoteNotifications (UIApplication application, NSData deviceToken)
         {
             // Get current device token
-            var DeviceToken = deviceToken.Description;
-            if (!string.IsNullOrWhiteSpace(DeviceToken))
-            {
-                DeviceToken = DeviceToken.Trim('<').Trim('>');
-            }
+            byte[] bytes = deviceToken.ToArray<byte>();
+            string[] hexArray = bytes.Select(b => b.ToString("x2")).ToArray();
+            var DeviceToken = string.Join(string.Empty, hexArray);
 
             Debug.WriteLine(DeviceToken);
 
