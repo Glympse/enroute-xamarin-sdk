@@ -262,6 +262,13 @@ namespace EnRoute
     public const int TASKS_TASK_TRANSFERRED = 0x00004000;
     
     /**
+     * This event is broadcast when the Chat Messages associated with a task is updated
+     *
+     * The associated task is passed as a parameter (GTask).
+    */
+    public const int TASKS_TASK_CHAT_MESSAGES_CHANGED = 0x00008000;
+    
+    /**
      * @name ETA Planner events.
      *
      * Events broadcasted by LISTENER_ETA_PLANNER.
