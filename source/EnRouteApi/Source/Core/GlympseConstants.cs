@@ -1045,6 +1045,39 @@ namespace Glympse
     {
         return CoreFactory.createString("https://glympse.com/terms/");
     }
+    
+    /**
+     * Customer Pickup phases
+     */
+    
+    public static String CUSTOMER_PICKUP_PHASE_NEW()
+    {
+        return CoreFactory.createString("new");
+    }
+    public static String CUSTOMER_PICKUP_PHASE_READY()
+    {
+        return CoreFactory.createString("ready");
+    }
+    public static String CUSTOMER_PICKUP_PHASE_LIVE()
+    {
+        return CoreFactory.createString("live");
+    }
+    public static String CUSTOMER_PICKUP_PHASE_ARRIVED()
+    {
+        return CoreFactory.createString("arrived");
+    }
+    public static String CUSTOMER_PICKUP_PHASE_COMPLETED()
+    {
+        return CoreFactory.createString("completed");
+    }
+    public static String CUSTOMER_PICKUP_PHASE_HOLD()
+    {
+        return CoreFactory.createString("not_completed");
+    }
+    public static String CUSTOMER_PICKUP_PHASE_CANCELLED()
+    {
+        return CoreFactory.createString("cancelled");
+    }
 
 };
 
