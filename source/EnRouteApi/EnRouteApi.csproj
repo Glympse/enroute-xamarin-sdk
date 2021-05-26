@@ -61,6 +61,11 @@
     <Compile Include="Source\Core\GCardMessage.cs" />
     <Compile Include="Source\Core\GCardMessages.cs" />
     <Compile Include="Source\Core\GConfig.cs" />
+    <Compile Include="Source\Core\GCustomerPickupManager.cs" />
+    <Compile Include="Source\Core\GCustomerPickup.cs" />
+    <Compile Include="Source\Core\GPickupArrivalData.cs" />
+    <Compile Include="Source\Core\GPickupArrivalDataBuilder.cs" />
+    <Compile Include="Source\Core\GChatMessage.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
   <ItemGroup>

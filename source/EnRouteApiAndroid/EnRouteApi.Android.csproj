@@ -185,6 +185,11 @@
     <Compile Include="Source\CardMessage.cs" />
     <Compile Include="Source\CardMessages.cs" />
     <Compile Include="Source\Config.cs" />
+    <Compile Include="Source\CustomerPickupManager.cs" />
+    <Compile Include="Source\CustomerPickup.cs" />
+    <Compile Include="Source\PickupArrivalData.cs" />
+    <Compile Include="Source\PickupArrivalDataBuilder.cs" />
+    <Compile Include="Source\ChatMessage.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Additions\AboutAdditions.txt" />

@@ -163,6 +163,11 @@ namespace EnRoute
     public const int ENROUTE_MANAGER_LOCATION_ACCURACY_UPDATED = 0x00002000;
     
     /**
+     * This event is broadcast when the predefined messages for an org have been fetched
+     */
+    public const int ENROUTE_MANAGER_ORG_PREDEFINED_MESSAGES_UPDATED = 0x00004000;
+    
+    /**
      * @name Task Manager events.
      *
      * Events broadcasted by LISTENER_TASKS.

@@ -264,6 +264,9 @@ namespace Glympse.EnRoute.iOS
         [Export("getConsentManager")]
         GlyConsentManager getConsentManager();
 
+        [Export("getCustomerPickupManager")]
+        GlyCustomerPickupManager getCustomerPickupManager();
+
         [Export("sendTicket:")]
         bool sendTicket(GlyTicket ticket);
 
@@ -438,6 +441,157 @@ namespace Glympse.EnRoute.iOS
     }
 
     [BaseType(typeof(NSObject))]
+    [DisableDefaultCtor]
+    interface GlyCustomerPickupManager
+    {
+        [Export("setInviteCode:")]
+        void setInviteCode(string inviteCode);
+
+        [Export("setForeignId:")]
+        void setForeignId(string foreignId);
+
+        [Export("setManualETA:")]
+        bool setManualETA(long eta);
+
+        [Export("arrived")]
+        bool arrived();
+
+        [Export("holdPickup")]
+        bool holdPickup();
+
+        [Export("sendArrivalData:")]
+        bool sendArrivalData(GlyPickupArrivalData arrivalData);
+
+        [Export("sendFeedback:customerComment:")]
+        bool sendFeedback(int customerRating, string customerComment);
+
+        [Export("getCurrentPickup")]
+        GlyCustomerPickup getCurrentPickup();
+
+        [Export("sendChatMessage:")]
+        bool sendChatMessage(string message);
+
+        [Export("getChatMessages")]
+        GlyArray getChatMessages();
+    }
+
+    [BaseType(typeof(NSObject))]
+    [DisableDefaultCtor]
+    interface GlyCustomerPickup
+    {
+        [Export("getId")]
+        string getId();
+
+        [Export("getInviteCode")]
+        string getInviteCode();
+
+        [Export("getCreatedTime")]
+        long getCreatedTime();
+
+        [Export("getDueTime")]
+        long getDueTime();
+
+        [Export("getCompletedTime")]
+        long getCompletedTime();
+
+        [Export("getArrivedTime")]
+        long getArrivedTime();
+
+        [Export("getPhase")]
+        string getPhase();
+
+        [Export("getForeignId")]
+        string getForeignId();
+
+        [Export("getMetadata")]
+        GlyArray getMetadata();
+
+        [Export("getCustomerArrivalData")]
+        GlyPickupArrivalData getCustomerArrivalData();
+
+        [Export("getManualEta")]
+        long getManualEta();
+
+        [Export("getChatRoomId")]
+        string getChatRoomId();
+
+        [Export("getNotes")]
+        string getNotes();
+
+        [Export("getChatEnabledPhases")]
+        GlyArray getChatEnabledPhases();
+    }
+
+    [BaseType(typeof(NSObject))]
+    [DisableDefaultCtor]
+    interface GlyPickupArrivalData
+    {
+        [Export("getStallLabel")]
+        string getStallLabel();
+
+        [Export("getLicensePlate")]
+        string getLicensePlate();
+
+        [Export("getCarMake")]
+        string getCarMake();
+
+        [Export("getCarModel")]
+        string getCarModel();
+
+        [Export("getCarColor")]
+        string getCarColor();
+
+        [Export("isPickupInStore")]
+        bool isPickupInStore();
+    }
+
+    [BaseType(typeof(NSObject))]
+    [DisableDefaultCtor]
+    interface GlyPickupArrivalDataBuilder
+    {
+        [Export("setStallLabel:")]
+        void setStallLabel(string stallLabel);
+
+        [Export("setLicensePlate:")]
+        void setLicensePlate(string licensePlate);
+
+        [Export("setCarMake:")]
+        void setCarMake(string carMake);
+
+        [Export("setCarModel:")]
+        void setCarModel(string carModel);
+
+        [Export("setCarColor:")]
+        void setCarColor(string carColor);
+
+        [Export("setPickupInStore:")]
+        void setPickupInStore(bool isPickupInStore);
+
+        [Export("getPickupArrivalData")]
+        GlyPickupArrivalData getPickupArrivalData();
+    }
+
+    [BaseType(typeof(NSObject))]
+    [DisableDefaultCtor]
+    interface GlyChatMessage
+    {
+        [Export("getId")]
+        long getId();
+
+        [Export("getCreatedTime")]
+        long getCreatedTime();
+
+        [Export("getContents")]
+        string getContents();
+
+        [Export("getAuthor")]
+        string getAuthor();
+
+        [Export("getSequenceId")]
+        long getSequenceId();
+    }
+
+        [BaseType(typeof(NSObject))]
     [DisableDefaultCtor]
     interface GlyDirectionsManager
     {

@@ -16,6 +16,8 @@ namespace Glympse
 
         GConsentManager getConsentManager();
 
+        GCustomerPickupManager getCustomerPickupManager();
+
         bool sendTicket(GTicket ticket);
 
         int getSmsSendMode();
