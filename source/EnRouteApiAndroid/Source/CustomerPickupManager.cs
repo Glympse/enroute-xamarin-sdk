@@ -74,5 +74,19 @@ namespace Glympse.EnRoute.Android
         {
             return _raw;
         }
+
+        /**
+         * GEventSink section
+         */
+
+        public bool addListener(GEventListener eventListener)
+        {
+            return _raw.addListener((com.glympse.android.api.GEventListener)eventListener);
+        }
+
+        public bool removeListener(GEventListener eventListener)
+        {
+            return _raw.removeListener((com.glympse.android.api.GEventListener)eventListener);
+        }
     }
 }

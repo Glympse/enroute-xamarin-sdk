@@ -233,6 +233,25 @@ namespace Glympse.EnRoute.iOS
         bool removeListener(GlyListener listener);
     }
 
+    [BaseType(typeof(GlyCommon))]
+    [Model]
+    interface GlyEventListener
+    {
+        [Export("eventsOccurred:listener:events:object:")]
+        void eventsOccurred(GlyGlympse glympse, int listener, int events, GlyCommon param);
+    }
+
+    [BaseType(typeof(GlyCommon))]
+    [Model]
+    interface GlyEventSink
+    {
+        [Export("addListener:")]
+        bool addListener(GlyEventListener listener);
+
+        [Export("removeListener:")]
+        bool removeListener(GlyEventListener listener);
+    }
+
     [BaseType(typeof(NSObject))]
     [DisableDefaultCtor]
     interface GlyCoreFactory
@@ -440,7 +459,7 @@ namespace Glympse.EnRoute.iOS
         void exemptFromConsent(bool isExempt);
     }
 
-    [BaseType(typeof(NSObject))]
+    [BaseType(typeof(GlyEventSink))]
     [DisableDefaultCtor]
     interface GlyCustomerPickupManager
     {

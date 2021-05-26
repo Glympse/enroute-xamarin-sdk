@@ -66,6 +66,8 @@
     <Compile Include="Source\Core\GPickupArrivalData.cs" />
     <Compile Include="Source\Core\GPickupArrivalDataBuilder.cs" />
     <Compile Include="Source\Core\GChatMessage.cs" />
+    <Compile Include="Source\Core\GEventSink.cs" />
+    <Compile Include="Source\Core\GEventListener.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
   <ItemGroup>

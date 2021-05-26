@@ -66,6 +66,20 @@ namespace Glympse.EnRoute.iOS
         }
 
         /**
+         * GEventSink section
+         */
+
+        public bool addListener(GEventListener eventListener)
+        {
+            return _raw.addListener((GlyEventListener)eventListener);
+        }
+
+        public bool removeListener(GEventListener eventListener)
+        {
+            return _raw.removeListener((GlyEventListener)eventListener);
+        }
+
+        /**
          * GCommon section
          */
 

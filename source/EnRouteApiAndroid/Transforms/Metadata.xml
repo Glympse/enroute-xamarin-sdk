@@ -156,6 +156,34 @@
         path="/api/package[@name='com.glympse.android.toolbox.listener']/interface[@name='GSource']/method[@name='removeListener']" 
         name="managedName">removeListener</attr>
     <remove-node path="/api/package[@name='com.glympse.android.toolbox.listener']/class[@name='CommonSource']" />
+    <remove-node path="/api/package[@name='com.glympse.android.toolbox']/class[@name='AirplaneMode']" />
+    <remove-node path="/api/package[@name='com.glympse.android.toolbox']/class[@name='AutoOwnershipHelper']" />
+    <remove-node path="/api/package[@name='com.glympse.android.toolbox']/class[@name='BatteryMode']" />
+    <remove-node path="/api/package[@name='com.glympse.android.toolbox']/class[@name='ConversationHelper']" />
+    <remove-node path="/api/package[@name='com.glympse.android.toolbox']/class[@name='CurrentLocationHelper']" />
+    <remove-node path="/api/package[@name='com.glympse.android.toolbox']/class[@name='GroupCreator']" />
+    <remove-node path="/api/package[@name='com.glympse.android.toolbox']/class[@name='RequestHelper']" />
+    <remove-node path="/api/package[@name='com.glympse.android.toolbox']/class[@name='SendTicketHelper']" />
+    <remove-node path="/api/package[@name='com.glympse.android.toolbox']/class[@name='TokenHelper']" />
+
+    <!-- GEventSink -->
+    <attr 
+        path="/api/package[@name='com.glympse.android.api']/interface[@name='GEventSink']" 
+        name="managedName">GEventSink</attr>
+    <attr 
+        path="/api/package[@name='com.glympse.android.api']/interface[@name='GEventSink']/method[@name='addListener']" 
+        name="managedName">addListener</attr>
+    <attr 
+        path="/api/package[@name='com.glympse.android.api']/interface[@name='GEventSink']/method[@name='removeListener']" 
+        name="managedName">removeListener</attr>
+
+    <!-- GEventListener -->
+    <attr 
+        path="/api/package[@name='com.glympse.android.api']/interface[@name='GEventListener']" 
+        name="managedName">GEventListener</attr>
+    <attr 
+        path="/api/package[@name='com.glympse.android.api']/interface[@name='GEventListener']/method[@name='eventsOccurred']" 
+        name="managedName">eventsOccurred</attr>
 
     <!-- GGlympse -->
     <attr 
@@ -541,6 +569,7 @@
     <remove-node path="/api/package[@name='com.glympse.android.hal']/class[@name='ErrorReporterBase']" />
     <remove-node path="/api/package[@name='com.glympse.android.hal']/class[@name='NameValue']" />
     <remove-node path="/api/package[@name='com.glympse.android.hal']/class[@name='NameValue.NameValueComparator']" />
+    <remove-node path="/api/package[@name='com.glympse.android.hal']/class[@name='NotificationListener']" />
 
     <!-- EnRoute SDK Symbols -->
 

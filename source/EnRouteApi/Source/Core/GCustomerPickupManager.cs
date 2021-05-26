@@ -3,7 +3,7 @@ using Glympse.Toolbox;
 
 namespace Glympse
 {
-    public interface GCustomerPickupManager : GCommon
+    public interface GCustomerPickupManager : GEventSink
     {
         void setInviteCode(string inviteCode);
 
