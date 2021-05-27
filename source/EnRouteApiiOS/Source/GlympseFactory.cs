@@ -29,6 +29,11 @@ namespace Glympse.EnRoute.iOS
             return new Ticket(GlyGlympseFactory.createTicket(duration, message, nativeDestination));
         }
 
+        public GPickupArrivalDataBuilder createPickupArrivalDataBuilder()
+        {
+            return new PickupArrivalDataBuilder(GlyGlympseFactory.createPickupArrivalDataBuilder());
+        }
+
         public GCoreFactory createCoreFactory()
         {
             return new CoreFactory();

@@ -2,7 +2,7 @@
 
 namespace Glympse
 {
-    public interface GEventListener : GCommon
+    public interface GEventListener
     {
         void eventsOccurred(GGlympse glympse, int listener, int events, object param);
     }

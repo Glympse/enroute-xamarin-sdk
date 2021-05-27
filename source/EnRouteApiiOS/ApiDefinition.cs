@@ -449,6 +449,10 @@ namespace Glympse.EnRoute.iOS
         [Static]
         [Export("createTicket:message:destination:")]
         GlyTicket createTicket(long duration, string message, GlyPlace destination);
+
+        [Static]
+        [Export("createPickupArrivalDataBuilder")]
+        GlyPickupArrivalDataBuilder createPickupArrivalDataBuilder();
     }
 
     [BaseType(typeof(NSObject))]
@@ -492,6 +496,12 @@ namespace Glympse.EnRoute.iOS
 
         [Export("getChatMessages")]
         GlyArray getChatMessages();
+
+        [Export("addListener:")]
+        bool addListener(GlyEventListener listener);
+
+        [Export("removeListener:")]
+        bool removeListener(GlyEventListener listener);
     }
 
     [BaseType(typeof(NSObject))]

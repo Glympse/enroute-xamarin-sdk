@@ -2,13 +2,16 @@
 
 namespace Glympse.EnRoute.iOS
 {
-    class CustomerPickupManager : GCustomerPickupManager
+    class CustomerPickupManager : GCustomerPickupManager, EventSink.GGlyEventSink
     {
         private GlyCustomerPickupManager _raw;
+
+        private EventSink _eventSink;
 
         public CustomerPickupManager(GlyCustomerPickupManager raw)
         {
             _raw = raw;
+            _eventSink = new EventSink(this);
         }
 
         /**
@@ -71,12 +74,22 @@ namespace Glympse.EnRoute.iOS
 
         public bool addListener(GEventListener eventListener)
         {
-            return _raw.addListener((GlyEventListener)eventListener);
+            return _eventSink.addListener(eventListener);
         }
 
         public bool removeListener(GEventListener eventListener)
         {
-            return _raw.removeListener((GlyEventListener)eventListener);
+            return _eventSink.removeListener(eventListener);
+        }
+
+        public bool addListener(GlyEventListener listener)
+        {
+            return _raw.addListener(listener);
+        }
+
+        public bool removeListener(GlyEventListener listener)
+        {
+            return _raw.removeListener(listener);
         }
 
         /**

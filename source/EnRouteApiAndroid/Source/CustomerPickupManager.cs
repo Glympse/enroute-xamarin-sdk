@@ -6,9 +6,12 @@ namespace Glympse.EnRoute.Android
     {
         private com.glympse.android.api.GCustomerPickupManager _raw;
 
+        private EventSink _eventSink;
+
         public CustomerPickupManager(com.glympse.android.api.GCustomerPickupManager raw)
         {
             _raw = raw;
+            _eventSink = new EventSink(raw);
         }
 
         /**
@@ -80,12 +83,12 @@ namespace Glympse.EnRoute.Android
 
         public bool addListener(GEventListener eventListener)
         {
-            return _raw.addListener((com.glympse.android.api.GEventListener)eventListener);
+            return _eventSink.addListener(eventListener);
         }
 
         public bool removeListener(GEventListener eventListener)
         {
-            return _raw.removeListener((com.glympse.android.api.GEventListener)eventListener);
+            return _eventSink.removeListener(eventListener);
         }
     }
 }

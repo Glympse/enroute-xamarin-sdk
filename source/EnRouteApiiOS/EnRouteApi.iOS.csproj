@@ -73,6 +73,7 @@
     <Compile Include="Source\PickupArrivalData.cs" />
     <Compile Include="Source\PickupArrivalDataBuilder.cs" />
     <Compile Include="Source\ChatMessage.cs" />
+    <Compile Include="Source\EventSink.cs" />
   </ItemGroup>
   <ItemGroup>
     <ObjcBindingApiDefinition Include="ApiDefinition.cs" />
