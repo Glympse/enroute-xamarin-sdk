@@ -12,6 +12,8 @@ namespace Glympse
 
         GTicket createTicket(long duration, string message, GPlace destination);
 
+        GPickupArrivalDataBuilder createPickupArrivalDataBuilder();
+
         GCoreFactory createCoreFactory();
     }
 }

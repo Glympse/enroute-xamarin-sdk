@@ -553,6 +553,9 @@
     <attr 
         path="/api/package[@name='com.glympse.android.api']/class[@name='GlympseFactory']/method[@name='createTicket']" 
         name="managedName">createTicket</attr>
+    <attr 
+        path="/api/package[@name='com.glympse.android.api']/class[@name='GlympseFactory']/method[@name='createPickupArrivalDataBuilder']" 
+        name="managedName">createPickupArrivalDataBuilder</attr>
 
     <!-- Exclude unnecessary packages -->
     <remove-node path="/api/package[starts-with(@name, 'com.glympse.android.lib')]" />

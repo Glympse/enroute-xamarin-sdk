@@ -47,7 +47,7 @@ namespace Glympse.EnRoute.Android
 
         public GPickupArrivalData getPickupArrivalData()
         {
-            return (GPickupArrivalData) _raw.getPickupArrivalData();
+            return (GPickupArrivalData)ClassBinder.bind(_raw.getPickupArrivalData());
         }
 
         /**

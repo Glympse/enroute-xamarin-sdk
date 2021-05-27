@@ -36,6 +36,10 @@ namespace Glympse.EnRoute.Android
             {
                 return new Operation((com.glympse.enroute.android.api.GOperation)raw);
             }
+            else if ( raw is com.glympse.android.api.GPickupArrivalData)
+            {
+                return new PickupArrivalData((com.glympse.android.api.GPickupArrivalData)raw);
+            }
             else if ( raw is Java.Lang.Object )
             {
                 Java.Lang.Object obj = (Java.Lang.Object)raw;
