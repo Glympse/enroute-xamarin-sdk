@@ -273,6 +273,8 @@ namespace EnRoute
     */
     public const int TASKS_TASK_CHAT_MESSAGES_CHANGED = 0x00008000;
     
+    public const int TASKS_TASK_ROUTE_CHANGED = 0x00010000;
+    
     /**
      * @name ETA Planner events.
      *
