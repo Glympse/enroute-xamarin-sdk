@@ -485,8 +485,8 @@ namespace Glympse.EnRoute.iOS
         [Export("sendArrivalData:")]
         bool sendArrivalData(GlyPickupArrivalData arrivalData);
 
-        [Export("sendFeedback:customerComment:")]
-        bool sendFeedback(int customerRating, string customerComment);
+        [Export("sendFeedback:customerComment:canContactCustomer:")]
+        bool sendFeedback(int customerRating, string customerComment, bool canContactCustomer);
 
         [Export("getCurrentPickup")]
         GlyCustomerPickup getCurrentPickup();

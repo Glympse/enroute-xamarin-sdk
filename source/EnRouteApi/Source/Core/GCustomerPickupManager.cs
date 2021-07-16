@@ -17,7 +17,7 @@ namespace Glympse
 
         bool sendArrivalData(GPickupArrivalData arrivalData);
 
-        bool sendFeedback(int customerRating, string customerComment);
+        bool sendFeedback(int customerRating, string customerComment, bool canContactCustomer);
 
         GCustomerPickup getCurrentPickup();
 

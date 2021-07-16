@@ -48,9 +48,9 @@ namespace Glympse.EnRoute.iOS
             return _raw.sendChatMessage(message);
         }
 
-        public bool sendFeedback(int customerRating, string customerComment)
+        public bool sendFeedback(int customerRating, string customerComment, bool canContactCustomer)
         {
-            return _raw.sendFeedback(customerRating, customerComment);
+            return _raw.sendFeedback(customerRating, customerComment, canContactCustomer);
         }
 
         public void setForeignId(string foreignId)
