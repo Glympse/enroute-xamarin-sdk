@@ -146,6 +146,14 @@ namespace EnRoute
     public const long PICKUP_COMPLETED_KEEP_THRESHOLD_MS = 172800000;
     
     /**
+     * @name Completed Task Keep Threshold
+     * Tasks older than this value should be discarded
+     * Value is 48 hours in ms
+     */
+    
+    public const long TASK_COMPLETED_KEEP_THRESHOLD_MS = 172800000;
+    
+    /**
      * @name Phase properties
      */
     
