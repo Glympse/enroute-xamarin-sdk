@@ -275,6 +275,10 @@ namespace EnRoute
     
     public const int TASKS_TASK_ROUTE_CHANGED = 0x00010000;
     
+    public const int TASKS_TASK_CREATED = 0x00020000;
+    
+    public const int TASKS_TASK_CREATE_FAILED = 0x00040000;
+    
     /**
      * @name ETA Planner events.
      *
