@@ -21,7 +21,7 @@ CLIENT_SDK_ZIP=$(find . -name "EnRoute_Api_Android_*.zip" | cut -d '_' -f 4)
 CLIENT_SDK_VERSION=${CLIENT_SDK_ZIP%.zip}
 
 # NuGet Restore
-/Library/Frameworks/Mono.framework/Commands/nuget restore ../samples/EnRouteDemo/EnRouteDemo.sln
+/Library/Frameworks/Mono.framework/Commands/nuget restore ../samples/EnRouteDemo/EnRouteDemo.sln -msbuildversion 15
 
 # Clean the Andriod build
 /Library/Frameworks/Mono.framework/Commands/msbuild /p:Configuration=Release /p:AndroidClassParser=class-parse /target:Clean ../source/EnRouteApiAndroid/EnRouteApi.Android.csproj
