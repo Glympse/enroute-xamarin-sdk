@@ -263,6 +263,24 @@ namespace EnRoute
         return CoreFactory.createString("cycle");
     }
     
+    /**
+     * @name Confirmation Image modes
+     */
+    public static String CONFIRMATION_IMAGE_NONE()
+    {
+        return CoreFactory.createString("none");
+    }
+    
+    public static String CONFIRMATION_IMAGE_SIGNATURE()
+    {
+        return CoreFactory.createString("signature");
+    }
+    
+    public static String CONFIRMATION_IMAGE_PHOTO()
+    {
+        return CoreFactory.createString("photo");
+    }
+    
 };
     
 }

@@ -1,6 +1,7 @@
 # ios
 *.a
 *.framework
+*.xcframework
 
 # android
 .idea
