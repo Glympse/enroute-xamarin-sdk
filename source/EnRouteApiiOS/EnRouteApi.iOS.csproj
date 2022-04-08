@@ -91,7 +91,7 @@
   </ItemGroup>
   <ItemGroup>
     <NativeReference Include="Libs\EnRouteApi.xcframework">
-      <Kind>Framework</Kind>
+      <Kind>Static</Kind>
       <SmartLink>False</SmartLink>
     </NativeReference>
   </ItemGroup>
