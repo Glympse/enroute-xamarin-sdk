@@ -39,8 +39,9 @@ cp ../source/EnRouteApiAndroid/bin/Release/EnRouteApi.dll ${SHARED_LIB_DIRECTORY
 # Build the iOS solution
 /Library/Frameworks/Mono.framework/Commands/msbuild /p:Configuration=Release /p:BuildIpa=false /target:Build ../source/EnRouteApiiOS/EnRouteApi.iOS.csproj
 
-# Move iOS Dlls to the output folder
+# Move iOS Dll and native framework to the output folder
 cp ../source/EnRouteApiiOS/bin/Release/EnRouteApi.iOS.dll ${IOS_LIB_DIRECTORY}/EnRouteApi.iOS.dll
+cp -R ../source/EnRouteApiiOS/bin/Release/EnRouteApi.iOS.resources ${IOS_LIB_DIRECTORY}/EnRouteApi.iOS.resources
 
 # Create a version.properties to package with the zip
 CONFIG_SOURCE_FILE="../source/EnRouteApi/Source/Core/Config.cs"
