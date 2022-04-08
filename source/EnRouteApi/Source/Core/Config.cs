@@ -9,7 +9,7 @@ namespace EnRouteApi
          */
         public static readonly int ENROUTE_SDK_MAJOR = 2;
         public static readonly int ENROUTE_SDK_MINOR = 104;
-        public static readonly int ENROUTE_SDK_BUILD = 225;
+        public static readonly int ENROUTE_SDK_BUILD = 226;
         public static readonly int ENROUTE_SDK_BUGFIX = 0;
         public static readonly int ENROUTE_SDK_ITER = 0;
     }
