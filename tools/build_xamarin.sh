@@ -45,7 +45,7 @@ cp -R ../source/EnRouteApiiOS/bin/Release/EnRouteApi.iOS.resources ${IOS_LIB_DIR
 
 # Create a version.properties to package with the zip
 CONFIG_SOURCE_FILE="../source/EnRouteApi/Source/Core/Config.cs"
-XAMARIN_SDK_VERSION=$(./GetVersionNumber.py $CONFIG_SOURCE_FILE)
+XAMARIN_SDK_VERSION=$(python ./GetVersionNumber.py $CONFIG_SOURCE_FILE)
 echo "XAMARIN_SDK_VERSION=${XAMARIN_SDK_VERSION}" > tmp_dlls/etc/version.properties
 echo "CLIENT_SDK_VERSION=${CLIENT_SDK_VERSION}" >> tmp_dlls/etc/version.properties
 
