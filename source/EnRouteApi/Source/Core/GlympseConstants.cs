@@ -775,6 +775,24 @@ namespace Glympse
      * Track data is provided by Glympse Directions API.
      */
     public const int TRACK_SOURCE_GLYMPSE_DIRECTIONS = 4;
+    
+    /**
+     * @name Place Sources
+     *
+     * Specifies which Places Search provider to use
+     */
+    
+    /**
+     * Place search uses Glympse maps-service which will use credentials configured
+     * for the API key (default)
+     */
+    public const int PLACE_SOURCE_GLYMPSE = 0;
+    
+    /**
+     * Place search uses HERE apis. Host application must specify its own credentials
+     * when setting this configuration
+     */
+    public const int PLACE_SOURCE_HERE = 1;
 
     /**
      * @name Directions state.

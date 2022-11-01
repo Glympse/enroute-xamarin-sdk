@@ -55,6 +55,8 @@ namespace EnRoute
     public const int LOGOUT_REASON_INVALID_TOKEN = 4;
     public const int LOGOUT_REASON_LOCATION_SERVICES_UNAVAILABLE = 5;
     public const int LOGOUT_REASON_SERVER_ERROR = 6;
+    public const int LOGOUT_REASON_INVALID_SUBSCRIPTION = 7;
+    public const int LOGOUT_REASON_APP_FLAVOR_MISMATCH = 8;
     
     /**
      * @name Task completion reasons
