@@ -8,8 +8,8 @@ namespace EnRouteApi
          * EnRoute Xamarin SDK version.
          */
         public static readonly int ENROUTE_SDK_MAJOR = 2;
-        public static readonly int ENROUTE_SDK_MINOR = 106;
-        public static readonly int ENROUTE_SDK_BUILD = 237;
+        public static readonly int ENROUTE_SDK_MINOR = 107;
+        public static readonly int ENROUTE_SDK_BUILD = 243;
         public static readonly int ENROUTE_SDK_BUGFIX = 0;
         public static readonly int ENROUTE_SDK_ITER = 0;
     }
