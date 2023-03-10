@@ -369,58 +369,6 @@ namespace Glympse.EnRoute.iOS
 
     [BaseType(typeof(NSObject))]
     [DisableDefaultCtor]
-    interface GlyCardMessages
-    {
-        [Export("getMessageList")]
-        GlyArray getMessageList();
-
-        [Export("getCardId")]
-        string getCardId();
-
-        [Export("sendMessageWithNSString:")]
-        string sendMessage(string message);
-
-        [Export("hasUnreadMessages")]
-        bool hasUnreadMessages();
-
-        [Export("confirmReadWithGlyCardMessage:")]
-        bool confirmRead(GlyCardMessage message);
-
-        [Export("confirmReadWithNSString:")]
-        bool confirmReadById(string messageId);
-    }
-
-    [BaseType(typeof(GlyCommon))]
-    [DisableDefaultCtor]
-    interface GlyCardMessage
-    {
-        [Export("getId")]
-        string getId();
-
-        [Export("getCreatedTime")]
-        long getCreatedTime();
-
-        [Export("getText")]
-        string getText();
-
-        [Export("getCardId")]
-        string getCardId();
-
-        [Export("getSenderUserId")]
-        string getSenderUserId();
-
-        [Export("getSenderNickname")]
-        string getSenderNickname();
-
-        [Export("getSenderAvatarUrl")]
-        string getSenderAvatarUrl();
-
-        [Export("isRead")]
-        bool isRead();
-    }
-
-    [BaseType(typeof(NSObject))]
-    [DisableDefaultCtor]
     interface GlyConfig
     {
         [Export("setActiveSharingNotificationMessage:")]
@@ -764,9 +712,6 @@ namespace Glympse.EnRoute.iOS
 
         [Export ("completeOperationWithGlyOperation:withInt:")]
         bool completeOperation(GlyOperation operation, int reasonCode);
-
-        [Export("getCardMessagesForTask:")]
-        GlyCardMessages getCardMessagesForTask(GlyTask task);
 
         [Export("setTravelModeForTask:travelMode:")]
         void setTravelModeForTask(GlyTask task, string travelMode);

@@ -36,14 +36,6 @@ namespace Glympse.EnRoute.iOS
             {
                 return new Operation((GlyOperation)raw);
             }
-            else if ( raw is GlyCardMessage )
-            {
-                return new CardMessage((GlyCardMessage)raw);
-            }
-            else if (raw is GlyCardMessages)
-            {
-                return new CardMessages((GlyCardMessages)raw);
-            }
             else if (raw is GlyTicket)
             {
                 return new Ticket((GlyTicket)raw);

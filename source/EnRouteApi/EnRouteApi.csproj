@@ -58,8 +58,6 @@
     <Compile Include="Source\Core\GGlympseFactory.cs" />
     <Compile Include="Source\Core\GConsentManager.cs" />
     <Compile Include="Source\Core\GCoreFactory.cs" />
-    <Compile Include="Source\Core\GCardMessage.cs" />
-    <Compile Include="Source\Core\GCardMessages.cs" />
     <Compile Include="Source\Core\GConfig.cs" />
     <Compile Include="Source\Core\GCustomerPickupManager.cs" />
     <Compile Include="Source\Core\GCustomerPickup.cs" />
