@@ -567,6 +567,14 @@ namespace Glympse
     {
         return CoreFactory.createString("email");
     }
+    
+    /**
+     * Verizon Messenger
+     */
+    public static String LINKED_ACCOUNT_TYPE_VERIZON()
+    {
+        return CoreFactory.createString("verizon");
+    }
 
    /**
      * @name Linked Account Properties
