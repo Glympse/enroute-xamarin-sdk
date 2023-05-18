@@ -26,6 +26,8 @@ namespace Glympse
             void setTravelModeForTask(GTask task, string travelMode);
 
             string getTravelModeForTask(GTask task);
+
+            bool sendMessage(GTask task, string message);
         }
     }
 }

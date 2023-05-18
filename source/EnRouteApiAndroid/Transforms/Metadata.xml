@@ -316,6 +316,34 @@
         path="/api/package[@name='com.glympse.android.api']/interface[@name='GConsentManager']/method[@name='exemptFromConsent']" 
         name="managedName">exemptFromConsent</attr>
 
+    <!-- GChatManager -->
+    <attr 
+        path="/api/package[@name='com.glympse.android.api']/interface[@name='GChatManager']" 
+        name="managedName">GChatManager</attr>
+    <attr 
+        path="/api/package[@name='com.glympse.android.api']/interface[@name='GChatManager']/method[@name='getChatRoom']" 
+        name="managedName">getChatRoom</attr>
+    <attr 
+        path="/api/package[@name='com.glympse.android.api']/interface[@name='GChatManager']/method[@name='setRoomAsRead']" 
+        name="managedName">setRoomAsRead</attr>
+
+    <!-- GChatRoom -->
+    <attr 
+        path="/api/package[@name='com.glympse.android.api']/interface[@name='GChatRoom']" 
+        name="managedName">GChatRoom</attr>
+    <attr 
+        path="/api/package[@name='com.glympse.android.api']/interface[@name='GChatRoom']/method[@name='getName']" 
+        name="managedName">getName</attr>
+    <attr 
+        path="/api/package[@name='com.glympse.android.api']/interface[@name='GChatRoom']/method[@name='getChatMessages']" 
+        name="managedName">getChatMessages</attr>
+    <attr 
+        path="/api/package[@name='com.glympse.android.api']/interface[@name='GChatRoom']/method[@name='getSequenceNumber']" 
+        name="managedName">getSequenceNumber</attr>
+    <attr 
+        path="/api/package[@name='com.glympse.android.api']/interface[@name='GChatRoom']/method[@name='getLastReadSequenceNumber']" 
+        name="managedName">getLastReadSequenceNumber</attr>
+
     <!-- GCustomerPickupManager -->
     <attr 
         path="/api/package[@name='com.glympse.android.api']/interface[@name='GCustomerPickupManager']" 
@@ -583,6 +611,9 @@
 	<attr 
         path="/api/package[@name='com.glympse.enroute.android.api']/interface[@name='GTask']/method[@name='getForeignId']" 
         name="managedName">getForeignId</attr>
+    <attr 
+        path="/api/package[@name='com.glympse.enroute.android.api']/interface[@name='GTask']/method[@name='getChatRoomId']" 
+        name="managedName">getChatRoomId</attr>
 
     <!-- GOperation -->
     <attr 
@@ -652,7 +683,10 @@
         name="managedName">setTravelModeForTask</attr> 
     <attr 
         path="/api/package[@name='com.glympse.enroute.android.api']/interface[@name='GTaskManager']/method[@name='getTravelModeForTask']" 
-        name="managedName">getTravelModeForTask</attr> 
+        name="managedName">getTravelModeForTask</attr>
+    <attr 
+        path="/api/package[@name='com.glympse.enroute.android.api']/interface[@name='GTaskManager']/method[@name='sendMessage' and count(parameter)=2]" 
+        name="managedName">sendMessage</attr> 
 
     <!-- GEnRouteManager -->
     <attr

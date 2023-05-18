@@ -46,6 +46,11 @@ namespace Glympse.EnRoute.iOS
             return _raw.getForeignId();
         }
 
+        public string getChatRoomId()
+        {
+            return _raw.getChatRoomId();
+        }
+
         public object raw()
         {
             return _raw;

@@ -66,6 +66,8 @@
     <Compile Include="Source\Core\GChatMessage.cs" />
     <Compile Include="Source\Core\GEventSink.cs" />
     <Compile Include="Source\Core\GEventListener.cs" />
+    <Compile Include="Source\Core\GChatRoom.cs" />
+    <Compile Include="Source\Core\GChatManager.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
   <ItemGroup>

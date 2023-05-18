@@ -69,6 +69,11 @@ namespace Glympse.EnRoute.Android
             return _raw.getTravelModeForTask((com.glympse.enroute.android.api.GTask)task.raw());
         }
 
+        public bool sendMessage(GTask task, string message)
+        {
+            return _raw.sendMessage((com.glympse.enroute.android.api.GTask)task.raw(), message);
+        }
+
         /**
          * GSource section
          */

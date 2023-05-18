@@ -69,6 +69,11 @@ namespace Glympse.EnRoute.iOS
             return _raw.getTravelModeForTask((GlyTask)task.raw());
         }
 
+        public bool sendMessage(GTask task, string message)
+        {
+            return _raw.sendMessage((GlyTask)task.raw(), message);
+        }
+
         /**
          * GSource section
          */

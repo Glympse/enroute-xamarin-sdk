@@ -413,6 +413,40 @@ namespace Glympse.EnRoute.iOS
 
     [BaseType(typeof(GlyEventSink))]
     [DisableDefaultCtor]
+    interface GlyChatManager
+    {
+        [Export("getChatRoom:")]
+        GlyChatRoom getChatRoom(string roomId);
+
+        [Export("setRoomAsRead:")]
+        void setRoomAsRead(string roomId);
+
+        [Export("addListener:")]
+        bool addListener(GlyEventListener listener);
+
+        [Export("removeListener:")]
+        bool removeListener(GlyEventListener listener);
+    }
+
+    [BaseType(typeof(NSObject))]
+    [DisableDefaultCtor]
+    interface GlyChatRoom
+    {
+        [Export("getName")]
+        string getName();
+
+        [Export("getChatMessages")]
+        GlyArray getChatMessages();
+
+        [Export("getSequenceNumber")]
+        long getSequenceNumber();
+
+        [Export("getLastReadSequenceNumber")]
+        long getLastReadSequenceNumber();
+    }
+
+    [BaseType(typeof(GlyEventSink))]
+    [DisableDefaultCtor]
     interface GlyCustomerPickupManager
     {
         [Export("setInviteCode:")]
@@ -650,7 +684,10 @@ namespace Glympse.EnRoute.iOS
         string getPhase();
 
         [Export ("getForeignId")]
-        string getForeignId();   
+        string getForeignId();
+
+        [Export("getChatRoomId")]
+        string getChatRoomId();
     }
 
     [BaseType (typeof(GlyCommon))]
@@ -718,6 +755,9 @@ namespace Glympse.EnRoute.iOS
 
         [Export("getTravelModeForTask:")]
         string getTravelModeForTask(GlyTask task);
+
+        [Export("sendMessage:message:")]
+        bool sendMessage(GlyTask task, string message);
 
         [Export ("addListener:")]
         bool addListener(GlyListener listener);

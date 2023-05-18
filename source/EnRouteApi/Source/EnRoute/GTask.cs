@@ -19,6 +19,8 @@ namespace Glympse
             string getPhase();
 
             string getForeignId();
+
+            string getChatRoomId();
         }
     }
 }

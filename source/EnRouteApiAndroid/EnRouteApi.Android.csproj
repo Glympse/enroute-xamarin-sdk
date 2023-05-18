@@ -189,6 +189,8 @@
     <Compile Include="Source\PickupArrivalDataBuilder.cs" />
     <Compile Include="Source\ChatMessage.cs" />
     <Compile Include="Source\EventSink.cs" />
+    <Compile Include="Source\ChatRoom.cs" />
+    <Compile Include="Source\ChatManager.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Additions\AboutAdditions.txt" />
