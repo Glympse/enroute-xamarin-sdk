@@ -20,7 +20,7 @@ namespace Glympse.EnRoute.iOS
 
         public GChatRoom getChatRoom(string roomId)
         {
-            return (GChatRoom)_raw.getChatRoom(roomId);
+            return new ChatRoom(_raw.getChatRoom(roomId));
         }
 
         public void setRoomAsRead(string roomId)

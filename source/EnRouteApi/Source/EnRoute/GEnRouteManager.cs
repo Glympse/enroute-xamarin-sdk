@@ -31,6 +31,8 @@ namespace Glympse
 
             void refresh();
 
+            GGlympse getGlympse();
+
             GOrganization getOrganization();
 
             GAgent getLoggedInAgent();

@@ -18,6 +18,8 @@ namespace Glympse
 
         GCustomerPickupManager getCustomerPickupManager();
 
+        GChatManager getChatManager();
+
         bool sendTicket(GTicket ticket);
 
         int getSmsSendMode();

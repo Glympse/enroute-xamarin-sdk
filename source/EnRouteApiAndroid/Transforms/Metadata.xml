@@ -211,6 +211,9 @@
         path="/api/package[@name='com.glympse.android.api']/interface[@name='GGlympse']/method[@name='getCustomerPickupManager']" 
         name="managedName">getCustomerPickupManager</attr>
     <attr 
+        path="/api/package[@name='com.glympse.android.api']/interface[@name='GGlympse']/method[@name='getChatManager']" 
+        name="managedName">getChatManager</attr>
+    <attr 
         path="/api/package[@name='com.glympse.android.api']/interface[@name='GGlympse']/method[@name='sendTicket']" 
         name="managedName">sendTicket</attr>
     <attr 
@@ -494,6 +497,9 @@
     <attr 
         path="/api/package[@name='com.glympse.android.api']/interface[@name='GChatMessage']/method[@name='getSequenceId']" 
         name="managedName">getSequenceId</attr>
+    <attr 
+        path="/api/package[@name='com.glympse.android.api']/interface[@name='GChatMessage']/method[@name='isAgent']" 
+        name="managedName">isAgent</attr>
     
     <!-- GUser -->
     <attr 
@@ -728,6 +734,9 @@
     <attr 
         path="/api/package[@name='com.glympse.enroute.android.api']/interface[@name='GEnRouteManager']/method[@name='refresh']" 
         name="managedName">refresh</attr>
+    <attr 
+        path="/api/package[@name='com.glympse.enroute.android.api']/interface[@name='GEnRouteManager']/method[@name='getGlympse']" 
+        name="managedName">getGlympse</attr>
     <attr 
         path="/api/package[@name='com.glympse.enroute.android.api']/interface[@name='GEnRouteManager']/method[@name='getOrganization']" 
         name="managedName">getOrganization</attr>

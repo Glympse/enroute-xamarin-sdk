@@ -286,6 +286,9 @@ namespace Glympse.EnRoute.iOS
         [Export("getCustomerPickupManager")]
         GlyCustomerPickupManager getCustomerPickupManager();
 
+        [Export("getChatManager")]
+        GlyChatManager getChatManager();
+
         [Export("sendTicket:")]
         bool sendTicket(GlyTicket ticket);
 
@@ -582,7 +585,7 @@ namespace Glympse.EnRoute.iOS
         GlyPickupArrivalData getPickupArrivalData();
     }
 
-    [BaseType(typeof(NSObject))]
+    [BaseType(typeof(GlyCommon))]
     [DisableDefaultCtor]
     interface GlyChatMessage
     {
@@ -600,9 +603,12 @@ namespace Glympse.EnRoute.iOS
 
         [Export("getSequenceId")]
         long getSequenceId();
+
+        [Export("isAgent")]
+        bool isAgent();
     }
 
-        [BaseType(typeof(NSObject))]
+    [BaseType(typeof(NSObject))]
     [DisableDefaultCtor]
     interface GlyDirectionsManager
     {
@@ -756,7 +762,7 @@ namespace Glympse.EnRoute.iOS
         [Export("getTravelModeForTask:")]
         string getTravelModeForTask(GlyTask task);
 
-        [Export("sendMessage:message:")]
+        [Export("sendMessageWithGlyTask:withNSString:")]
         bool sendMessage(GlyTask task, string message);
 
         [Export ("addListener:")]
@@ -805,6 +811,9 @@ namespace Glympse.EnRoute.iOS
 
         [Export ("refresh")]
         void refresh();
+
+        [Export("getGlympse")]
+        GlyGlympse getGlympse();
 
         [Export ("getOrganization")]
         GlyOrganization getOrganization();

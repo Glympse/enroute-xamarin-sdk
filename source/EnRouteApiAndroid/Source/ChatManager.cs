@@ -16,7 +16,8 @@ namespace Glympse.EnRoute.Android
 
         public GChatRoom getChatRoom(string roomId)
         {
-            return (GChatRoom)_raw.getChatRoom(roomId);
+            return (GChatRoom)ClassBinder.bind(_raw.getChatRoom(roomId));
+
         }
 
         public void setRoomAsRead(string roomId)

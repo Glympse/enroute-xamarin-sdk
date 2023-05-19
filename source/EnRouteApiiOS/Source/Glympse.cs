@@ -66,6 +66,11 @@ namespace Glympse.EnRoute.iOS
             return new CustomerPickupManager((GlyCustomerPickupManager)_raw.getCustomerPickupManager());
         }
 
+        public GChatManager getChatManager()
+        {
+            return new ChatManager((GlyChatManager)_raw.getChatManager());
+        }
+
         public bool sendTicket(GTicket ticket)
         {
             return _raw.sendTicket((GlyTicket)ticket.raw());

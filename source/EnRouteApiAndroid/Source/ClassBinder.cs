@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Reflection;
 using Android.Runtime;
 using Glympse.EnRoute;
 
@@ -39,6 +40,18 @@ namespace Glympse.EnRoute.Android
             else if ( raw is com.glympse.android.api.GPickupArrivalData)
             {
                 return new PickupArrivalData((com.glympse.android.api.GPickupArrivalData)raw);
+            }
+            else if (raw is com.glympse.android.api.GGlympse)
+            {
+                return new Glympse((com.glympse.android.api.GGlympse)raw);
+            }
+            else if (raw is com.glympse.android.api.GChatRoom)
+            {
+                return new ChatRoom((com.glympse.android.api.GChatRoom)raw);
+            }
+            else if (raw is com.glympse.android.api.GChatMessage)
+            {
+                return new ChatMessage((com.glympse.android.api.GChatMessage)raw);
             }
             else if ( raw is Java.Lang.Object )
             {
@@ -81,6 +94,16 @@ namespace Glympse.EnRoute.Android
                 }
                 else
                 {
+                    // For some classes the only way to bind them is to try a cast which will throw a TargetInvocationException
+                    // if it's not the right class
+                    try
+                    {
+                        com.glympse.android.api.GChatMessage message = Extensions.JavaCast<com.glympse.android.api.GChatMessage>(obj);
+                        return new ChatMessage(message);
+                    } catch (TargetInvocationException e)
+                    {
+
+                    }
                     return null;
                 }
             }    

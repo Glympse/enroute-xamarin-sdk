@@ -66,6 +66,11 @@ namespace Glympse.EnRoute.Android
             return new CustomerPickupManager((com.glympse.android.api.GCustomerPickupManager)_raw.getCustomerPickupManager());
         }
 
+        public GChatManager getChatManager()
+        {
+            return new ChatManager((com.glympse.android.api.GChatManager)_raw.getChatManager());
+        }
+
         public bool sendTicket(GTicket ticket)
         {
             return _raw.sendTicket((com.glympse.android.api.GTicket)ticket.raw());

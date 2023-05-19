@@ -40,6 +40,11 @@ namespace Glympse.EnRoute.Android
             return _raw.getSequenceId();
         }
 
+        public bool isAgent()
+        {
+            return _raw.isAgent();
+        }
+
         /**
          * GCommon section
          */

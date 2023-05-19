@@ -13,5 +13,7 @@ namespace Glympse
         string getAuthor();
 
         long getSequenceId();
+
+        bool isAgent();
     }
 }

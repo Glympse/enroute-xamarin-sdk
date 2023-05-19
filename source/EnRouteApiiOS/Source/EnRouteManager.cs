@@ -80,6 +80,11 @@ namespace Glympse.EnRoute.iOS
             _raw.refresh();
         }
 
+        public GGlympse getGlympse()
+        {
+            return (GGlympse)ClassBinder.bind(_raw.getGlympse());
+        }
+
         public GOrganization getOrganization()
         {
             return (GOrganization)ClassBinder.bind(_raw.getOrganization());

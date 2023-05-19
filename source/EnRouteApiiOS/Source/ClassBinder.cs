@@ -60,6 +60,14 @@ namespace Glympse.EnRoute.iOS
             {
                 return new ConsentManager((GlyConsentManager)raw);
             }
+            else if (raw is GlyChatManager)
+            {
+                return new ChatManager((GlyChatManager)raw);
+            }
+            else if (raw is GlyChatMessage)
+            {
+                return new ChatMessage((GlyChatMessage)raw);
+            }
             else if ( raw is Foundation.NSString )
             {
                 return ((Foundation.NSString) raw).ToString();
