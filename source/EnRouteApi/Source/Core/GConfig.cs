@@ -1,12 +1,9 @@
-﻿using System;
+﻿namespace Glympse;
 
-namespace Glympse
+public interface GConfig : GCommon
 {
-    public interface GConfig : GCommon
-    {
-        void setActiveSharingNotificationMessage(string message);
+    void setActiveSharingNotificationMessage(string message);
 
-        // For possible modes see GlympseConstants::EXPIRE_ON_ARRIVAL_*
-        void setExpireOnArrival(int mode);
-    }
+    // For possible modes see GlympseConstants::EXPIRE_ON_ARRIVAL_*
+    void setExpireOnArrival(int mode);
 }

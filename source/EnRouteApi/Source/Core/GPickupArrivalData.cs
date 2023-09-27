@@ -1,19 +1,16 @@
-﻿using System;
+﻿namespace Glympse;
 
-namespace Glympse
+public interface GPickupArrivalData : GCommon
 {
-    public interface GPickupArrivalData : GCommon
-    {
-        string getStallLabel();
+    string getStallLabel();
 
-        string getLicensePlate();
+    string getLicensePlate();
 
-        string getCarMake();
+    string getCarMake();
 
-        string getCarModel();
+    string getCarModel();
 
-        string getCarColor();
+    string getCarColor();
 
-        bool isPickupInStore();
-    }
+    bool isPickupInStore();
 }

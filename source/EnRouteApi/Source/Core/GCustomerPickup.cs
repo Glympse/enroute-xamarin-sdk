@@ -1,35 +1,32 @@
-﻿using System;
+﻿namespace Glympse;
 
-namespace Glympse
+public interface GCustomerPickup : GCommon
 {
-    public interface GCustomerPickup : GCommon
-    {
-        string getId();
+    string getId();
 
-        string getInviteCode();
+    string getInviteCode();
 
-        long getCreatedTime();
+    long getCreatedTime();
 
-        long getDueTime();
+    long getDueTime();
 
-        long getCompletedTime();
+    long getCompletedTime();
 
-        long getArrivedTime();
+    long getArrivedTime();
 
-        string getPhase();
+    string getPhase();
 
-        string getForeignId();
+    string getForeignId();
 
-        GArray<GPrimitive> getMetadata();
+    GArray<GPrimitive> getMetadata();
 
-        GPickupArrivalData getCustomerArrivalData();
+    GPickupArrivalData getCustomerArrivalData();
 
-        long getManualEta();
+    long getManualEta();
 
-        string getChatRoomId();
+    string getChatRoomId();
 
-        string getNotes();
+    string getNotes();
 
-        GArray<string> getChatEnabledPhases();
-    }
+    GArray<string> getChatEnabledPhases();
 }

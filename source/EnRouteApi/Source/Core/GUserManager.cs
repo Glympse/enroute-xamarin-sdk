@@ -1,9 +1,6 @@
-﻿using System;
+﻿namespace Glympse;
 
-namespace Glympse
+public interface GUserManager : GCommon
 {
-    public interface GUserManager : GCommon
-    {
-        GUser getSelf();
-    }
+    GUser getSelf();
 }

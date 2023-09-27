@@ -1,41 +1,38 @@
-﻿using System;
+﻿namespace Glympse;
 
-namespace Glympse
+public interface GGlympse : GCommon
 {
-    public interface GGlympse : GCommon
-    {
-        void start();
+    void start();
 
-        void stop();
+    void stop();
 
-        bool isStarted();
+    bool isStarted();
 
-        GUserManager getUserManager();
+    GUserManager getUserManager();
 
-        GDirectionsManager getDirectionsManager();
+    GDirectionsManager getDirectionsManager();
 
-        GConsentManager getConsentManager();
+    GConsentManager getConsentManager();
 
-        GCustomerPickupManager getCustomerPickupManager();
+    GCustomerPickupManager getCustomerPickupManager();
 
-        GChatManager getChatManager();
+    GChatManager getChatManager();
 
-        bool sendTicket(GTicket ticket);
+    bool sendTicket(GTicket ticket);
 
-        int getSmsSendMode();
+    int getSmsSendMode();
 
-        void setSmsSendMode(int mode);
+    void setSmsSendMode(int mode);
 
-        int canDeviceSendSms();
+    int canDeviceSendSms();
 
-        int getEtaMode();
+    int getEtaMode();
 
-        void setEtaMode(int mode);
+    void setEtaMode(int mode);
 
-        string getApiVersion();
+    string getApiVersion();
 
-        void overrideLoggingLevels(int fileLevel, int debugLevel);
+    void overrideLoggingLevels(int fileLevel, int debugLevel);
 
-        GConfig getConfig();
-    }
+    GConfig getConfig();
 }
