@@ -1,7 +1,5 @@
-﻿using System;
-namespace Glympse
+﻿namespace Glympse;
+
+public interface GPlace : GCommon
 {
-    public interface GPlace : GCommon
-    {
-    }
 }

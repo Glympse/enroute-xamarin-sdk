@@ -1,15 +1,12 @@
-﻿using System;
+﻿namespace Glympse;
 
-namespace Glympse
+public interface GChatRoom : GCommon
 {
-    public interface GChatRoom : GCommon
-    {
-        string getName();
+    string getName();
 
-        GArray<GChatMessage> getChatMessages();
+    GArray<GChatMessage> getChatMessages();
 
-        long getSequenceNumber();
+    long getSequenceNumber();
 
-        long getLastReadSequenceNumber();
-    }
+    long getLastReadSequenceNumber();
 }

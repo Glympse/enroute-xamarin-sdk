@@ -5,31 +5,26 @@
 //------------------------------------------------------------------------------
 
 using System;
-using System.Collections;
-using System.Collections.Generic;
-using System.Text;
-using System.Threading;
 
-namespace Glympse 
-{
-    
+namespace Glympse;
+
 /**
- * Declares the list of all constants (enumerations) utilized by various API components. 
+ * Declares the list of all constants (enumerations) utilized by various API components.
  */
 /*O*/public/**/ class GlympseConstants
 {
     /**
      * @name SMS Modes
-     * 
-     * SMS mode defines party responsible for SMS delivery. 
+     *
+     * SMS mode defines party responsible for SMS delivery.
      */
     
     /**
-     * The default SMS send mode allows the Glympse API to query the device and determine 
-     * if an SMS invite should be sent locally from the device's SMS number or remotely 
-     * from the Glympse server SMS provider. 
+     * The default SMS send mode allows the Glympse API to query the device and determine
+     * if an SMS invite should be sent locally from the device's SMS number or remotely
+     * from the Glympse server SMS provider.
      *
-     * You can call the IGlympse::canDeviceSendSms method to determine if the Glympse API 
+     * You can call the IGlympse::canDeviceSendSms method to determine if the Glympse API
      * has detected that the device does support sending of SMS messages.
      */     
     public const int SMS_SEND_MODE_DEFAULT      = 1;
@@ -51,7 +46,7 @@ namespace Glympse
      */
     
     /**
-     * The device is capable of sending SMS messages programmatically. 
+     * The device is capable of sending SMS messages programmatically.
      */ 
     public const int SMS_SEND_AUTO              = 1;    
     
@@ -61,24 +56,24 @@ namespace Glympse
     public const int SMS_SEND_MANUAL            = 2;        
     
     /**
-     * The device is not capable of sending SMS messages. 
+     * The device is not capable of sending SMS messages.
      */ 
     public const int SMS_SEND_NOT_SUPPORTED     = 3;
     
     /**
      * @name ETA Modes
      *
-     * Supported ETA modes. 
+     * Supported ETA modes.
      */
     
     /**
-     * In this mode ETA information should be provided externally. 
-     * Glympse API will not attempt to calclulate that. 
+     * In this mode ETA information should be provided externally.
+     * Glympse API will not attempt to calclulate that.
      */     
     public const int ETA_MODE_EXTERNAL          = 1;        
 
     /**
-     * Glympse API will attempt to calclulate ETA in this mode.      
+     * Glympse API will attempt to calclulate ETA in this mode.
      */
     public const int ETA_MODE_INTERNAL          = 2; 
     
@@ -91,26 +86,26 @@ namespace Glympse
      */
     
     /**
-     * Default mode for invites decoding. 
+     * Default mode for invites decoding.
      *
      * Platform starts viewing ticket invites automatically in this mode
-     * (without any confirmations). 
+     * (without any confirmations).
      *
      * Request invite will still result in GE::PLATFORM_INVITE_REQUEST being spread.
      * Platform prevents automatic replying to ticket requests because of security
-     * considerations. 
+     * considerations.
      */
     public const int INVITE_MODE_DEFAULT                  = 0x00000000;        
     
     /**
      * Enables viewing confirmation for ticket invites. GE::PLATFORM_INVITE_TICKET is spread
-     * to all subscribers of IGlympse event sink. Explicit action is required to start 
+     * to all subscribers of IGlympse event sink. Explicit action is required to start
      * viewing ticket invite (see IGlympse::viewTicket()), if this mode is specified.
      */
     public const int INVITE_MODE_PROMPT_BEFORE_VIEWING    = 0x00000001;
     
     /**
-     * Newly added standalone user will automatically be activated, 
+     * Newly added standalone user will automatically be activated,
      * if this mode is specified. This mode only makes sense in conjunction with
      * INVITE_MODE_DEFAULT, where users are added automatically.
      */
@@ -119,7 +114,7 @@ namespace Glympse
     /**
      * @name User Tracking Modes
      *
-     * User tracking mode defines the way platform deals with multiple concurrent incoming 
+     * User tracking mode defines the way platform deals with multiple concurrent incoming
      * tickets received from a user.
      *
      * @see IUserManager#setUserTrackingMode
@@ -128,7 +123,7 @@ namespace Glympse
     /**
      * When running in this mode, platform tracks and provides host application with updates
      * regarding the only ticket for a given user (the most recently received one). This ticket object is
-     * accessible through IUser#getActiveStandalone method. All other tickets received from 
+     * accessible through IUser#getActiveStandalone method. All other tickets received from
      * the user remain on the list, but are never updated. The order of tickets changes only when
      * new ticket is received from the user or currently active ticket expires.
      *
@@ -142,10 +137,10 @@ namespace Glympse
     
     /**
      * Platform pulls updates for all active tickets received from a given user, when running in
-     * this mode. 
+     * this mode.
      *
      * User trail is still available through active standalone ticket. Major difference
-     * is that properties of all other tickets received from this user are also updated up until 
+     * is that properties of all other tickets received from this user are also updated up until
      * expiration.
      *
      * In this mode platform never unsubscribes listeners of user's tickets.
@@ -155,7 +150,7 @@ namespace Glympse
     /**
      * @name Ticket States
      *
-     * Supported ticket states. 
+     * Supported ticket states.
      */
     
     public const int TICKET_STATE_NONE             = 0x00000001;
@@ -171,17 +166,17 @@ namespace Glympse
     
     public const int TICKET_STATE_DECODING
         = TICKET_STATE_ADDING
-        | TICKET_STATE_ACTIVE;
+          | TICKET_STATE_ACTIVE;
     public const int TICKET_STATE_ACTIVATING
         = TICKET_STATE_ADDING
-        | TICKET_STATE_ACTIVE;
+          | TICKET_STATE_ACTIVE;
     
     /**
      * @name Invite Aspects
      *
      * Glympse invite code (6 or 8 character string separated by a dash)
      * always points to an object in Glympse universe (e.g. ticket or request to share location).
-     * Invite aspect identifies type of that object. 
+     * Invite aspect identifies type of that object.
      */
 
     /**
@@ -263,7 +258,7 @@ namespace Glympse
     public const int GROUP_STATE_ADDING               = 2;     
     /**
      * Intermediate group state, in which group finds itself once being decoded
-     * but not yet accepted by the user. 
+     * but not yet accepted by the user.
      */
     public const int GROUP_STATE_PENDING              = 3;            
     public const int GROUP_STATE_ACTIVE               = 4;  
@@ -280,18 +275,18 @@ namespace Glympse
      */    
     
     /**
-     * Automatic expiration logic is totally turned off in this mode. 
+     * Automatic expiration logic is totally turned off in this mode.
      */
     public const int EXPIRE_ON_ARRIVAL_NONE       = 0;
     
     /**
      * Ticket subscribers are notified with GE::TICKET_ARRIVED event upon arrival
-     * to the destination. 
+     * to the destination.
      */ 
     public const int EXPIRE_ON_ARRIVAL_NOTIFY     = 1;
     
     /**
-     * Ticket is automatically expired upon arrival. GE::TICKET_EXPIRED is spread to 
+     * Ticket is automatically expired upon arrival. GE::TICKET_EXPIRED is spread to
      * ticket subscribers.
      */
     public const int EXPIRE_ON_ARRIVAL_AUTO       = 2;
@@ -322,7 +317,7 @@ namespace Glympse
      */
     
     /**
-     * Specified group name conforms to group name requirements. 
+     * Specified group name conforms to group name requirements.
      */
     public const int GROUP_NAME_CORRECT               = 0;
     
@@ -332,7 +327,7 @@ namespace Glympse
     public const int GROUP_NAME_TOO_SHORT             = 1;
     
     /**
-     * Specified group name contains invalid character. 
+     * Specified group name contains invalid character.
      */
     public const int GROUP_NAME_INVALID_CHARACTER     = 2;
 
@@ -366,12 +361,12 @@ namespace Glympse
      */
     
     /**
-     * Minimum value of context key. 
+     * Minimum value of context key.
      */
     public const long CONTEXT_KEY_MIN         = 0x0L;
     
     /**
-     * Maximum value of specific key. 
+     * Maximum value of specific key.
      */
     public const long CONTEXT_KEY_MAX         = 0xffffffffffffL;
     
@@ -403,7 +398,7 @@ namespace Glympse
     
     /**
      * @name External Handoff Actions
-     * 
+     *
      * Actions commonly supported by handoff providers.
      */
     
@@ -471,42 +466,27 @@ namespace Glympse
     /**
      * TICKET_VISIBILITY_KEY_LOCATION() value indicating visible location.
      */
-    public static String TICKET_VISIBILITY_LOCATION_VISIBLE()
-    {
-        return CoreFactory.createString("visible");
-    }
-    
+    public static string TICKET_VISIBILITY_LOCATION_VISIBLE() => CoreFactory.createString("visible");
+
     /**
      * TICKET_VISIBILITY_KEY_LOCATION() value indicating cloaked location.
      */
-    public static String TICKET_VISIBILITY_LOCATION_CLOAKED()
-    {
-        return CoreFactory.createString("cloaked");
-    }
+    public static string TICKET_VISIBILITY_LOCATION_CLOAKED() => CoreFactory.createString("cloaked");
 
     /**
      * TICKET_VISIBILITY_KEY_LOCATION() value indicating hidden location.
      */
-    public static String TICKET_VISIBILITY_LOCATION_HIDDEN()
-    {
-        return CoreFactory.createString("hidden");
-    }
+    public static string TICKET_VISIBILITY_LOCATION_HIDDEN() => CoreFactory.createString("hidden");
 
     /**
      * Key to retrieve the location visibility from ITicket::getVisibility.
      */
-    public static String TICKET_VISIBILITY_KEY_LOCATION()
-    {
-        return CoreFactory.createString("location");
-    }
+    public static string TICKET_VISIBILITY_KEY_LOCATION() => CoreFactory.createString("location");
 
     /**
      * Key to retrieve the visibility context from ITicket::getVisibility.
      */
-    public static String TICKET_VISIBILITY_KEY_CONTEXT()
-    {
-        return CoreFactory.createString("context");
-    }
+    public static string TICKET_VISIBILITY_KEY_CONTEXT() => CoreFactory.createString("context");
 
     /**
      * @name Linked Accounts
@@ -515,70 +495,46 @@ namespace Glympse
     /**
      * Facebook.
      */
-    public static String LINKED_ACCOUNT_TYPE_FACEBOOK()
-    {
-        return CoreFactory.createString("facebook");
-    }
-    
+    public static string LINKED_ACCOUNT_TYPE_FACEBOOK() => CoreFactory.createString("facebook");
+
     /**
      * Twitter.
      */
-    public static String LINKED_ACCOUNT_TYPE_TWITTER()
-    {
-        return CoreFactory.createString("twitter");
-    }
-    
+    public static string LINKED_ACCOUNT_TYPE_TWITTER() => CoreFactory.createString("twitter");
+
     /**
      * Evernote.
      */
-    public static String LINKED_ACCOUNT_TYPE_EVERNOTE()
-    {
-        return CoreFactory.createString("evernote");
-    }
+    public static string LINKED_ACCOUNT_TYPE_EVERNOTE() => CoreFactory.createString("evernote");
 
     /**
      * Google+.
      */
-    public static String LINKED_ACCOUNT_TYPE_GOOGLE()
-    {
-        return CoreFactory.createString("google_plus");
-    }
+    public static string LINKED_ACCOUNT_TYPE_GOOGLE() => CoreFactory.createString("google_plus");
 
     /**
      * Pairing Code.
      */
-    public static String LINKED_ACCOUNT_TYPE_PAIRING()
-    {
-        return CoreFactory.createString("pairing");
-    }
-    
+    public static string LINKED_ACCOUNT_TYPE_PAIRING() => CoreFactory.createString("pairing");
+
     /**
      * Phone Number.
      */
-    public static String LINKED_ACCOUNT_TYPE_PHONE()
-    {
-        return CoreFactory.createString("phone");
-    }
-    
+    public static string LINKED_ACCOUNT_TYPE_PHONE() => CoreFactory.createString("phone");
+
     /**
      * Email Address.
      */
-    public static String LINKED_ACCOUNT_TYPE_EMAIL()
-    {
-        return CoreFactory.createString("email");
-    }
-    
+    public static string LINKED_ACCOUNT_TYPE_EMAIL() => CoreFactory.createString("email");
+
     /**
      * Verizon Messenger
      */
-    public static String LINKED_ACCOUNT_TYPE_VERIZON()
-    {
-        return CoreFactory.createString("verizon");
-    }
+    public static string LINKED_ACCOUNT_TYPE_VERIZON() => CoreFactory.createString("verizon");
 
-   /**
-     * @name Linked Account Properties
-     */
+    /**
+      * @name Linked Account Properties
+      */
     
     /**
      * This property controls whether invites of the associated linked account type
@@ -586,10 +542,7 @@ namespace Glympse
      * itself. By default, this property is false for all linked account types, so
      * invites will be sent by the server.
      */
-    public static String LINKED_ACCOUNT_PROPERTY_INVITE_CLIENT_SEND()
-    {
-        return CoreFactory.createString("invite_client_send");
-    }
+    public static string LINKED_ACCOUNT_PROPERTY_INVITE_CLIENT_SEND() => CoreFactory.createString("invite_client_send");
 
     /**
      * @name Linked Account States
@@ -727,7 +680,7 @@ namespace Glympse
     
     /**
      * The request failed because server disabled current platform installation.
-     * Upon receiving this error platform will stop talking to Glympse server 
+     * Upon receiving this error platform will stop talking to Glympse server
      * until it sees a change in application version.
      */
     public const int SERVER_ERROR_DISABLED      = 9;
@@ -830,7 +783,7 @@ namespace Glympse
     /**
      * @name Trigger Types
      *
-     * Trigger types based on criteria used to fire associated action. 
+     * Trigger types based on criteria used to fire associated action.
      */
     
     /**
@@ -872,16 +825,10 @@ namespace Glympse
      * @name Remote trigger type strings
      */
     
-    public static String TRIGGER_REMOTE_GEO_CIRCLE_KEY()
-    {
-        return CoreFactory.createString("geo_circle");
-    }
-    
-    public static String TRIGGER_REMOTE_ETA_KEY()
-    {
-        return CoreFactory.createString("eta");
-    }
-    
+    public static string TRIGGER_REMOTE_GEO_CIRCLE_KEY() => CoreFactory.createString("geo_circle");
+
+    public static string TRIGGER_REMOTE_ETA_KEY() => CoreFactory.createString("eta");
+
     /**
      * @name Network Response
      *
@@ -907,28 +854,19 @@ namespace Glympse
 
     public const int CARD_TICKET_REPLY_ANY
         = CARD_TICKET_REPLY_ACCEPT
-        | CARD_TICKET_REPLY_DECLINE;
+          | CARD_TICKET_REPLY_DECLINE;
     
     /**
      * @name Card Object types
      *
      * Constants defining what type of object a card object is.
      */
-    public static String CARD_OBJECT_TYPE_POI()
-    {
-        return CoreFactory.createString("poi");
-    }
-    
-    public static String CARD_OBJECT_TYPE_INVITE()
-    {
-        return CoreFactory.createString("invite");
-    }
-    
-    public static String CARD_OBJECT_TYPE_UNKNOWN()
-    {
-        return CoreFactory.createString("unknown");
-    }
-    
+    public static string CARD_OBJECT_TYPE_POI() => CoreFactory.createString("poi");
+
+    public static string CARD_OBJECT_TYPE_INVITE() => CoreFactory.createString("invite");
+
+    public static string CARD_OBJECT_TYPE_UNKNOWN() => CoreFactory.createString("unknown");
+
     /**
      * @name Card States
      *
@@ -941,7 +879,7 @@ namespace Glympse
     public const int CARD_STATE_NONE             = 0x00000001;
     
     /**
-     * Card is in process of being created. 
+     * Card is in process of being created.
      */
     public const int CARD_STATE_CREATING         = 0x00000002;
     
@@ -986,11 +924,8 @@ namespace Glympse
     /**
      * Private group card ID
      */
-    public static String CARD_ID_PRIVATE_GROUP()
-    {
-        return CoreFactory.createString("559364b74d76b03a2f46096e");
-    }
-    
+    public static string CARD_ID_PRIVATE_GROUP() => CoreFactory.createString("559364b74d76b03a2f46096e");
+
     /**
      * @name Consent types
      *
@@ -1000,19 +935,13 @@ namespace Glympse
     /**
      * Indicates the user is agreeing for themself
      */
-    public static String CONSENT_TYPE_SUBJECT()
-    {
-        return CoreFactory.createString("subject");
-    }
-    
+    public static string CONSENT_TYPE_SUBJECT() => CoreFactory.createString("subject");
+
     /**
      * Indicates the user is providing consent for a minor
      */
-    public static String CONSENT_TYPE_GUARDIAN()
-    {
-        return CoreFactory.createString("guardian");
-    }
-    
+    public static string CONSENT_TYPE_GUARDIAN() => CoreFactory.createString("guardian");
+
     /**
      * @name Consent states
      *
@@ -1024,34 +953,22 @@ namespace Glympse
      * be displayed to the user as soon as possible. The user will not be able
      * to create new data while in this state.
      */
-    public static String USER_CONSENT_NONE()
-    {
-        return CoreFactory.createString("none");
-    }
-    
+    public static string USER_CONSENT_NONE() => CoreFactory.createString("none");
+
     /**
      * Consent has been denied. The user will not be able to create new
      * data through the platform while in this state.
      */
-    public static String USER_CONSENT_NO()
-    {
-        return CoreFactory.createString("no");
-    }
-    
+    public static string USER_CONSENT_NO() => CoreFactory.createString("no");
+
     /**
      * Consent has been granted. The user will have normal ability to interact
      * with the platform without restrictions while in this state.
      */
-    public static String USER_CONSENT_YES()
-    {
-        return CoreFactory.createString("yes");
-    }
-    
-    public static String USER_CONSENT_EXEMPT()
-    {
-        return CoreFactory.createString("exempt");
-    }
-    
+    public static string USER_CONSENT_YES() => CoreFactory.createString("yes");
+
+    public static string USER_CONSENT_EXEMPT() => CoreFactory.createString("exempt");
+
     /**
      * @name Glympse Privacy URLs
      */
@@ -1059,53 +976,28 @@ namespace Glympse
     /**
      * URL for Glympse's Privacy Policy
      */
-    public static String PRIVACY_POLICY_URL()
-    {
-        return CoreFactory.createString("https://glympse.com/privacy/");
-    }
-    
+    public static string PRIVACY_POLICY_URL() => CoreFactory.createString("https://glympse.com/privacy/");
+
     /**
      * URL for Glympse's Terms & Conditions
      */
-    public static String TERMS_AND_CONDITIONS_URL()
-    {
-        return CoreFactory.createString("https://glympse.com/terms/");
-    }
-    
+    public static string TERMS_AND_CONDITIONS_URL() => CoreFactory.createString("https://glympse.com/terms/");
+
     /**
      * Customer Pickup phases
      */
     
-    public static String CUSTOMER_PICKUP_PHASE_NEW()
-    {
-        return CoreFactory.createString("new");
-    }
-    public static String CUSTOMER_PICKUP_PHASE_READY()
-    {
-        return CoreFactory.createString("ready");
-    }
-    public static String CUSTOMER_PICKUP_PHASE_LIVE()
-    {
-        return CoreFactory.createString("live");
-    }
-    public static String CUSTOMER_PICKUP_PHASE_ARRIVED()
-    {
-        return CoreFactory.createString("arrived");
-    }
-    public static String CUSTOMER_PICKUP_PHASE_COMPLETED()
-    {
-        return CoreFactory.createString("completed");
-    }
-    public static String CUSTOMER_PICKUP_PHASE_HOLD()
-    {
-        return CoreFactory.createString("not_completed");
-    }
-    public static String CUSTOMER_PICKUP_PHASE_CANCELLED()
-    {
-        return CoreFactory.createString("cancelled");
-    }
+    public static string CUSTOMER_PICKUP_PHASE_NEW() => CoreFactory.createString("new");
 
+    public static string CUSTOMER_PICKUP_PHASE_READY() => CoreFactory.createString("ready");
+
+    public static string CUSTOMER_PICKUP_PHASE_LIVE() => CoreFactory.createString("live");
+
+    public static string CUSTOMER_PICKUP_PHASE_ARRIVED() => CoreFactory.createString("arrived");
+
+    public static string CUSTOMER_PICKUP_PHASE_COMPLETED() => CoreFactory.createString("completed");
+
+    public static string CUSTOMER_PICKUP_PHASE_HOLD() => CoreFactory.createString("not_completed");
+
+    public static string CUSTOMER_PICKUP_PHASE_CANCELLED() => CoreFactory.createString("cancelled");
 };
-
-}
-

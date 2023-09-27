@@ -1,28 +1,25 @@
-﻿using System;
+﻿namespace Glympse;
 
-namespace Glympse
+public interface GTicket : GCommon
 {
-    public interface GTicket : GCommon
-    {
-        string getId();
+    string getId();
 
-        bool appendData(long partnerId, string name, GPrimitive value);
+    bool appendData(long partnerId, string name, GPrimitive value);
 
-        bool addInvite(GInvite invite);
+    bool addInvite(GInvite invite);
 
-        bool expire();
+    bool expire();
 
-        void updateEta(long eta);
+    void updateEta(long eta);
 
-        bool extend(long interval);
+    bool extend(long interval);
 
-        long getEta();
+    long getEta();
 
-        bool modify(long remaining, string message, GPlace destination);
+    bool modify(long remaining, string message, GPlace destination);
 
-        GArray<GInvite> getInvites();
+    GArray<GInvite> getInvites();
 
-        long getDuration();
+    long getDuration();
 
-    }
 }

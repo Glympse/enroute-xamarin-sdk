@@ -1,9 +1,6 @@
-﻿using System;
+﻿namespace Glympse;
 
-namespace Glympse
+public interface GEventListener
 {
-    public interface GEventListener
-    {
-        void eventsOccurred(GGlympse glympse, int listener, int events, object param);
-    }
+    void eventsOccurred(GGlympse glympse, int listener, int events, object param);
 }

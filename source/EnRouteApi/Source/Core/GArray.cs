@@ -1,12 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 
-namespace Glympse
+namespace Glympse;
+
+public interface GArray<out T> : GCommon, IEnumerable<T>
 {
-    public interface GArray<T> : GCommon, IEnumerable<T>
-    {
-        int length();
+    int length();
 
-        T at(int index);
-    }
+    T at(int index);
 }

@@ -1,13 +1,7 @@
-﻿using System;
+﻿namespace Glympse;
 
-namespace Glympse
+public static class CoreFactory
 {
-    public static class CoreFactory
-    {
-        public static string createString(string str)
-        {
-            return str;
-        }
-    }
+    public static string createString(string str) => 
+        str;
 }
-

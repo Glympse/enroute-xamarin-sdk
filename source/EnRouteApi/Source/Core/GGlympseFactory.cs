@@ -1,19 +1,16 @@
-﻿using System;
+﻿namespace Glympse;
 
-namespace Glympse
+public interface GGlympseFactory
 {
-    public interface GGlympseFactory
-    {
-        GGlympse createGlympse(string server, string apiKey);
+    GGlympse createGlympse(string server, string apiKey);
 
-        GInvite createInvite(int type, string name, string address);
+    GInvite createInvite(int type, string name, string address);
 
-        GPlace createPlace(double latitude, double longitude, string name);
+    GPlace createPlace(double latitude, double longitude, string name);
 
-        GTicket createTicket(long duration, string message, GPlace destination);
+    GTicket createTicket(long duration, string message, GPlace destination);
 
-        GPickupArrivalDataBuilder createPickupArrivalDataBuilder();
+    GPickupArrivalDataBuilder createPickupArrivalDataBuilder();
 
-        GCoreFactory createCoreFactory();
-    }
+    GCoreFactory createCoreFactory();
 }

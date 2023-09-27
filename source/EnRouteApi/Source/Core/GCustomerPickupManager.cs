@@ -1,28 +1,24 @@
-﻿using System;
-using Glympse.Toolbox;
+﻿namespace Glympse;
 
-namespace Glympse
+public interface GCustomerPickupManager : GEventSink
 {
-    public interface GCustomerPickupManager : GEventSink
-    {
-        void setInviteCode(string inviteCode);
+    void setInviteCode(string inviteCode);
 
-        void setForeignId(string foreignId);
+    void setForeignId(string foreignId);
 
-        bool setManualETA(long eta);
+    bool setManualETA(long eta);
 
-        bool arrived();
+    bool arrived();
 
-        bool holdPickup();
+    bool holdPickup();
 
-        bool sendArrivalData(GPickupArrivalData arrivalData);
+    bool sendArrivalData(GPickupArrivalData arrivalData);
 
-        bool sendFeedback(int customerRating, string customerComment, bool canContactCustomer);
+    bool sendFeedback(int customerRating, string customerComment, bool canContactCustomer);
 
-        GCustomerPickup getCurrentPickup();
+    GCustomerPickup getCurrentPickup();
 
-        bool sendChatMessage(string message);
+    bool sendChatMessage(string message);
 
-        GArray<GChatMessage> getChatMessages();
-    }
+    GArray<GChatMessage> getChatMessages();
 }
