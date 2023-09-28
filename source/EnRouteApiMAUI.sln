@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EnRouteApi", "EnRouteApi\EnRouteApi.csproj", "{37B64C1F-A189-4190-A9CA-B72D694428FA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EnRouteApi.MAUI", "EnRouteApiMAUI\EnRouteApi.MAUI.csproj", "{E3591F5A-EB6C-4D22-80DA-297ABF604DAF}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{37B64C1F-A189-4190-A9CA-B72D694428FA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{37B64C1F-A189-4190-A9CA-B72D694428FA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{37B64C1F-A189-4190-A9CA-B72D694428FA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{37B64C1F-A189-4190-A9CA-B72D694428FA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E3591F5A-EB6C-4D22-80DA-297ABF604DAF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E3591F5A-EB6C-4D22-80DA-297ABF604DAF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E3591F5A-EB6C-4D22-80DA-297ABF604DAF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E3591F5A-EB6C-4D22-80DA-297ABF604DAF}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

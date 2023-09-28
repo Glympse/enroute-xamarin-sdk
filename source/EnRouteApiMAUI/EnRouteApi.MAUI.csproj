@@ -1,0 +1,34 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFrameworks>net7.0;net7.0-android;net7.0-ios</TargetFrameworks>
+    <UseMaui>true</UseMaui>
+    <SingleProject>true</SingleProject>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <IsBindingProject>true</IsBindingProject>
+
+    <SupportedOSPlatformVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'ios'">14.2</SupportedOSPlatformVersion>
+    <SupportedOSPlatformVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'android'">21.0</SupportedOSPlatformVersion>
+
+    <LangVersion>default</LangVersion>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ObjcBindingApiDefinition Include="Platforms\iOS\ApiDefinition.cs"/>
+    <ObjcBindingCoreSource Include="Platforms\iOS\StructsAndEnums.cs"/>
+  </ItemGroup>
+
+  <ItemGroup>
+    <NativeReference Include="Platforms\iOS\Libs\EnRouteApi.xcframework">
+      <Kind>Framework</Kind>
+      <Frameworks>Foundation</Frameworks>
+      <ForceLoad>True</ForceLoad>
+      <SmartLink>False</SmartLink>
+    </NativeReference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\EnRouteApi\EnRouteApi.csproj"/>
+  </ItemGroup>
+
+</Project>
