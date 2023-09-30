@@ -4,6 +4,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EnRouteApi", "EnRouteApi\En
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EnRouteApi.MAUI", "EnRouteApiMAUI\EnRouteApi.MAUI.csproj", "{E3591F5A-EB6C-4D22-80DA-297ABF604DAF}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EnRouteApi.iOS", "EnRouteApiiOS\EnRouteApi.iOS.csproj", "{F2E61127-C3D3-46D2-ABD7-BAAD954B10B8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EnRouteApi.Android", "EnRouteApiAndroid\EnRouteApi.Android.csproj", "{5D4EBF7F-27CB-4836-9C4F-5BCA9F25BA12}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -18,5 +22,13 @@ Global
 		{E3591F5A-EB6C-4D22-80DA-297ABF604DAF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E3591F5A-EB6C-4D22-80DA-297ABF604DAF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E3591F5A-EB6C-4D22-80DA-297ABF604DAF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F2E61127-C3D3-46D2-ABD7-BAAD954B10B8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F2E61127-C3D3-46D2-ABD7-BAAD954B10B8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F2E61127-C3D3-46D2-ABD7-BAAD954B10B8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F2E61127-C3D3-46D2-ABD7-BAAD954B10B8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5D4EBF7F-27CB-4836-9C4F-5BCA9F25BA12}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5D4EBF7F-27CB-4836-9C4F-5BCA9F25BA12}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5D4EBF7F-27CB-4836-9C4F-5BCA9F25BA12}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5D4EBF7F-27CB-4836-9C4F-5BCA9F25BA12}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
