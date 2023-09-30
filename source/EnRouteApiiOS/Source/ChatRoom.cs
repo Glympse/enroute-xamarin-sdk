@@ -1,47 +1,32 @@
-﻿using System;
+﻿namespace Glympse.EnRoute.iOS;
 
-namespace Glympse.EnRoute.iOS
+internal class ChatRoom : GChatRoom
 {
-    class ChatRoom : GChatRoom
-    {
-        private GlyChatRoom _raw;
+    GlyChatRoom _raw;
 
-        public ChatRoom(GlyChatRoom raw)
-        {
-            _raw = raw;
-        }
+    public ChatRoom(GlyChatRoom raw) =>
+        _raw = raw;
 
-        /**
-         * GChatRoom section
-         */
+    /**
+     * GChatRoom section
+     */
 
-        public string getName()
-        {
-            return _raw.getName();
-        }
+    public string getName() =>
+        _raw.getName();
 
-        public GArray<GChatMessage> getChatMessages()
-        {
-            return new Array<GChatMessage>(_raw.getChatMessages());
-        }
+    public GArray<GChatMessage> getChatMessages() =>
+        new Array<GChatMessage>(_raw.getChatMessages());
 
-        public long getSequenceNumber()
-        {
-            return _raw.getSequenceNumber();
-        }
+    public long getSequenceNumber() =>
+        _raw.getSequenceNumber();
 
-        public long getLastReadSequenceNumber()
-        {
-            return _raw.getLastReadSequenceNumber();
-        }
+    public long getLastReadSequenceNumber() =>
+        _raw.getLastReadSequenceNumber();
 
-        /**
-         * GCommon section
-         */
+    /**
+     * GCommon section
+     */
 
-        public object raw()
-        {
-            return _raw;
-        }
-    }
+    public object raw() =>
+        _raw;
 }

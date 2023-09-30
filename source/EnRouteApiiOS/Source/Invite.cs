@@ -1,29 +1,18 @@
-﻿using System;
+﻿namespace Glympse.EnRoute.iOS;
 
-namespace Glympse.EnRoute.iOS
+internal class Invite : GInvite
 {
-    class Invite : GInvite
-    {
-        private GlyInvite _raw;
+    GlyInvite _raw;
 
-        public Invite(GlyInvite raw)
-        {
-            _raw = raw;
-        }
+    public Invite(GlyInvite raw) =>
+        _raw = raw;
 
-        public string getAddress()
-        {
-            return _raw.getAddress();
-        }
+    public string getAddress() =>
+        _raw.getAddress();
 
-        public int getType()
-        {
-            return _raw.getType();
-        }
+    public int getType() =>
+        _raw.getType();
 
-        public object raw()
-        {
-            return _raw;
-        }
-    }
+    public object raw() =>
+        _raw;
 }

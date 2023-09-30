@@ -1,57 +1,38 @@
-﻿using System;
+﻿namespace Glympse.EnRoute.iOS;
 
-namespace Glympse.EnRoute.iOS
+internal class ChatMessage : GChatMessage
 {
-    class ChatMessage : GChatMessage
-    {
-        private GlyChatMessage _raw;
+    GlyChatMessage _raw;
 
-        public ChatMessage(GlyChatMessage raw)
-        {
-            _raw = raw;
-        }
+    public ChatMessage(GlyChatMessage raw) =>
+        _raw = raw;
 
-        /**
-         * GChatMessage section
-         */
+    /**
+     * GChatMessage section
+     */
 
-        public long getId()
-        {
-            return _raw.getId();
-        }
+    public long getId() =>
+        _raw.getId();
 
-        public long getCreatedTime()
-        {
-            return _raw.getCreatedTime();
-        }
+    public long getCreatedTime() =>
+        _raw.getCreatedTime();
 
-        public string getContents()
-        {
-            return _raw.getContents();
-        }
+    public string getContents() =>
+        _raw.getContents();
 
-        public string getAuthor()
-        {
-            return _raw.getAuthor();
-        }
+    public string getAuthor() =>
+        _raw.getAuthor();
 
-        public long getSequenceId()
-        {
-            return _raw.getSequenceId();
-        }
+    public long getSequenceId() =>
+        _raw.getSequenceId();
 
-        public bool isAgent()
-        {
-            return _raw.isAgent();
-        }
+    public bool isAgent() =>
+        _raw.isAgent();
 
-        /**
-         * GCommon section
-         */
+    /**
+     * GCommon section
+     */
 
-        public object raw()
-        {
-            return _raw;
-        }
-    }
+    public object raw() =>
+        _raw;
 }
