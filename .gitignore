@@ -25,3 +25,4 @@ project.lock.json
 Package.StoreAssociation.xml
 UpgradeLog.htm
 google-services.json
+.DS_Store
