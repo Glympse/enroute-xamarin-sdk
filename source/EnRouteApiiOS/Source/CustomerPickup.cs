@@ -1,97 +1,62 @@
-﻿using System;
+﻿namespace Glympse.EnRoute.iOS;
 
-namespace Glympse.EnRoute.iOS
+internal class CustomerPickup : GCustomerPickup
 {
-    class CustomerPickup : GCustomerPickup
-    {
-        private GlyCustomerPickup _raw;
+    GlyCustomerPickup _raw;
 
-        public CustomerPickup(GlyCustomerPickup raw)
-        {
-            _raw = raw;
-        }
+    public CustomerPickup(GlyCustomerPickup raw) =>
+        _raw = raw;
 
-        /**
-         * GCustomerPickup section
-         */
+    /**
+     * GCustomerPickup section
+     */
 
-        public string getId()
-        {
-            return _raw.getId();
-        }
+    public string getId() =>
+        _raw.getId();
 
-        public string getInviteCode()
-        {
-            return _raw.getInviteCode();
-        }
+    public string getInviteCode() =>
+        _raw.getInviteCode();
 
-        public long getCreatedTime()
-        {
-            return _raw.getCreatedTime();
-        }
+    public long getCreatedTime() =>
+        _raw.getCreatedTime();
 
-        public long getDueTime()
-        {
-            return _raw.getDueTime();
-        }
+    public long getDueTime() =>
+        _raw.getDueTime();
 
-        public long getCompletedTime()
-        {
-            return _raw.getCompletedTime();
-        }
+    public long getCompletedTime() =>
+        _raw.getCompletedTime();
 
-        public long getArrivedTime()
-        {
-            return _raw.getArrivedTime();
-        }
+    public long getArrivedTime() =>
+        _raw.getArrivedTime();
 
-        public string getPhase()
-        {
-            return _raw.getPhase();
-        }
+    public string getPhase() =>
+        _raw.getPhase();
 
-        public string getForeignId()
-        {
-            return _raw.getForeignId();
-        }
+    public string getForeignId() =>
+        _raw.getForeignId();
 
-        public GArray<GPrimitive> getMetadata()
-        {
-            return new Array<GPrimitive>(_raw.getMetadata());
-        }
+    public GArray<GPrimitive> getMetadata() =>
+        new Array<GPrimitive>(_raw.getMetadata());
 
-        public GPickupArrivalData getCustomerArrivalData()
-        {
-            return (GPickupArrivalData)ClassBinder.bind(_raw.getCustomerArrivalData());
-        }
+    public GPickupArrivalData getCustomerArrivalData() =>
+        (GPickupArrivalData)ClassBinder.bind(_raw.getCustomerArrivalData());
 
-        public long getManualEta()
-        {
-            return _raw.getManualEta();
-        }
+    public long getManualEta() =>
+        _raw.getManualEta();
 
-        public string getChatRoomId()
-        {
-            return _raw.getChatRoomId();
-        }
+    public string getChatRoomId() =>
+        _raw.getChatRoomId();
 
-        public string getNotes()
-        {
-            return _raw.getNotes();
-        }
+    public string getNotes() =>
+        _raw.getNotes();
 
-        public GArray<string> getChatEnabledPhases()
-        {
-            return new Array<string>(_raw.getChatEnabledPhases());
-        }
+    public GArray<string> getChatEnabledPhases() =>
+        new Array<string>(_raw.getChatEnabledPhases());
 
-        /**
-         * GCommon section
-         */
+    /**
+     * GCommon section
+     */
 
-        public object raw()
-        {
-            return _raw;
-        }
-    }
+    public object raw() =>
+        _raw;
 }

@@ -1,57 +1,38 @@
-﻿using System;
+﻿namespace Glympse.EnRoute.iOS;
 
-namespace Glympse.EnRoute.iOS
+internal class PickupArrivalData : GPickupArrivalData
 {
-    class PickupArrivalData : GPickupArrivalData
-    {
-        private GlyPickupArrivalData _raw;
+    GlyPickupArrivalData _raw;
 
-        public PickupArrivalData(GlyPickupArrivalData raw)
-        {
-            _raw = raw;
-        }
+    public PickupArrivalData(GlyPickupArrivalData raw) =>
+        _raw = raw;
 
-        /**
-         * GPickupArrivalData section
-         */
+    /**
+     * GPickupArrivalData section
+     */
 
-        public string getStallLabel()
-        {
-            return _raw.getStallLabel();
-        }
+    public string getStallLabel() =>
+        _raw.getStallLabel();
 
-        public string getCarColor()
-        {
-            return _raw.getCarColor();
-        }
+    public string getCarColor() =>
+        _raw.getCarColor();
 
-        public string getCarMake()
-        {
-            return _raw.getCarMake();
-        }
+    public string getCarMake() =>
+        _raw.getCarMake();
 
-        public string getCarModel()
-        {
-            return _raw.getCarModel();
-        }
+    public string getCarModel() =>
+        _raw.getCarModel();
 
-        public string getLicensePlate()
-        {
-            return _raw.getLicensePlate();
-        }
+    public string getLicensePlate() =>
+        _raw.getLicensePlate();
 
-        public bool isPickupInStore()
-        {
-            return _raw.isPickupInStore();
-        }
+    public bool isPickupInStore() =>
+        _raw.isPickupInStore();
 
-        /**
-         * GCommon section
-         */
+    /**
+     * GCommon section
+     */
 
-        public object raw()
-        {
-            return _raw;
-        }
-    }
+    public object raw() =>
+        _raw;
 }

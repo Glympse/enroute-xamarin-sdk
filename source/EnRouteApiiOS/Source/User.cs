@@ -1,29 +1,18 @@
-﻿using System;
+﻿namespace Glympse.EnRoute.iOS;
 
-namespace Glympse.EnRoute.iOS
+internal class User : GUser
 {
-    class User : GUser
-    {
-        private GlyUser _raw;
+    GlyUser _raw;
 
-        public User(GlyUser raw)
-        {
-            _raw = raw;
-        }
+    public User(GlyUser raw) =>
+        _raw = raw;
 
-        public bool setNickname(string nickname)
-        {
-            return _raw.setNickname(nickname);
-        }
+    public bool setNickname(string nickname) =>
+        _raw.setNickname(nickname);
 
-        public string getNickname()
-        {
-            return _raw.getNickname();
-        }
+    public string getNickname() =>
+        _raw.getNickname();
 
-        public object raw()
-        {
-            return _raw;
-        }
-    }
+    public object raw() =>
+        _raw;
 }
