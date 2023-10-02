@@ -7,86 +7,83 @@ public class ClassBinder
         if ( null == raw ) 
         {
             return null;
-        }            
-        else if ( raw is GlyEnRouteManager )
+        }
+        if ( raw is GlyEnRouteManager )
         {
             return new EnRouteManager((GlyEnRouteManager)raw);
         }
-        else if ( raw is GlyTaskManager )
+        if ( raw is GlyTaskManager )
         {
             return new TaskManager((GlyTaskManager)raw);
         }
-        else if ( raw is GlyOrganization )
+        if ( raw is GlyOrganization )
         {
             return new Organization((GlyOrganization)raw);
         }
-        else if ( raw is GlyAgent )
+        if ( raw is GlyAgent )
         {
             return new Agent((GlyAgent)raw);
         }
-        else if ( raw is GlyTask )
+        if ( raw is GlyTask )
         {
             return new Task((GlyTask)raw);
         }
-        else if ( raw is GlyOperation )
+        if ( raw is GlyOperation )
         {
             return new Operation((GlyOperation)raw);
         }
-        else if (raw is GlyTicket)
+        if (raw is GlyTicket)
         {
             return new Ticket((GlyTicket)raw);
         }
-        else if (raw is GlyInvite)
+        if (raw is GlyInvite)
         {
             return new Invite((GlyInvite)raw);
         }
-        else if (raw is GlyUser)
+        if (raw is GlyUser)
         {
             return new User((GlyUser)raw);
         }
-        else if (raw is GlyPlace)
+        if (raw is GlyPlace)
         {
             return new Place((GlyPlace)raw);
         }
-        else if (raw is GlyGlympse)
+        if (raw is GlyGlympse)
         {
             return new Glympse((GlyGlympse)raw);
         }
-        else if (raw is GlyConsentManager)
+        if (raw is GlyConsentManager)
         {
             return new ConsentManager((GlyConsentManager)raw);
         }
-        else if (raw is GlyChatManager)
+        if (raw is GlyChatManager)
         {
             return new ChatManager((GlyChatManager)raw);
         }
-        else if (raw is GlyChatMessage)
+        if (raw is GlyChatMessage)
         {
             return new ChatMessage((GlyChatMessage)raw);
         }
-        else if ( raw is Foundation.NSString )
+        if ( raw is NSString nsString )
         {
-            return ((Foundation.NSString) raw).ToString();
+            return nsString.ToString();
         }
-        else if ( raw is Foundation.NSNumber )
+        if ( raw is NSNumber nsNumber )
         {
-            return ((Foundation.NSNumber) raw).LongValue;
+            return nsNumber.ToString();
         }
-        else if (raw is GlyUserManager)
+        if (raw is GlyUserManager)
         {
             return new UserManager((GlyUserManager)raw);
         }
-        else if ( raw is GlyPrimitive )
+        if ( raw is GlyPrimitive )
         {
             return new Primitive((GlyPrimitive)raw);
         }
-        else if (raw is GlyLong)
+        if (raw is GlyLong)
         {
             return ((GlyLong) raw).longValue();
         }
-        else
-        {
-            return null;
-        }
+        return null;
     }
 }
