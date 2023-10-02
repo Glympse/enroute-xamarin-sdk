@@ -1,34 +1,21 @@
-﻿using System;
+﻿namespace Glympse.EnRoute.iOS;
 
-namespace Glympse.EnRoute.iOS
+internal class Organization : GOrganization
 {
-    class Organization : GOrganization
-    {
-        private GlyOrganization _raw;
+    GlyOrganization _raw;
 
-        public Organization(GlyOrganization raw)
-        {
-            _raw = raw;
-        }
+    public Organization(GlyOrganization raw) =>
+        _raw = raw;
 
-        public long getId()
-        {
-            return _raw.getId();
-        }
+    public long getId() =>
+        _raw.getId();
 
-        public string getName()
-        {
-            return _raw.getName();
-        }
+    public string getName() =>
+        _raw.getName();
 
-        public string getAdminEmail()
-        {
-            return _raw.getAdminEmail();
-        }
+    public string getAdminEmail() =>
+        _raw.getAdminEmail();
 
-        public object raw()
-        {
-            return _raw;
-        }
-    }
+    public object raw() =>
+        _raw;
 }

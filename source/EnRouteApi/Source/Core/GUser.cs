@@ -1,11 +1,8 @@
-﻿using System;
+﻿namespace Glympse;
 
-namespace Glympse
+public interface GUser : GCommon
 {
-    public interface GUser : GCommon
-    {
-        bool setNickname(string nickname);
+    bool setNickname(string nickname);
 
-        string getNickname();
-    }
+    string getNickname();
 }

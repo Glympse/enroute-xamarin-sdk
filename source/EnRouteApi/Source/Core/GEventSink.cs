@@ -1,11 +1,8 @@
-﻿using System;
+﻿namespace Glympse;
 
-namespace Glympse
+public interface GEventSink : GCommon
 {
-    public interface GEventSink : GCommon
-    {
-        bool addListener(GEventListener eventListener);
+    bool addListener(GEventListener eventListener);
 
-        bool removeListener(GEventListener eventListener);
-    }
+    bool removeListener(GEventListener eventListener);
 }

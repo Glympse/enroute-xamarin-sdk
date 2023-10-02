@@ -1,9 +1,6 @@
-﻿using System;
+﻿namespace Glympse;
 
-namespace Glympse
+public interface GCommon
 {
-    public interface GCommon
-    {
-        object raw();
-    }
+    object raw();
 }

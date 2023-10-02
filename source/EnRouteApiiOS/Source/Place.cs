@@ -1,19 +1,12 @@
-﻿using System;
+﻿namespace Glympse.EnRoute.iOS;
 
-namespace Glympse.EnRoute.iOS
+internal class Place : GPlace
 {
-    class Place : GPlace
-    {
-        private GlyPlace _raw;
+    GlyPlace _raw;
 
-        public Place(GlyPlace raw)
-        {
-            _raw = raw;
-        }
+    public Place(GlyPlace raw) =>
+        _raw = raw;
 
-        public object raw()
-        {
-            return _raw;
-        }
-    }
+    public object raw() =>
+        _raw;
 }

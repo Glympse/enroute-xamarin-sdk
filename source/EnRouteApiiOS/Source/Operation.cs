@@ -1,64 +1,43 @@
-﻿using System;
+﻿namespace Glympse.EnRoute.iOS;
 
-namespace Glympse.EnRoute.iOS
+internal class Operation : GOperation
 {
-    class Operation : GOperation
+    GlyOperation _raw;
+
+    public Operation(GlyOperation raw) =>
+        _raw = raw;
+
+    public int getState() =>
+        _raw.getState();
+
+    public long getId() =>
+        _raw.getId();
+
+    public long getStartTime() =>
+        _raw.getStartTime();
+
+    public string getTicketId() =>
+        _raw.getTicketId();
+
+    public string getInviteUrl() =>
+        _raw.getInviteUrl();
+
+    public string getInviteCode() =>
+        _raw.getInviteCode();
+
+    public long getTaskId() =>
+        _raw.getTaskId();
+
+    public void setTicketEta(long eta)
     {
-        private GlyOperation _raw;
-
-        public Operation(GlyOperation raw)
-        {
-            _raw = raw;
-        }
-
-        public int getState()
-        {
-            return _raw.getState();
-        }
-
-        public long getId()
-        {
-            return _raw.getId();
-        }
-
-        public long getStartTime()
-        {
-            return _raw.getStartTime();
-        }
-
-        public string getTicketId()
-        {
-            return _raw.getTicketId();
-        }
-
-        public string getInviteUrl()
-        {
-            return _raw.getInviteUrl();
-        }
-
-        public string getInviteCode()
-        {
-            return _raw.getInviteCode();
-        }
-
-        public long getTaskId()
-        {
-            return _raw.getTaskId();
-        }
-
-        public void setTicketEta(long eta)
-        {
-            _raw.setTicketEta(eta);
-        }
-
-        public void setTicketVisible(string visible)
-        {
-            _raw.setTicketVisible(visible);
-        }
-
-        public object raw()
-        {
-            return _raw;
-        }
+        _raw.setTicketEta(eta);
     }
+
+    public void setTicketVisible(string visible)
+    {
+        _raw.setTicketVisible(visible);
+    }
+
+    public object raw() =>
+        _raw;
 }

@@ -1,9 +1,6 @@
-﻿using System;
+﻿namespace Glympse;
 
-namespace Glympse
+public interface GConsentManager : GCommon
 {
-    public interface GConsentManager : GCommon
-    {
-        void exemptFromConsent(bool isExempt);
-    }
+    void exemptFromConsent(bool isExempt);
 }

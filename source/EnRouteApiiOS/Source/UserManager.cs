@@ -1,24 +1,15 @@
-﻿using System;
+﻿namespace Glympse.EnRoute.iOS;
 
-namespace Glympse.EnRoute.iOS
+internal class UserManager : GUserManager
 {
-    class UserManager : GUserManager
-    {
-        private GlyUserManager _raw;
+    GlyUserManager _raw;
 
-        public UserManager(GlyUserManager raw)
-        {
-            _raw = raw;
-        }
+    public UserManager(GlyUserManager raw) =>
+        _raw = raw;
 
-        public GUser getSelf()
-        {
-            return new User((GlyUser)_raw.getSelf());
-        }
+    public GUser getSelf() =>
+        new User((GlyUser)_raw.getSelf());
 
-        public object raw()
-        {
-            return _raw;
-        }
-    }
+    public object raw() =>
+        _raw;
 }

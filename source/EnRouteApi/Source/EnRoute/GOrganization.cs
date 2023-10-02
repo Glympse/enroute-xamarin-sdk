@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace Glympse
+﻿namespace Glympse
 {
     namespace EnRoute
     {

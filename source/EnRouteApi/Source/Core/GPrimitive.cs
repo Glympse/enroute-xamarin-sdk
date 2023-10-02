@@ -1,149 +1,146 @@
-﻿using System;
+﻿namespace Glympse;
 
-namespace Glympse
+public interface GPrimitive
 {
-    public interface GPrimitive
-    {
-        /**
-         * Common properties
-         */
+    /**
+     * Common properties
+     */
 
-        object raw();
+    object raw();
 
-        int type();
+    int type();
 
-        bool isArray();
+    bool isArray();
 
-        bool isObject();
+    bool isObject();
 
-        bool isDouble();
+    bool isDouble();
 
-        bool isLong();
+    bool isLong();
 
-        bool isBool();
+    bool isBool();
 
-        bool isString();
+    bool isString();
 
-        bool isNull();
+    bool isNull();
 
-        int size();
+    int size();
     
-        GPrimitive clone();
+    GPrimitive clone();
 
-        bool merge(GPrimitive from, bool overrideTarget);
+    bool merge(GPrimitive from, bool overrideTarget);
 
-        /**
-         * Value getters
-         */
+    /**
+     * Value getters
+     */
 
-        double getDouble();
+    double getDouble();
 
-        long getLong();
+    long getLong();
 
-        bool getBool();
+    bool getBool();
 
-        string  getString();
+    string  getString();
 
-        /**
-         * Object getters
-         */
+    /**
+     * Object getters
+     */
 
-        GPrimitive get(string key);
+    GPrimitive get(string key);
 
-        double getDouble(string key);
+    double getDouble(string key);
 
-        long getLong(string key);
+    long getLong(string key);
 
-        bool getBool(string key);
+    bool getBool(string key);
 
-        string getString(string key);
+    string getString(string key);
 
-        /*Enumeration<String> getKeys();*/
+    /*Enumeration<String> getKeys();*/
 
-        bool hasKey(string key);
+    bool hasKey(string key);
 
-        /**
-         * Array getters
-         */
+    /**
+     * Array getters
+     */
 
-        GArray<GPrimitive> getArray();
+    GArray<GPrimitive> getArray();
 
-        GPrimitive get(int index);
+    GPrimitive get(int index);
 
-        double getDouble(int index);
+    double getDouble(int index);
 
-        long getLong(int index);
+    long getLong(int index);
 
-        bool getBool(int index);
+    bool getBool(int index);
 
-        string getString(int index);
+    string getString(int index);
 
-        /**
-         * Value modifiers
-         */
+    /**
+     * Value modifiers
+     */
 
-        void set(double value);
+    void set(double value);
 
-        void set(long value);
+    void set(long value);
 
-        void set(bool value);
+    void set(bool value);
 
-        void set(string value);
+    void set(string value);
 
-        void setNull();
+    void setNull();
 
-        void setArray();
+    void setArray();
 
-        void setObject();
+    void setObject();
 
-        /**
-         * Object modifiers
-         */
+    /**
+     * Object modifiers
+     */
 
-        void put(string key, GPrimitive value);
+    void put(string key, GPrimitive value);
 
-        void put(string key, double value);
+    void put(string key, double value);
 
-        void put(string key, long value);
+    void put(string key, long value);
 
-        void put(string key, bool value);
+    void put(string key, bool value);
 
-        void put(string key, string value);
+    void put(string key, string value);
 
-        void putNull(string key);
+    void putNull(string key);
 
-        void remove(string key);
+    void remove(string key);
 
-        /**
-         * Array modifiers.
-         */
+    /**
+     * Array modifiers.
+     */
 
-        void put(GPrimitive value);
+    void put(GPrimitive value);
 
-        void put(double value);
+    void put(double value);
 
-        void put(long value);
+    void put(long value);
 
-        void put(bool value);
+    void put(bool value);
 
-        void put(string value);
+    void put(string value);
 
-        void insert(int index, GPrimitive value);
+    void insert(int index, GPrimitive value);
 
-        void put(int index, GPrimitive value);
+    void put(int index, GPrimitive value);
 
-        void put(int index, double value);
+    void put(int index, double value);
 
-        void put(int index, long value);
+    void put(int index, long value);
 
-        void put(int index, bool value);
+    void put(int index, bool value);
 
-        void put(int index, string value);
+    void put(int index, string value);
 
-        void putNull(int index);
+    void putNull(int index);
 
-        void remove(int index);
+    void remove(int index);
 
-        void remove(GPrimitive value);
-    }
+    void remove(GPrimitive value);
 }

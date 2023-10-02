@@ -1,19 +1,16 @@
-﻿using System;
+﻿namespace Glympse;
 
-namespace Glympse
+public interface GChatMessage : GCommon
 {
-    public interface GChatMessage : GCommon
-    {
-        long getId();
+    long getId();
 
-        long getCreatedTime();
+    long getCreatedTime();
 
-        string getContents();
+    string getContents();
 
-        string getAuthor();
+    string getAuthor();
 
-        long getSequenceId();
+    long getSequenceId();
 
-        bool isAgent();
-    }
+    bool isAgent();
 }

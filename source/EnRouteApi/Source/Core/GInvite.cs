@@ -1,11 +1,8 @@
-﻿using System;
+﻿namespace Glympse;
 
-namespace Glympse
+public interface GInvite : GCommon
 {
-    public interface GInvite : GCommon
-    {
-        string getAddress();
+    string getAddress();
 
-        int getType();
-    }
+    int getType();
 }

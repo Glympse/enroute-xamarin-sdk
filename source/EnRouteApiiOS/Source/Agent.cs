@@ -1,34 +1,21 @@
-﻿using System;
+﻿namespace Glympse.EnRoute.iOS;
 
-namespace Glympse.EnRoute.iOS
+internal class Agent : GAgent
 {
-    class Agent : GAgent
-    {
-        private GlyAgent _raw;
+    GlyAgent _raw;
 
-        public Agent(GlyAgent raw)
-        {
-            _raw = raw;
-        }
+    public Agent(GlyAgent raw) =>
+        _raw = raw;
 
-        public long getId()
-        {
-            return _raw.getId();
-        }
+    public long getId() =>
+        _raw.getId();
 
-        public string getName()
-        {
-            return _raw.getName();
-        }
+    public string getName() =>
+        _raw.getName();
 
-        public string getEmail()
-        {
-            return _raw.getEmail();
-        }
+    public string getEmail() =>
+        _raw.getEmail();
 
-        public object raw()
-        {
-            return _raw;
-        }
-    }
+    public object raw() =>
+        _raw;
 }

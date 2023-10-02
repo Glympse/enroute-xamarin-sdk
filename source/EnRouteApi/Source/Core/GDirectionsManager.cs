@@ -1,9 +1,6 @@
-﻿using System;
+﻿namespace Glympse;
 
-namespace Glympse
+public interface GDirectionsManager : GCommon
 {
-    public interface GDirectionsManager : GCommon
-    {
-        void setTravelMode(int mode);
-    }
+    void setTravelMode(int mode);
 }

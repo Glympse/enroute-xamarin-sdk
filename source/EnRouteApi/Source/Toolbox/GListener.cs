@@ -1,12 +1,6 @@
-﻿using System;
+﻿namespace Glympse.Toolbox;
 
-namespace Glympse
+public interface GListener
 {
-    namespace Toolbox
-    {
-        public interface GListener
-        {
-            void eventsOccurred(GSource source, int listener, int events, object param1, object param2);
-        }
-    }
+    void eventsOccurred(GSource source, int listener, int events, object param1, object param2);
 }

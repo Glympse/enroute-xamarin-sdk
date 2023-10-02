@@ -1,98 +1,36 @@
-<?xml version="1.0" encoding="utf-8"?>
-<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+<Project Sdk="Microsoft.NET.Sdk">
+  
   <PropertyGroup>
-    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
-    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectTypeGuids>{8FFB629D-F513-41CE-95D2-7ECE97B6EEEC};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
-    <ProjectGuid>{F2E61127-C3D3-46D2-ABD7-BAAD954B10B8}</ProjectGuid>
-    <OutputType>Library</OutputType>
-    <RootNamespace>EnRouteApi.iOS</RootNamespace>
-    <IPhoneResourcePrefix>Resources</IPhoneResourcePrefix>
-    <AssemblyName>EnRouteApi.iOS</AssemblyName>
-  </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <DebugSymbols>true</DebugSymbols>
-    <DebugType>full</DebugType>
-    <Optimize>false</Optimize>
-    <OutputPath>bin\Debug</OutputPath>
-    <DefineConstants>DEBUG;</DefineConstants>
-    <ErrorReport>prompt</ErrorReport>
-    <WarningLevel>4</WarningLevel>
-    <ConsolePause>false</ConsolePause>
+    <TargetFramework>net7.0-ios</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>true</ImplicitUsings>
+    <IsBindingProject>true</IsBindingProject>
+    <LangVersion>default</LangVersion>
+    
+    <!--This part isn't included in the new binding template yet -->
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
-    <NoBindingEmbedding>true</NoBindingEmbedding>
+    <NoBindingEmbedding>false</NoBindingEmbedding>
+    <!-- End addition -->
+    
   </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <DebugType>full</DebugType>
-    <Optimize>true</Optimize>
-    <OutputPath>bin\Release</OutputPath>
-    <ErrorReport>prompt</ErrorReport>
-    <WarningLevel>4</WarningLevel>
-    <ConsolePause>false</ConsolePause>
-    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
-    <NoBindingEmbedding>true</NoBindingEmbedding>
-  </PropertyGroup>
+  
   <ItemGroup>
-    <Reference Include="System" />
-    <Reference Include="System.Runtime" />
-    <Reference Include="System.Core" />
-    <Reference Include="Xamarin.iOS" />
-  </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Resources\" />
-    <Folder Include="Source\" />
-  </ItemGroup>
-  <ItemGroup>
-    <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Libs\libEnRouteApi.linkwith.cs" />
-    <Compile Include="Source\EnRouteFactory.cs" />
-    <Compile Include="Source\EnRouteManager.cs" />
-    <Compile Include="Source\Array.cs" />
-    <Compile Include="Source\ClassBinder.cs" />
-    <Compile Include="Source\Task.cs" />
-    <Compile Include="Source\CommonSource.cs" />
-    <Compile Include="Source\Agent.cs" />
-    <Compile Include="Source\Operation.cs" />
-    <Compile Include="Source\Organization.cs" />
-    <Compile Include="Source\TaskManager.cs" />
-    <Compile Include="Source\Primitive.cs" />
-    <Compile Include="Source\CoreFactory.cs" />
-    <Compile Include="Source\Place.cs" />
-    <Compile Include="Source\Invite.cs" />
-    <Compile Include="Source\Ticket.cs" />
-    <Compile Include="Source\GlympseFactory.cs" />
-    <Compile Include="Source\DirectionsManager.cs" />
-    <Compile Include="Source\User.cs" />
-    <Compile Include="Source\UserManager.cs" />
-    <Compile Include="Source\Glympse.cs" />
-    <Compile Include="Source\ConsentManager.cs" />
-    <Compile Include="Source\Config.cs" />
-    <Compile Include="Source\CustomerPickupManager.cs" />
-    <Compile Include="Source\CustomerPickup.cs" />
-    <Compile Include="Source\PickupArrivalData.cs" />
-    <Compile Include="Source\PickupArrivalDataBuilder.cs" />
-    <Compile Include="Source\ChatMessage.cs" />
-    <Compile Include="Source\EventSink.cs" />
-    <Compile Include="Source\ChatRoom.cs" />
-    <Compile Include="Source\ChatManager.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <ObjcBindingApiDefinition Include="ApiDefinition.cs" />
-  </ItemGroup>
-  <ItemGroup>
+    <ObjcBindingApiDefinition Include="ApiDefinitions.cs" />
     <ObjcBindingCoreSource Include="StructsAndEnums.cs" />
   </ItemGroup>
-  <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.ObjCBinding.CSharp.targets" />
-  <ItemGroup>
-    <ProjectReference Include="..\EnRouteApi\EnRouteApi.csproj">
-      <Project>{20BD2BA0-CF80-4808-BDDB-612943EC729B}</Project>
-      <Name>EnRouteApi</Name>
-    </ProjectReference>
-  </ItemGroup>
+  
   <ItemGroup>
     <NativeReference Include="Libs\EnRouteApi.xcframework">
-      <Kind>Static</Kind>
+      <Kind>Framework</Kind>
+      <ForceLoad>True</ForceLoad>
       <SmartLink>False</SmartLink>
+      <Frameworks>Foundation</Frameworks>
     </NativeReference>
+    
   </ItemGroup>
+  
+  <ItemGroup>
+    <ProjectReference Include="..\EnRouteApi\EnRouteApi.csproj"/>
+  </ItemGroup>
+  
 </Project>

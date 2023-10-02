@@ -1,9 +1,6 @@
-﻿using System;
+﻿namespace Glympse;
 
-namespace Glympse
+public interface GCoreFactory
 {
-    public interface GCoreFactory
-    {
-        GPrimitive createPrimitive(string str);
-    }
+    GPrimitive createPrimitive(string str);
 }
