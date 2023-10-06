@@ -67,6 +67,7 @@ namespace EnRoute
     public const int TASK_COMPLETE_REASON_CANCELLED = 3;
     public const int TASK_COMPLETE_REASON_TICKET_EXPIRED = 4;
     public const int TASK_COMPLETE_REASON_TASK_REMOVED = 5;
+    public const int TASK_COMPLETE_REASON_DEPARTURE_DETECTED = 6;
     
     /**
      * @name Session completion reasons
@@ -156,6 +157,13 @@ namespace EnRoute
     public const long TASK_COMPLETED_KEEP_THRESHOLD_MS = 172800000;
     
     /**
+     * @name Lookahead value when fetching Tasks with auto-complete enabled
+     * This is to prevent fetching Tasks from too far in the future when an Org is setup for auto-start / auto-complete
+     * Value is 24 hours in ms
+     */
+    public const long TASK_LOOKAHEAD_FOR_AUTO_COMPLETE_MS = 86400000;
+    
+    /**
      * @name Phase properties
      */
     
@@ -210,6 +218,14 @@ namespace EnRoute
     public static String PHASE_PROPERTY_READY()
     {
         return CoreFactory.createString("ready");
+    }
+    public static String PHASE_PROPERTY_SCHEDULED()
+    {
+        return CoreFactory.createString("scheduled");
+    }
+    public static String PHASE_PROPERTY_QUASI()
+    {
+        return CoreFactory.createString("quasi");
     }
     
     /**
