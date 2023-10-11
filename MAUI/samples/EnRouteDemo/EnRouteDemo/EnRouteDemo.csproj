@@ -56,4 +56,11 @@
 	  <ProjectReference Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'android'" Include="..\..\..\source\EnRouteApi.Android.MAUI\EnRouteApi.Android.MAUI.csproj" />
 	  <ProjectReference Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'ios'" Include="..\..\..\source\EnRouteApi.iOS.MAUI\EnRouteApi.iOS.MAUI.csproj" />
 	</ItemGroup>
+	<ItemGroup Condition="'$(TargetFramework)' == 'net7.0-android'">
+	  <PackageReference Include="Xamarin.Firebase.Common" Version="120.3.3.1" />
+	  <PackageReference Include="Xamarin.Firebase.Iid" Version="121.1.0.10" />
+	  <PackageReference Include="Xamarin.Firebase.Messaging" Version="123.1.2.2" />
+	  <PackageReference Include="Xamarin.AndroidX.Activity.Ktx" Version="1.7.2.2" />
+	  <PackageReference Include="Xamarin.AndroidX.Activity" Version="1.7.2.2" />
+	</ItemGroup>
 </Project>
