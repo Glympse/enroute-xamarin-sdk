@@ -1,4 +1,11 @@
-﻿namespace EnRouteDemo;
+﻿using Glympse.EnRoute;
+#if ANDROID
+using Glympse.EnRoute.Android;
+#elif iOS
+using Glympse.EnRoute.iOS;
+#endif
+
+namespace EnRouteDemo;
 
 public partial class MainPage : ContentPage
 {
@@ -7,19 +14,32 @@ public partial class MainPage : ContentPage
 	public MainPage()
 	{
 		InitializeComponent();
-	}
 
-	private void OnCounterClicked(object sender, EventArgs e)
+#if ANDROID
+		GEnRouteFactory enRouteFactory = new EnRouteFactory(Platform.AppContext);
+#elif IOS
+		GEnRouteFactory enRouteFactory = null;
+#endif
+
+        EnRouteManagerWrapper.Instance.Initialize(enRouteFactory);
+		Auth.onAppStart(EnRouteManagerWrapper.Instance.Manager);
+    }
+
+	private void OnLoginClicked(object sender, EventArgs e)
 	{
-		count++;
+		if ( EnRouteManagerWrapper.Instance.Manager.isLoginNeeded() )
+		{
+            Auth.start(EnRouteManagerWrapper.Instance.Manager);
+        }
+    }
 
-		if (count == 1)
-			CounterBtn.Text = $"Clicked {count} time";
-		else
-			CounterBtn.Text = $"Clicked {count} times";
-
-		SemanticScreenReader.Announce(CounterBtn.Text);
-	}
+    private void OnLogoutClicked(object sender, EventArgs e)
+    {
+        if (!EnRouteManagerWrapper.Instance.Manager.isLoginNeeded())
+        {
+            EnRouteManagerWrapper.Instance.Manager.logout(EnRouteConstants.LOGOUT_REASON_USER_ACTION);
+        }
+    }
 }
 
 
