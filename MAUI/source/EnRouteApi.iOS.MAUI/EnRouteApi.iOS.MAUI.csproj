@@ -9,6 +9,9 @@
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <NoBindingEmbedding>true</NoBindingEmbedding>
+  </PropertyGroup>
   <ItemGroup>
     <ObjcBindingApiDefinition Include="ApiDefinition.cs" />
     <ObjcBindingCoreSource Include="StructsAndEnums.cs" />
@@ -16,7 +19,7 @@
   <ItemGroup>
     <NativeReference Include="Libs\EnRouteApi.xcframework">
       <Kind>Static</Kind>
-      <SmartLink>False</SmartLink>
+      <SmartLink>True</SmartLink>
     </NativeReference>
   </ItemGroup>
   <ItemGroup>

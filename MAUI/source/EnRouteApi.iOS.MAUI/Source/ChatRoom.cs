@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace Glympse.EnRoute.iOS
+﻿namespace Glympse.EnRoute.iOS
 {
     class ChatRoom : GChatRoom
     {

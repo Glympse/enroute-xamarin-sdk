@@ -1,7 +1,4 @@
-﻿using System;
-using Glympse;
-
-namespace Glympse.EnRoute.iOS
+﻿namespace Glympse.EnRoute.iOS
 {
     public class EnRouteFactory : GEnRouteFactory
     {

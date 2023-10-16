@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-
-namespace Glympse.EnRoute.iOS
+﻿namespace Glympse.EnRoute.iOS
 {
     public class EventSink
     {

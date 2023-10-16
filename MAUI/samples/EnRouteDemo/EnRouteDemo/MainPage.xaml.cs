@@ -1,6 +1,7 @@
 ﻿using Glympse.EnRoute;
 #if ANDROID
 using Glympse.EnRoute.Android;
+using Microsoft.Maui.Controls.PlatformConfiguration;
 #elif iOS
 using Glympse.EnRoute.iOS;
 #endif
@@ -9,8 +10,6 @@ namespace EnRouteDemo;
 
 public partial class MainPage : ContentPage
 {
-	int count = 0;
-
 	public MainPage()
 	{
 		InitializeComponent();
@@ -18,16 +17,16 @@ public partial class MainPage : ContentPage
 #if ANDROID
 		GEnRouteFactory enRouteFactory = new EnRouteFactory(Platform.AppContext);
 #elif IOS
-		GEnRouteFactory enRouteFactory = null;
+		GEnRouteFactory enRouteFactory = new Glympse.EnRoute.iOS.EnRouteFactory();
 #endif
 
         EnRouteManagerWrapper.Instance.Initialize(enRouteFactory);
-		Auth.onAppStart(EnRouteManagerWrapper.Instance.Manager);
+        Auth.onAppStart(EnRouteManagerWrapper.Instance.Manager);
     }
 
-	private void OnLoginClicked(object sender, EventArgs e)
+    private void OnLoginClicked(object sender, EventArgs e)
 	{
-		if ( EnRouteManagerWrapper.Instance.Manager.isLoginNeeded() )
+        if ( EnRouteManagerWrapper.Instance.Manager.isLoginNeeded() )
 		{
             Auth.start(EnRouteManagerWrapper.Instance.Manager);
         }

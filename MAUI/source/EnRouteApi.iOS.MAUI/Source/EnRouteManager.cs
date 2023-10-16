@@ -1,6 +1,4 @@
-﻿using System;
-using Glympse.EnRoute;
-using Glympse.Toolbox;
+﻿using Glympse.Toolbox;
 
 namespace Glympse.EnRoute.iOS
 {

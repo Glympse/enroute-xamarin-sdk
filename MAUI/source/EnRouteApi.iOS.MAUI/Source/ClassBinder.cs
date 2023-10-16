@@ -1,8 +1,4 @@
-﻿using System;
-
-using Glympse.EnRoute;
-
-namespace Glympse.EnRoute.iOS
+﻿namespace Glympse.EnRoute.iOS
 {
     public class ClassBinder
     {

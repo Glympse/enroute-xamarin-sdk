@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android" package="com.companyname.enroutedemo" android:versionCode="1" android:versionName="1.0">
-	<application android:allowBackup="true" android:icon="@mipmap/appicon" android:supportsRtl="true" android:label="EnRouteDemo">
+	<application android:allowBackup="true" android:supportsRtl="true" android:label="EnRouteDemo">
 		<service android:name="com.glympse.android.push.FCMListenerService">
 			<intent-filter>
 				<action android:name="com.google.firebase.MESSAGING_EVENT" />
