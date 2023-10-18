@@ -23,4 +23,4 @@ cp $TMP_ANDROID/lib/EnRouteApi/EnRouteApi-release.aar ../MAUI/source/EnRouteApi.
 
 # Copy iOS dependencies
 unzip $PACKAGE_IOS -d $TMP_IOS
-cp -r $TMP_IOS/framework/* ../MAUI/source/EnRouteApi.iOS.MAUI/Libs
+cp -r $TMP_IOS/framework/EnRouteApi.xcframework ../MAUI/source/EnRouteApi.iOS.MAUI/Libs/EnRouteApi.xcframework
