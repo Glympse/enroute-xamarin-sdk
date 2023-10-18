@@ -2,7 +2,7 @@
 set -e
 
 #
-# The script unpacks native SDKs and places dependencies where appropriately.
+# The script unpacks native SDKs and places dependencies where appropriate.
 #
 
 PACKAGE_ANDROID=$(ls -t *Android* | head -1)
