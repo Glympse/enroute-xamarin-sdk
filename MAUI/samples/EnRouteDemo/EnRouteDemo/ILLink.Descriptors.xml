@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<linker>
+  <assembly fullname="Microsoft.iOS">
+      <namespace fullname="SystemConfiguration" />
+      <namespace fullname="EventKit" />
+      <namespace fullname="CoreMotion" />
+      <namespace fullname="MessageUI" />
+      <namespace fullname="UserNotifications" /> 
+  </assembly>
+</linker>
