@@ -105,6 +105,11 @@ namespace Glympse.EnRoute.Android
         {
             return (GTaskManager)ClassBinder.bind(_raw.getTaskManager());
         }
+
+        public GSessionManager getSessionManager()
+        {
+            return (GSessionManager)ClassBinder.bind(_raw.getSessionManager());
+        }
         
         public void handleRemoteNotification(string payload)
         {

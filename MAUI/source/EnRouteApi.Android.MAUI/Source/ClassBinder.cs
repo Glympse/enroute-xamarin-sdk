@@ -20,6 +20,10 @@ namespace Glympse.EnRoute.Android
             {
                 return new TaskManager((com.glympse.enroute.android.api.GTaskManager)raw);
             }
+            else if ( raw is com.glympse.enroute.android.api.GSessionManager )
+            {
+                return new SessionManager((com.glympse.enroute.android.api.GSessionManager)raw);
+            }
             else if ( raw is com.glympse.enroute.android.api.GOrganization )
             {
                 return new Organization((com.glympse.enroute.android.api.GOrganization)raw);
@@ -35,6 +39,10 @@ namespace Glympse.EnRoute.Android
             else if ( raw is com.glympse.enroute.android.api.GOperation )
             {
                 return new Operation((com.glympse.enroute.android.api.GOperation)raw);
+            }
+            else if ( raw is com.glympse.enroute.android.api.GSession )
+            {
+                return new Session((com.glympse.enroute.android.api.GSession)raw);
             }
             else if ( raw is com.glympse.android.api.GPickupArrivalData)
             {
@@ -63,6 +71,10 @@ namespace Glympse.EnRoute.Android
                 {
                     return new TaskManager(Extensions.JavaCast<com.glympse.enroute.android.api.GTaskManager>(obj));
                 }
+                else if ( "com.glympse.enroute.android.lib.SessionManager" == obj.Class.Name ) 
+                {
+                    return new SessionManager(Extensions.JavaCast<com.glympse.enroute.android.api.GSessionManager>(obj));
+                }
                 else if ( "com.glympse.enroute.android.lib.Organization" == obj.Class.Name ) 
                 {
                     return new Organization(Extensions.JavaCast<com.glympse.enroute.android.api.GOrganization>(obj));
@@ -78,6 +90,10 @@ namespace Glympse.EnRoute.Android
                 else if ( "com.glympse.enroute.android.lib.Operation" == obj.Class.Name ) 
                 {
                     return new Operation(Extensions.JavaCast<com.glympse.enroute.android.api.GOperation>(obj));
+                }
+                else if ( "com.glympse.enroute.android.lib.Session" == obj.Class.Name ) 
+                {
+                    return new Session(Extensions.JavaCast<com.glympse.enroute.android.api.GSession>(obj));
                 }
                 else if ( "java.lang.String" == obj.Class.Name )
                 {

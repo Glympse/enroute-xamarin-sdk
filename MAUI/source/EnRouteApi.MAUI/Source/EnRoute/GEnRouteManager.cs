@@ -40,6 +40,8 @@ namespace Glympse
             string getEnRouteToken();
 
             GTaskManager getTaskManager();
+
+            GSessionManager getSessionManager();
             
             void handleRemoteNotification(string payload);
             

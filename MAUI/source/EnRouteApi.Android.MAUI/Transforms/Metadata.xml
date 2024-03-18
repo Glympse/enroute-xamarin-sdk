@@ -693,6 +693,68 @@
     <attr 
         path="/api/package[@name='com.glympse.enroute.android.api']/interface[@name='GTaskManager']/method[@name='sendMessage' and count(parameter)=2]" 
         name="managedName">sendMessage</attr> 
+    <!-- GSession -->
+    <attr 
+        path="/api/package[@name='com.glympse.enroute.android.api']/interface[@name='GSession']" 
+        name="managedName">GSession</attr>
+    <attr 
+        path="/api/package[@name='com.glympse.enroute.android.api']/interface[@name='GSession']/method[@name='getId']" 
+        name="managedName">getId</attr>
+    <attr 
+        path="/api/package[@name='com.glympse.enroute.android.api']/interface[@name='GSession']/method[@name='getCreatedTime']" 
+        name="managedName">getCreatedTime</attr>
+    <attr 
+        path="/api/package[@name='com.glympse.enroute.android.api']/interface[@name='GSession']/method[@name='getDescription']" 
+        name="managedName">getDescription</attr>
+    <attr 
+        path="/api/package[@name='com.glympse.enroute.android.api']/interface[@name='GSession']/method[@name='getTasks']" 
+        name="managedName">getTasks</attr>
+    <attr 
+        path="/api/package[@name='com.glympse.enroute.android.api']/interface[@name='GSession']/method[@name='getActiveTask']" 
+        name="managedName">getActiveTask</attr>
+    <attr 
+        path="/api/package[@name='com.glympse.enroute.android.api']/interface[@name='GSession']/method[@name='getActiveTaskIndex']" 
+        name="managedName">getActiveTaskIndex</attr>
+    <attr 
+        path="/api/package[@name='com.glympse.enroute.android.api']/interface[@name='GSession']/method[@name='getState']" 
+        name="managedName">getState</attr>
+    <attr 
+        path="/api/package[@name='com.glympse.enroute.android.api']/interface[@name='GSession']/method[@name='getStartTime']" 
+        name="managedName">getStartTime</attr>
+    <attr 
+        path="/api/package[@name='com.glympse.enroute.android.api']/interface[@name='GSession']/method[@name='getOrgId']" 
+        name="managedName">getOrgId</attr>
+    <attr 
+        path="/api/package[@name='com.glympse.enroute.android.api']/interface[@name='GSession']/method[@name='getAgentId']" 
+        name="managedName">getAgentId</attr>
+    <attr 
+        path="/api/package[@name='com.glympse.enroute.android.api']/interface[@name='GSession']/method[@name='getOperationId']" 
+        name="managedName">getOperationId</attr>
+    <attr 
+        path="/api/package[@name='com.glympse.enroute.android.api']/interface[@name='GSession']/method[@name='getOperation']" 
+        name="managedName">getOperation</attr>
+    <attr 
+        path="/api/package[@name='com.glympse.enroute.android.api']/interface[@name='GSession']/method[@name='getCompletionReason']" 
+        name="managedName">getCompletionReason</attr>
+    <!-- GSessionManager -->
+    <attr 
+        path="/api/package[@name='com.glympse.enroute.android.api']/interface[@name='GSessionManager']" 
+        name="managedName">GSessionManager</attr>
+    <attr 
+        path="/api/package[@name='com.glympse.enroute.android.api']/interface[@name='GSessionManager']/method[@name='isStarted']" 
+        name="managedName">isStarted</attr>
+    <attr 
+        path="/api/package[@name='com.glympse.enroute.android.api']/interface[@name='GSessionManager']/method[@name='refresh']" 
+        name="managedName">refresh</attr>
+    <attr 
+        path="/api/package[@name='com.glympse.enroute.android.api']/interface[@name='GSessionManager']/method[@name='getSessions']" 
+        name="managedName">getSessions</attr>
+    <attr 
+        path="/api/package[@name='com.glympse.enroute.android.api']/interface[@name='GSessionManager']/method[@name='anyActiveSessions']" 
+        name="managedName">anyActiveSessions</attr>
+    <attr 
+        path="/api/package[@name='com.glympse.enroute.android.api']/interface[@name='GSessionManager']/method[@name='findSessionById']" 
+        name="managedName">findSessionById</attr>
 
     <!-- GEnRouteManager -->
     <attr
@@ -749,6 +811,9 @@
     <attr 
         path="/api/package[@name='com.glympse.enroute.android.api']/interface[@name='GEnRouteManager']/method[@name='getTaskManager']" 
         name="managedName">getTaskManager</attr>
+    <attr 
+        path="/api/package[@name='com.glympse.enroute.android.api']/interface[@name='GEnRouteManager']/method[@name='getSessionManager']" 
+        name="managedName">getSessionManager</attr>
     <attr 
         path="/api/package[@name='com.glympse.enroute.android.api']/interface[@name='GEnRouteManager']/method[@name='handleRemoteNotification']" 
         name="managedName">handleRemoteNotification</attr>    

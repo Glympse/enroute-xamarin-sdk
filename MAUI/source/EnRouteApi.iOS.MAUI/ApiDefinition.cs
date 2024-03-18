@@ -772,6 +772,76 @@ namespace Glympse.EnRoute.iOS
         bool removeListener(GlyListener listener);
     }
 
+    [BaseType(typeof(GlyCommon))]
+    [DisableDefaultCtor]
+    interface GlySession
+    {
+        [Export("getId")]
+        long getId();
+
+        [Export("getCreatedTime")]
+        long getCreatedTime();
+
+        [Export("getDescription")]
+        string getDescription();
+
+        [Export("getTasks")]
+        GlyArray getTasks();
+
+        [Export("getActiveTask")]
+        GlyTask getActiveTask();
+
+        [Export("getActiveTaskIndex")]
+        int getActiveTaskIndex();
+
+        [Export("getState")]
+        int getState();
+
+        [Export("getStartTime")]
+        long getStartTime();
+
+        [Export("getOrgId")]
+        long getOrgId();
+
+        [Export("getAgentId")]
+        long getAgentId();
+
+        [Export("getOperationId")]
+        long getOperationId();
+
+        [Export("getOperation")]
+        GlyOperation getOperation();
+
+        [Export("getCompletionReason")]
+        int getCompletionReason();
+    }
+
+    [BaseType(typeof(GlySource))]
+    [DisableDefaultCtor]
+    interface GlySessionManager
+    {
+        [Export("isStarted")]
+        bool isStarted();
+
+        [Export("refresh")]
+        void refresh();
+
+        [Export("getSessions")]
+        GlyArray getSessions();
+
+        [Export("anyActiveSessions:")]
+        bool anyActiveSessions();
+
+        [Export("findSessionById:")]
+        GlySession findSessionById(long sessionId);
+
+        [Export("addListener:")]
+        bool addListener(GlyListener listener);
+
+        [Export("removeListener:")]
+        bool removeListener(GlyListener listener);
+    }
+
     [BaseType(typeof(GlySource))]
     [DisableDefaultCtor]
     interface GlyEnRouteManager
@@ -826,6 +896,9 @@ namespace Glympse.EnRoute.iOS
 
         [Export("getTaskManager")]
         GlyTaskManager getTaskManager();
+
+        [Export("getSessionManager")]
+        GlySessionManager getSessionManager();
 
         [Export("addListener:")]
         bool addListener(GlyListener listener);
