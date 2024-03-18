@@ -6,6 +6,7 @@
 # android
 .idea
 *.jar
+*.aar
 *.zip
 
 # xamarin
