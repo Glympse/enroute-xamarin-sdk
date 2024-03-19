@@ -16,10 +16,10 @@ rm -rf tmp_*
 
 # Copy Android dependencies
 unzip $PACKAGE_ANDROID -d $TMP_ANDROID
-cp $TMP_ANDROID/lib/GlympseApi/GlympseApi-release.aar ../MAUI/source/EnRouteApi.Android.MAUI/Libs/GlympseApi-release.aar
-cp $TMP_ANDROID/lib/GlympseApiPush/GlympseApiPush-release.aar ../MAUI/source/EnRouteApi.Android.MAUI/Libs/GlympseApiPush-release.aar
-cp $TMP_ANDROID/lib/GlympseApiToolbox/GlympseApiToolbox-release.aar ../MAUI/source/EnRouteApi.Android.MAUI/Libs/GlympseApiToolbox-release.aar
-cp $TMP_ANDROID/lib/EnRouteApi/EnRouteApi-release.aar ../MAUI/source/EnRouteApi.Android.MAUI/Libs/EnRouteApi-release.aar
+cp -r $TMP_ANDROID/lib/GlympseApi/ ../MAUI/source/EnRouteApi.Android.MAUI/Libs/
+cp -r $TMP_ANDROID/lib/GlympseApiPush/ ../MAUI/source/EnRouteApi.Android.MAUI/Libs/
+cp -r $TMP_ANDROID/lib/GlympseApiToolbox/ ../MAUI/source/EnRouteApi.Android.MAUI/Libs/
+cp -r $TMP_ANDROID/lib/EnRouteApi/ ../MAUI/source/EnRouteApi.Android.MAUI/Libs/
 
 # Copy iOS dependencies
 unzip $PACKAGE_IOS -d $TMP_IOS
