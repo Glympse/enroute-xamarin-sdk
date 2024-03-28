@@ -16,6 +16,10 @@
             {
                 return new TaskManager((GlyTaskManager)raw);
             }
+            else if ( raw is GlySessionManager )
+            {
+                return new SessionManager((GlySessionManager)raw);
+            }
             else if ( raw is GlyOrganization )
             {
                 return new Organization((GlyOrganization)raw);
@@ -31,6 +35,10 @@
             else if ( raw is GlyOperation )
             {
                 return new Operation((GlyOperation)raw);
+            }
+            else if (raw is GlySession)
+            {
+                return new Session((GlySession)raw);
             }
             else if (raw is GlyTicket)
             {
