@@ -829,7 +829,7 @@ namespace Glympse.EnRoute.iOS
         [Export("getSessions")]
         GlyArray getSessions();
 
-        [Export("anyActiveSessions:")]
+        [Export("anyActiveSessions")]
         bool anyActiveSessions();
 
         [Export("findSessionById:")]
