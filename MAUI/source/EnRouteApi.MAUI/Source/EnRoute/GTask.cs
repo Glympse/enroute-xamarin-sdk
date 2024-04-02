@@ -12,6 +12,8 @@ namespace Glympse
 
             GOperation getOperation();
 
+            GTicket getTicket();
+
             string getDescription();
 
             long getDueTime();

@@ -23,6 +23,8 @@ namespace Glympse
             void setTicketEta(long eta);
 
             void setTicketVisible(string visible);
+
+            GTicket getTicket();
         }
     }
 }

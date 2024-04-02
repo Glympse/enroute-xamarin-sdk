@@ -60,6 +60,14 @@ namespace Glympse.EnRoute.Android
             {
                 return new ChatMessage((com.glympse.android.api.GChatMessage)raw);
             }
+            else if (raw is com.glympse.android.api.GTicket)
+            {
+                return new Ticket((com.glympse.android.api.GTicket)raw);
+            }
+            else if (raw is com.glympse.android.api.GPlace)
+            {
+                return new Place((com.glympse.android.api.GPlace)raw);
+            }
             else if ( raw is Java.Lang.Object )
             {
                 Java.Lang.Object obj = (Java.Lang.Object)raw;

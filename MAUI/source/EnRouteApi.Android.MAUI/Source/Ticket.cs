@@ -61,6 +61,11 @@ namespace Glympse.EnRoute.Android
             _raw.updateEta(eta);
         }
 
+        public GPlace getDestination()
+        {
+            return (GPlace)ClassBinder.bind(_raw.getDestination());
+        }
+
         public object raw()
         {
             return _raw;

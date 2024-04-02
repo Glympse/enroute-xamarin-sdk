@@ -24,6 +24,11 @@
             return (GOperation)ClassBinder.bind(_raw.getOperation());
         }
 
+        public GTicket getTicket()
+        {
+            return (GTicket)ClassBinder.bind(_raw.getTicket());
+        }
+
         public string getDescription()
         {
             return _raw.getDescription();

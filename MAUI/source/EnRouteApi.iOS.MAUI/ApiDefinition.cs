@@ -321,7 +321,14 @@ namespace Glympse.EnRoute.iOS
     [DisableDefaultCtor]
     interface GlyPlace
     {
+        [Export("getName")]
+        string getName();
 
+        [Export("getLatitude")]
+        double getLatitude();
+
+        [Export("getLongitude")]
+        double getLongitude();
     }
 
     [BaseType(typeof(NSObject))]
@@ -368,6 +375,9 @@ namespace Glympse.EnRoute.iOS
 
         [Export("updateEta:")]
         void updateEta(long eta);
+
+        [Export("getDestination")]
+        GlyPlace getDestination();
     }
 
     [BaseType(typeof(NSObject))]
@@ -680,6 +690,9 @@ namespace Glympse.EnRoute.iOS
         [Export("getOperation")]
         GlyOperation getOperation();
 
+        [Export("getTicket")]
+        GlyTicket getTicket();
+
         [Export("getDescription")]
         string getDescription();
 
@@ -726,6 +739,9 @@ namespace Glympse.EnRoute.iOS
 
         [Export("setTicketVisible:")]
         void setTicketVisible(string visible);
+
+        [Export("getTicket")]
+        GlyTicket getTicket();
     }
 
     [BaseType(typeof(GlySource))]

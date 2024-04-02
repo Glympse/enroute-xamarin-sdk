@@ -56,6 +56,11 @@ namespace Glympse.EnRoute.Android
             _raw.setTicketVisible(visible);
         }
 
+        public GTicket getTicket()
+        {
+            return (GTicket)ClassBinder.bind(_raw.getTicket());
+        }
+
         public object raw()
         {
             return _raw;

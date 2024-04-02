@@ -245,6 +245,15 @@
     <attr 
         path="/api/package[@name='com.glympse.android.api']/interface[@name='GPlace']" 
         name="managedName">GPlace</attr>
+    <attr 
+        path="/api/package[@name='com.glympse.android.api']/interface[@name='GPlace']/method[@name='getName']" 
+        name="managedName">getName</attr>
+    <attr 
+        path="/api/package[@name='com.glympse.android.core']/interface[@name='GLatLng']/method[@name='getLatitude']" 
+        name="managedName">getLatitude</attr>
+    <attr 
+        path="/api/package[@name='com.glympse.android.core']/interface[@name='GLatLng']/method[@name='getLongitude']" 
+        name="managedName">getLongitude</attr>
     
     <!-- GInvite -->
     <attr 
@@ -291,6 +300,9 @@
     <attr 
         path="/api/package[@name='com.glympse.android.api']/interface[@name='GTicket']/method[@name='updateEta']" 
         name="managedName">updateEta</attr>
+    <attr 
+        path="/api/package[@name='com.glympse.android.api']/interface[@name='GTicket']/method[@name='getDestination']" 
+        name="managedName">getDestination</attr>
     
     <!-- GConfig -->
     <attr 
@@ -606,6 +618,9 @@
         path="/api/package[@name='com.glympse.enroute.android.api']/interface[@name='GTask']/method[@name='getOperation']" 
         name="managedName">getOperation</attr>
     <attr 
+        path="/api/package[@name='com.glympse.enroute.android.api']/interface[@name='GTask']/method[@name='getTicket']" 
+        name="managedName">getTicket</attr>
+    <attr 
         path="/api/package[@name='com.glympse.enroute.android.api']/interface[@name='GTask']/method[@name='getDescription']" 
         name="managedName">getDescription</attr>
     <attr 
@@ -652,6 +667,9 @@
     <attr 
         path="/api/package[@name='com.glympse.enroute.android.api']/interface[@name='GOperation']/method[@name='setTicketVisible']" 
         name="managedName">setTicketVisible</attr>
+    <attr 
+        path="/api/package[@name='com.glympse.enroute.android.api']/interface[@name='GOperation']/method[@name='getTicket']" 
+        name="managedName">getTicket</attr>
 
     <!-- GTaskManager -->
     <attr 

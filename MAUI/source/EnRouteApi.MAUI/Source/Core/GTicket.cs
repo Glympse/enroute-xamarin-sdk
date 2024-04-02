@@ -24,5 +24,6 @@ namespace Glympse
 
         long getDuration();
 
+        GPlace getDestination();
     }
 }

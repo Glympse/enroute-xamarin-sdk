@@ -13,5 +13,20 @@
         {
             return _raw;
         }
+
+        public string getName()
+        {
+            return _raw.getName();
+        }
+
+        public double getLatitude()
+        {
+            return _raw.getLatitude();
+        }
+
+        public double getLongitude()
+        {
+            return _raw.getLongitude();
+        }
     }
 }
