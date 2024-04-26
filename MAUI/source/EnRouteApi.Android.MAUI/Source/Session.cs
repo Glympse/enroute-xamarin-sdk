@@ -61,16 +61,6 @@ namespace Glympse.EnRoute.Android
             return _raw.getAgentId();
         }
 
-        public long getOperationId()
-        {
-            return _raw.getOperationId();
-        }
-
-        public GOperation getOperation()
-        {
-            return (GOperation)ClassBinder.bind(_raw.getOperation());
-        }
-
         public int getCompletionReason()
         {
             return _raw.getCompletionReason();

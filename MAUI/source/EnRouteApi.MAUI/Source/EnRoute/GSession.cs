@@ -26,10 +26,6 @@ namespace Glympse
 
             long getAgentId();
 
-            long getOperationId();
-
-            GOperation getOperation();
-
             int getCompletionReason();
         }
     }

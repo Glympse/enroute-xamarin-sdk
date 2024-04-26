@@ -746,12 +746,6 @@
         path="/api/package[@name='com.glympse.enroute.android.api']/interface[@name='GSession']/method[@name='getAgentId']" 
         name="managedName">getAgentId</attr>
     <attr 
-        path="/api/package[@name='com.glympse.enroute.android.api']/interface[@name='GSession']/method[@name='getOperationId']" 
-        name="managedName">getOperationId</attr>
-    <attr 
-        path="/api/package[@name='com.glympse.enroute.android.api']/interface[@name='GSession']/method[@name='getOperation']" 
-        name="managedName">getOperation</attr>
-    <attr 
         path="/api/package[@name='com.glympse.enroute.android.api']/interface[@name='GSession']/method[@name='getCompletionReason']" 
         name="managedName">getCompletionReason</attr>
     <!-- GSessionManager -->

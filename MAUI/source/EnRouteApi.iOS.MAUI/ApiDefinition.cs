@@ -822,12 +822,6 @@ namespace Glympse.EnRoute.iOS
         [Export("getAgentId")]
         long getAgentId();
 
-        [Export("getOperationId")]
-        long getOperationId();
-
-        [Export("getOperation")]
-        GlyOperation getOperation();
-
         [Export("getCompletionReason")]
         int getCompletionReason();
     }
