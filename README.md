@@ -46,7 +46,7 @@ Native SDK packages are required in order to get Xamarin projects to compile.
 Follow these steps to be able to build library projects and/or demo application.
 
 - Place EnRoute SDK zip files under ```./tools``` directory.
-- Run ```./unpack.sh``` from within ```./tools``` directory.
+- Run ```./unpack.sh``` or ```./unpack_MAUI.sh``` from within ```./tools``` directory.
 
 ## Contributing to this repository
 
