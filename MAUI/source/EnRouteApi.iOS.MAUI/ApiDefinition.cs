@@ -845,6 +845,18 @@ namespace Glympse.EnRoute.iOS
         [Export("findSessionById:")]
         GlySession findSessionById(long sessionId);
 
+        [Export("startSession:")]
+        void startSession(GlySession session);
+
+        [Export("arriveTaskForSession:task:")]
+        void arriveTaskForSession(GlySession session, GlyTask task);
+
+        [Export("departTaskForSession:task:")]
+        void departTaskForSession(GlySession session, GlyTask task);
+
+        [Export("completeSession:")]
+        void completeSession(GlySession session);
+
         [Export("addListener:")]
         bool addListener(GlyListener listener);
 

@@ -16,6 +16,14 @@ namespace Glympse
             bool anyActiveSessions();
 
             GSession findSessionById(long sessionId);
+
+            void startSession(GSession session);
+
+            void arriveTaskForSession(GSession session, GTask task);
+
+            void departTaskForSession(GSession session, GTask task);
+
+            void completeSession(GSession session);
         }
     }
 }

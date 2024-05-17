@@ -44,6 +44,26 @@ namespace Glympse.EnRoute.Android
             return (GSession)ClassBinder.bind(_raw.findSessionById(sessionId));
         }
 
+        public void startSession(GSession session)
+        {
+            _raw.startSession((com.glympse.enroute.android.api.GSession)session.raw());
+        }
+
+        public void arriveTaskForSession(GSession session, GTask task)
+        {
+            _raw.arriveTaskForSession((com.glympse.enroute.android.api.GSession)session.raw(), (com.glympse.enroute.android.api.GTask)task.raw());
+        }
+
+        public void departTaskForSession(GSession session, GTask task)
+        {
+            _raw.departTaskForSession((com.glympse.enroute.android.api.GSession)session.raw(), (com.glympse.enroute.android.api.GTask)task.raw());
+        }
+
+        public void completeSession(GSession session)
+        {
+            _raw.completeSession((com.glympse.enroute.android.api.GSession)session.raw());
+        }
+
         /**
          * GSource section
          */

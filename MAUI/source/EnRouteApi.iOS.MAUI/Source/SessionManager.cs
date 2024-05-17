@@ -43,6 +43,26 @@ namespace Glympse.EnRoute.iOS
             return (GSession)ClassBinder.bind(_raw.findSessionById(sessionId));
         }
 
+        public void startSession(GSession session)
+        {
+            _raw.startSession((GlySession)session.raw());
+        }
+
+        public void arriveTaskForSession(GSession session, GTask task)
+        {
+            _raw.arriveTaskForSession((GlySession)session.raw(), (GlyTask)task.raw());
+        }
+
+        public void departTaskForSession(GSession session, GTask task)
+        {
+            _raw.departTaskForSession((GlySession)session.raw(), (GlyTask)task.raw());
+        }
+
+        public void completeSession(GSession session)
+        {
+            _raw.completeSession((GlySession)session.raw());
+        }
+
         /**
          * GSource section
          */

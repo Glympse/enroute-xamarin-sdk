@@ -767,6 +767,18 @@
     <attr 
         path="/api/package[@name='com.glympse.enroute.android.api']/interface[@name='GSessionManager']/method[@name='findSessionById']" 
         name="managedName">findSessionById</attr>
+    <attr 
+        path="/api/package[@name='com.glympse.enroute.android.api']/interface[@name='GSessionManager']/method[@name='startSession']" 
+        name="managedName">startSession</attr>
+    <attr 
+        path="/api/package[@name='com.glympse.enroute.android.api']/interface[@name='GSessionManager']/method[@name='arriveTaskForSession']" 
+        name="managedName">arriveTaskForSession</attr>
+    <attr 
+        path="/api/package[@name='com.glympse.enroute.android.api']/interface[@name='GSessionManager']/method[@name='departTaskForSession']" 
+        name="managedName">departTaskForSession</attr>
+    <attr 
+        path="/api/package[@name='com.glympse.enroute.android.api']/interface[@name='GSessionManager']/method[@name='completeSession']" 
+        name="managedName">completeSession</attr>
 
     <!-- GEnRouteManager -->
     <attr
