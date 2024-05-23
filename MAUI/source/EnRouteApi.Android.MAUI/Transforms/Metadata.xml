@@ -849,7 +849,10 @@
         name="managedName">overrideLoggingLevels</attr> 
     <attr 
         path="/api/package[@name='com.glympse.enroute.android.api']/interface[@name='GEnRouteManager']/method[@name='enableXoANotifications']" 
-        name="managedName">enableXoANotifications</attr>     
+        name="managedName">enableXoANotifications</attr>
+    <attr 
+        path="/api/package[@name='com.glympse.enroute.android.api']/interface[@name='GEnRouteManager']/method[@name='setSessionsGeofencesEnabled']" 
+        name="managedName">setSessionsGeofencesEnabled</attr> 
     
     <!-- GEnRouteFactory -->
     <attr 

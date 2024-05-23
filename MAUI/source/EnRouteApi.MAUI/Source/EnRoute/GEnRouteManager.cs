@@ -50,6 +50,8 @@ namespace Glympse
             void overrideLoggingLevels(int fileLevel, int debugLevel);
 
             void enableXoANotifications(bool enabled);
+
+            void setSessionsGeofencesEnabled(bool enabled);
         }
     }
 }

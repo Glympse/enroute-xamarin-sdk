@@ -131,6 +131,11 @@ namespace Glympse.EnRoute.Android
             _raw.enableXoANotifications(enabled);
         }
 
+        public void setSessionsGeofencesEnabled(bool enabled)
+        {
+            _raw.setSessionsGeofencesEnabled(enabled);
+        }
+
         /**
          * GSource section
          */

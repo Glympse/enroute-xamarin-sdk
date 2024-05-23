@@ -939,6 +939,9 @@ namespace Glympse.EnRoute.iOS
 
         [Export("enableXoANotifications:")]
         void enableXoANotifications(bool enabled);
+
+        [Export("setSessionsGeofencesEnabled:")]
+        void setSessionsGeofencesEnabled(bool enabled);
     }
 
     [BaseType(typeof(NSObject))]
