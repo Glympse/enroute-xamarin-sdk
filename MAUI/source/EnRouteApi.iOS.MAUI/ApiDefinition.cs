@@ -104,7 +104,7 @@ namespace Glympse.EnRoute.iOS
         bool hasKey(string key);
 
         [Export("getArray")]
-        GlyCommon getArray();
+        GlyArray getArray();
 
         [Export("getWithInt:")]
         GlyCommon get(int index);
@@ -259,6 +259,10 @@ namespace Glympse.EnRoute.iOS
         [Static]
         [Export("createPrimitiveWithNSString:")]
         GlyPrimitive createPrimitive(string str);
+
+        [Static]
+        [Export("createPrimitiveWithInt:")]
+        GlyPrimitive createPrimitive(int type);
     }
 
     [BaseType(typeof(NSObject))]
@@ -780,6 +784,12 @@ namespace Glympse.EnRoute.iOS
 
         [Export("sendMessageWithGlyTask:withNSString:")]
         bool sendMessage(GlyTask task, string message);
+
+        [Export("saveManualSortOrder:")]
+        void saveManualSortOrder(GlyPrimitive taskIdArray);
+
+        [Export("getManualSortOrder")]
+        GlyPrimitive getManualSortOrder();
 
         [Export("addListener:")]
         bool addListener(GlyListener listener);

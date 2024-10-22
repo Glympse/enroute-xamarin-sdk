@@ -8,5 +8,10 @@ namespace Glympse.EnRoute.Android
         {
             return new Primitive(com.glympse.android.core.CoreFactory.createPrimitive(str));
         }
+
+        public GPrimitive createPrimitiveArray()
+        {
+            return new Primitive(com.glympse.android.core.CoreFactory.createPrimitive(com.glympse.android.core.CoreConstants.PrimitiveTypeArray));
+        }
     }
 }

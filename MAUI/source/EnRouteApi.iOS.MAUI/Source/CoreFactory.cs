@@ -6,5 +6,10 @@
         {
             return new Primitive(GlyCoreFactory.createPrimitive(str));
         }
+
+        public GPrimitive createPrimitiveArray()
+        {
+            return new Primitive(GlyCoreFactory.createPrimitive(1));
+        }
     }
 }

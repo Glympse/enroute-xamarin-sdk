@@ -73,6 +73,16 @@ namespace Glympse.EnRoute.iOS
             return _raw.sendMessage((GlyTask)task.raw(), message);
         }
 
+        public void saveManualSortOrder(GPrimitive taskIdArray)
+        {
+            _raw.saveManualSortOrder((GlyPrimitive)taskIdArray.raw());
+        }
+
+        public GPrimitive getManualSortOrder()
+        {
+            return (GPrimitive)ClassBinder.bind(_raw.getManualSortOrder());
+        }
+
         /**
          * GSource section
          */

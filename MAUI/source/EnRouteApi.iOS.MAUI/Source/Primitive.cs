@@ -123,7 +123,7 @@
 
         public GArray<GPrimitive> getArray()
         {
-            return (GArray<GPrimitive>) _raw.getArray();
+            return new Array<GPrimitive>(_raw.getArray());
         }
 
         public GPrimitive get(int index)

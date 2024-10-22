@@ -28,6 +28,10 @@ namespace Glympse
             string getTravelModeForTask(GTask task);
 
             bool sendMessage(GTask task, string message);
+
+            void saveManualSortOrder(GPrimitive taskIdArray);
+
+            GPrimitive getManualSortOrder();
         }
     }
 }

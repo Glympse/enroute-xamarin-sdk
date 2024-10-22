@@ -711,6 +711,12 @@
     <attr 
         path="/api/package[@name='com.glympse.enroute.android.api']/interface[@name='GTaskManager']/method[@name='sendMessage' and count(parameter)=2]" 
         name="managedName">sendMessage</attr> 
+    <attr 
+        path="/api/package[@name='com.glympse.enroute.android.api']/interface[@name='GTaskManager']/method[@name='saveManualSortOrder']" 
+        name="managedName">saveManualSortOrder</attr> 
+    <attr 
+        path="/api/package[@name='com.glympse.enroute.android.api']/interface[@name='GTaskManager']/method[@name='getManualSortOrder']" 
+        name="managedName">getManualSortOrder</attr>
     <!-- GSession -->
     <attr 
         path="/api/package[@name='com.glympse.enroute.android.api']/interface[@name='GSession']" 

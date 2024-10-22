@@ -74,6 +74,16 @@ namespace Glympse.EnRoute.Android
             return _raw.sendMessage((com.glympse.enroute.android.api.GTask)task.raw(), message);
         }
 
+        public void saveManualSortOrder(GPrimitive taskIdArray)
+        {
+            _raw.saveManualSortOrder((com.glympse.android.core.GPrimitive)taskIdArray.raw());
+        }
+
+        public GPrimitive getManualSortOrder()
+        {
+            return (GPrimitive)ClassBinder.bind(_raw.getManualSortOrder());
+        }
+
         /**
          * GSource section
          */
