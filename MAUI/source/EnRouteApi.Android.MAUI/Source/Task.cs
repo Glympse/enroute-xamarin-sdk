@@ -56,6 +56,11 @@ namespace Glympse.EnRoute.Android
             return _raw.getChatRoomId();
         }
 
+        public GArray<GPrimitive> getTags()
+        {
+            return new Array<GPrimitive>(_raw.getTags());
+        }
+
         public object raw()
         {
             return _raw;

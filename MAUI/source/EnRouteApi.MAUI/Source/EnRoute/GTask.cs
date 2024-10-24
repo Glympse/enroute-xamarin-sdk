@@ -23,6 +23,8 @@ namespace Glympse
             string getForeignId();
 
             string getChatRoomId();
+
+            GArray<GPrimitive> getTags();
         }
     }
 }

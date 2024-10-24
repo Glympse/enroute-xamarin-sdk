@@ -711,6 +711,9 @@ namespace Glympse.EnRoute.iOS
 
         [Export("getChatRoomId")]
         string getChatRoomId();
+
+        [Export("getTags")]
+        GlyArray getTags();
     }
 
     [BaseType(typeof(GlyCommon))]

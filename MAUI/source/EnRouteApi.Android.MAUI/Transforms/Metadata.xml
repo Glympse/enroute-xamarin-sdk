@@ -635,6 +635,9 @@
     <attr 
         path="/api/package[@name='com.glympse.enroute.android.api']/interface[@name='GTask']/method[@name='getChatRoomId']" 
         name="managedName">getChatRoomId</attr>
+    <attr 
+        path="/api/package[@name='com.glympse.enroute.android.api']/interface[@name='GTask']/method[@name='getTags']" 
+        name="managedName">getTags</attr>
 
     <!-- GOperation -->
     <attr 
