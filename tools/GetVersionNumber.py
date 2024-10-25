@@ -10,7 +10,7 @@ import sys, time, re, subprocess, datetime
 
 # Check arguments
 if ( len(sys.argv) < 2 ):
-    print "usage: ./GeneratePackageFile.py version_header"
+    print("usage: ./GeneratePackageFile.py version_header")
     exit(1)
 
 # Extract argumensts
@@ -29,4 +29,4 @@ ver_build = re.compile(r'_BUILD\s=\s( [0-9]* );', re.VERBOSE).findall(header)[0]
 params["BUILD_VERSION_SHORT"] = ver_major + "." + ver_minor + "." + ver_build
 
 # Return short SDK version
-print params["BUILD_VERSION_SHORT"]
+print(params["BUILD_VERSION_SHORT"])

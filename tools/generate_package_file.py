@@ -2,7 +2,7 @@ import sys, time, re, subprocess, datetime, os
 
 # Check arguments
 if ( len(sys.argv) < 5 ):
-    print "usage: ./generate_package_file.py version file_dst package_file product_name"
+    print("usage: ./generate_package_file.py version file_dst package_file product_name")
     exit(1)
 
 # Extract argumensts
@@ -61,4 +61,4 @@ file.write(template)
 file.close()
 
 # Return short SDK version
-print params["BUILD_VERSION_SHORT"]
+print(params["BUILD_VERSION_SHORT"])
