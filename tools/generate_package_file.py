@@ -33,7 +33,7 @@ if "none" != ver_status and "release" != ver_status:
 params["BUILD_VERSION_RESOURCE"] = params["BUILD_VERSION_FULL"]
 
 # Extract commit hash
-params["TAG_LONG"] = subprocess.Popen(["git", "rev-parse", "HEAD"], stdout=subprocess.PIPE).communicate()[0].rstrip("\n")
+params["TAG_LONG"] = subprocess.Popen(["git", "rev-parse", "HEAD"], stdout=subprocess.PIPE).communicate()[0].decode('utf-8').rstrip("\n")
 
 # Extract year
 params["YEAR_FULL"] = str(datetime.date.today().year)
