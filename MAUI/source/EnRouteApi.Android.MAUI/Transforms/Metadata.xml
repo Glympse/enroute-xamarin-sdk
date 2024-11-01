@@ -122,6 +122,70 @@
         path="/api/package[@name='com.glympse.android.core']/interface[@name='GPrimitive']/method[@name='insert']" 
         name="managedName">insert</attr>
 
+    <!-- GLocation -->
+    <attr 
+        path="/api/package[@name='com.glympse.android.core']/interface[@name='GLocation']" 
+        name="managedName">GLocation</attr>
+    <attr 
+        path="/api/package[@name='com.glympse.android.core']/interface[@name='GLocation']/method[@name='getTime']" 
+        name="managedName">getTime</attr>
+    <attr 
+        path="/api/package[@name='com.glympse.android.core']/interface[@name='GLocation']/method[@name='getVAccuracy']" 
+        name="managedName">getVAccuracy</attr>
+    <attr 
+        path="/api/package[@name='com.glympse.android.core']/interface[@name='GLocation']/method[@name='getHAccuracy']" 
+        name="managedName">getHAccuracy</attr>
+    <attr 
+        path="/api/package[@name='com.glympse.android.core']/interface[@name='GLocation']/method[@name='getSpeed']" 
+        name="managedName">getSpeed</attr>
+    <attr 
+        path="/api/package[@name='com.glympse.android.core']/interface[@name='GLocation']/method[@name='getBearing']" 
+        name="managedName">getBearing</attr>
+    <attr 
+        path="/api/package[@name='com.glympse.android.core']/interface[@name='GLocation']/method[@name='getAltitude']" 
+        name="managedName">getAltitude</attr>
+    <!-- GLatLng -->
+    <attr 
+        path="/api/package[@name='com.glympse.android.core']/interface[@name='GLatLng']" 
+        name="managedName">GLatLng</attr>
+    <attr 
+        path="/api/package[@name='com.glympse.android.core']/interface[@name='GLatLng']/method[@name='getLatitude']" 
+        name="managedName">getLatitude</attr>
+    <attr 
+        path="/api/package[@name='com.glympse.android.core']/interface[@name='GLatLng']/method[@name='getLongitude']" 
+        name="managedName">getLongitude</attr>
+
+    <!-- GEnumeration -->
+    <attr 
+        path="/api/package[@name='com.glympse.android.core']/interface[@name='GEnumeration']" 
+        name="managedName">GEnumeration</attr>
+    <attr 
+        path="/api/package[@name='com.glympse.android.core']/interface[@name='GEnumeration']/method[@name='hasMoreElements']" 
+        name="managedName">hasMoreElements</attr>
+    <attr 
+        path="/api/package[@name='com.glympse.android.core']/interface[@name='GEnumeration']/method[@name='nextElement']" 
+        name="managedName">nextElement</attr>
+
+    <!-- GList -->
+    <attr 
+        path="/api/package[@name='com.glympse.android.core']/interface[@name='GList']" 
+        name="managedName">GList</attr>
+    <attr 
+        path="/api/package[@name='com.glympse.android.core']/interface[@name='GList']/method[@name='length']" 
+        name="managedName">length</attr>
+    <attr 
+        path="/api/package[@name='com.glympse.android.core']/interface[@name='GList']/method[@name='getFirst']" 
+        name="managedName">getFirst</attr>
+    <attr 
+        path="/api/package[@name='com.glympse.android.core']/interface[@name='GList']/method[@name='getLast']" 
+        name="managedName">getLast</attr>
+    <attr 
+        path="/api/package[@name='com.glympse.android.core']/interface[@name='GList']/method[@name='elements']" 
+        name="managedName">elements</attr>
+    <attr 
+        path="/api/package[@name='com.glympse.android.core']/interface[@name='GList']/method[@name='elementsReversed']" 
+        name="managedName">elementsReversed</attr>
+
     <!-- GVector -->
     <attr 
         path="/api/package[@name='com.glympse.android.hal']/class[@name='GVector']" 
@@ -303,6 +367,29 @@
     <attr 
         path="/api/package[@name='com.glympse.android.api']/interface[@name='GTicket']/method[@name='getDestination']" 
         name="managedName">getDestination</attr>
+    <attr 
+        path="/api/package[@name='com.glympse.android.api']/interface[@name='GTicket']/method[@name='getRoute']" 
+        name="managedName">getRoute</attr>
+    <attr 
+        path="/api/package[@name='com.glympse.android.api']/interface[@name='GTicket']/method[@name='getTrack']" 
+        name="managedName">getTrack</attr>
+
+    <!-- GTrack -->
+    <attr 
+        path="/api/package[@name='com.glympse.android.api']/interface[@name='GTrack']" 
+        name="managedName">GTrack</attr>
+    <attr 
+        path="/api/package[@name='com.glympse.android.api']/interface[@name='GTrack']/method[@name='length']" 
+        name="managedName">length</attr>
+    <attr 
+        path="/api/package[@name='com.glympse.android.api']/interface[@name='GTrack']/method[@name='getDistance']" 
+        name="managedName">getDistance</attr>
+    <attr 
+        path="/api/package[@name='com.glympse.android.api']/interface[@name='GTrack']/method[@name='getLocations']" 
+        name="managedName">getLocations</attr>
+    <attr 
+        path="/api/package[@name='com.glympse.android.api']/interface[@name='GTrack']/method[@name='getNewLocations']" 
+        name="managedName">getNewLocations</attr>
     
     <!-- GConfig -->
     <attr 

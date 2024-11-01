@@ -66,6 +66,16 @@ namespace Glympse.EnRoute.Android
             return (GPlace)ClassBinder.bind(_raw.getDestination());
         }
 
+        public GTrack getTrack()
+        {
+            return (GTrack)ClassBinder.bind(_raw.getTrack());
+        }
+
+        public GTrack getRoute()
+        {
+            return (GTrack)ClassBinder.bind(_raw.getRoute());
+        }
+
         public object raw()
         {
             return _raw;

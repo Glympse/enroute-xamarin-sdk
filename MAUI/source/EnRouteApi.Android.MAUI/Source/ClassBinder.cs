@@ -68,6 +68,14 @@ namespace Glympse.EnRoute.Android
             {
                 return new Place((com.glympse.android.api.GPlace)raw);
             }
+            else if (raw is com.glympse.android.api.GTrack)
+            {
+                return new Track((com.glympse.android.api.GTrack)raw);
+            }
+            else if (raw is com.glympse.android.core.GLocation)
+            {
+                return new Location((com.glympse.android.core.GLocation)raw);
+            }
             else if ( raw is Java.Lang.Object )
             {
                 Java.Lang.Object obj = (Java.Lang.Object)raw;
@@ -110,6 +118,10 @@ namespace Glympse.EnRoute.Android
                 else if ( "java.lang.Long" == obj.Class.Name )
                 {
                     return Extensions.JavaCast<Java.Lang.Long>(obj).LongValue();
+                }
+                else if ( "com.glympse.android.lib.Location" == obj.Class.Name )
+                {
+                    return new Location(Extensions.JavaCast<com.glympse.android.core.GLocation>(obj));
                 }
                 else if ( "com.glympse.android.lib.Primitive" == obj.Class.Name )
                 {

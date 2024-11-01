@@ -25,5 +25,9 @@ namespace Glympse
         long getDuration();
 
         GPlace getDestination();
+
+        GTrack getTrack();
+
+        GTrack getRoute();
     }
 }
