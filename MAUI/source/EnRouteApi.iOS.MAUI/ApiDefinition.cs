@@ -38,6 +38,80 @@ namespace Glympse.EnRoute.iOS
 
     [BaseType(typeof(GlyCommon))]
     [DisableDefaultCtor]
+    interface GlyTrack
+    {
+        [Export("length")]
+        int length();
+
+        [Export("getLocations")]
+        GlyList getLocations();
+
+        [Export("getNewLocations")]
+        GlyList getNewLocations();
+
+        [Export("getDistance")]
+        int getDistance();
+    }
+
+    [BaseType(typeof(GlyCommon))]
+    [DisableDefaultCtor]
+    interface GlyList
+    {
+        [Export("length")]
+        int length();
+
+        [Export("getFirst")]
+        GlyCommon getFirst();
+
+        [Export("getLast")]
+        GlyCommon getLast();
+
+        [Export("elements")]
+        GlyEnumeration elements();
+    }
+
+    [BaseType(typeof(GlyCommon))]
+    [DisableDefaultCtor]
+    interface GlyEnumeration
+    {
+        [Export("hasMoreElements")]
+        bool hasMoreElements();
+
+        [Export("nextElement")]
+        GlyCommon nextElement();
+    }
+
+    [BaseType(typeof(GlyCommon))]
+    [DisableDefaultCtor]
+    interface GlyLocation
+    {
+        [Export("getAltitude")]
+        float getAltitude();
+
+        [Export("getBearing")]
+        float getBearing();
+
+        [Export("getSpeed")]
+        float getSpeed();
+
+        [Export("getHAccuracy")]
+        float getHAccuracy();
+
+        [Export("getVAccuracy")]
+        float getVAccuracy();
+
+        [Export("getTime")]
+        long getTime();
+
+        [Export("getLatitude")]
+        double getLatitude();
+
+        [Export("getLongitude")]
+        double getLongitude();
+    }
+
+    [BaseType(typeof(GlyCommon))]
+    [DisableDefaultCtor]
     interface GlyPrimitive
     {
         [Export("type")]
@@ -382,6 +456,12 @@ namespace Glympse.EnRoute.iOS
 
         [Export("getDestination")]
         GlyPlace getDestination();
+
+        [Export("getTrack")]
+        GlyTrack getTrack();
+
+        [Export("getRoute")]
+        GlyTrack getRoute();
     }
 
     [BaseType(typeof(NSObject))]

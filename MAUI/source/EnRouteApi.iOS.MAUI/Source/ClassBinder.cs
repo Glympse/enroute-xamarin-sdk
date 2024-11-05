@@ -56,6 +56,14 @@
             {
                 return new Place((GlyPlace)raw);
             }
+            else if (raw is GlyTrack)
+            {
+                return new Track((GlyTrack)raw);
+            }
+            else if (raw is GlyLocation)
+            {
+                return new Location((GlyLocation)raw);
+            }
             else if (raw is GlyGlympse)
             {
                 return new Glympse((GlyGlympse)raw);
