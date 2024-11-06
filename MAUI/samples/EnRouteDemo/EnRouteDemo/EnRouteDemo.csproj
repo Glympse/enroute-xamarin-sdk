@@ -29,6 +29,9 @@
 	  <CreatePackage>false</CreatePackage>
 	  <MtouchLink>SdkOnly</MtouchLink>
 	</PropertyGroup>
+	<PropertyGroup Condition="'$(TargetFramework)|$(Platform)'=='net8.0-ios|AnyCPU'">
+		<CodesignEntitlements>Platforms/iOS/Entitlements.plist</CodesignEntitlements>
+	</PropertyGroup>
 	<ItemGroup>
 	  <TrimmerRootDescriptor Include="ILLink.Descriptors.xml" />
 	</ItemGroup>

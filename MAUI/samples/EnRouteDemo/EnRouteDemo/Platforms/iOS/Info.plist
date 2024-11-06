@@ -13,6 +13,13 @@
 	<array>
 		<string>arm64</string>
 	</array>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>Location sharing</string>
+	<key>NSLocationTemporaryUsageDescriptionDictionary</key>
+	<dict>
+		<key>TemporaryFullAccuracyUsageDescription</key>
+		<string>Location sharing</string>
+	</dict>
 	<key>UISupportedInterfaceOrientations</key>
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>
