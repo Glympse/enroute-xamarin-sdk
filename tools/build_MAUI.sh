@@ -31,9 +31,10 @@ pushd ../MAUI/source/EnRouteApi.Android.MAUI/ > /dev/null
     dotnet build EnRouteApi.Android.MAUI.csproj --configuration Release
 popd > /dev/null
 
-# Move Android Dlls to the output folder
+# Move Android Dlls and native AARs to the output folder
 cp ../MAUI/source/EnRouteApi.Android.MAUI/bin/Release/net8.0-android/EnRouteApi.Android.MAUI.dll ${ANDROID_LIB_DIRECTORY}/EnRouteApi.Android.MAUI.dll
 cp ../MAUI/source/EnRouteApi.Android.MAUI/bin/Release/net8.0-android/EnRouteApi.MAUI.dll ${SHARED_LIB_DIRECTORY}/EnRouteApi.MAUI.dll
+find ../MAUI/source/EnRouteApi.Android.MAUI/bin/Release/net8.0-android/ -name "*.aar" -exec cp {} ${ANDROID_LIB_DIRECTORY} \;
 
 # Clean and build the iOS project
 pushd ../MAUI/source/EnRouteApi.iOS.MAUI/ > /dev/null
