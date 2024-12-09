@@ -135,7 +135,15 @@ namespace Glympse.EnRoute.Android
                     {
                         com.glympse.android.api.GChatMessage message = Extensions.JavaCast<com.glympse.android.api.GChatMessage>(obj);
                         return new ChatMessage(message);
-                    } catch (TargetInvocationException e)
+                    } catch (Exception e)
+                    {
+
+                    }
+                    try
+                    {
+                        com.glympse.android.api.GTicket ticket = Extensions.JavaCast<com.glympse.android.api.GTicket>(obj);
+                        return new Ticket(ticket);
+                    } catch (Exception e)
                     {
 
                     }

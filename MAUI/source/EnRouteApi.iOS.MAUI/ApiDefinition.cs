@@ -339,7 +339,7 @@ namespace Glympse.EnRoute.iOS
         GlyPrimitive createPrimitive(int type);
     }
 
-    [BaseType(typeof(NSObject))]
+    [BaseType(typeof(GlyCommon))]
     [DisableDefaultCtor]
     interface GlyGlympse
     {
@@ -409,7 +409,7 @@ namespace Glympse.EnRoute.iOS
         double getLongitude();
     }
 
-    [BaseType(typeof(NSObject))]
+    [BaseType(typeof(GlyCommon))]
     [DisableDefaultCtor]
     interface GlyInvite
     {
@@ -420,7 +420,7 @@ namespace Glympse.EnRoute.iOS
         int getType();
     }
 
-    [BaseType(typeof(NSObject))]
+    [BaseType(typeof(GlyCommon))]
     [DisableDefaultCtor]
     interface GlyTicket
     {
@@ -525,7 +525,7 @@ namespace Glympse.EnRoute.iOS
         bool removeListener(GlyEventListener listener);
     }
 
-    [BaseType(typeof(NSObject))]
+    [BaseType(typeof(GlyCommon))]
     [DisableDefaultCtor]
     interface GlyChatRoom
     {
@@ -583,7 +583,7 @@ namespace Glympse.EnRoute.iOS
         bool removeListener(GlyEventListener listener);
     }
 
-    [BaseType(typeof(NSObject))]
+    [BaseType(typeof(GlyCommon))]
     [DisableDefaultCtor]
     interface GlyCustomerPickup
     {
@@ -630,7 +630,7 @@ namespace Glympse.EnRoute.iOS
         GlyArray getChatEnabledPhases();
     }
 
-    [BaseType(typeof(NSObject))]
+    [BaseType(typeof(GlyCommon))]
     [DisableDefaultCtor]
     interface GlyPickupArrivalData
     {
@@ -653,7 +653,7 @@ namespace Glympse.EnRoute.iOS
         bool isPickupInStore();
     }
 
-    [BaseType(typeof(NSObject))]
+    [BaseType(typeof(GlyCommon))]
     [DisableDefaultCtor]
     interface GlyPickupArrivalDataBuilder
     {
@@ -718,7 +718,7 @@ namespace Glympse.EnRoute.iOS
         GlyUser getSelf();
     }
 
-    [BaseType(typeof(NSObject))]
+    [BaseType(typeof(GlyCommon))]
     [DisableDefaultCtor]
     interface GlyUser
     {

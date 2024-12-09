@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
 	<PropertyGroup>
-		<TargetFrameworks>net8.0-android;net8.0-ios</TargetFrameworks>
+		<TargetFrameworks>net9.0-android;net9.0-ios</TargetFrameworks>
 
 		<OutputType>Exe</OutputType>
 		<RootNamespace>EnRouteDemo</RootNamespace>
@@ -21,15 +21,15 @@
 		<ApplicationDisplayVersion>1.0</ApplicationDisplayVersion>
 		<ApplicationVersion>1</ApplicationVersion>
 
-		<SupportedOSPlatformVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'ios'">11.0</SupportedOSPlatformVersion>
+		<SupportedOSPlatformVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'ios'">12.2</SupportedOSPlatformVersion>
 		<SupportedOSPlatformVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'android'">21.0</SupportedOSPlatformVersion>
 	</PropertyGroup>
 
-	<PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Release|net8.0-ios|AnyCPU'">
+	<PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Release|net9.0-ios|AnyCPU'">
 	  <CreatePackage>false</CreatePackage>
 	  <MtouchLink>SdkOnly</MtouchLink>
 	</PropertyGroup>
-	<PropertyGroup Condition="'$(TargetFramework)|$(Platform)'=='net8.0-ios|AnyCPU'">
+	<PropertyGroup Condition="'$(TargetFramework)|$(Platform)'=='net9.0-ios|AnyCPU'">
 		<CodesignEntitlements>Platforms/iOS/Entitlements.plist</CodesignEntitlements>
 	</PropertyGroup>
 	<ItemGroup>
@@ -54,6 +54,7 @@
 
 	<ItemGroup>
 		<PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="7.0.0" />
+		<PackageReference Include="Microsoft.Maui.Controls" Version="9.0.0" />
 	</ItemGroup>
 
 	<ItemGroup>
@@ -63,11 +64,11 @@
 	<ItemGroup Condition="$(TargetFramework.Contains('-ios'))">
 		<ProjectReference Include="..\..\..\source\EnRouteApi.iOS.MAUI\EnRouteApi.iOS.MAUI.csproj" />
 	</ItemGroup>
-	<ItemGroup Condition="'$(TargetFramework)' == 'net8.0-android'">
+	<ItemGroup Condition="'$(TargetFramework)' == 'net9.0-android'">
 	  <PackageReference Include="Xamarin.Firebase.Common" Version="120.3.3.1" />
 	  <PackageReference Include="Xamarin.Firebase.Iid" Version="121.1.0.10" />
 	  <PackageReference Include="Xamarin.Firebase.Messaging" Version="123.1.2.2" />
-	  <PackageReference Include="Xamarin.AndroidX.Activity.Ktx" Version="1.7.2.2" />
-	  <PackageReference Include="Xamarin.AndroidX.Activity" Version="1.7.2.2" />
+	  <PackageReference Include="Xamarin.AndroidX.Activity.Ktx" Version="1.9.2.1" />
+	  <PackageReference Include="Xamarin.AndroidX.Activity" Version="1.9.2.1" />
 	</ItemGroup>
 </Project>

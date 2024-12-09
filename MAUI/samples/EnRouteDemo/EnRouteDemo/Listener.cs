@@ -12,8 +12,10 @@ namespace EnRouteDemo
      */
     public class Listener : GListener
     {
+        GEnRouteManager _enRouteManager;
         public void subscribe(GEnRouteManager manager)
         {
+            _enRouteManager = manager;
             manager.addListener(this);
         }
 
@@ -38,6 +40,8 @@ namespace EnRouteDemo
                 if (0 != (EnRouteEvents.ENROUTE_MANAGER_SYNCED & events))
                 {
                     // Synced
+                    GTaskManager taskManager = _enRouteManager.getTaskManager();
+                    taskManager.addListener(this);
                 }
                 if (0 != (EnRouteEvents.ENROUTE_MANAGER_LOGGED_OUT & events))
                 {

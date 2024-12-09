@@ -32,9 +32,9 @@ pushd ../MAUI/source/EnRouteApi.Android.MAUI/ > /dev/null
 popd > /dev/null
 
 # Move Android Dlls and native AARs to the output folder
-cp ../MAUI/source/EnRouteApi.Android.MAUI/bin/Release/net8.0-android/EnRouteApi.Android.MAUI.dll ${ANDROID_LIB_DIRECTORY}/EnRouteApi.Android.MAUI.dll
-cp ../MAUI/source/EnRouteApi.Android.MAUI/bin/Release/net8.0-android/EnRouteApi.MAUI.dll ${SHARED_LIB_DIRECTORY}/EnRouteApi.MAUI.dll
-find ../MAUI/source/EnRouteApi.Android.MAUI/bin/Release/net8.0-android/ -name "*.aar" -exec cp {} ${ANDROID_LIB_DIRECTORY} \;
+cp ../MAUI/source/EnRouteApi.Android.MAUI/bin/Release/net9.0-android/EnRouteApi.Android.MAUI.dll ${ANDROID_LIB_DIRECTORY}/EnRouteApi.Android.MAUI.dll
+cp ../MAUI/source/EnRouteApi.Android.MAUI/bin/Release/net9.0-android/EnRouteApi.MAUI.dll ${SHARED_LIB_DIRECTORY}/EnRouteApi.MAUI.dll
+find ../MAUI/source/EnRouteApi.Android.MAUI/bin/Release/net9.0-android/ -name "*.aar" -exec cp {} ${ANDROID_LIB_DIRECTORY} \;
 
 # Clean and build the iOS project
 pushd ../MAUI/source/EnRouteApi.iOS.MAUI/ > /dev/null
@@ -43,8 +43,8 @@ pushd ../MAUI/source/EnRouteApi.iOS.MAUI/ > /dev/null
 popd > /dev/null
 
 # Move iOS Dll and native framework to the output folder
-cp ../MAUI/source/EnRouteApi.iOS.MAUI/bin/Release/net8.0-ios/EnRouteApi.iOS.MAUI.dll ${IOS_LIB_DIRECTORY}/EnRouteApi.iOS.MAUI.dll
-cp -R ../MAUI/source/EnRouteApi.iOS.MAUI/bin/Release/net8.0-ios/EnRouteApi.iOS.MAUI.resources ${IOS_LIB_DIRECTORY}/EnRouteApi.iOS.MAUI.resources
+cp ../MAUI/source/EnRouteApi.iOS.MAUI/bin/Release/net9.0-ios/EnRouteApi.iOS.MAUI.dll ${IOS_LIB_DIRECTORY}/EnRouteApi.iOS.MAUI.dll
+cp -R ../MAUI/source/EnRouteApi.iOS.MAUI/bin/Release/net9.0-ios/EnRouteApi.iOS.MAUI.resources ${IOS_LIB_DIRECTORY}/EnRouteApi.iOS.MAUI.resources
 
 # Create a version.properties to package with the zip
 CONFIG_SOURCE_FILE="../MAUI/source/EnRouteApi.MAUI/Source/Core/Config.cs"

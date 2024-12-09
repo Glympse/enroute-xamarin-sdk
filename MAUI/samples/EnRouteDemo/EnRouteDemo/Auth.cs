@@ -20,8 +20,8 @@ namespace EnRouteDemo
         public static void start(GEnRouteManager manager)
         {
             _listener = new Listener();
+            _listener.subscribe(manager);
             manager.overrideLoggingLevels(1, 1); // Used for increased logging during development or debugging
-            manager.addListener(_listener);
             manager.setAuthenticationMode(EnRouteConstants.AUTH_MODE_CREDENTIALS);
             manager.start();
         }
