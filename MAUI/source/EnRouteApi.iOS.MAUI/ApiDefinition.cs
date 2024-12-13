@@ -7,10 +7,6 @@ using CoreGraphics;
 
 namespace Glympse.EnRoute.iOS
 {
-    /**
-     * Core SDK Bindings
-     */
-
     [BaseType(typeof(NSObject))]
     [DisableDefaultCtor]
     interface GlyCommon
@@ -728,10 +724,6 @@ namespace Glympse.EnRoute.iOS
         [Export("getNickname")]
         string getNickname();
     }
-
-    /**
-     * EnRoute SDK Bindings
-     */
 
     [BaseType(typeof(GlyCommon))]
     [DisableDefaultCtor]
