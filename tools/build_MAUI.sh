@@ -4,6 +4,17 @@ set -e
 #
 # This script creates a zip file containing Dlls from the Enroute Android and iOS MAUI libraries.
 #
+# Use -publish to push this build to NuGet
+# The environment variable NUGET_API_KEY must be declared to perform this action
+
+PUBLISH=false
+
+while [ $# -gt 0 ]; do
+    case "$1" in
+        -publish) PUBLISH=true;;
+    esac
+    shift
+done
 
 SHARED_LIB_DIRECTORY=tmp_dlls/lib/EnRouteApi
 ANDROID_LIB_DIRECTORY=tmp_dlls/lib/EnRouteApiAndroid
@@ -66,5 +77,13 @@ pushd tmp_dlls > /dev/null
     echo "Creating archive $TARGET_ZIP" 
     zip -q -r -y $TARGET_ZIP .
     mv $TARGET_ZIP ../build/$TARGET_ZIP
+
+    if [ "$PUBLISH" != false ]; then 
+        # Update nuspec template with the version number. Then pack and push
+        NUSPEC_FILE="EnRouteApi.MAUI.nuspec"
+        sed "s#{VERSION}#$MAUI_SDK_VERSION#" "../${NUSPEC_FILE}.template" > ${NUSPEC_FILE}
+        nuget pack ${NUSPEC_FILE}
+        dotnet nuget push "EnRouteApi.MAUI.${MAUI_SDK_VERSION}.nupkg" --api-key ${NUGET_API_KEY} --source "https://api.nuget.org/v3/index.json"
+    fi
 popd > /dev/null
 

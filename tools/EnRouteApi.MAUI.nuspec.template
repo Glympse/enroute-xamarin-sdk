@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>EnRouteApi.MAUI</id>
+    <version>{VERSION}</version>
+    <authors>Glympse Inc.</authors>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Glympse En Route SDK</description>
+  </metadata>
+</package>
