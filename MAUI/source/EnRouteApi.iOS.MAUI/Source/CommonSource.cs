@@ -1,4 +1,6 @@
-﻿using Glympse.Toolbox;
+﻿using System.Collections.Generic;
+using Foundation;
+using Glympse.Toolbox;
 
 namespace Glympse.EnRoute.iOS
 {
@@ -17,8 +19,8 @@ namespace Glympse.EnRoute.iOS
                 GlySource source, 
                 int listener, 
                 int events, 
-                GlyCommon param1, 
-                GlyCommon param2)
+                NSObject param1, 
+                NSObject param2)
             {
                 _listener.eventsOccurred(
                     (GSource)ClassBinder.bind(source), 

@@ -289,7 +289,7 @@ namespace Glympse.EnRoute.iOS
     interface GlyListener
     {
         [Export("eventsOccurred:listener:events:param1:param2:")]
-        void eventsOccurred(GlySource source, int listener, int events, GlyCommon param1, GlyCommon param2);
+        void eventsOccurred(GlySource source, int listener, int events, NSObject param1, NSObject param2);
     }
 
     [BaseType(typeof(NSObject))]
