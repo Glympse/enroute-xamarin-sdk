@@ -79,9 +79,17 @@ pushd tmp_dlls > /dev/null
     mv $TARGET_ZIP ../build/$TARGET_ZIP
 
     if [ "$PUBLISH" != false ]; then 
-        # Update nuspec template with the version number. Then pack and push
+        # Update nuspec template with the version number.
         NUSPEC_FILE="EnRouteApi.MAUI.nuspec"
         sed "s#{VERSION}#$MAUI_SDK_VERSION#" "../${NUSPEC_FILE}.template" > ${NUSPEC_FILE}
+
+        # Rename directories
+        pushd lib > /dev/null
+            mv "EnRouteApi" "net9.0"
+            mv "EnRouteApiAndroid" "net9.0-android35"
+            mv "EnRouteApiiOS" "net9.0-ios18.0"
+        popd > /dev/null
+
         nuget pack ${NUSPEC_FILE}
         dotnet nuget push "EnRouteApi.MAUI.${MAUI_SDK_VERSION}.nupkg" --api-key ${NUGET_API_KEY} --source "https://api.nuget.org/v3/index.json"
     fi
