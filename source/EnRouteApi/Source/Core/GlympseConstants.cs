@@ -1127,6 +1127,27 @@ namespace Glympse
     {
         return CoreFactory.createString("ad");
     }
+    
+    /**
+     * @name Logo Alignments
+     *
+     * Supported alignment options
+     */
+    
+    public static String LOGO_ALIGN_CENTER()
+    {
+        return CoreFactory.createString("CENTER");
+    }
+    
+    public static String LOGO_ALIGN_LEFT()
+    {
+        return CoreFactory.createString("LEFT");
+    }
+        
+    public static String LOGO_ALIGN_RIGHT()
+    {
+        return CoreFactory.createString("RIGHT");
+    }
 
 };
 

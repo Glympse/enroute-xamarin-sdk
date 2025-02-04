@@ -731,6 +731,11 @@ namespace Glympse
      * until it sees a change in application version.
      */
     public const int SERVER_ERROR_DISABLED      = 9;
+    
+    /**
+     * The request failed because a password is required
+     */
+    public const int SERVER_ERROR_PASSWORD_REQUIRED      = 10;
 
     /**
      * @name Expiration Mode
@@ -1103,6 +1108,45 @@ namespace Glympse
     public static String CUSTOMER_PICKUP_PHASE_CANCELLED()
     {
         return CoreFactory.createString("cancelled");
+    }
+    
+    /*
+     * @name Premium Tag image types
+     */
+    public static String TAG_IMAGE_TYPE_LOGO()
+    {
+        return CoreFactory.createString("logo");
+    }
+    
+    public static String TAG_IMAGE_TYPE_AVATAR()
+    {
+        return CoreFactory.createString("avatar");
+    }
+    
+    public static String TAG_IMAGE_TYPE_AD()
+    {
+        return CoreFactory.createString("ad");
+    }
+    
+    /**
+     * @name Logo Alignments
+     *
+     * Supported alignment options
+     */
+    
+    public static String LOGO_ALIGN_CENTER()
+    {
+        return CoreFactory.createString("CENTER");
+    }
+    
+    public static String LOGO_ALIGN_LEFT()
+    {
+        return CoreFactory.createString("LEFT");
+    }
+        
+    public static String LOGO_ALIGN_RIGHT()
+    {
+        return CoreFactory.createString("RIGHT");
     }
 
 };

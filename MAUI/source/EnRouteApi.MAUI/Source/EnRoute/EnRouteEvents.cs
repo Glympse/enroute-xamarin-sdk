@@ -47,12 +47,6 @@ namespace EnRoute
     public const int LISTENER_SESSIONS = 4;
     
     /**
-     * Active Agent events.
-     * Use IActiveAgentsManager event sink to subscribe on these events.
-     */
-    public const int LISTENER_ACTIVE_AGENTS = 6;
-    
-    /**
      * ETA Planner events.
      * Use IEtaPlanner event sink to subscribe on these events.
      */
@@ -373,23 +367,34 @@ namespace EnRoute
     public const int SESSIONS_SESSION_ACTIVE_TASK_PHASE_CHANGED = 0x00000040;
     
     /**
-     * @name Active Agents Manager events.
+     * This event is broadcast when a session is going to be completed soon, but it is delayed due to minimum session duration configuration
      *
-     * Events broadcasted by LISTENER_ACTIVE_AGENTS.
+     * param1: GSession session
      */
+    public const int SESSIONS_SESSION_COMPLETION_DELAYED = 0X00000080;
     
     /**
-     * This event is broadcast when anything changes within the active agent list managed by
-     * the Active Agents Manager.
+     * This event is broadcast when a session task destination arrival call fails
+     *
+     * param1: GSession session
+     * param2: String error
      */
-    public const int ACTIVE_AGENTS_AGENT_LIST_CHANGED = 0x00000001;
+    public const int SESSIONS_SESSION_ARRIVE_FAILED = 0X00000100;
     
     /**
-     * This event is broadcast when an agent is added to the active agents list.
+     * This event is broadcast when a session task destination depart call fails
      *
-     * The associated active agent is passed as a parameter (GActiveAgent).
+     * param1: GSession session
+     * param2: String error
      */
-    public const int ACTIVE_AGENTS_AGENT_REGISTERED = 0x00000002;
+    public const int SESSIONS_SESSION_DEPART_FAILED = 0X00000200;
+    
+    /**
+     * This event is broadcast when the route for a session's active task is updated
+     *
+     * param1: GSession session
+     */
+    public const int SESSIONS_SESSION_ACTIVE_TASK_ROUTE_UPDATED = 0x00000400;
     
     /**
      * @name Pickup Manager events
