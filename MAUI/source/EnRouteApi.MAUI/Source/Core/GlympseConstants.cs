@@ -1148,6 +1148,35 @@ namespace Glympse
     {
         return CoreFactory.createString("RIGHT");
     }
+    
+    /**
+     * @name Data Rate Module names
+     */
+    
+    public static String MODULE_ETA()
+    {
+        return CoreFactory.createString("eta");
+    }
+    
+    public static String MODULE_PREMIUM()
+    {
+        return CoreFactory.createString("premium");
+    }
+    
+    public static String MODULE_CARDS()
+    {
+        return CoreFactory.createString("cards");
+    }
+    
+    public static String MODULE_VIEWERS()
+    {
+        return CoreFactory.createString("viewers");
+    }
+    
+    public static String MODULE_IDLE()
+    {
+        return CoreFactory.createString("idle");
+    }
 
 };
 

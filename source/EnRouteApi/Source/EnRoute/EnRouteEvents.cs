@@ -47,12 +47,6 @@ namespace EnRoute
     public const int LISTENER_SESSIONS = 4;
     
     /**
-     * ETA Planner events.
-     * Use IEtaPlanner event sink to subscribe on these events.
-     */
-    public const int LISTENER_ETA_PLANNER = 7;
-    
-    /**
      * Pickup events
      * Use IPickupManager event sink to subscribe on these events
      */
@@ -256,19 +250,6 @@ namespace EnRoute
     public const int TASKS_TASK_CREATED = 0x00020000;
     
     public const int TASKS_TASK_CREATE_FAILED = 0x00040000;
-    
-    /**
-     * @name ETA Planner events.
-     *
-     * Events broadcasted by LISTENER_ETA_PLANNER.
-     */
-    
-    /**
-     * This event is broadcast when the Eta planner has updated etas.
-     *
-     * The list of etas are passed as a parameter (GVector<GLong>).
-     */
-    public const int ETA_PLANNER_ETAS_UPDATED = 0x00000001;
     
     /**
      * @name Agent Manager events.
