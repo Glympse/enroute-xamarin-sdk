@@ -21,6 +21,14 @@
       <Kind>Static</Kind>
       <SmartLink>True</SmartLink>
     </NativeReference>
+    <NativeReference Include="Libs\GlympsePrivateAPI.xcframework">
+      <Kind>Static</Kind>
+      <SmartLink>True</SmartLink>
+    </NativeReference>
+    <NativeReference Include="Libs\GlympseKit.xcframework">
+      <Kind>Static</Kind>
+      <SmartLink>True</SmartLink>
+    </NativeReference>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\EnRouteApi.MAUI\EnRouteApi.MAUI.csproj" />

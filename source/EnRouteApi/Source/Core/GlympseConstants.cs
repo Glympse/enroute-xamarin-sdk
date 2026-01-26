@@ -1177,6 +1177,11 @@ namespace Glympse
     {
         return CoreFactory.createString("idle");
     }
+    
+    public static String MODULE_TRACKING()
+    {
+        return CoreFactory.createString("tracking");
+    }
 
 };
 
