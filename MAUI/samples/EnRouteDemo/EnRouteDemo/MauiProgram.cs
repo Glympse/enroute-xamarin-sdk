@@ -6,6 +6,11 @@ public static class MauiProgram
 {
 	public static MauiApp CreateMauiApp()
 	{
+		AppDomain.CurrentDomain.FirstChanceException += (sender, eventArgs) =>
+		{
+			System.Diagnostics.Debug.WriteLine($"First chance exception: {eventArgs.Exception}");
+		};
+
 		var builder = MauiApp.CreateBuilder();
 		builder
 			.UseMauiApp<App>()
